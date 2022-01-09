@@ -21,7 +21,7 @@ with io.open(os.path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="rasa-demo",
+    name="autobot-demo",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -34,18 +34,18 @@ setup(
     packages=find_packages(where="demo"),
     version="2.0",
     install_requires=install_requires,
-    description="Rasa Demo Bot",
+    description="Autobot Demo Bot",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    author="Rasa Technologies GmbH",
-    author_email="hi@rasa.com",
+    author="Autobot Technologies GmbH",
+    author_email="hi@komu.vn",
     maintainer="Akela Drissner-Schmid",
-    maintainer_email="akela@rasa.com",
+    maintainer_email="akela@komu.vn",
     license="GNU General Public License v3.0",
-    url="https://github.com/rasahq/rasa-demo",
-    download_url="https://github.com/RasaHQ/rasa-demo/archive/main.zip",
+    url="https://github.com/rasahq/autobot-demo",
+    download_url="https://github.com/RasaHQ/autobot-demo/archive/main.zip",
     project_urls={
-        "Bug Reports": "https://github.com/rasahq/rasa-demo/issues",
-        "Source": "https://github.com/rasahq/rasa-demo",
+        "Bug Reports": "https://github.com/rasahq/autobot-demo/issues",
+        "Source": "https://github.com/rasahq/autobot-demo",
     },
 )

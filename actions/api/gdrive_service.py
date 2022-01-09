@@ -22,7 +22,7 @@ class GDriveService:
     SALES_WORKSHEET_NAME = "demobot"
 
     # Name of the playground issues spreadsheet
-    ISSUES_SPREADSHEET_NAME = "Issues Reported to Sara"
+    ISSUES_SPREADSHEET_NAME = "Issues Reported to Komu"
 
     # Name of the playground issues sheet
     PLAYGROUND_WORKSHEET_NAME = "playground"

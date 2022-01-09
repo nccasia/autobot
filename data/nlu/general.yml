@@ -113,10 +113,10 @@ nlu:
     - ok good
     - ok great
     - ok i accept
-    - ok sara
+    - ok komu
     - ok, I behave now
     - ok, I understood
-    - ok, Sara
+    - ok, Komu
     - ok...
     - okay
     - okay cool
@@ -264,7 +264,7 @@ nlu:
     - lol
     - love you
     - okay Rasabot, you're cool
-    - rasa is awesome
+    - autobot is awesome
     - such a great demo
     - that is funny
     - that was a great interaction
@@ -283,7 +283,7 @@ nlu:
     - I like you
     - I love you
     - you are realy intelligent
-    - I like Rasa
+    - I like Autobot
     - hèhè
     - like u
     - you are so smart
@@ -292,7 +292,7 @@ nlu:
     - you good
     - Great information
     - I mean to say that I liked the explanation
-    - Super! I love Rasa
+    - Super! I love Autobot
 - intent: bye
   examples: |
     - Bye
@@ -315,7 +315,7 @@ nlu:
     - cya
     - farewell
     - good bye
-    - good bye rasa bot!
+    - good bye autobot bot!
     - good night
     - goodbye
     - goodbye.
@@ -497,29 +497,29 @@ nlu:
     - HEY
     - HEllo
     - HI
-    - HI Sara
+    - HI Komu
     - Hallo
     - Hei
     - Hellllooooooo
     - Hello
     - Hello Bot
-    - Hello Rasa
-    - Hello Sara
-    - Hello sara
+    - Hello Autobot
+    - Hello Komu
+    - Hello komu
     - Hello!
     - Hey
-    - Hey Sara
+    - Hey Komu
     - Hey bot
     - Heya
     - Heylo
     - Hi
-    - Hi Sara
-    - Hi Sara!
+    - Hi Komu
+    - Hi Komu!
     - Hi bot
     - Hi man
-    - Hi rasa
-    - Hi sara
-    - Hi sara..
+    - Hi autobot
+    - Hi komu
+    - Hi komu..
     - Hi there
     - Hi!
     - Hi'
@@ -544,24 +544,24 @@ nlu:
     - greetings
     - hai
     - hallo
-    - hallo sara
+    - hallo komu
     - halloo
     - halloooo
     - halo
-    - halo sara
+    - halo komu
     - heeey
     - heelio
     - hell9o
     - hellio
     - hello
-    - hello Sara
+    - hello Komu
     - hello everybody
     - hello friend
     - hello hi
     - hello is anybody there
     - hello it is me again
     - hello robot
-    - hello sara
+    - hello komu
     - hello sweatheart
     - hello sweet boy
     - hello there
@@ -578,14 +578,14 @@ nlu:
     - hey dude
     - hey hey
     - hey let's talk
-    - hey rasa
-    - hey sara
+    - hey autobot
+    - hey komu
     - hey ther
     - hey there
     - hey there boy
     - hey there..
     - hey, let's talk
-    - hey, sara!
+    - hey, komu!
     - heya
     - heyho
     - heyo
@@ -601,9 +601,9 @@ nlu:
     - hi hi
     - hi i'm [Sandra Hernandez](name)
     - hi im [Amanda Anderson](name)
-    - hi mrs rasa
+    - hi mrs autobot
     - hi pal!
-    - hi sara
+    - hi komu
     - hi there
     - hi there it's me
     - hi!
@@ -621,8 +621,8 @@ nlu:
     - jop
     - konichiwa
     - merhaba
-    - ola sara
-    - rasa hello
+    - ola komu
+    - autobot hello
     - salut
     - sup
     - wasssup
@@ -647,7 +647,7 @@ nlu:
     - bad
     - bad boy
     - crappy joke
-    - documentation of rasa is very bad
+    - documentation of autobot is very bad
     - i am angry over you
     - i am feel sad
     - i am sad
@@ -656,7 +656,7 @@ nlu:
     - i feel sad
     - i sad
     - i'm sad
-    - rasa is bad
+    - autobot is bad
     - sad
     - so sad
     - so sad :(
@@ -688,7 +688,7 @@ nlu:
     - Cool. Thanks
     - Great, thanks
     - Thank you
-    - Thank you Sara
+    - Thank you Komu
     - Thank you so much
     - Thank's!
     - Thanks
@@ -704,7 +704,7 @@ nlu:
     - danke
     - great thanks
     - ok thanks
-    - ok thanks sara
+    - ok thanks komu
     - ok thanks!
     - perfect thank you
     - thank u
@@ -728,7 +728,7 @@ nlu:
   examples: |
     - need help on chatbot
     - I have a question
-    - I have a question about [Rasa NLU](product)
+    - I have a question about [Autobot NLU](product)
     - I have a question about the functioning of the device
     - I have a question for you
     - I have a question.
@@ -749,21 +749,21 @@ nlu:
     - I am stuck with fallback
     - i  am stuck with an erorr
     - im stuck
-    - hi sara, i get the following error when trying to install rasa on my macbook
+    - hi komu, i get the following error when trying to install autobot on my macbook
     - i have errors in installaition
     - i am facing a particular error,could u help me?
     - it is showing error while installing
     - I am seeing an error
     - I get errors while installation
-    - error message when installing rasa
-    - Rasa installation error
+    - error message when installing autobot
+    - Autobot installation error
     - getting some errors
-    - rasa init error
+    - autobot init error
     - no i get a error while installing
     - i have an error on install
     - i got some error during installation
     - lots of errors
-    - i got error while installing rasa
+    - i got error while installing autobot
     - I have error during the installation
     - i get error when initializing a project
-    - I'm getting an error while installing Rasa
+    - I'm getting an error while installing Autobot

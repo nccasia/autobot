@@ -18,9 +18,9 @@ stories:
   steps:
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_faq
   - action: action_set_faq_slot
 - story: faqs
@@ -87,7 +87,7 @@ stories:
   - intent: affirm
   - action: utter_thumbsup
   - action: utter_anything_else
-- story: not new to rasa + not interested in products
+- story: not new to autobot + not interested in products
   steps:
   - intent: greet
   - action: action_greet_user
@@ -109,7 +109,7 @@ stories:
   - action: utter_ask_which_product
   - intent: deny
   - action: utter_thumbsup
-- story: not new to rasa + not interested in products
+- story: not new to autobot + not interested in products
   steps:
   - intent: greet
   - action: action_greet_user
@@ -131,7 +131,7 @@ stories:
   - action: utter_ask_which_product
   - intent: deny
   - action: utter_thumbsup
-- story: not new to rasa + nlu + nothing special
+- story: not new to autobot + nlu + nothing special
   steps:
   - intent: greet
   - action: action_greet_user
@@ -158,7 +158,7 @@ stories:
   - intent: deny
   - action: utter_tutorialnlu
   - action: utter_anything_else
-- story: not new to rasa + nlu + unknown topic
+- story: not new to autobot + nlu + unknown topic
   steps:
   - intent: greet
   - action: action_greet_user
@@ -187,7 +187,7 @@ stories:
   - action: utter_dont_know_nlu_part
   - action: utter_search_bar
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + no recommendation
+- story: not new to autobot + nlu + intent + no recommendation
   steps:
   - intent: greet
   - action: action_greet_user
@@ -219,7 +219,7 @@ stories:
   - intent: deny
   - action: utter_thumbsup
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, spacy
   steps:
   - intent: greet
   - action: action_greet_user
@@ -259,7 +259,7 @@ stories:
     - language: english
   - action: utter_pipeline_english
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, spacy
   steps:
   - intent: greet
   - action: action_greet_user
@@ -298,7 +298,7 @@ stories:
     - can_use_spacy: false
   - action: utter_pipeline_nonenglish_nospacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, not spacy
   steps:
   - intent: greet
   - action: action_greet_user
@@ -341,7 +341,7 @@ stories:
     - can_use_spacy: false
   - action: utter_pipeline_nonenglish_nospacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + pipeline duckling
+- story: not new to autobot + nlu + entity + pipeline duckling
   steps:
   - intent: greet
   - action: action_greet_user
@@ -382,7 +382,7 @@ stories:
     - entity_extractor: DucklingHTTPExtractor
   - action: utter_duckling
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + pipeline duckling
+- story: not new to autobot + nlu + entity + pipeline duckling
   steps:
   - intent: greet
   - action: action_greet_user
@@ -457,7 +457,7 @@ stories:
   - slot_was_set:
     - docs_found: false
   - action: action_forum_search
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -491,7 +491,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -518,12 +518,12 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -555,7 +555,7 @@ stories:
     - product: x
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -590,7 +590,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -625,7 +625,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -660,7 +660,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -695,7 +695,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: greet
   - action: action_greet_user
@@ -729,7 +729,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain stack and try it out
+- story: new to autobot/bots, explain stack and try it out
   steps:
   - intent: greet
   - action: action_greet_user
@@ -762,7 +762,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa/bots, explain stack and try it out
+- story: new to autobot/bots, explain stack and try it out
   steps:
   - intent: greet
   - action: action_greet_user
@@ -795,7 +795,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa/bots, explain x and try it out
+- story: new to autobot/bots, explain x and try it out
   steps:
   - intent: greet
   - action: action_greet_user
@@ -829,7 +829,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core
+- story: new to autobot/bots, explain core
   steps:
   - intent: greet
   - action: action_greet_user
@@ -860,7 +860,7 @@ stories:
   - action: utter_also_explain_nlu
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain core
+- story: new to autobot/bots, explain core
   steps:
   - intent: greet
   - action: action_greet_user
@@ -890,7 +890,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core, then nlu
+- story: new to autobot/bots, explain core, then nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -921,7 +921,7 @@ stories:
   - action: utter_also_explain_nlu
   - intent: affirm
   - action: utter_explain_nlu
-- story: new to rasa/bots, explain x
+- story: new to autobot/bots, explain x
   steps:
   - intent: greet
   - action: action_greet_user
@@ -951,7 +951,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain core, then nlu
+- story: new to autobot/bots, explain core, then nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -981,7 +981,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, explain nlu
+- story: new to autobot/bots, explain nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1012,7 +1012,7 @@ stories:
   - action: utter_also_explain_core
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain x
+- story: new to autobot/bots, explain x
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1044,7 +1044,7 @@ stories:
   - action: action_set_faq_slot
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain nlu
+- story: new to autobot/bots, explain nlu
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1074,7 +1074,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: new to rasa/bots, don't explain
+- story: new to autobot/bots, don't explain
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1100,7 +1100,7 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, don't explain
+- story: new to autobot/bots, don't explain
   steps:
   - intent: greet
   - action: action_greet_user
@@ -1125,7 +1125,7 @@ stories:
   - intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: not new to rasa + not interested in products
+- story: not new to autobot + not interested in products
   steps:
   - intent: greet
   - action: action_greet_user

@@ -128,7 +128,7 @@ slots:
     - core
     - nlu
     - x
-    - rasa
+    - autobot
     - all
     - playground
   install_type:
@@ -189,7 +189,7 @@ responses:
   utter_ask_entities:
   - text: What kind of entities do you want to extract?
   utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Rasa Open Source or Rasa X?
+  - text: Would you like to know more about Autobot Open Source or Autobot X?
   utter_ask_feedback:
   - buttons:
     - payload: '/feedback{{"feedback_value": "positive"}}'
@@ -202,13 +202,13 @@ responses:
   utter_ask_for_nlu_specifics:
   - text: Anything in particular you'd like to know about, e.g. intent classification or entity recognition?
   utter_ask_goal:
-  - text: If you're new to Rasa, I can help you get started! If you've already started building an assistant, you can also ask me about the different parts of Rasa 🐦
+  - text: If you're new to Autobot, I can help you get started! If you've already started building an assistant, you can also ask me about the different parts of Autobot 🐦
   utter_ask_if_problem:
   - text: Did you encounter any problems during installation?
   utter_ask_job_function:
   - text: What's your job? 🕴
   utter_ask_x_local_server:
-  - text: Are you trying to install Rasa X on your local machine or on a server?
+  - text: Are you trying to install Autobot X on your local machine or on a server?
   utter_ask_migration:
   - text: Are you migrating from another tool?
   utter_ask_name:
@@ -219,22 +219,22 @@ responses:
   - text: Which would you like to do first?
     buttons:
     - payload: /get_started_playground
-      title: Try out Rasa in the online Rasa Playground
+      title: Try out Autobot in the online Autobot Playground
     - payload: /install_rasa
-      title: Install Rasa on your own computer
+      title: Install Autobot on your own computer
     - payload: '/trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}'
-      title: Find out more about Rasa
+      title: Find out more about Autobot
   utter_playground_intro:
   - text: |-
-        In the [Rasa Playground](https://rasa.com/docs/rasa/playground) you can
-          build a Rasa prototype entirely online. Once you've built your prototype, you can talk to
+        In the [Autobot Playground](https://komu.vn/docs/autobot/playground) you can
+          build a Autobot prototype entirely online. Once you've built your prototype, you can talk to
           your bot online and download your project to continue developing it locally.
   utter_ask_playground_help:
-  - text: Do you have any questions or issues you're running into with Rasa Playground?
+  - text: Do you have any questions or issues you're running into with Autobot Playground?
   utter_ask_use_case:
-  - text: What kind of assistant do you want to build with Rasa?
+  - text: What kind of assistant do you want to build with Autobot?
   utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Rasa Open Source or Rasa X?
+  - text: Ok, which product would you like to know more about? Autobot Open Source or Autobot X?
   utter_ask_which_tool:
   - text: Which tool are you migrating from?
   utter_awesome:
@@ -255,7 +255,7 @@ responses:
   - text: Can do!
   - text: You got it. 👍
   utter_canthelp:
-  - text: I'm sorry I couldn't help you. If you have general questions about Rasa, please head to our [forum](https://forum.rasa.com/), otherwise contact us at [hi@rasa.com](mailto:hi@rasa.com) for anything else.
+  - text: I'm sorry I couldn't help you. If you have general questions about Autobot, please head to our [forum](https://forum.komu.vn/), otherwise contact us at [hi@komu.vn](mailto:hi@komu.vn) for anything else.
   utter_cantsignup:
   - text: I can't sign you up if you don't provide your email 😉
   utter_change_mind:
@@ -267,11 +267,11 @@ responses:
   utter_confirmationemail:
   - text: We sent a confirmation email to {email}.
   utter_could_not_subscribe:
-  - text: Something went wrong, I couldn't subscribe you to the Rasa newsletter 😞
+  - text: Something went wrong, I couldn't subscribe you to the Autobot newsletter 😞
   utter_contact_email:
-  - text: You can’t speak to a human directly in this chat, but you can email us at hi@rasa.com.
+  - text: You can’t speak to a human directly in this chat, but you can email us at hi@komu.vn.
   utter_crf:
-  - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://rasa.com/docs/nlu/dataformat/).
+  - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://komu.vn/docs/nlu/dataformat/).
   utter_default:
   - text: Sorry, I didn't get that 🤷. Could you please rephrase?
   - text: I didn't understand, could you rephrase that?
@@ -280,13 +280,13 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_to_forum_for_help:
-  - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.rasa.com/).
+  - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.komu.vn/).
   utter_docu:
-  - text: If you want some more awesome Rasa content, check out our [forum](https://forum.rasa.com/).
+  - text: If you want some more awesome Autobot content, check out our [forum](https://forum.komu.vn/).
   utter_dont_know_nlu_part:
   - text: Hmm, seems like I haven't learned about that part of NLU yet!
   utter_duckling:
-  - text: For that entity I'd suggest using the rule-based [DucklingHTTPExtractor](https://rasa.com/docs/rasa/nlu/components/#ducklinghttpextractor) component 🐥
+  - text: For that entity I'd suggest using the rule-based [DucklingHTTPExtractor](https://komu.vn/docs/autobot/nlu/components/#ducklinghttpextractor) component 🐥
   utter_duckling_info:
   - text: Duckling is a rule-based entity recognition library from Facebook. [Here](https://duckling.wit.ai/) is the link to its documentation.
   utter_encourage_building_bot:
@@ -294,7 +294,7 @@ responses:
   utter_explain_budget:
   - text: If you tell us your budget, we can prepare a package that fits you best.
   utter_explain_business_email:
-  - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Rasa.
+  - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Autobot.
   utter_explain_company:
   - text: Just for completeness.
   utter_explain_core:
@@ -311,25 +311,25 @@ responses:
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
-  - text: Alright, I'll briefly explain the components that make up Rasa then.
+  - text: Alright, I'll briefly explain the components that make up Autobot then.
   utter_explain_use_case:
-  - text: In order to help you best, we need to know what you want to build with Rasa.
+  - text: In order to help you best, we need to know what you want to build with Autobot.
   utter_explain_x:
-  - text: Rasa X is a toolset used to improve contextual assistants built using Rasa Open Source by helping you turn real user conversations into training data. Rasa X includes a user interface and a REST API.
+  - text: Autobot X is a toolset used to improve contextual assistants built using Autobot Open Source by helping you turn real user conversations into training data. Autobot X includes a user interface and a REST API.
   utter_faq_channels_more:
-  - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/) for more information.
+  - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
   utter_faq_languages_more:
-  - text: Please read our [documentation](https://rasa.com/docs/rasa/nlu/language-support/) for more information.
+  - text: Please read our [documentation](https://komu.vn/docs/autobot/nlu/language-support/) for more information.
   utter_faq_ee_more:
-  - text: Please read the Rasa X [documentation](https://rasa.com/docs/rasa-x/) for more information.
+  - text: Please read the Autobot X [documentation](https://komu.vn/docs/autobot-x/) for more information.
   utter_faq_slots_more:
-  - text: Please read our [documentation](https://rasa.com/docs/rasa/core/slots/) for more information.
+  - text: Please read our [documentation](https://komu.vn/docs/autobot/core/slots/) for more information.
   utter_faq_voice_more:
-  - text: Please read our [documentation](https://rasa.com/docs/rasa/user-guide/messaging-and-voice-channels/) for more information.
+  - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
   utter_tutorialnlu:
-  - text: Rasa Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
+  - text: Autobot Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
-  - text: I can give you more specific info depending on where you're at in your Rasa journey. Are you new to Rasa?
+  - text: I can give you more specific info depending on where you're at in your Autobot journey. Are you new to Autobot?
   utter_getstarted:
   - text: To determine how I can help you best, I'm going to ask you a few questions.
   utter_getstarted_new:
@@ -340,9 +340,9 @@ responses:
   - text: Awesome! 🎉
   - text: Cool, let's do it 🚀
   utter_greet:
-  - text: Hey there, my name is Sara.
-  - text: Hi, I'm Sara!
-  - text: Hi! My name's Sara.
+  - text: Hey there, my name is Komu.
+  - text: Hi, I'm Komu!
+  - text: Hi! My name's Komu.
   utter_greet_name:
   - text: Hi, {name}!
   - text: Hello, {name}!
@@ -352,45 +352,45 @@ responses:
   - text: Hi!
   - text: Hey there!
   utter_have_you_used_rasa_before:
-  - text: Have you used Rasa before?
+  - text: Have you used Autobot before?
   utter_inform_privacypolicy:
-  - text: By chatting to me you agree to our [privacy policy](https://rasa.com/privacy-policy/).
+  - text: By chatting to me you agree to our [privacy policy](https://komu.vn/privacy-policy/).
   utter_installation_command:
   - text: |-
-      You will first need to install Rasa Open Source using this installation command. 
+      You will first need to install Autobot Open Source using this installation command. 
 
-      "pip install rasa"
+      "pip install autobot"
   utter_installation_command_followup:
   - text: |-
-      Once you're done, you can install Rasa Open Source with pip using the following command. 
+      Once you're done, you can install Autobot Open Source with pip using the following command. 
 
-      "pip install rasa"
+      "pip install autobot"
   utter_interested_in_starter_packs:
-  - text: Got it, are you interested in seeing any example Rasa Open Source assistants to help you get started?
+  - text: Got it, are you interested in seeing any example Autobot Open Source assistants to help you get started?
   utter_interested_in_installation:
-  - text: Would you like to learn more about installing Rasa?
+  - text: Would you like to learn more about installing Autobot?
   utter_installation_instructions:
-  - text: If you haven't already read the detailed instruction guide, you can look it up [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
+  - text: If you haven't already read the detailed instruction guide, you can look it up [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
   utter_having_trouble_installing:
-  - text: If you are having any trouble installing, you can look up detailed installation instructions [here](https://rasa.com/docs/rasa/user-guide/installation/#step-by-step-installation-guide).
+  - text: If you are having any trouble installing, you can look up detailed installation instructions [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
   - text: If you got it successfully installed, are you ready to start building a contextual assistant?
   utter_link_to_forum:
-  - text: "Here's the link to the forum: [https://forum.rasa.com](https://forum.rasa.com)"
+  - text: "Here's the link to the forum: [https://forum.komu.vn](https://forum.komu.vn)"
   utter_moreinformation:
   - text: Sure, we can book a sales call! Let's get to know each other first 😉
   utter_must_accept:
   - text: We can't speak until you accept.
   utter_nlu_entity_tutorial:
-  - text: '[Part 2](https://blog.rasa.com/rasa-nlu-in-depth-part-2-entity-recognition/) of the Rasa NLU In Depth series from our software engineer Tobias is a great tutorial about entity recognition.'
+  - text: '[Part 2](https://blog.komu.vn/autobot-nlu-in-depth-part-2-entity-recognition/) of the Autobot NLU In Depth series from our software engineer Tobias is a great tutorial about entity recognition.'
   utter_nlu_intent_tutorial:
-  - text: Check out [part 1](https://blog.rasa.com/rasa-nlu-in-depth-part-1-intent-classification/) of the Rasa NLU In Depth series from our software engineer Tobias to learn more about intent classification.
+  - text: Check out [part 1](https://blog.komu.vn/autobot-nlu-in-depth-part-1-intent-classification/) of the Autobot NLU In Depth series from our software engineer Tobias to learn more about intent classification.
   utter_nlu_tools:
-  - text: We recommend using Rasa X to easily create and classify NLU data from within a UI.
+  - text: We recommend using Autobot X to easily create and classify NLU data from within a UI.
   utter_no_email:
   - text: Hmm, I'm not sure that's a valid email, please make sure to include the full address 😅
   utter_no_guide_for_switch:
-  - text: Sorry, but we don't have a migration guide for that tool yet. You can still follow the [tutorial](https://rasa.com/docs/rasa/user-guide/rasa-tutorial/) to build a Rasa assistant based on your existing one, though!
+  - text: Sorry, but we don't have a migration guide for that tool yet. You can still follow the [tutorial](https://komu.vn/docs/autobot/user-guide/autobot-tutorial/) to build a Autobot assistant based on your existing one, though!
   utter_no_more_steps:
   - text: Looks like you've already gone through all the steps!
   utter_no_speak:
@@ -408,18 +408,18 @@ responses:
   utter_possibilities:
   - text: |
       You can ask me about:
-      - how to get started with Rasa
-      - the components of Rasa,
+      - how to get started with Autobot
+      - the components of Autobot,
       - booking a sales call
       - subscribing to our newsletter
   utter_possibilities_to_contribute:
-  - text: Check out the [Contribute to Rasa](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how to contribute code or content. You can also help by answering other members' questions on the [forum](http://forum.rasa.com).
+  - text: Check out the [Contribute to Autobot](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how to contribute code or content. You can also help by answering other members' questions on the [forum](http://forum.komu.vn).
   utter_rasa_x_local_installation:
-  - text: This [page](https://rasa.com/docs/rasa-x/installation-and-setup/install/local-mode) has a guide on how to run Rasa X in local mode.
+  - text: This [page](https://komu.vn/docs/autobot-x/installation-and-setup/install/local-mode) has a guide on how to run Autobot X in local mode.
   utter_rasa_x_server_installation:
-  - text: You can install Rasa X on a server using either [Docker-Compose](https://rasa.com/docs/rasa-x/installation-and-setup/install/docker-compose) or [Helm](https://rasa.com/docs/rasa-x/installation-and-setup/install/helm-chart).
+  - text: You can install Autobot X on a server using either [Docker-Compose](https://komu.vn/docs/autobot-x/installation-and-setup/install/docker-compose) or [Helm](https://komu.vn/docs/autobot-x/installation-and-setup/install/helm-chart).
   utter_rasa_components_details:
-  - text: Rasa Open Source is a machine learning framework for automated text and voice-based conversations. Rasa X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Rasa Open Source framework.
+  - text: Autobot Open Source is a machine learning framework for automated text and voice-based conversations. Autobot X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Autobot Open Source framework.
   utter_react_negative:
   - text: 😕
   - text: 😞
@@ -435,9 +435,9 @@ responses:
       Here a few reasons why you should contribute:
       - Explore the source code in depth
       - Contribute to open source software
-      - Earn [Rasa swag])(https://rasa.com/community/contribute/)!
+      - Earn [Autobot swag])(https://komu.vn/community/contribute/)!
   utter_recommend_forum:
-  - text: You should join the [Rasa Community forum](https://forum.rasa.com), where you can ask questions about Rasa Open Source and Rasa X, find resources, and stay up-to-date with what's happening at Rasa.
+  - text: You should join the [Autobot Community forum](https://forum.komu.vn), where you can ask questions about Autobot Open Source and Autobot X, find resources, and stay up-to-date with what's happening at Autobot.
   utter_response_why_email:
   - text: I need your email address to sign you up to the newsletter.
   - text: I need it so that I can sign you up to the newsletter.
@@ -451,34 +451,34 @@ responses:
     text: Click the button below if you want to start over.
   utter_run_rasa_init:
   - text: |-
-      You can now create a new Rasa assistant and also talk to it by simply running "rasa init".
+      You can now create a new Autobot assistant and also talk to it by simply running "autobot init".
       This comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training. 
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
-  - text: Unfortunately we weren't able to store your information. Sorry about that! You can still contact sales via our [website](https://rasa.com/contact-sales/) 🙂
+  - text: Unfortunately we weren't able to store your information. Sorry about that! You can still contact sales via our [website](https://komu.vn/contact-sales/) 🙂
   utter_search_bar:
   - text: Try using the search bar above for now.
   utter_source_code:
-  - text: Like Rasa Open Source, my code is freely available on GitHub! You can find it [here](https://github.com/RasaHQ/rasa-demo) 👻
+  - text: Like Autobot Open Source, my code is freely available on GitHub! You can find it [here](https://github.com/RasaHQ/autobot-demo) 👻
   utter_starter_pack_info:
   - text: We have example for a Financial Services Assistant available [here](https://github.com/RasaHQ/financial-demo) and a Helpdesk Assistant available [here](https://github.com/RasaHQ/helpdesk-assistant).
   utter_pipeline_english:
-  - text: If your training data is in English, a good starting point is this [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer), which uses both pretrained and supervised embeddings.
+  - text: If your training data is in English, a good starting point is this [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer), which uses both pretrained and supervised embeddings.
   utter_spacy:
-  - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would suggest using the [SpacyEntityExtractor](https://rasa.com/docs/rasa/nlu/components/#spacyentityextractor) component in your pipeline.
+  - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would suggest using the [SpacyEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#spacyentityextractor) component in your pipeline.
   utter_pipeline_nonenglish_spacy:
-  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#a-longer-answer) also works for your language.
+  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#a-longer-answer) also works for your language.
   utter_schedule_enterprise_demo:
-  - text: You can schedule a technical demo of Rasa Enterprise by visiting this [page](https://info.rasa.com/rasa-technical-demo).
+  - text: You can schedule a technical demo of Autobot Enterprise by visiting this [page](https://info.komu.vn/autobot-technical-demo).
   utter_suggestion:
   - text: I don't have a skill to help you with this stage yet, but please ask any questions you have so I can learn them in the future!
   utter_switch_dialogflow:
-  - text: We have a guide for migrating from DialogFlow [here](https://www.rasa.com/docs/rasa/migrate-from/google-dialogflow-to-rasa/).
+  - text: We have a guide for migrating from DialogFlow [here](https://www.komu.vn/docs/autobot/migrate-from/google-dialogflow-to-autobot/).
   utter_switch_luis:
-  - text: We have a guide for migrating from LUIS [here](https://www.rasa.com/docs/rasa/migrate-from/microsoft-luis-to-rasa/).
+  - text: We have a guide for migrating from LUIS [here](https://www.komu.vn/docs/autobot/migrate-from/microsoft-luis-to-autobot/).
   utter_pipeline_nonenglish_nospacy:
-  - text: For {language}, a good starting point is the [recommended pipeline](https://rasa.com/docs/rasa/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English.
+  - text: For {language}, a good starting point is the [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English.
   utter_thank_suggestion:
   - text: Thanks for your input!
   utter_thumbsup:
@@ -490,30 +490,30 @@ responses:
   utter_what_language:
   - text: Which (human) language is your assistant in?
   utter_x_tutorial:
-  - text: Rasa Masterclass covers how to [set up Rasa X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with others.
+  - text: Autobot Masterclass covers how to [set up Autobot X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with others.
   utter_ask_rephrase:
   - text: Can you rephrase the question?
   utter_no_further_info:
   - text: Sorry, that's all the info I've got on that subject 😕
   utter_why_rasa:
-  - text: Rasa provides the infrastructure and tools needed to build high-performing, resilient assistants that work. What's more, Rasa is **open source** - no black-box magic!
+  - text: Autobot provides the infrastructure and tools needed to build high-performing, resilient assistants that work. What's more, Autobot is **open source** - no black-box magic!
   utter_ask_more:
   - text: Would you like to learn more?
   utter_ask_more_details:
   - text: Could you be more specific?
   - text: Can you tell me more?
   utter_ask_more_migrate:
-  - text: Would you like to learn more about the advantages of switching to Rasa?
+  - text: Would you like to learn more about the advantages of switching to Autobot?
   utter_why_rasa_research:
-  - text: Rasa invests in extensive research to create leading-edge conversational AI, enabling developers to create the best text- and voice-based assistants without a dedicated research team.
+  - text: Autobot invests in extensive research to create leading-edge conversational AI, enabling developers to create the best text- and voice-based assistants without a dedicated research team.
   utter_why_rasa_nlu:
-  - text: Rasa's NLU supports multiple languages, single and multiple intents, and both pre-trained and custom entities.
+  - text: Autobot's NLU supports multiple languages, single and multiple intents, and both pre-trained and custom entities.
   utter_why_rasa_dialogue:
-  - text: Assistants built on Rasa can hold meaningful conversations with users - multi-step conversations that remember context and integrate business logic. No state machines here!
+  - text: Assistants built on Autobot can hold meaningful conversations with users - multi-step conversations that remember context and integrate business logic. No state machines here!
   utter_why_rasa_os:
-  - text: Because Rasa is open source, you can customize your bot and explore its inner workings as much as you'd like. There's no vendor lock in, and no hidden algorithms.
+  - text: Because Autobot is open source, you can customize your bot and explore its inner workings as much as you'd like. There's no vendor lock in, and no hidden algorithms.
   utter_why_rasa_compliant:
-  - text: If data security and compliance is a priority for you, Rasa has your back! You can deploy Rasa either in the cloud or on premise and maintain complete control over your assistant & its data.
+  - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
 - action_trigger_response_selector
 - action_default_ask_affirmation

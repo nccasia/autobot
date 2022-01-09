@@ -4,71 +4,71 @@ nlu:
   examples: |
     - it's not working
     - I think it's broken
-    - [Rasa playgrounds](product) isn't working for me
+    - [Autobot playgrounds](product) isn't working for me
     - [Playground](product) is broken
-    - [rasa](product) is not working
+    - [autobot](product) is not working
     - help me can you fix it
     - it's broken
     - it's not training
     - the [playground](product) is not training
-    - [Rasa X](product) isn't working for me
-    - [Rasa Open Source](product) is not training at all
-    - For some reason, [Rasa X](product) never loads and I don't know why
+    - [Autobot X](product) isn't working for me
+    - [Autobot Open Source](product) is not training at all
+    - For some reason, [Autobot X](product) never loads and I don't know why
     - help me please it's not working
     - it won't train
     - the bot won't train
 - intent: why_rasa
   examples: |
-    - why should i use rasa instead of google [dialogflow](current_api)
-    - why rasa
-    - why should I use rasa?
-    - why should I switch to rasa?
-    - what's so great about using Rasa?
-    - how is rasa's NLU better than [watson](current_api) 's
-    - why should i use rasa instead of IBM [watson](current_api) ?
-    - Is it better to use rasa or [luis](current_api)?
-    - Is rasa better than google [dialogflow](current_api)?
-    - what sets rasa apart?
-    - give me a reason to use Rasa
-    - why should I switch to rasa from [dialogflow](current_api)
+    - why should i use autobot instead of google [dialogflow](current_api)
+    - why autobot
+    - why should I use autobot?
+    - why should I switch to autobot?
+    - what's so great about using Autobot?
+    - how is autobot's NLU better than [watson](current_api) 's
+    - why should i use autobot instead of IBM [watson](current_api) ?
+    - Is it better to use autobot or [luis](current_api)?
+    - Is autobot better than google [dialogflow](current_api)?
+    - what sets autobot apart?
+    - give me a reason to use Autobot
+    - why should I switch to autobot from [dialogflow](current_api)
     - why should I switch from [luis](current_api)
-    - give me a reason to switch to Rasa from [luis](current_api)
-    - Why switch to Rasa?
+    - give me a reason to switch to Autobot from [luis](current_api)
+    - Why switch to Autobot?
     - why switch from [dialogflow](current_api)?
     - why not use [watson](current_api)?
-    - why would you opt for rasa
-    - why use rasa
+    - why would you opt for autobot
+    - why use autobot
     - why should I switch
     - I meant why you over competitors ?
-    - why to use RASA
-    - why is Rasa useful
-    - why is rasa better?
-    - why RASA?
-    - why should i choose rasa
-    - why is rasa so good?
-    - why is rasa good
-    - why do I need rasa
-    - why should I use Rasa
-    - why only rasa
-    - why to use rasa
-    - why should I migrate to rasa?
+    - why to use AUTOBOT
+    - why is Autobot useful
+    - why is autobot better?
+    - why AUTOBOT?
+    - why should i choose autobot
+    - why is autobot so good?
+    - why is autobot good
+    - why do I need autobot
+    - why should I use Autobot
+    - why only autobot
+    - why to use autobot
+    - why should I migrate to autobot?
     - why migrate?
     - why switch?
     - why not use ibm watson
-    - why people go for Rasa chatbot?
-    - why to use rasa over other available platform
+    - why people go for Autobot chatbot?
+    - why to use autobot over other available platform
     - i want to know more about nlu and why is it better than watson or luis
-    - why is rasa a good nlp libarary
+    - why is autobot a good nlp libarary
     - and why i should not use Tenserflow?
     - why would i use your product
-    - why is rasa interesting
-    - Why rasa?
-    - Why choose rasa?
+    - why is autobot interesting
+    - Why autobot?
+    - Why choose autobot?
 - intent: ask_how_contribute
   examples: |
     - Can I assist?
     - Can I help improve your code at all?
-    - How can I add code to Rasa
+    - How can I add code to Autobot
     - How can I assist the cause?
     - How can I be a contributor?
     - How can I be helpful?
@@ -80,9 +80,9 @@ nlu:
     - How can one contribute to this cause?
     - How can one contribute?
     - How does one go about making their contribution?
-    - I want to help improve Rasa
+    - I want to help improve Autobot
     - I want to help the cause.
-    - I want to make Rasa better
+    - I want to make Autobot better
     - I want to offer assistance
     - I want to put some of my effort in.
     - I would like to contribute.
@@ -110,13 +110,13 @@ nlu:
     - how can I help improve your code
     - how can I help improve your code?
     - how can I help?
-    - how can I improve Rasa
-    - how can i contribute to Rasa
+    - how can I improve Autobot
+    - how can i contribute to Autobot
     - how can i contribute to it
-    - how contribute to Rasa
+    - how contribute to Autobot
     - how do I contribute?
-    - how help Rasa
-    - how to improve Rasa
+    - how help Autobot
+    - how to improve Autobot
     - in what ways can I help out?
     - what can I do?
 - intent: ask_question_in_forum
@@ -165,23 +165,23 @@ nlu:
     - to the forum
 - intent: ask_which_events
   examples: |
-    - Any other event like rasa meetup in future?
-    - Does Rasa host any events?
+    - Any other event like autobot meetup in future?
+    - Does Autobot host any events?
     - Can you tell me what kinds of events you have?
     - Could you please list the kinds of events that you have?
     - Do you have a user group
     - Give me the events you have.
-    - I want to meet Rasa
-    - Is there a Rasa meetup
+    - I want to meet Autobot
+    - Is there a Autobot meetup
     - Is there a meetup
-    - Is there any Rasa meetups?
+    - Is there any Autobot meetups?
     - Tell me all of the events you have.
     - Tell me the events you have
     - What are all of the events you have?
     - What are the events available?
     - What are the events now?
     - What are the events that you have?
-    - What do you know about rasa meetups?
+    - What do you know about autobot meetups?
     - What events are scheduled for today?
     - What events are there?
     - What is on the calendar for this month?
@@ -196,7 +196,7 @@ nlu:
     - Which events are available?
     - Which events do you have?
     - Which events you got?
-    - You have rasa meetups?
+    - You have autobot meetups?
     - can you explain what the events are?
     - can you tell all of the events?
     - does the community have meet ups?
@@ -231,7 +231,7 @@ nlu:
     - Do you know when is the next event in [Montreal](location)?
     - If there is an upcoming event when is it?
     - Is next community event held in 2019?
-    - Is there a Rasa event in [San Francisco](location)
+    - Is there a Autobot event in [San Francisco](location)
     - Is there an event in [Montreal](location)?
     - Is there any special in next community event?
     - On what day is the next event scheduled?
@@ -240,7 +240,7 @@ nlu:
     - What even is coming up next and when is it please?
     - What is the date of the next community event?
     - What's the next community event
-    - What's the next rasa event
+    - What's the next autobot event
     - When does the upcoming event occur?
     - When is it planned the next event in [Montreal](location)?
     - When is it scheduled the next community event?
@@ -279,16 +279,16 @@ nlu:
     - Why add to your business?
     - Why aid your opportunity?
     - Why be a part of your mission?
-    - Why contribute to Rasa?
+    - Why contribute to Autobot?
     - Why do I want to help with your code
-    - Why help Rasa's organization?
+    - Why help Autobot's organization?
     - Why should I add to your code
     - Why should I contribute
-    - Why should I contribute to Rasa
+    - Why should I contribute to Autobot
     - Why should I contribute to your code?
     - Why should I devote effort to working on your code
     - Why should I devote time to your code
-    - Why should I help to improve Rasa
+    - Why should I help to improve Autobot
     - what are the benefits of helping
     - what do I get if I contribute
     - what will i get for the contribution?
@@ -298,11 +298,11 @@ nlu:
 - intent: book_demo
   examples: |
     - I would like to have a demo scheduled
-    - Is there a live demo of rasa somewhere ?
+    - Is there a live demo of autobot somewhere ?
     - Can i have a deno
     - bookin
-    - I want to see a demonstration of rasa enterprise
-    - How can I try out rasa enterprise
+    - I want to see a demonstration of autobot enterprise
+    - How can I try out autobot enterprise
 - intent: contact_sales
   examples: |
     - But I wanted a sales call
@@ -318,7 +318,7 @@ nlu:
     - I want an offer for your platform
     - I want to book a call
     - I want to book a call with your sales team
-    - I want to buy the rasa platform
+    - I want to buy the autobot platform
     - I want to contact sales
     - I want to contact the sales team
     - I want to get in touch with your sales guys
@@ -336,9 +336,9 @@ nlu:
     - I would like to have a call with sales team
     - I would like to talk to someone from your sales team
     - i want to buy the enterprise edition
-    - i would like rasa enterprise
-    - purchase rasa enterprise
-    - buy rasa enterprise
+    - i would like autobot enterprise
+    - purchase autobot enterprise
+    - buy autobot enterprise
     - Ok I want to talk to your sales team immediately
     - Please connect me to someone from sales
     - Please schedule a sales call
@@ -405,7 +405,7 @@ nlu:
     - i want to book a appointment
     - i want to book a sales call
     - i want to bookk a sales call
-    - i want to buy the rasa platform
+    - i want to buy the autobot platform
     - i want to call
     - i want to chat to sales
     - i want to connect to sales
@@ -423,7 +423,7 @@ nlu:
     - i'd like to talk to a sales person
     - i'd like to talk to sales
     - id like a call please
-    - id like to talk to someone who can explain me what i can do with rasa
+    - id like to talk to someone who can explain me what i can do with autobot
     - iwant booking sales
     - just gimme a call
     - let me call the sales team
@@ -459,7 +459,7 @@ nlu:
     - sales team connection
     - sign me up, my email is Elizabeth@yahoo.com
     - talk to sales team
-    - we started working with rasa but now we need support
+    - we started working with autobot but now we need support
 - intent: enter_data
   examples: |
     - $1
@@ -490,7 +490,7 @@ nlu:
     - Able to integrate with paypal, wordpress, facebook andd twilio
     - An ice cube bot
     - Country names
-    - Evaluate Rasa :-)
+    - Evaluate Autobot :-)
     - Flexible, but looking for low-cost alternative to proof of concept
     - I am [Christina Sullivan](name)
     - I am [Hattie Rice](name)
@@ -587,7 +587,7 @@ nlu:
     - My name si [tom Harbin](name)
     - No job
     - None
-    - Rasa bot
+    - Autobot bot
     - SCALABLE MINDS
     - The master of desaster
     - The name of the company is [Daimler](company)
@@ -684,7 +684,7 @@ nlu:
     - None?
     - [Owner](job_function)
     - [Product Manager](job_function)
-    - [Rasa](company)
+    - [Autobot](company)
     - Robert.Sparks@gmail.com
     - [SAP](company)
     - [Scalable Minds](company)
@@ -825,7 +825,7 @@ nlu:
     - can you try E_Conder@gmail.com instead?
     - chatbot
     - chief lemonade officer
-    - chief nerd at rasa technologies
+    - chief nerd at autobot technologies
     - company: [uber](company)
     - conversational
     - customer service
@@ -1178,7 +1178,7 @@ nlu:
     - My name is [manuel](name)
     - I am [Aniket](name)
     - general and sales
-    - [rasa](product)
+    - [autobot](product)
     - [botpress](current_api)
     - simple bpt
     - education bot
@@ -1203,86 +1203,86 @@ nlu:
     - [dialog management](product)
     - [dialogue management](product) please
     - [Dialogue management](product)
-    - Rasa [Core](product)
-    - Rasa [core](product)
-    - rasa [core](product)
+    - Autobot [Core](product)
+    - Autobot [core](product)
+    - autobot [core](product)
     - Only [NLU](product)
-    - RASA [NLU](product)
-    - Rasa [NLU](product)
+    - AUTOBOT [NLU](product)
+    - Autobot [NLU](product)
     - [nlu](product)
     - [nlu](product) part
     - [NLU](product)
-    - and rasa [nlu](product)?
-    - rasa [nlu](product)
-    - just Rasa [NLU](product)
+    - and autobot [nlu](product)?
+    - autobot [nlu](product)
+    - just Autobot [NLU](product)
     - just [NLU](product)
-    - just rasa [nlu](product)
-    - [Rasa Playground](product)
+    - just autobot [nlu](product)
+    - [Autobot Playground](product)
     - [interactive playground](product)
-    - [rasa playground](product)
-    - [Rasa X](product)
+    - [autobot playground](product)
+    - [Autobot X](product)
 - intent: how_to_get_started
   examples: |
     - can you help me to build a bot
     - can you tell me how to build a bot?
-    - Can I build a FAQ robot with Rasa?
+    - Can I build a FAQ robot with Autobot?
     - I wanted to build a bot my product customer support
     - Get started
-    - HOW CAN i connect to rasa
+    - HOW CAN i connect to autobot
     - Help me get started
-    - Hi, how can i get started with [rasa x](product)
-    - Hot to get started with rasa
+    - Hi, how can i get started with [autobot x](product)
+    - Hot to get started with autobot
     - How can I develop a bot?
-    - How can I get started with Rasa
-    - How can I get started with Rasa?
-    - How can I get started with rasa?
+    - How can I get started with Autobot
+    - How can I get started with Autobot?
+    - How can I get started with autobot?
     - How can I get started?
-    - How can I start with RASA on a legacy windows without Python?
-    - How can I try out Rasa?
+    - How can I start with AUTOBOT on a legacy windows without Python?
+    - How can I try out Autobot?
     - How can i launch a bot?
     - How do I build a bot
     - How do I get started
-    - How do I get started with Rasa?
+    - How do I get started with Autobot?
     - How do I get started?
     - How do I start
     - How do i get started
     - How get started?
-    - How to build a bot in rasa
+    - How to build a bot in autobot
     - How to download?
     - How to get start
     - How to get started
-    - How to get started with Rasa
-    - How to get started with Rasa [core](product)?
-    - How to get started with Rasa?
+    - How to get started with Autobot
+    - How to get started with Autobot [core](product)?
+    - How to get started with Autobot?
     - How to get started?
     - How to get starter?
     - How to make a bot
-    - How to start using Rasa
+    - How to start using Autobot
     - I am [new](user_type)
-    - I am [new](user_type) to Rasa
+    - I am [new](user_type) to Autobot
     - I like to build a bot
-    - I need to know if I can use Rasa to build an application?
+    - I need to know if I can use Autobot to build an application?
     - I want to build a bot
     - I want to build a chatbot
-    - I want to create chatbot using Rasa
-    - I want to implement rasa
-    - I want to know how to get started with rasa
+    - I want to create chatbot using Autobot
+    - I want to implement autobot
+    - I want to know how to get started with autobot
     - I'm [new](user_type)
-    - I'm [new](user_type) in Rasa, help me!
-    - I'm [new](user_type) to Rasa
-    - I'm [new](user_type) to rasa
+    - I'm [new](user_type) in Autobot, help me!
+    - I'm [new](user_type) to Autobot
+    - I'm [new](user_type) to autobot
     - Im [new](user_type)
     - Lets start with the basics
     - Please tell me how I can start?
     - Please tell me how to get started
-    - Please tell me how to get started with rasa
-    - Show me learning resources about Rasa
+    - Please tell me how to get started with autobot
+    - Show me learning resources about Autobot
     - Sure, give me the basics
     - Tell me how to get started
-    - Tell me how to get started with Rasa
-    - Tell me more about Get started with Rasa
-    - What are the prerequisites for installing RASA
-    - What do I Need for Rasa implementation?
+    - Tell me how to get started with Autobot
+    - Tell me more about Get started with Autobot
+    - What are the prerequisites for installing AUTOBOT
+    - What do I Need for Autobot implementation?
     - Yeah please help me out
     - Yes I am [new](user_type)
     - [new](user_type)
@@ -1294,146 +1294,146 @@ nlu:
     - can you help me build a chatbot
     - can you help me get started?
     - do you know how to set up a chatbot?
-    - find out how to get started with Rasa
+    - find out how to get started with Autobot
     - from where I should start?
     - get starte
     - get started
     - get started pls
-    - get started with Rasa
-    - get started with rasa
-    - get strarted with rasa
+    - get started with Autobot
+    - get started with autobot
+    - get strarted with autobot
     - help me build a bot
     - help me get started
-    - help with rasa
+    - help with autobot
     - hi can you help e build a chatbot
     - how about building chatbot
     - how can I build a chatbot
     - how can I get started
     - how can I get started?
-    - how can I learn rasa
+    - how can I learn autobot
     - how can i build a chatbot
-    - how can i get started with Rasa?
-    - how can i get started with rasa
+    - how can i get started with Autobot?
+    - how can i get started with autobot
     - how can i get started?
     - how can i start
-    - how cna i get started with rasa
+    - how cna i get started with autobot
     - how do I build a bot?
     - how do I get started
-    - how do I get started with Rasa
-    - how do I get started with rasa
+    - how do I get started with Autobot
+    - how do I get started with autobot
     - how do I get started?
     - how do I start
-    - how do I use rasa
+    - how do I use autobot
     - how do i build a bot
     - how do i build a bot?
     - how do i build a chatbot?
-    - how do i build a rasa chatbot?
+    - how do i build a autobot chatbot?
     - how do i get startd?
     - how do i get started
     - how do i get started with [NLU](product)
     - how do i get started with [nlu](product)
-    - how do i get started with rasa
-    - how do i get started with rasa [nlu](product)
-    - how do i get started with rasa myself?
+    - how do i get started with autobot
+    - how do i get started with autobot [nlu](product)
+    - how do i get started with autobot myself?
     - how do i get started?
-    - how do i learn rasa [core](product)
-    - how can i start with rasa [core](product)?
+    - how do i learn autobot [core](product)
+    - how can i start with autobot [core](product)?
     - how do i set up a chatbot?
     - how do i sstart
     - how do i start
-    - how do i train rasa [core](product)
-    - how do i train rasa [nlu](product)
+    - how do i train autobot [core](product)
+    - how do i train autobot [nlu](product)
     - how do you build a bot
-    - how easy is it to use rasa?
+    - how easy is it to use autobot?
     - how start
-    - how this Rasa works
+    - how this Autobot works
     - how to build a bot
     - how to build a bot?
     - how to build a chatbot
-    - how to build chatbot using rasa
+    - how to build chatbot using autobot
     - how to create a basic chat bot
     - how to get sarted
     - how to get start
-    - how to get start with Rasa
+    - how to get start with Autobot
     - how to get started
     - how to get started with
-    - how to get started with Rasa
-    - how to get started with Rasa?
+    - how to get started with Autobot
+    - how to get started with Autobot?
     - how to get started with [nlu](product)
-    - how to get started with rasa
-    - how to get started with rasa ?
-    - how to get started with rasa [nlu](product)
+    - how to get started with autobot
+    - how to get started with autobot ?
+    - how to get started with autobot [nlu](product)
     - how to get started with rassa
     - how to get started?
     - how to get strated
     - how to get strated?
-    - how to learn RASA
-    - how to learn rasa [core](product)
-    - how to setup rasa
+    - how to learn AUTOBOT
+    - how to learn autobot [core](product)
+    - how to setup autobot
     - how to start
-    - how to start RASA
-    - how to start rasa
+    - how to start AUTOBOT
+    - how to start autobot
     - how to start with it
-    - how to start with rasa
-    - how to start with rasa?
+    - how to start with autobot
+    - how to start with autobot?
     - how to use
     - how toget strated?
     - how t oget started
-    - hw to get started with Rasa
+    - hw to get started with Autobot
     - i am [new](user_type)
-    - i am [new](user_type) to rasa
+    - i am [new](user_type) to autobot
     - i am a [new](user_type)
     - i am a [new](user_type) user
     - i m [new](user_type)
-    - i need help with rasa
+    - i need help with autobot
     - i wanna build a bot
     - i wanna get started
-    - i wanna try rasa [nlu](product)
+    - i wanna try autobot [nlu](product)
     - i want to built a chatbot please help me
     - i want to develop a chatbot
     - i want to get started
-    - i want to get started with rasa
+    - i want to get started with autobot
     - i want to know how can buld my own bot
-    - i want to know how to start with Rasa
+    - i want to know how to start with Autobot
     - i want to make intelligence chatbot
     - i want to use [nlu](product)
-    - i want to use rasa to build my chatbot
-    - i would like to know how to get started with Rasa
-    - i'd like to get started with rasa
+    - i want to use autobot to build my chatbot
+    - i would like to know how to get started with Autobot
+    - i'd like to get started with autobot
     - i'm [new](user_type)
-    - i'm [new](user_type) to rasa
-    - im a [new](user_type) to rasa
+    - i'm [new](user_type) to autobot
+    - im a [new](user_type) to autobot
     - let's start
     - lets get started
-    - ok i am [new](user_type) to Rasa
-    - ow to get started with Rasa
+    - ok i am [new](user_type) to Autobot
+    - ow to get started with Autobot
     - please teach me
     - pls explain how to get started
-    - so, how do I use rasa?
-    - start rasa
-    - tell me how i can get started with rasa
+    - so, how do I use autobot?
+    - start autobot
+    - tell me how i can get started with autobot
     - tell me how to get started with [core](product)
     - tell me how to start
-    - tell me more about how to use rasa
+    - tell me more about how to use autobot
     - what is the best place to get started?
     - where can i learn to build a chatbot
     - where do i find instructions
     - where do i start?
     - where should i start from
-    - where to start the development of rasa
+    - where to start the development of autobot
     - where to start?
-    - I am trying to build a bot using rasa
+    - I am trying to build a bot using autobot
     - i am [new](user_type) but so how can i start
-    - rasa basics
+    - autobot basics
     - how can i get stared
     - how to build assistant?
-    - how to build assistant with rasa?
+    - how to build assistant with autobot?
     - how to using you
     - create chatbot steps
-    - can you tell me how to create a new rasa project
+    - can you tell me how to create a new autobot project
     - can you help me build my bot?
     - start
-    - how to build bot with rasa x
+    - how to build bot with autobot x
 - intent: human_handoff
   examples: |
     - Can I speak to anyone who can really help me?
@@ -1446,7 +1446,7 @@ nlu:
     - can I speak to a person?
     - can i please speak to a human?
     - can you forward me to your team
-    - can you please connect me to a real rasa employee?
+    - can you please connect me to a real autobot employee?
     - can you put me in touch with a human?
     - do you have human support ?
     - gimme a proper human
@@ -1460,12 +1460,12 @@ nlu:
     - i want to talk to a human
     - i want to talk to a person
     - i want to talk to human
-    - i want to talk to someone at rasa
+    - i want to talk to someone at autobot
     - i want to talk to someone else
     - i want to talk to someone who is smarter than you
     - i would like to speak to a person
-    - i'd rather speak with a real rasa employee
-    - id like to talk to a real rasa employee
+    - i'd rather speak with a real autobot employee
+    - id like to talk to a real autobot employee
     - let me speak with a real person please
     - let me talk to a human
     - let me talk to a real person
@@ -1507,113 +1507,113 @@ nlu:
     - i want to talk to a real person
 - intent: install_rasa
   examples: |
-    - how do I get rasa [core](product)
-    - how do i get rasa [core](product)
-    - how do i get rasa [nlu](product)
+    - how do I get autobot [core](product)
+    - how do i get autobot [core](product)
+    - how do i get autobot [nlu](product)
     - Can you shw me some information about intallation?
-    - How do I download RASA
-    - How do I download rasa ?
-    - Hoe do I install [Rasa X](product)
-    - install [Rasa X](product)
-    - I want to install [Rasa X](product)
-    - How to install [rasa X](product)?
-    - Help me install [rasa x](product)
-    - Can you get me Rasa [Core](product)?
-    - Can you help me to install Rasa?
-    - Do you mind helping me install Rasa?
-    - Help me get Rasa [Core](product).
-    - Help me install Rasa
-    - How do I install Rasa Stack?
+    - How do I download AUTOBOT
+    - How do I download autobot ?
+    - Hoe do I install [Autobot X](product)
+    - install [Autobot X](product)
+    - I want to install [Autobot X](product)
+    - How to install [autobot X](product)?
+    - Help me install [autobot x](product)
+    - Can you get me Autobot [Core](product)?
+    - Can you help me to install Autobot?
+    - Do you mind helping me install Autobot?
+    - Help me get Autobot [Core](product).
+    - Help me install Autobot
+    - How do I install Autobot Stack?
     - How i install
-    - How to install Rasa
-    - How to install Rasa Stack
-    - How to install Rasa [Core](product)?
-    - How to install Rasa?
-    - How to install rasa
-    - How to install rasa stack
-    - I have chosen Rasa Stack
-    - I have decided on Rasa Stack
-    - I need Rasa Stack
-    - I need Rasa Stack.
-    - I need assistance in getting Rasa Stack.
-    - I need to get Rasa Stack up and running.
-    - I need to install Rasa
-    - I need to install Rasa [Core](product).
-    - I need to install Rasa [NLU](product).
-    - I require Rasa Stack?
-    - I think I want to install Rasa Stack
-    - I want info on installing Rasa
-    - I want to do a Rasa Stack installation
-    - I want to install Rasa Stack
-    - I want to install Rasa [Core](product)
-    - I want to install rasa
-    - I want to use Rasa Stack
-    - I'd like to install Rasa [Core](product)
-    - I'd like to install Rasa [NLU](product)
-    - I'd like to perform an installation of Rasa Stack
-    - I'm getting Rasa Stack
-    - I'm going to install Rasa Stack
-    - I'm installing Rasa Stack
-    - Installing Rasa Stack will be extremely helpful to me.
-    - Installing rasa
-    - Its urgent for me to install Rasa.
-    - Just install Rasa Stack
-    - Let me install Rasa Stack.
-    - Please assist me with installing Rasa Stack.
-    - Please help me install Rasa Stack
-    - Please install Rasa Stack
-    - Please, I need Rasa [Core](product).
-    - Rasa Stack is what I will be installing
-    - Thank you in advance for suggesting I install Rasa [NLU](product).
-    - Where to get Rasa Stack?
-    - Yes, I do need Rasa Stack.
+    - How to install Autobot
+    - How to install Autobot Stack
+    - How to install Autobot [Core](product)?
+    - How to install Autobot?
+    - How to install autobot
+    - How to install autobot stack
+    - I have chosen Autobot Stack
+    - I have decided on Autobot Stack
+    - I need Autobot Stack
+    - I need Autobot Stack.
+    - I need assistance in getting Autobot Stack.
+    - I need to get Autobot Stack up and running.
+    - I need to install Autobot
+    - I need to install Autobot [Core](product).
+    - I need to install Autobot [NLU](product).
+    - I require Autobot Stack?
+    - I think I want to install Autobot Stack
+    - I want info on installing Autobot
+    - I want to do a Autobot Stack installation
+    - I want to install Autobot Stack
+    - I want to install Autobot [Core](product)
+    - I want to install autobot
+    - I want to use Autobot Stack
+    - I'd like to install Autobot [Core](product)
+    - I'd like to install Autobot [NLU](product)
+    - I'd like to perform an installation of Autobot Stack
+    - I'm getting Autobot Stack
+    - I'm going to install Autobot Stack
+    - I'm installing Autobot Stack
+    - Installing Autobot Stack will be extremely helpful to me.
+    - Installing autobot
+    - Its urgent for me to install Autobot.
+    - Just install Autobot Stack
+    - Let me install Autobot Stack.
+    - Please assist me with installing Autobot Stack.
+    - Please help me install Autobot Stack
+    - Please install Autobot Stack
+    - Please, I need Autobot [Core](product).
+    - Autobot Stack is what I will be installing
+    - Thank you in advance for suggesting I install Autobot [NLU](product).
+    - Where to get Autobot Stack?
+    - Yes, I do need Autobot Stack.
     - am struck with installation
-    - am struck with installation of rasa [nlu](product) and [core](product) in my mac book
-    - can i run rasa on my computer?
+    - am struck with installation of autobot [nlu](product) and [core](product) in my mac book
+    - can i run autobot on my computer?
     - can you help me with installation
-    - can you help me with installation of rasa [nlu](product) and train my first bot
+    - can you help me with installation of autobot [nlu](product) and train my first bot
     - download
-    - dude, i want install rasa
+    - dude, i want install autobot
     - having some problems with installation
     - help me wih the installation
-    - hi i am not able install rasa demo in my machine
-    - how can I install RASA
+    - hi i am not able install autobot demo in my machine
+    - how can I install AUTOBOT
     - how can i install python
-    - how can i install rasa
-    - how do I install Rasa
+    - how can i install autobot
+    - how do I install Autobot
     - how do I install it?
-    - how do I install rasa in windows
-    - how do I install rasa?
-    - how do I run rasa on windows
+    - how do I install autobot in windows
+    - how do I install autobot?
+    - how do I run autobot on windows
     - how do i install
-    - how do i install rasa?
+    - how do i install autobot?
     - how to install
     - how to install on window
-    - how to install rasa [core](product)?
-    - how to install rasa in my system
-    - how to install rasa on windows?
-    - how to install rasa stack
-    - how to install rasa?
+    - how to install autobot [core](product)?
+    - how to install autobot in my system
+    - how to install autobot on windows?
+    - how to install autobot stack
+    - how to install autobot?
     - how to install rasa_nlu
-    - how to install sara in my server
-    - how to install the rasa stack
+    - how to install komu in my server
+    - how to install the autobot stack
     - i need help setting up
-    - i need to download rasa
+    - i need to download autobot
     - i want to install
-    - i want to install rasa
-    - i want to use pip to install sara
+    - i want to install autobot
+    - i want to use pip to install komu
     - install
-    - install Rasa [NLU](product)
-    - install Rasa on Linux
-    - install Rasa on Mac
-    - install rasa stack
+    - install Autobot [NLU](product)
+    - install Autobot on Linux
+    - install Autobot on Mac
+    - install autobot stack
     - please tell steps for installing chatbot
-    - what do I need to install Rasa
-    - what sould i do to install rasa
-    - installation steps of rasa
-    - how can I install [rasa open source](product)?
-    - How to download rasa
-    - where do i download rasa
+    - what do I need to install Autobot
+    - what sould i do to install autobot
+    - installation steps of autobot
+    - how can I install [autobot open source](product)?
+    - How to download autobot
+    - where do i download autobot
     - I have a specific question regarding installation
 - intent: nlu_generation_tool_recommendation
   examples: |
@@ -1637,15 +1637,15 @@ nlu:
     - I checked the documentation on [intent classification](nlu_part) but I still don’t understand it
     - I don’t understand [entity recognition](nlu_part)
     - I don’t understand [intent classification](nlu_part)
-    - I don’t understand how you handle [entity recognition](nlu_part) at Rasa
-    - I don’t understand how you handle [intent classification](nlu_part) at Rasa
+    - I don’t understand how you handle [entity recognition](nlu_part) at Autobot
+    - I don’t understand how you handle [intent classification](nlu_part) at Autobot
     - I still don’t get how [entity recognition](nlu_part) works
     - I still don’t get how [intent classification](nlu_part) works
-    - I want to know if rasa works with [duckling](nlu_part)
+    - I want to know if autobot works with [duckling](nlu_part)
     - I want to learn about [entity recognition](nlu_part)
     - I want to learn about [intent classification](nlu_part)
     - I was looking for [Duckling](nlu_part) integration
-    - Rasa NLu
+    - Autobot NLu
     - Tell me about the [entity extraction](nlu_part)
     - Tell me about the [entity recognition](nlu_part)
     - [Entity recognition](nlu_part)
@@ -1668,14 +1668,14 @@ nlu:
     - can you explain to me how [intent classification](nlu_part) works?
     - custom [ner](nlu_part)
     - do you use [duckling](nlu_part)
-    - does rasa work with [duckling](nlu_part)?
+    - does autobot work with [duckling](nlu_part)?
     - hm [intents](nlu_part)?
     - how do you integrate [duckling](nlu_part)
     - how does [entity recognition](nlu_part) work?
     - how does [intent classification](nlu_part) work?
-    - how is [entity recognition](nlu_part) managed in rasa?
-    - how is [intent classification](nlu_part) managed in rasa?
-    - is [duckling](nlu_part) part of rasa?
+    - how is [entity recognition](nlu_part) managed in autobot?
+    - how is [intent classification](nlu_part) managed in autobot?
+    - is [duckling](nlu_part) part of autobot?
     - it would be helpful to learn more about [entity recognition](nlu_part)
     - it would be helpful to learn more about [intent classification](nlu_part)
     - sorry its [ner](nlu_part)
@@ -1692,7 +1692,7 @@ nlu:
     - what is [intent recognition](nlu_part)?
     - what is a [intent](nlu_part)?
     - where to [intents](nlu_part)?
-    - where to train [intents](nlu_part) in rasa?
+    - where to train [intents](nlu_part) in autobot?
     - what does NLU server do?
     - how enttity extrcation works
 - intent: pipeline_recommendation
@@ -1724,7 +1724,7 @@ nlu:
     - I want to sign up for the newsletter
     - I want to sign up for the newsletter.
     - I want to subscribe to your newsletter
-    - I want to subscribing to the Rasa newsletter
+    - I want to subscribing to the Autobot newsletter
     - I would like to sign up for the newsletter.
     - I would love to subscribe to a newsletter!
     - I'd like to subscribe
@@ -1737,7 +1737,7 @@ nlu:
     - Subscribe me to the newsletter please!
     - Subscribe me to you newsletter
     - Subscribe newsletter
-    - Subscribe to Rasa newsletter
+    - Subscribe to Autobot newsletter
     - add me as your subscriber
     - add me to the newsletter
     - add me to the newsletter list
@@ -1754,10 +1754,10 @@ nlu:
     - first lets sign up for the newsletter
     - get a subscription
     - get newsletter
-    - get the latest news from Rasa
+    - get the latest news from Autobot
     - get the newsletter
     - gimme the newsletter
-    - hello sara, can you subscribe me to the newsletter?
+    - hello komu, can you subscribe me to the newsletter?
     - how about the newsletter
     - how about the newsletter signup
     - how to subdcribe?
@@ -1795,7 +1795,7 @@ nlu:
     - i would like to subscribe
     - i would like to subscribe to your newsletter
     - i would love to get the newsletter
-    - i would love to receive the rasa newsletter
+    - i would love to receive the autobot newsletter
     - i'd like your newspaper please
     - i'm craving the newsletter
     - id like to receive the newsletter
@@ -1831,7 +1831,7 @@ nlu:
     - send me the newsletter
     - sign me up for that newsletter
     - sign me up for the newsletter - my email is Carolyn_Caskey@yahoo.com
-    - sign me up for the rasa newsletter
+    - sign me up for the autobot newsletter
     - sign up
     - sign up for newsletter
     - sign up for the NL
@@ -1879,11 +1879,11 @@ nlu:
     - i want to use your source code
     - is your code available?
     - source code
-    - we want to have full code of rasa chatbot
+    - we want to have full code of autobot chatbot
     - what is your source code
     - what's your source code?
     - where can I download the source code?
-    - where can I find the rasa source code?
+    - where can I find the autobot source code?
     - where can i find this code
     - where is the source code?
     - where is your source code
@@ -1899,8 +1899,8 @@ nlu:
   examples: |
     - How to migrate from [DialogFlwo](current_api)
     - Do you have any tutorials how to migrate from [dialogflow](current_api)?
-    - How to migrate a bot from [DialogFlow](current_api) to Rasa?
-    - How to migrate from [DialogFlow](current_api) to Rasa?
+    - How to migrate a bot from [DialogFlow](current_api) to Autobot?
+    - How to migrate from [DialogFlow](current_api) to Autobot?
     - How to migrate from [DialogFlow](current_api)?
     - How to migrate from [Luis](current_api)?
     - How to migrate to [DialogFlow](current_api)?
@@ -1910,13 +1910,13 @@ nlu:
     - I use [DialogFlow](current_api)
     - I use [luis](current_api)
     - I use [wit.ai](current_api)
-    - I want to change from [dialogflow](current_api) to rasa
-    - I want to convert my [dialog flow](current_api) bot to rasa
-    - I want to move from [LUIS.ai](current_api) to Rasa
+    - I want to change from [dialogflow](current_api) to autobot
+    - I want to convert my [dialog flow](current_api) bot to autobot
+    - I want to move from [LUIS.ai](current_api) to Autobot
     - I want to switch from [dialog flow](current_api)
-    - I want to switch from [dialogflow](current_api) to rasa
+    - I want to switch from [dialogflow](current_api) to autobot
     - Migration please
-    - Yes I want to switch from [LUIS](current_api) to rasa
+    - Yes I want to switch from [LUIS](current_api) to autobot
     - [DialogFlow](current_api)
     - [LUIS](current_api)
     - [bot framework](current_api)
@@ -1926,13 +1926,13 @@ nlu:
     - [luis](current_api) bot can migrate to raza bot ?
     - [wit](current_api)
     - can i migrate my [luis](current_api) bot to raza
-    - can i switch from [luis](current_api) to rasa?
+    - can i switch from [luis](current_api) to autobot?
     - how can i migrate from [dialogflow](current_api)?
     - how do you switch from [dialogflow](current_api)
-    - how to export [dialogflow](current_api) data to rasa
+    - how to export [dialogflow](current_api) data to autobot
     - i am switching from [luis](current_api)
     - i can migrate microsoft [luis](current_api) bot to raza?
-    - i want to switch from [luis](current_api) to rasa
+    - i want to switch from [luis](current_api) to autobot
     - i'm migrating from [LUIS](current_api)
     - im migrating from [dialogflow](current_api)
     - im moving [luis](current_api)
@@ -1940,72 +1940,72 @@ nlu:
     - migration from [dialogflow](current_api)
     - switching
     - switching from [DialogFlow](current_api)
-    - migrate to rasa
-    - how to migrate my bot to rasa
-    - switch to rasa from another platform
-    - migrate to rasa from another tool
-    - switch to rasa
-    - from which tools can I migrate to rasa?
-    - can I migrate to rasa from another tool?
+    - migrate to autobot
+    - how to migrate my bot to autobot
+    - switch to autobot from another platform
+    - migrate to autobot from another tool
+    - switch to autobot
+    - from which tools can I migrate to autobot?
+    - can I migrate to autobot from another tool?
     - [dialogflow](current_api) and implementation from scratch
     - how to migrate to [dialogueflow](current_api)
     - switch from [dilogueflow](current_api)
     - how do i migrate from [dialogflow](current_api)
 - intent: technical_question
   examples: |
-    - having trouble with rasa installation
+    - having trouble with autobot installation
     - what is helm
-    - how to restart the rasa server
-    - i don't want to run rasa, i want to restart it
-    - action_restart in rasa
+    - how to restart the autobot server
+    - i don't want to run autobot, i want to restart it
+    - action_restart in autobot
     - i want to know restart action
     - how can i restart conversation on chatbot
     - how to restart story if am drooping in between
-    - how to restart rasa
-    - how to restart the rasa
+    - how to restart autobot
+    - how to restart the autobot
     - how to restart rasax
     - docker is restarting
     - restart server
     - I am not able to restart action in some action
-    - how to restart rasa?
+    - how to restart autobot?
     - how do you restart a story?
     - Create ecommerce bot
     - How can I visualise conversation flow?
     - How many languages does Spacy support?
     - and your REST API doesn't work
     - can i makae rest calls
-    - can we use regex is rasa code
+    - can we use regex is autobot code
     - does it support AI
     - how do you retrieve previous messages
     - how many words can you handle?
     - how to use flask?
     - how to visualise dialogue flow
     - is this test compatible with linux?
-    - what database rasa use
+    - what database autobot use
     - what is significance of domain.yml file
     - what is the policy
     - will this work on windows server
     - work with buttons?
     - can I install this on a mac?
-    - database rasa is using
+    - database autobot is using
     - what is the difference between you and LUIS
-    - what is the latest version of rasa?
-    - Can I use Rasa for E-Mail
+    - what is the latest version of autobot?
+    - Can I use Autobot for E-Mail
     - Can you send messages based on events?
-    - How did rasa works?
-    - How do I use ngrok with [rasa x](product)?
+    - How did autobot works?
+    - How do I use ngrok with [autobot x](product)?
     - I want to know more about tracker
     - What is the difference between entities and slots?
-    - Where can I get the source code of Rasa?
+    - Where can I get the source code of Autobot?
     - Which other tools can be used to create chatbots?
-    - an I use Rasa for e-mail applications
-    - any open source GUI rasa have?
+    - an I use Autobot for e-mail applications
+    - any open source GUI autobot have?
     - any other tools to create chatbots?
     - can i install on may mac
-    - can rasa run standalone
+    - can autobot run standalone
     - db processing
-    - do you have docker image for rasa?
-    - does rasa support prestashop?
+    - do you have docker image for autobot?
+    - does autobot support prestashop?
     - hey can i run this onpremise
     - how about interactive learning
     - how can I get a docker image
@@ -2013,12 +2013,12 @@ nlu:
     - how can i deploy my server on production?
     - how i deploy my bot on production server?
     - how to get the metadata file
-    - how to integrate RASA with customer data?
+    - how to integrate AUTOBOT with customer data?
     - how to use formaction
     - how to use form actions
     - how to use forms
     - interactive learning?
-    - is rasa core able to run standalone?
+    - is autobot core able to run standalone?
     - ok quick question here do i download this api
     - tensorflow 1.10.0 has requirement numpy<=1.14.5,>=1.13.3, but you'll have numpy 1.16.0 which is incompatible.
     - training model?
@@ -2027,37 +2027,37 @@ nlu:
     - what is a synonym called?
     - what is endpoint
     - what is pip?
-    - what is the last version of rasa [core](product)?
+    - what is the last version of autobot [core](product)?
     - what technologies did u use to create more mature chatbot?
     - what's pip
     - yes what if i have to code open end responses into some categories
     - best policies to be used
     - Deploy to a Server
-    - Hello, Sara. How can I configure [etnity extraction](nlu_part) for [russian](language) lnguage?
-    - can I use Rasa with my Raspberry Pi
-    - Can I run Rasa on a raspberry pi ?
-    - can I run rasa on a raspberry pi
-    - Can I run rasa on a raspberry pi ?
-    - Is it possible to integrate Rasa with Android to run on mobile devices
-    - What is the min requirements to run rasa
+    - Hello, Komu. How can I configure [etnity extraction](nlu_part) for [russian](language) lnguage?
+    - can I use Autobot with my Raspberry Pi
+    - Can I run Autobot on a raspberry pi ?
+    - can I run autobot on a raspberry pi
+    - Can I run autobot on a raspberry pi ?
+    - Is it possible to integrate Autobot with Android to run on mobile devices
+    - What is the min requirements to run autobot
     - TypeError: 'module' object is not callable
-    - deploy rasa chat bot in flask
-    - How can i automate retraining of my rasa models
-    - can i user rasa for my text classification problem?
+    - deploy autobot chat bot in flask
+    - How can i automate retraining of my autobot models
+    - can i user autobot for my text classification problem?
     - how to initialize a new project?
     - how to train model
     - what are the policy available
     - i need help with policies
     - how to connect mongodb
-    - what is fallback policy in rasa
+    - what is fallback policy in autobot
     - what is a webhook
     - how to handle sending scheduled message to custom webhooks
     - actions
-    - actions on rasa
+    - actions on autobot
     - how to add dropdowns?
     - replace default nlu with custom component
     - which technology is used to create you
-    - rasa-core error
+    - autobot-core error
     - I am getting some error
     - I have a problem
     - I need help with a problem
@@ -2069,27 +2069,27 @@ nlu:
     - i am having trouble setting this up
     - technical side of things?
     - there is error
-    - why do I get errors using rasa?
+    - why do I get errors using autobot?
     - there are some python incompatibilities
     - can this be integrated with mongo db
     - Can you help me with forms
     - can tell me about rasa_sdk
-    - rasa sdk
-    - where is rasa sdk?
+    - autobot sdk
+    - where is autobot sdk?
     - Do you have a python sdk?
-    - RASA sdk
-    - do RASA has sdk to develop bot
+    - AUTOBOT sdk
+    - do AUTOBOT has sdk to develop bot
     - python sdk
     - how to run sdk endpoint in background
     - sdk
-    - where can i find api documentation for rasa x
-    - where is the api for rasa x
+    - where can i find api documentation for autobot x
+    - where is the api for autobot x
     - Hello, where can I find the paper about DIET?
     - Is there a technical paper about DIET?
     - domain
     - How do I get yes / no answer buttons
     - I am searching the changlog
-    - rasa templates
+    - autobot templates
     - how to add in my website
     - php
     - php code
@@ -2106,16 +2106,16 @@ nlu:
     - Can i use NLU on its own
     - do we need to write training data nlu.md
     - For training data, to we need to exclusively write the file in MD format?
-    - How can i talk to RASA through the url
+    - How can i talk to AUTOBOT through the url
     - what is action server
     - is it a best practice to connect an external cms
     - can you show me buttons
     - I'd like to handle chitchat
-    - Can Rasa be incorporated into iOS apps?
+    - Can Autobot be incorporated into iOS apps?
     - how to implement buttons
     - buttons
     - implement buttons
-    - I want to build RASA DIET in google colab
+    - I want to build AUTOBOT DIET in google colab
     - tensorflow-text
     - installation of tensorflow-text
     - ConveRTFeaturizer
@@ -2128,14 +2128,14 @@ nlu:
     - hosting
     - host models
     - What is COnvert?
-    - Hi the command rasa init doesn't do anything in windows
+    - Hi the command autobot init doesn't do anything in windows
     - what is the knowledge base server
     - testing chatbot
     - what is knowledge base
     - knowledge base action
     - multipass issue
     - embeddings
-    - how to write stories to train rasa
+    - how to write stories to train autobot
     - tell me about the nlu training data format
     - how can i get data from a database and use them as a response to a question?
     - how to add a database?
@@ -2157,22 +2157,22 @@ nlu:
     - how long to train
     - what model do you use
     - technical question
-    - rasa core agent information
-    - rasa shell
+    - autobot core agent information
+    - autobot shell
     - what is an intemt
-    - Rasa provides me recall and precision?
-    - i want to run rasa x in ibm cloud
+    - Autobot provides me recall and precision?
+    - i want to run autobot x in ibm cloud
     - how to build stories
     - testing
     - whats tensorflow
     - what is a custom action?
     - which python libraries are used
-    - Should I run the 'rasa init' command in the anaconda prompt ?
-    - Where to run rasa init command ?
+    - Should I run the 'autobot init' command in the anaconda prompt ?
+    - Where to run autobot init command ?
     - how to set threshold ?
     - how to you exit the server
-    - is Rasa works with Unity3d?
-    - rasa uses deep learning ?
+    - is Autobot works with Unity3d?
+    - autobot uses deep learning ?
     - i want to extract predefined entity from user query
 - intent: restart
   examples: |
@@ -2283,16 +2283,16 @@ nlu:
 - synonym: organisation
   examples: |
     - companies
-- synonym: rasa
+- synonym: autobot
   examples: |
-    - Rasa
-    - rasa open source
-    - Rasa Open Source
-    - Rasa open source
-    - rasa Open Source
+    - Autobot
+    - autobot open source
+    - Autobot Open Source
+    - Autobot open source
+    - autobot Open Source
     - open source
-    - open source rasa
-    - RASA open source
+    - open source autobot
+    - AUTOBOT open source
 - synonym: stack
   examples: |
     - fullstack
@@ -2310,18 +2310,18 @@ nlu:
   examples: |
     - Rasax
     - RASAX
-    - Rasa X
-    - rasa x
-    - RASA X
+    - Autobot X
+    - autobot x
+    - AUTOBOT X
     - X
     - rasax
 - synonym: playground
   examples: |
     - Rasaplayground
     - RASAPlayground
-    - Rasa Playground
-    - rasa playground
-    - RASA playgrounds
+    - Autobot Playground
+    - autobot playground
+    - AUTOBOT playgrounds
     - playgrounds
     - Playground
     - rasaplaygrounds

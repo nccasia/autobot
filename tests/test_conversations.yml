@@ -20,11 +20,11 @@ stories:
     - faq: null
   - intent: install_rasa
     user: |-
-      how do I install rasa
+      how do I install autobot
   - action: utter_ask_which_product
   - intent: faq
     user: |-
-      [Rasa X]{"entity": "product", "value": "x"}
+      [Autobot X]{"entity": "product", "value": "x"}
     entities:
     - product: x
   - action: utter_ask_x_local_server
@@ -74,7 +74,7 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     user: |-
-      [Rasa X]{"entity": "product", "value": "x"} plz
+      [Autobot X]{"entity": "product", "value": "x"} plz
     entities:
     - product: x
   - slot_was_set:
@@ -90,7 +90,7 @@ stories:
 - story: faqs
   steps:
   - user: |
-      what is [Rasa X]{"entity": "product", "value": "x"}?
+      what is [Autobot X]{"entity": "product", "value": "x"}?
     intent: faq
   - slot_was_set:
     - product: x
@@ -99,11 +99,11 @@ stories:
 - story: faqs
   steps:
   - user: |
-      Can you tell which messaging channels does rasa support?
+      Can you tell which messaging channels does autobot support?
     intent: faq
   - action: utter_faq
   - action: action_set_faq_slot
-- story: FAQ - tell more about rasa x ee
+- story: FAQ - tell more about autobot x ee
   steps:
   - user: |
       Can you tell me about the enterprise edition?
@@ -116,10 +116,10 @@ stories:
       can you elaborate
     intent: explain
   - action: action_explain_faq
-- story: new to rasa at start
+- story: new to autobot at start
   steps:
   - user: |
-      I'm [new]{"entity": "user_type"} to Rasa
+      I'm [new]{"entity": "user_type"} to Autobot
     intent: how_to_get_started
   - action: action_set_onboarding
   - slot_was_set:
@@ -133,11 +133,11 @@ stories:
   - action: utter_rasa_components_details
   - action: utter_ask_explain_nlucorex
   - user: |
-      you are [open source]{"entity": "product", "value": "rasa"} ?
+      you are [open source]{"entity": "product", "value": "autobot"} ?
     intent: faq
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: not new to rasa/bots, faq rasa
+- story: not new to autobot/bots, faq autobot
   steps:
   - user: |
       How do I get started
@@ -156,11 +156,11 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - user: |
-      What is included in [RASA open source]{"entity": "product", "value": "rasa"} edition?
+      What is included in [AUTOBOT open source]{"entity": "product", "value": "autobot"} edition?
     intent: faq
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: get started rasa open source
+- story: get started autobot open source
   steps:
   - user: |
       How do I get started
@@ -179,10 +179,10 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - user: |
-      [rasa open source]{"entity": "product", "value": "rasa"} first
+      [autobot open source]{"entity": "product", "value": "autobot"} first
     intent: how_to_get_started
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
 - story: just newsletter + confirm
@@ -272,7 +272,7 @@ stories:
     intent: affirm
   - action: utter_thumbsup
   - action: utter_anything_else
-- story: not new to rasa + rasa
+- story: not new to autobot + autobot
   steps:
   - user: |
       help me get started
@@ -289,13 +289,13 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - user: |
-      [rasa open source]{"entity": "product", "value": "rasa"}
+      [autobot open source]{"entity": "product", "value": "autobot"}
     intent: how_to_get_started
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: not new to rasa + rasax
+- story: not new to autobot + rasax
   steps:
   - user: |
       how to get started
@@ -314,7 +314,7 @@ stories:
     - onboarding: false
   - action: utter_ask_which_product
   - user: |
-      [rasa x]{"entity": "product", "value": "x"}
+      [autobot x]{"entity": "product", "value": "x"}
     intent: faq
   - slot_was_set:
     - product: x
@@ -323,7 +323,7 @@ stories:
 - story: faq with entities
   steps:
   - user: |
-      what's the difference between [rasa]{"entity": "product"} and [rasa x]{"entity": "product", "value": "x"}
+      what's the difference between [autobot]{"entity": "product"} and [autobot x]{"entity": "product", "value": "x"}
     intent: faq
   - slot_was_set:
     - product: x
@@ -335,10 +335,10 @@ stories:
       By what means were you made?
     intent: chitchat
   - action: utter_chitchat
-- story: why rasa
+- story: why autobot
   steps:
   - user: |
-      Why should I go with Rasa?
+      Why should I go with Autobot?
     intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
@@ -353,7 +353,7 @@ stories:
 - story: why contribute
   steps:
   - user: |
-      Why should I contribute to Rasa?
+      Why should I contribute to Autobot?
     intent: ask_why_contribute
   - action: utter_reasons_to_contribute
   - user: |
@@ -363,7 +363,7 @@ stories:
 - story: community events
   steps:
   - user: |
-      Does Rasa host any events?
+      Does Autobot host any events?
     intent: ask_which_events
   - action: action_get_community_events
 - story: forum question
@@ -402,13 +402,13 @@ stories:
   - action: utter_ask_playground_install_info
   - intent: install_rasa
     user: |-
-      install rasa
+      install autobot
   - action: utter_ask_which_product
   - intent: how_to_get_started
     user: |-
-      [rasa open source]{"entity": "product", "value": "rasa"}
+      [autobot open source]{"entity": "product", "value": "autobot"}
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
@@ -418,7 +418,7 @@ stories:
   - action: utter_run_rasa_init
   - intent: install_rasa
     user: |-
-      install [rasa x]{"entity": "product", "value": "x"}
+      install [autobot x]{"entity": "product", "value": "x"}
   - slot_was_set:
     - product: x
   - action: utter_ask_x_local_server

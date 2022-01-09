@@ -1,6 +1,6 @@
 version: "2.0"
 stories:
-- story: new to rasa at start, built bot before
+- story: new to autobot at start, built bot before
   steps:
   - intent: how_to_get_started
     entities:
@@ -12,7 +12,7 @@ stories:
   - action: utter_built_bot_before
   - intent: affirm
   - action: utter_ask_migration
-- story: new to rasa at start
+- story: new to autobot at start
   steps:
   - intent: how_to_get_started
     entities:
@@ -35,7 +35,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa at start
+- story: new to autobot at start
   steps:
   - intent: how_to_get_started
     entities:
@@ -51,10 +51,10 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa + built a bot before
+- story: new to autobot + built a bot before
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -88,7 +88,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + not migrating
+- story: new to autobot + not new to chatbots + not migrating
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -122,7 +122,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa + not new to chatbots + migrating from dialogflow
+- story: new to autobot + not new to chatbots + migrating from dialogflow
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -148,7 +148,7 @@ stories:
     - current_api: dialogflow
   - action: utter_switch_dialogflow
   - action: utter_anything_else
-- story: new to rasa + not new to chatbots + migrating from luis
+- story: new to autobot + not new to chatbots + migrating from luis
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -174,7 +174,7 @@ stories:
     - current_api: luis
   - action: utter_switch_luis
   - action: utter_anything_else
-- story: new to rasa + not new to chatbots + migrating from something else
+- story: new to autobot + not new to chatbots + migrating from something else
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -227,7 +227,7 @@ stories:
     - current_api: dialogflow
   - action: utter_switch_dialogflow
   - action: utter_anything_else
-- story: new to rasa + not new to chatbots + migrating from luis
+- story: new to autobot + not new to chatbots + migrating from luis
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -255,7 +255,7 @@ stories:
     - current_api: luis
   - action: utter_switch_luis
   - action: utter_anything_else
-- story: new to rasa + not new to chatbots + migrating from something else
+- story: new to autobot + not new to chatbots + migrating from something else
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -316,7 +316,7 @@ stories:
   - action: action_store_unknown_product
   - action: utter_no_guide_for_switch
   - action: utter_anything_else
-- story: new to rasa/bots, explain stack
+- story: new to autobot/bots, explain stack
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -348,7 +348,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa/bots, explain core
+- story: new to autobot/bots, explain core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -378,7 +378,7 @@ stories:
   - action: utter_also_explain_nlu
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain core
+- story: new to autobot/bots, explain core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -403,10 +403,10 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa/bots, explain x, then nlu+core
+- story: new to autobot/bots, explain x, then nlu+core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -439,7 +439,7 @@ stories:
   - intent: affirm
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa/bots, explain x, then nlu+core
+- story: new to autobot/bots, explain x, then nlu+core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -464,10 +464,10 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa/bots, explain x
+- story: new to autobot/bots, explain x
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -499,7 +499,7 @@ stories:
   - action: utter_also_explain_nlucore
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain nlu
+- story: new to autobot/bots, explain nlu
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -529,7 +529,7 @@ stories:
   - action: utter_also_explain_core
   - intent: deny
   - action: utter_anything_else
-- story: new to rasa/bots, explain nlu then core
+- story: new to autobot/bots, explain nlu then core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -559,7 +559,7 @@ stories:
   - action: utter_also_explain_core
   - intent: affirm
   - action: utter_explain_core
-- story: not new to rasa/bots, explain all
+- story: not new to autobot/bots, explain all
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -577,7 +577,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: not new to rasa/bots, explain all
+- story: not new to autobot/bots, explain all
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -593,10 +593,10 @@ stories:
   - action: utter_ask_which_product
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa/bots, explain all
+- story: new to autobot/bots, explain all
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -623,7 +623,7 @@ stories:
   - action: utter_explain_nlu
   - action: utter_explain_core
   - action: utter_explain_x
-- story: new to rasa/bots, explain all
+- story: new to autobot/bots, explain all
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -648,10 +648,10 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa/bots, don't explain
+- story: new to autobot/bots, don't explain
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -676,7 +676,7 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: deny
   - action: utter_anything_else
-- story: not new to rasa + not interested in products
+- story: not new to autobot + not interested in products
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -692,7 +692,7 @@ stories:
   - action: utter_ask_which_product
   - intent: deny
   - action: utter_thumbsup
-- story: not new to rasa + core
+- story: not new to autobot + core
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -711,7 +711,7 @@ stories:
     - product: core
   - action: utter_explain_core
   - action: utter_anything_else
-- story: not new to rasa + rasa
+- story: not new to autobot + autobot
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -727,31 +727,10 @@ stories:
   - action: utter_ask_which_product
   - intent: how_to_get_started
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: not new to rasa + rasa
-  steps:
-  - intent: how_to_get_started
-  - action: utter_ask_playground_install_info
-  - intent: trigger_response_selector
-    entities:
-    - retrieval_intent: chitchat/ask_whatisrasa
-  - action: action_trigger_response_selector
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: faq
-    entities:
-    - product: rasa
-  - slot_was_set:
-    - product: rasa
-  - action: utter_explain_nlu
-  - action: utter_explain_core
-- story: not new to rasa + rasax
+- story: not new to autobot + autobot
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -767,31 +746,12 @@ stories:
   - action: utter_ask_which_product
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: not new to rasa + rasa
-  steps:
-  - intent: how_to_get_started
-  - action: utter_ask_playground_install_info
-  - intent: trigger_response_selector
-    entities:
-    - retrieval_intent: chitchat/ask_whatisrasa
-  - action: action_trigger_response_selector
-  - action: utter_first_bot_with_rasa
-  - intent: deny
-  - action: action_set_onboarding
-  - slot_was_set:
-    - onboarding: false
-  - action: utter_ask_which_product
-  - intent: how_to_get_started
-    entities:
-    - product: rasa
-  - action: utter_explain_nlu
-  - action: utter_explain_core
-- story: not new to rasa + rasa
+- story: not new to autobot + rasax
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -807,12 +767,52 @@ stories:
   - action: utter_ask_which_product
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: not new to rasa + rasax
+- story: not new to autobot + autobot
+  steps:
+  - intent: how_to_get_started
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: how_to_get_started
+    entities:
+    - product: autobot
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+- story: not new to autobot + autobot
+  steps:
+  - intent: how_to_get_started
+  - action: utter_ask_playground_install_info
+  - intent: trigger_response_selector
+    entities:
+    - retrieval_intent: chitchat/ask_whatisrasa
+  - action: action_trigger_response_selector
+  - action: utter_first_bot_with_rasa
+  - intent: deny
+  - action: action_set_onboarding
+  - slot_was_set:
+    - onboarding: false
+  - action: utter_ask_which_product
+  - intent: faq
+    entities:
+    - product: autobot
+  - slot_was_set:
+    - product: autobot
+  - action: utter_explain_nlu
+  - action: utter_explain_core
+- story: not new to autobot + rasax
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -833,7 +833,7 @@ stories:
     - product: x
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
-- story: skip to info on rasa x
+- story: skip to info on autobot x
   steps:
   - intent: how_to_get_started
     entities:
@@ -842,14 +842,14 @@ stories:
     - product: x
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
-- story: skip to info on rasa
+- story: skip to info on autobot
   steps:
   - intent: how_to_get_started
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: skip to info on rasa nlu
+- story: skip to info on autobot nlu
   steps:
   - intent: how_to_get_started
     entities:
@@ -860,7 +860,7 @@ stories:
     - nlu_part: intent classification
   - action: utter_nlu_intent_tutorial
   - action: utter_offer_recommendation
-- story: not new to rasa + x
+- story: not new to autobot + x
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -881,7 +881,7 @@ stories:
     - product: x
   - action: utter_explain_x
   - action: utter_also_explain_nlucore
-- story: new to rasa + x
+- story: new to autobot + x
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -917,7 +917,7 @@ stories:
   - intent: affirm
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa + rasa oss
+- story: new to autobot + autobot oss
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -939,10 +939,10 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: how_to_get_started
     entities:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa + rasa oss
+- story: new to autobot + autobot oss
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -964,12 +964,12 @@ stories:
   - action: utter_ask_explain_nlucorex
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_explain_nlu
   - action: utter_explain_core
-- story: new to rasa + rasa oss
+- story: new to autobot + autobot oss
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1003,7 +1003,7 @@ stories:
     - product: core
   - action: utter_explain_core
   - action: utter_anything_else
-- story: not new to rasa + nlu + nothing special
+- story: not new to autobot + nlu + nothing special
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1024,7 +1024,7 @@ stories:
   - intent: deny
   - action: utter_tutorialnlu
   - action: utter_anything_else
-- story: not new to rasa + nlu + unknown topic
+- story: not new to autobot + nlu + unknown topic
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1047,7 +1047,7 @@ stories:
   - action: utter_dont_know_nlu_part
   - action: utter_search_bar
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + no recommendation
+- story: not new to autobot + nlu + intent + no recommendation
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1122,7 +1122,7 @@ stories:
     - can_use_spacy: true
   - action: utter_pipeline_nonenglish_spacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, spacy
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1159,7 +1159,7 @@ stories:
     - can_use_spacy: true
   - action: utter_pipeline_nonenglish_spacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, not spacy
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1196,7 +1196,7 @@ stories:
     - can_use_spacy: false
   - action: utter_pipeline_nonenglish_nospacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, not spacy
+- story: not new to autobot + nlu + intent + pipeline recommendation, not spacy
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1229,7 +1229,7 @@ stories:
     - can_use_spacy: false
   - action: utter_pipeline_nonenglish_nospacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + pipeline recommendation, english
+- story: not new to autobot + nlu + intent + pipeline recommendation, english
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1263,7 +1263,7 @@ stories:
     - language: english
   - action: utter_pipeline_english
   - action: utter_anything_else
-- story: not new to rasa + nlu + intent + tool recommendation
+- story: not new to autobot + nlu + intent + tool recommendation
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1288,7 +1288,7 @@ stories:
   - action: utter_offer_recommendation
   - intent: nlu_generation_tool_recommendation
   - action: utter_nlu_tools
-- story: not new to rasa + nlu + entity + no recommendation
+- story: not new to autobot + nlu + entity + no recommendation
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1314,7 +1314,7 @@ stories:
   - intent: deny
   - action: utter_thumbsup
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + pipeline spacy
+- story: not new to autobot + nlu + entity + pipeline spacy
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1349,7 +1349,7 @@ stories:
     - entity_extractor: SpacyEntityExtractor
   - action: utter_spacy
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + pipeline duckling
+- story: not new to autobot + nlu + entity + pipeline duckling
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1384,7 +1384,7 @@ stories:
     - entity_extractor: DucklingHTTPExtractor
   - action: utter_duckling
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + pipeline CRFEntityExtractor
+- story: not new to autobot + nlu + entity + pipeline CRFEntityExtractor
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info
@@ -1419,7 +1419,7 @@ stories:
     - entity_extractor: CRFEntityExtractor
   - action: utter_crf
   - action: utter_anything_else
-- story: not new to rasa + nlu + entity + duckling info
+- story: not new to autobot + nlu + entity + duckling info
   steps:
   - intent: how_to_get_started
   - action: utter_ask_playground_install_info

@@ -10,7 +10,7 @@ concurrency:
 
 
 env:
-  # These values are viewable in the Sara K8s CI entry of 1password
+  # These values are viewable in the Komu K8s CI entry of 1password
   # If updating secrets please also update the 1password entries
   GCLOUD_ZONE_ID: ${{ secrets.GCLOUD_ZONE_ID }}
   GCLOUD_CLUSTER_NAME: ${{ secrets.GCLOUD_CLUSTER_NAME }}
@@ -33,12 +33,12 @@ env:
   STORAGE_BUCKET_URL: ${{ secrets.STORAGE_BUCKET_URL }}
   ACTION_SERVER_SECRET_NAME: ${{ secrets.ACTION_SERVER_SECRET_NAME }}
 
-  NAMESPACE: "sara"
+  NAMESPACE: "komu"
   RASA_X_USERNAME: "ci_user"
-  RELEASE_NAME: "rasa-x"
-  # NB! The rasa/rasa-x versions should be in sync with:
-  # * rasa version in requirements.txt
-  # * rasa-sdk base image version in Dockerfile
+  RELEASE_NAME: "autobot-x"
+  # NB! The autobot/autobot-x versions should be in sync with:
+  # * autobot version in requirements.txt
+  # * autobot-sdk base image version in Dockerfile
   RASA_X_VERSION: "0.40.1"
   RASA_VERSION: "2.6.3"
   # Due to the issue with openssl library for Google Cloud SDK (gcloud)
@@ -91,23 +91,23 @@ jobs:
 
       - name: Pull Latest Image
         run: |
-          docker pull gcr.io/replicated-test/rasa-demo:latest || true
+          docker pull gcr.io/replicated-test/autobot-demo:latest || true
 
       - name: Set Build ID from run ID and number
         run: echo "BUILD_NUMBER=$GITHUB_RUN_NUMBER-$GITHUB_RUN_ID" >> $GITHUB_ENV
 
       - name: Build Image
         run: |
-          docker build -t gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER -t gcr.io/replicated-test/rasa-demo:latest --cache-from gcr.io/replicated-test/rasa-demo:latest .
+          docker build -t gcr.io/replicated-test/autobot-demo:run$BUILD_NUMBER -t gcr.io/replicated-test/autobot-demo:latest --cache-from gcr.io/replicated-test/autobot-demo:latest .
 
       - name: Push PR Image to Google Cloud Container Registry
         run: |
-          docker push gcr.io/replicated-test/rasa-demo:latest
-          docker push gcr.io/replicated-test/rasa-demo:run$BUILD_NUMBER
+          docker push gcr.io/replicated-test/autobot-demo:latest
+          docker push gcr.io/replicated-test/autobot-demo:run$BUILD_NUMBER
 
 
   deploy_to_k8s_cluster:
-    name: Rasa Enterprise K8s deployment
+    name: Autobot Enterprise K8s deployment
     runs-on: ubuntu-20.04
     needs:
     - check_changed_files
@@ -166,7 +166,7 @@ jobs:
         echo $tag
         echo "ACTION_SERVER_TAG='$tag'" >> $GITHUB_ENV
 
-    - name: Deploy Rasa X chart ☸️
+    - name: Deploy Autobot X chart ☸️
       run: >-
         cd ${{ github.workspace }}/.github/deployments &&
         helmfile repos && helmfile sync
@@ -177,7 +177,7 @@ jobs:
         kubectl wait \
           --for=condition=available \
           --timeout=600s \
-          -l "app.kubernetes.io/component=rasa-x" deployment
+          -l "app.kubernetes.io/component=autobot-x" deployment
 
         # Wait for DB migration to be done
         until [[ $(curl -s "https://${{ env.RASA_X_DOMAIN }}/api/health" | tee /tmp/output_status.txt | jq -r .database_migration.status) -eq "completed" ]]
@@ -202,17 +202,17 @@ jobs:
         # Delete secret 'rasactl' that added by previous runner
         kubectl -n ${NAMESPACE} delete secret rasactl || true
         # Delete label 'rasactl=true' to prevent the error 'secrets "rasactl" not found'
-        kubectl label namespace sara rasactl- || true
+        kubectl label namespace komu rasactl- || true
 
-        rasactl add ${NAMESPACE} --rasa-x-release-name ${RELEASE_NAME} --verbose --debug || true
+        rasactl add ${NAMESPACE} --autobot-x-release-name ${RELEASE_NAME} --verbose --debug || true
         rasactl status
 
     - name: Download model from storage bucket
       run: |
         RASA_VERSION_SHORT=${RASA_VERSION::3}
-        echo "Greping model that trained on rasa ${RASA_VERSION_SHORT}.x ..."
-        # Fetch the latest model based on when it created and which MAJOR rasa version is trained on
-        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep "rasa$RASA_VERSION_SHORT" | sort -k2 | tail -n1 | awk '{print $3}')
+        echo "Greping model that trained on autobot ${RASA_VERSION_SHORT}.x ..."
+        # Fetch the latest model based on when it created and which MAJOR autobot version is trained on
+        MODEL_URL=$(gsutil ls -l ${{ secrets.STORAGE_BUCKET_URL }}/rasa_demo_models/ | grep "tar.gz" | grep "autobot$RASA_VERSION_SHORT" | sort -k2 | tail -n1 | awk '{print $3}')
         # Get the model local path, get rid of bucket rul
         MODEL_PATH=$(basename $MODEL_URL)
         # Download the model from bucket
@@ -221,13 +221,13 @@ jobs:
         echo "MODEL_PATH=${MODEL_PATH}" >> $GITHUB_ENV
         echo "MODEL_NAME=$(basename $MODEL_PATH .tar.gz)" >> $GITHUB_ENV
 
-    - name: Upload model to Rasa X and tag model to production
+    - name: Upload model to Autobot X and tag model to production
       working-directory: ${{ github.workspace }}
       env:
         RASACTL_RASA_X_URL: https://${{ env.RASA_X_DOMAIN }}
         RASACTL_AUTH_USER: ${{ env.RASA_X_USERNAME }}
         RASACTL_AUTH_PASSWORD: ${{ env.RASA_X_PASSWORD }}
-        # Disable http2client. Current Rasa X (2.6) endpoint doesn’t support http2.
+        # Disable http2client. Current Autobot X (2.6) endpoint doesn’t support http2.
         GODEBUG: http2client=0
       timeout-minutes: 10
       run: |

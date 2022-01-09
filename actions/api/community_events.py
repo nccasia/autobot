@@ -11,7 +11,7 @@ from geopy.geocoders import Nominatim
 logger = logging.getLogger(__name__)
 
 DATE_FORMAT = "%d %B, %Y"
-COMMUNITY_EVENT_PAGE = "https://rasa.com/community/join/"
+COMMUNITY_EVENT_PAGE = "https://komu.vn/community/join/"
 
 
 class CommunityEvent:
@@ -98,7 +98,7 @@ def get_country_for(city: Text) -> Optional[Text]:
     ssl_context.check_hostname = False
     ssl_context.verify_mode = ssl.CERT_NONE
 
-    geo_locator = Nominatim(ssl_context=ssl_context, user_agent="rasa-demo")
+    geo_locator = Nominatim(ssl_context=ssl_context, user_agent="autobot-demo")
     location = geo_locator.geocode(city, language="en", addressdetails=True)
 
     if location:

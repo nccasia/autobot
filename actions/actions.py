@@ -333,7 +333,7 @@ class ActionStoreEntityExtractor(Action):
 
 class ActionSetOnboarding(Action):
     """Sets the slot 'onboarding' to true/false dependent on whether the user
-    has built a bot with rasa before"""
+    has built a bot with autobot before"""
 
     def name(self) -> Text:
         return "action_set_onboarding"
@@ -411,7 +411,7 @@ class ActionGreetUser(Action):
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
         if intent == "greet" or (intent == "enter_data" and name_entity):
-            if shown_privacy and name_entity and name_entity.lower() != "sara":
+            if shown_privacy and name_entity and name_entity.lower() != "komu":
                 dispatcher.utter_message(response="utter_greet_name", name=name_entity)
                 return []
             elif shown_privacy:
@@ -565,7 +565,7 @@ class ActionRestartWithButton(Action):
 
 
 class ActionCommunityEvent(Action):
-    """Utters Rasa community events."""
+    """Utters Autobot community events."""
 
     def __init__(self) -> None:
         self.last_event_update = None
@@ -611,7 +611,7 @@ class ActionCommunityEvent(Action):
 
         if not events:
             dispatcher.utter_message(
-                text="Looks like we don't have currently have any Rasa events planned."
+                text="Looks like we don't have currently have any Autobot events planned."
             )
         else:
             self._utter_events(
@@ -636,24 +636,24 @@ class ActionCommunityEvent(Action):
             if not events_for_location:
                 header = (
                     f"Sorry, there are currently no events in {location}. \n\n"
-                    "However, here are the upcoming Rasa events:"
+                    "However, here are the upcoming Autobot events:"
                 )
                 if only_next:
                     header = (
                         f"Sorry, there are currently no events in {location}. \n\n"
-                        "However, here is the next Rasa event:"
+                        "However, here is the next Autobot event:"
                     )
 
             else:
                 events = events_for_location
-                header = f"Here are the upcoming Rasa events in {location}:"
+                header = f"Here are the upcoming Autobot events in {location}:"
                 if only_next:
                     header = f"Here is the next event in {location}:"
 
         else:
-            header = "Here are the upcoming Rasa events:"
+            header = "Here are the upcoming Autobot events:"
             if only_next:
-                header = "Here is the next Rasa event:"
+                header = "Here is the next Autobot event:"
 
         if only_next:
             events = events[0:1]
@@ -707,8 +707,8 @@ class ActionDocsSearch(Action):
             hits = [
                 hit
                 for hit in algolia_result.get("hits")
-                if "Rasa X Changelog " not in hit.get("hierarchy", {}).values()
-                and "Rasa Open Source Change Log "
+                if "Autobot X Changelog " not in hit.get("hierarchy", {}).values()
+                and "Autobot Open Source Change Log "
                 not in hit.get("hierarchy", {}).values()
             ]
             if not hits:
@@ -752,7 +752,7 @@ class ActionForumSearch(Action):
                 return []
 
         # Search forum
-        discourse = DiscourseAPI("https://forum.rasa.com/search")
+        discourse = DiscourseAPI("https://forum.komu.vn/search")
         disc_res = discourse.query(search_text)
         disc_res = disc_res.json()
 
@@ -770,7 +770,7 @@ class ActionForumSearch(Action):
         else:
             dispatcher.utter_message(
                 text=(
-                    "I did not find any matching issues on our [forum](https://forum.rasa.com/):\n"
+                    "I did not find any matching issues on our [forum](https://forum.komu.vn/):\n"
                     "I recommend you post your question there."
                 )
             )
@@ -779,7 +779,7 @@ class ActionForumSearch(Action):
 
 
 class ActionTagFeedback(Action):
-    """Tag a conversation in Rasa X as positive or negative feedback """
+    """Tag a conversation in Autobot X as positive or negative feedback """
 
     def name(self):
         return "action_tag_feedback"
@@ -807,7 +807,7 @@ class ActionTagFeedback(Action):
 
 
 class ActionTagDocsSearch(Action):
-    """Tag a conversation in Rasa X according to whether the docs search was helpful"""
+    """Tag a conversation in Autobot X according to whether the docs search was helpful"""
 
     def name(self):
         return "action_tag_docs_search"

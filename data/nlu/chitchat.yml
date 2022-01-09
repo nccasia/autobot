@@ -48,17 +48,17 @@ nlu:
     - in what way were you made?
     - so how were you made?
     - what are you made of
-    - Are you built using rasa?
-    - Are u developed in rasa
-    - are you build with rasa ?
+    - Are you built using autobot?
+    - Are u developed in autobot
+    - are you build with autobot ?
 - intent: chitchat/ask_howdoing
   examples: |
     - Ahoy matey how are you?
     - Are you ok?
     - Do you feel good?
     - Do you have a great day?
-    - HI Sara, what are you up to?
-    - Hi Sara! How are you?
+    - HI Komu, what are you up to?
+    - Hi Komu! How are you?
     - How are You?
     - How are things?
     - How are you
@@ -89,7 +89,7 @@ nlu:
     - hey how are you?
     - hi how are you?
     - hi how u doing
-    - hi sara, how are you?
+    - hi komu, how are you?
     - how ?
     - how are things going
     - how are things with you?
@@ -135,7 +135,7 @@ nlu:
     - what are you up to?
     - what's good
     - what's up
-    - what's up sara
+    - what's up komu
     - what's up?
     - whatchcha doing
     - whatchya upto ?
@@ -143,8 +143,8 @@ nlu:
     - whats new
     - whatsapp
     - yow are you
-    - how are you Rasa
-    - Hey Sara, how's it going
+    - how are you Autobot
+    - Hey Komu, how's it going
     - are you cool
 - intent: chitchat/ask_howold
   examples: |
@@ -215,7 +215,7 @@ nlu:
     - are you a bot ?
     - are you a bot?
     - are you a chatbot
-    - are you a rasa bot?
+    - are you a autobot bot?
     - are you a real bot?
     - are you a robot
     - are you ai
@@ -223,7 +223,7 @@ nlu:
     - are you artificial intelligence
     - are you bot
     - are you bot?
-    - are you rasa bot?
+    - are you autobot bot?
     - are you real
     - are you real lol
     - are you really a bot
@@ -258,7 +258,7 @@ nlu:
     - are you a human ?
     - Are you human ?
     - Are you a human being?
-    - sara, are you a robot or human?
+    - komu, are you a robot or human?
     - r u real?
     - are you a real person
     - are u a real person?
@@ -565,79 +565,79 @@ nlu:
     - what's my name?
 - intent: chitchat/ask_whatisrasa
   examples: |
-    - Can you brief me about rasa
-    - Can you tell me more about rasa?
-    - Can you tell me what Rasa does?
-    - Could you tell me more about Rasa?
-    - Give me more information about Rasa
-    - How does Rasa work?
+    - Can you brief me about autobot
+    - Can you tell me more about autobot?
+    - Can you tell me what Autobot does?
+    - Could you tell me more about Autobot?
+    - Give me more information about Autobot
+    - How does Autobot work?
     - I want to know about rsa
-    - I want to know what rasa actually does that isn't clear to me yet
-    - I want to learn what rasa does
-    - I want to learn what rasa is
-    - I would like to know about rasa
+    - I want to know what autobot actually does that isn't clear to me yet
+    - I want to learn what autobot does
+    - I want to learn what autobot is
+    - I would like to know about autobot
     - I would like to know more about your product
-    - OK can u brief me Abt rasa
-    - RASA?
-    - Rasa Is?
+    - OK can u brief me Abt autobot
+    - AUTOBOT?
+    - Autobot Is?
     - WHAT IS IT
-    - WHAT IS RASA
-    - What Is rasa?
-    - What can rasa do?
+    - WHAT IS AUTOBOT
+    - What Is autobot?
+    - What can autobot do?
     - What do you do as a company?
-    - What do you do at Rasa?
-    - What does Rasa build?
-    - What does Rasa do?
-    - What does Rasa make?
-    - What does rasa do exactly?
-    - What exactly is Rasa?
-    - What is Rasa?
-    - What is rasa doing exactly?
-    - What is rasa?
-    - What is the RASA Stack?
-    - What's rasa?
-    - can you explain rasa?
-    - can you pls explain what rasa does
-    - could you tell me more about rasa
-    - explain me what rasa does
-    - explain me what rasa is
-    - how does RASA work?
-    - how does rasa work
-    - how does rasa work?
-    - how rasa works ?
-    - how works rasa
-    - i dont get what rasa is
-    - i havent understood yet what rasa actually is
-    - i want to about rasa
-    - i want to know about rasa
-    - i want to know what rasa does
-    - i want to learn something about rasa
+    - What do you do at Autobot?
+    - What does Autobot build?
+    - What does Autobot do?
+    - What does Autobot make?
+    - What does autobot do exactly?
+    - What exactly is Autobot?
+    - What is Autobot?
+    - What is autobot doing exactly?
+    - What is autobot?
+    - What is the AUTOBOT Stack?
+    - What's autobot?
+    - can you explain autobot?
+    - can you pls explain what autobot does
+    - could you tell me more about autobot
+    - explain me what autobot does
+    - explain me what autobot is
+    - how does AUTOBOT work?
+    - how does autobot work
+    - how does autobot work?
+    - how autobot works ?
+    - how works autobot
+    - i dont get what autobot is
+    - i havent understood yet what autobot actually is
+    - i want to about autobot
+    - i want to know about autobot
+    - i want to know what autobot does
+    - i want to learn something about autobot
     - so how does it all work?
-    - sorry tell me about rasa
-    - tell me about rasa
-    - tell me bout rasa
-    - tell me more about rasa
+    - sorry tell me about autobot
+    - tell me about autobot
+    - tell me bout autobot
+    - tell me more about autobot
     - tell me more about your company
-    - what are the componensts of RASA
-    - what can I do with Rasa?
-    - what can i do with rasa
-    - what do you guys do at rasa
-    - what does rasa do
-    - what does rasa do ?
-    - what does rasa do?
-    - what does rasa mean
-    - what is rasa
-    - what is rasa?
-    - what is in rasa
+    - what are the componensts of AUTOBOT
+    - what can I do with Autobot?
+    - what can i do with autobot
+    - what do you guys do at autobot
+    - what does autobot do
+    - what does autobot do ?
+    - what does autobot do?
+    - what does autobot mean
+    - what is autobot
+    - what is autobot?
+    - what is in autobot
     - what is it for?
-    - what is rasa
-    - what is rasa actually
-    - what is rasa?
-    - whats rasa
-    - yeah go on explaining what rasa is
-    - RASA IS SOFTWARE?
-    - rasa os
-    - what is Rasa
+    - what is autobot
+    - what is autobot actually
+    - what is autobot?
+    - whats autobot
+    - yeah go on explaining what autobot is
+    - AUTOBOT IS SOFTWARE?
+    - autobot os
+    - what is Autobot
 - intent: chitchat/ask_whatspossible
   examples: |
     - Can you explain me in one sentence what you are doing?
@@ -673,7 +673,7 @@ nlu:
     - help pls
     - help?
     - hep me
-    - hi. Sara what do you do?
+    - hi. Komu what do you do?
     - hm that doesnt quite help me is there anything else you can do?
     - how can i use you
     - how can you help me
@@ -708,7 +708,7 @@ nlu:
     - what can I ask ?
     - what can I ask you?
     - what can I do here
-    - what can I do with Sara?
+    - what can I do with Komu?
     - what can I do with this bot
     - what can i do here
     - what can i do now
@@ -717,7 +717,7 @@ nlu:
     - what can you answer
     - what can you do
     - what can you do for me
-    - what can you do, sara?
+    - what can you do, komu?
     - what can you do?
     - what can you offer me?
     - what can you tell me
@@ -743,7 +743,7 @@ nlu:
     - what you talk about?
     - you can hep me
     - what can you teache me?
-    - Can rasa do calculations?
+    - Can autobot do calculations?
     - what you can
 - intent: chitchat/ask_wherefrom
   examples: |

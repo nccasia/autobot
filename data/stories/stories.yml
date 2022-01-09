@@ -270,7 +270,7 @@ stories:
   steps:
   - intent: react_negative
   - action: utter_react_negative
-- story: why rasa 1
+- story: why autobot 1
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
@@ -281,7 +281,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa 2
+- story: why autobot 2
   steps:
   - intent: why_rasa
     entities:
@@ -296,7 +296,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa 3
+- story: why autobot 3
   steps:
   - intent: why_rasa
     entities:
@@ -312,7 +312,7 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa 4
+- story: why autobot 4
   steps:
   - intent: why_rasa
     entities:
@@ -328,14 +328,14 @@ stories:
   - action: utter_why_rasa_dialogue
   - action: utter_why_rasa_os
   - action: utter_why_rasa_compliant
-- story: why rasa 5
+- story: why autobot 5
   steps:
   - intent: why_rasa
   - action: utter_why_rasa
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa 6
+- story: why autobot 6
   steps:
   - intent: why_rasa
     entities:
@@ -346,7 +346,7 @@ stories:
   - action: utter_ask_more
   - intent: deny
   - action: utter_anything_else
-- story: why rasa 7
+- story: why autobot 7
   steps:
   - intent: why_rasa
     entities:
@@ -358,7 +358,7 @@ stories:
   - action: utter_ask_more_migrate
   - intent: deny
   - action: utter_anything_else
-- story: why rasa 8
+- story: why autobot 8
   steps:
   - intent: why_rasa
     entities:
@@ -379,7 +379,7 @@ stories:
   - intent: technical_question
   - action: action_docs_search
 
-# stories that should be rules but currently can't (see https://github.com/RasaHQ/rasa/issues/8176)
+# stories that should be rules but currently can't (see https://github.com/RasaHQ/autobot/issues/8176)
 - story: explain -> can't explain # the default "rule"; longer rules will handle cases where an explanation exists
   steps:
   - intent: explain

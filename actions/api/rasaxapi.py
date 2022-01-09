@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class RasaXAPI:
-    """Class to connect to the Rasa X API"""
+    """Class to connect to the Autobot X API"""
 
     def __init__(
         self,
@@ -36,12 +36,12 @@ class RasaXAPI:
             return header
         except Exception as e:
             logger.debug(
-                f"Failed to fetch authorization header from Rasa X, using empty auth error: {e}"
+                f"Failed to fetch authorization header from Autobot X, using empty auth error: {e}"
             )
             return {}
 
     def tag_convo(self, tracker: Tracker, label: Text) -> requests.Response:
-        """Tag a conversation in Rasa X with a given label"""
+        """Tag a conversation in Autobot X with a given label"""
         auth_header = self.get_auth_header()
         endpoint = (
             f"{self.schema}://{self.host}/api/conversations/{tracker.sender_id}/tags"

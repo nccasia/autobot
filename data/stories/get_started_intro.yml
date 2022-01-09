@@ -1,7 +1,7 @@
 version: "2.0"
 stories:
 
-- story: Getting started with Rasa playground
+- story: Getting started with Autobot playground
   steps:
   - intent: get_started_intro
   - action: utter_greet
@@ -9,7 +9,7 @@ stories:
   - intent: affirm
   - action: utter_what_help
 
-- story: Getting started with Rasa playground
+- story: Getting started with Autobot playground
   steps:
   - intent: get_started_intro
   - action: utter_greet
@@ -30,28 +30,28 @@ stories:
   - intent: install_rasa
   - action: utter_ask_which_product
 
-- story: Getting started with Rasa Open Source installation
+- story: Getting started with Autobot Open Source installation
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
   - or:
     - intent: faq
       entities:
-      - product: rasa
+      - product: autobot
     - intent: enter_data
       entities:
-      - product: rasa
+      - product: autobot
     - intent: how_to_get_started
       entities:
-      - product: rasa
+      - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
 
 
-- story: Getting started with Rasa X installation
+- story: Getting started with Autobot X installation
   steps:
   - intent: get_started_intro
   - action: utter_greet
@@ -69,13 +69,13 @@ stories:
       entities:
       - product: x
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
     - product: x
   - action: utter_ask_x_local_server
 
 
-- story: Getting started with Rasa X local mode installation
+- story: Getting started with Autobot X local mode installation
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -99,7 +99,7 @@ stories:
     - install_type: local
   - action: utter_rasa_x_local_installation
 
-- story: Getting started with Rasa X server installation
+- story: Getting started with Autobot X server installation
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -145,7 +145,7 @@ stories:
   - action: utter_what_help
 
 
-- story: Getting started with Rasa playground
+- story: Getting started with Autobot playground
   steps:
   - intent: get_started_intro
   - action: utter_greet

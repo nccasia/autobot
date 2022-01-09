@@ -16,7 +16,7 @@ credentials.yml
 test_train_split
 results
 .history
-rasa.*
+autobot.*
 events.*
 terms
 docker-local

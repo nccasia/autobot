@@ -24,7 +24,7 @@ from gspread.models import Worksheet  # noqa: F401
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk import Tracker
 from rasa_sdk.types import DomainDict
-from rasa.shared.core.domain import Domain
+from autobot.shared.core.domain import Domain
 
 from actions import config
 from actions.api.rasaxapi import RasaXAPI
@@ -68,14 +68,14 @@ def domain() -> DomainDict:
 
 @pytest.fixture
 def rasa_x_conversation_endpoint() -> Text:
-    """Return the Rasa X conversations endpoint"""
+    """Return the Autobot X conversations endpoint"""
     rasax = RasaXAPI()
     return f"{rasax.schema}://{rasax.host}/api/conversations"
 
 
 @pytest.fixture
 def rasa_x_auth_header() -> Dict[Text, Text]:
-    """Get authentication header for Rasa X"""
+    """Get authentication header for Autobot X"""
     rasax = RasaXAPI()
     return rasax.get_auth_header()
 
@@ -87,7 +87,7 @@ def rasa_x_convo(
     tracker: Tracker,
     db_session: Session,
 ) -> Iterator[None]:
-    """Create an empty conversation in Rasa X"""
+    """Create an empty conversation in Autobot X"""
     del_endpoint = f"{rasa_x_conversation_endpoint}/{tracker.sender_id}"
     # delete the conversation in case it already exists due to an improperly exited test
     requests.delete(del_endpoint, headers=rasa_x_auth_header)
@@ -113,7 +113,7 @@ def mailchimp_email(mailchimp_client: "MailChimp") -> Iterator[Text]:
     """Create a user who is not on the newsletter list at all"""
     # use a random email to avoid mailchimp errors due to too many
     # attempted signups by the same email address
-    email = f"{uuid.uuid4().hex}@rasa.com"
+    email = f"{uuid.uuid4().hex}@komu.vn"
 
     # try to delete user in case of an improperly exited test
     try:

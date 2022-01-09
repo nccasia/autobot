@@ -6,8 +6,8 @@ from actions.api.discourse import DiscourseAPI
 
 def test_get_discourse_links():
     """Test that the link returned is correctly formatted and goes to a valid webpage"""
-    discourse = DiscourseAPI("https://forum.rasa.com/search")
-    disc_res = discourse.query("rasa")
+    discourse = DiscourseAPI("https://forum.komu.vn/search")
+    disc_res = discourse.query("autobot")
     disc_res = disc_res.json()
     link_string = discourse.get_discourse_links(disc_res.get("topics"), 0)
     markdown_link_pattern = r"- \[[^\]]+\]\([^\)]+\)$"

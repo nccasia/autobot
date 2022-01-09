@@ -10,7 +10,7 @@ def test_get_algolia_link():
     algolia = AlgoliaAPI(
         config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
     )
-    algolia_result = algolia.search("rasa")
+    algolia_result = algolia.search("autobot")
     link_string = algolia.get_algolia_link(algolia_result.get("hits"), 0)
     markdown_link_pattern = r"- \[[^\]]+\]\([^\)]+\)$"
     assert re.match(markdown_link_pattern, link_string)

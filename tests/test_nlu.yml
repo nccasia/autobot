@@ -27,14 +27,14 @@ nlu:
     - Who is your programmer?
 - intent: faq/channels
   examples: |
-    - which messaging channels are supported by rasa?
-    - which messaging channels are compatible with rasa?
-    - Do you know which messaging channels rasa supports?
-    - rasa supports which messaging channels?
-    - DOES RASA SUPPORT MESSENGER?
+    - which messaging channels are supported by autobot?
+    - which messaging channels are compatible with autobot?
+    - Do you know which messaging channels autobot supports?
+    - autobot supports which messaging channels?
+    - DOES AUTOBOT SUPPORT MESSENGER?
 - intent: faq/community_size
   examples: |
-    - how many people are using Rasa
+    - how many people are using Autobot
 - intent: faq/differencecorenlu
   examples: |
     - what is the main difference between [core](product) and [nlu](product)?
@@ -44,46 +44,46 @@ nlu:
     - How does [nlu](product) contrast to [core](product)?
     - What does [core](product) offer that [nlu](product) does not?
     - Do you know the difference between [core](product) and [nlu](product)?
-    - diffrence between rasa [core](product) and rasa [nlu](product)
+    - diffrence between autobot [core](product) and autobot [nlu](product)
     - what are the primary areas of difference between [core](product) and [nlu](product)?
     - what is different about [core](product) compared to [nlu](product)?
     - What makes [core](product) distinct to [nlu](product)?
 - intent: faq/differencerasarasax
   examples: |
-    - tell me the difference between [rasa](product) and [rasa x]{"entity": "product", "value": "x"}
-    - Are [Rasa](product) and [Rasa X]{"entity": "product", "value": "x"} the same thing?
-    - What's new in [Rasa X]{"entity": "product", "value": "x"} compared to [Rasa]{"entity": "product", "value": "rasa"}?
+    - tell me the difference between [autobot](product) and [autobot x]{"entity": "product", "value": "x"}
+    - Are [Autobot](product) and [Autobot X]{"entity": "product", "value": "x"} the same thing?
+    - What's new in [Autobot X]{"entity": "product", "value": "x"} compared to [Autobot]{"entity": "product", "value": "autobot"}?
 - intent: faq/ee
   examples: |
-    - Tell me about rasa x ee
-    - what is rasa x ee?
+    - Tell me about autobot x ee
+    - what is autobot x ee?
     - what is the enterprise edition
 - intent: faq/languages
   examples: |
-    - what about languages supported in rasa?
+    - what about languages supported in autobot?
     - need to use [portuguese](language)
     - What language u support?
-    - does Rasa support other languages like spanish?
+    - does Autobot support other languages like spanish?
     - languages
-    - which languages supports rasa
+    - which languages supports autobot
     - How can I change the language
 - intent: faq/is_programming_required
   examples: |
-    - Does rasa require programming knowledge
-    - Do I need programming skills to develop a chatbot in rasa
-    - do I need programming experience to use rasa
-    - how to programe rasa
-    - Rasa can be programmed in python
+    - Does autobot require programming knowledge
+    - Do I need programming skills to develop a chatbot in autobot
+    - do I need programming experience to use autobot
+    - how to programe autobot
+    - Autobot can be programmed in python
     - programming language use
     - what programming languge do i use
     - How do I do the programming?
     - i have never programed before
     - what language do I need to program?
-    - do i need to be able to program to use rasa?
+    - do i need to be able to program to use autobot?
 - intent: faq/opensource
   examples: |
-    - is rasa a type of open source software?
-    - is rasa open source?
+    - is autobot a type of open source software?
+    - is autobot open source?
 - intent: faq/python_version
   examples: |
     - what version of python
@@ -101,26 +101,26 @@ nlu:
 - intent: faq/tutorials
   examples: |
     - can you show me a tutorial
-    - i want a tutorial on rasa
+    - i want a tutorial on autobot
     - do you have tutorials
 - intent: faq/voice
   examples: |
-    - How can I use to rasa to build a voice bot?
-    - Building a voice bot using rasa.
-    - Do you know how to build a voice bot with rasa?
-    - I can build a voice bot with rasa, right?
-    - Is it possible to build a voice bot with rasa?
-    - what is the chance of building a rasa voice bot?
-    - How could I construct a voice bot with rasa?
-    - How can I build my voice bot using rasa?
-    - I can build a voice bot with rasa?
+    - How can I use to autobot to build a voice bot?
+    - Building a voice bot using autobot.
+    - Do you know how to build a voice bot with autobot?
+    - I can build a voice bot with autobot, right?
+    - Is it possible to build a voice bot with autobot?
+    - what is the chance of building a autobot voice bot?
+    - How could I construct a voice bot with autobot?
+    - How can I build my voice bot using autobot?
+    - I can build a voice bot with autobot?
 - intent: faq/what_is_forum
   examples: |
     - whats in the forum
 - intent: ask_how_contribute
   examples: |
-    - how contribute to Rasa?
-    - I want to make Rasa better
+    - how contribute to Autobot?
+    - I want to make Autobot better
     - how can I support the community
 - intent: chitchat/ask_howbuilt
   examples: |
@@ -216,13 +216,13 @@ nlu:
     - Do you know what my name is?
 - intent: chitchat/ask_whatisrasa
   examples: |
-    - Give me more information about Rasa
-    - I want to learn what rasa does
-    - what can i build with rasa core?
-    - what does rasa do?
-    - tell me more about rasa
-    - Can you tell me what Rasa does?
-    - what is rasa?
+    - Give me more information about Autobot
+    - I want to learn what autobot does
+    - what can i build with autobot core?
+    - what does autobot do?
+    - tell me more about autobot
+    - Can you tell me what Autobot does?
+    - what is autobot?
 - intent: chitchat/ask_whatspossible
   examples: |
     - so now what
@@ -246,9 +246,9 @@ nlu:
 - intent: ask_which_events
   examples: |
     - Which community events do you have
-    - i want to meet Rasa
-    - what's the next rasa event
-    - is there a Rasa event in [San Francisco](location)
+    - i want to meet Autobot
+    - what's the next autobot event
+    - is there a Autobot event in [San Francisco](location)
 - intent: chitchat/ask_whoami
   examples: |
     - WHo am I
@@ -279,7 +279,7 @@ nlu:
     - give me someone who can explain your business model
     - I want to talk to your sales guys
     - sales contact
-    - we started working with rasa but now we need support
+    - we started working with autobot but now we need support
     - just gimme a call
     - sales pl
     - next the sales contact
@@ -290,7 +290,7 @@ nlu:
     - i want to be connected to your sales team
     - sales team connection
     - sales sales sales
-    - can someone help me with infos about the rasa platform
+    - can someone help me with infos about the autobot platform
     - let me talk to your sales people
     - I want to talk to your sales people
     - let' contact sales now
@@ -321,7 +321,7 @@ nlu:
     - [spanish](language)
     - adele@gmx.com
     - The name of the company is [Daimler](company)
-    - Rasa bot
+    - Autobot bot
     - the people speak [mandarin](language)
     - My email is linda@linda.linda
     - A wolf bot
@@ -397,7 +397,7 @@ nlu:
     - [designer](job_function)
     - lead generation
     - until now it’s only in [french](language)
-    - hi@rasa.com
+    - hi@komu.vn
     - it’s an [english](language) bot
     - maxmeier@firma.de
     - the assistant speaks [mandarin](language)
@@ -472,18 +472,18 @@ nlu:
     - hi
 - intent: how_to_get_started
   examples: |
-    - where to start the development of rasa
-    - Get started with [Rasa]{"entity": "product", "value": "rasa"}
+    - where to start the development of autobot
+    - Get started with [Autobot]{"entity": "product", "value": "autobot"}
     - Get started
     - How do I use [NLU]{"entity": "product", "value": "nlu"}
-    - How do I get started with [Rasa X]{"entity": "product", "value": "x"}
-    - WHAT IS RASA
-    - How do I get started with Rasa [NLU]{"entity": "product", "value": "nlu"}
+    - How do I get started with [Autobot X]{"entity": "product", "value": "x"}
+    - WHAT IS AUTOBOT
+    - How do I get started with Autobot [NLU]{"entity": "product", "value": "nlu"}
     - [Both]{"entity": "product", "value": "all"} of them
     - how do i use [core](product)
-    - how to start with rasa
-    - Help me use [Rasa X](product)
-    - how do i get started with [Rasa X]{"entity": "product", "value": "x"}
+    - how to start with autobot
+    - Help me use [Autobot X](product)
+    - how do i get started with [Autobot X]{"entity": "product", "value": "x"}
     - i want to understand [all](product) the products
     - Help me get started
 - intent: human_handoff
@@ -495,22 +495,22 @@ nlu:
     - i have an issue with permissions
     - wrong i want to speak to a human
     - i want to speak to customer service
-    - i'd rather speak with a real rasa employee
+    - i'd rather speak with a real autobot employee
     - give me a human
 - intent: install_rasa
   examples: |
-    - install Rasa on Linux
-    - How to install Rasa Stack
-    - I have decided on Rasa Stack
-    - How to install Rasa?
-    - I have chosen Rasa Stack
-    - I require Rasa Stack?
-    - I'm going to install Rasa Stack
-    - I need assistance in getting Rasa Stack.
-    - I want to use Rasa Stack
-    - Help me get Rasa Core.
-    - How do I install Rasa X
-    - install Rasa X
+    - install Autobot on Linux
+    - How to install Autobot Stack
+    - I have decided on Autobot Stack
+    - How to install Autobot?
+    - I have chosen Autobot Stack
+    - I require Autobot Stack?
+    - I'm going to install Autobot Stack
+    - I need assistance in getting Autobot Stack.
+    - I want to use Autobot Stack
+    - Help me get Autobot Core.
+    - How do I install Autobot X
+    - install Autobot X
 - intent: nlu_generation_tool_recommendation
   examples: |
     - which tools can I use to create nlu data
@@ -519,7 +519,7 @@ nlu:
 - intent: nlu_info
   examples: |
     - [intents](nlu_part)
-    - I don’t understand how you handle [entity recognition](nlu_part) at Rasa
+    - I don’t understand how you handle [entity recognition](nlu_part) at Autobot
     - do you use [duckling](nlu_part)
     - [intent classification](nlu_part)
     - I want to learn about [entity recognition](nlu_part)
@@ -531,7 +531,7 @@ nlu:
     - de que lugar eres?
     - epdi iruka
     - eres humana
-    - kalhmera sara ti kaneis
+    - kalhmera komu ti kaneis
     - kannst du auch deutsch?
     - spreek je Nederlands?
 - intent: out_of_scope/other
@@ -550,7 +550,7 @@ nlu:
     - hang on let me find it
     - did i break you
     - i told you already
-    - Is Rasa really smart?
+    - Is Autobot really smart?
     - give me food
     - you are a stupid bot
     - how are akela's cats doing?
@@ -570,7 +570,7 @@ nlu:
     - i need to be on the newsletter list
     - add me to the subscription list
     - i would love to get the newsletter
-    - newsletter - my email is lol@rasa.com
+    - newsletter - my email is lol@komu.vn
     - i want to subscribe to your newsletter
     - subscribe to newsletter
     - i also want to sign up for the newsletter
@@ -580,7 +580,7 @@ nlu:
     - Sign up.
     - get newsletter
     - newsletter pls
-    - Subscribe to Rasa newsletter
+    - Subscribe to Autobot newsletter
     - do the newsletter then
     - lets do the newsletter signup
     - i want to receive the newsletter from now on
@@ -591,17 +591,17 @@ nlu:
   examples: |
     - I currently use [dialog flow]{"entity": "current_api", "value": "dialogflow"}
     - I use [DialogFlow]{"entity": "current_api", "value": "dialogflow"}
-    - I want to move from [LUIS.ai]{"entity": "current_api", "value": "luis"} to Rasa
-    - I want to switch from [dialog flow]{"entity": "current_api", "value": "dialogflow"} to rasa
+    - I want to move from [LUIS.ai]{"entity": "current_api", "value": "luis"} to Autobot
+    - I want to switch from [dialog flow]{"entity": "current_api", "value": "dialogflow"} to autobot
     - [LUIS]{"entity": "current_api", "value": "luis"}
 - intent: technical_question
   examples: |
-    - does rasa support voice input
+    - does autobot support voice input
     - technical side of things?
-    - is rasa better than [dialogflow](current_api)
+    - is autobot better than [dialogflow](current_api)
     - having some problems with installation
     - i am having trouble setting this up
-    - where to train intents in rasa?
+    - where to train intents in autobot?
 - intent: thank
   examples: |
     - thanks this is great news
@@ -612,13 +612,13 @@ nlu:
     - Cool. Thanks
 - synonym: x
   examples: |
-    - rasa x
-    - Rasa X
-    - RASA X
+    - autobot x
+    - Autobot X
+    - AUTOBOT X
     - X
-- synonym: rasa
+- synonym: autobot
   examples: |
-    - Rasa
+    - Autobot
 - synonym: nlu
   examples: |
     - NLU
@@ -789,6 +789,6 @@ nlu:
     - core
     - nlu
     - x
-    - rasa x
+    - autobot x
     - both
     - all

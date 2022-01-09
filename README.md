@@ -1,28 +1,28 @@
-# Sara - the Rasa Demo Bot
+# Komu - the Autobot Demo Bot
 
 ## :surfer: Introduction
-The purpose of this repo is to showcase a contextual AI assistant built with the open source Rasa framework.
+The purpose of this repo is to showcase a contextual AI assistant built with the open source Autobot framework.
 
-Sara is an alpha version and lives in our docs, 
+Komu is an alpha version and lives in our docs, 
 helping developers getting started with our open source tools. It supports the following user goals:
 
-- Understanding the Rasa framework
-- Getting started with Rasa
-- Answering some FAQs around Rasa
+- Understanding the Autobot framework
+- Getting started with Autobot
+- Answering some FAQs around Autobot
 - Directing technical questions to specific documentation
-- Subscribing to the Rasa newsletter
-- Requesting a call with Rasa's sales team
+- Subscribing to the Autobot newsletter
+- Requesting a call with Autobot's sales team
 - Handling basic chitchat
 
-You can find planned enhancements for Sara in the
-[Project Board](https://github.com/RasaHQ/rasa-demo/projects/1)
+You can find planned enhancements for Komu in the
+[Project Board](https://github.com/RasaHQ/autobot-demo/projects/1)
 
 ## 👷‍ Installation
 
-To install Sara, please clone the repo and run:
+To install Komu, please clone the repo and run:
 
 ```sh
-cd rasa-demo
+cd autobot-demo
 make install
 ```
 
@@ -30,15 +30,15 @@ This will install the bot and all of its requirements.
 Note that this bot should be used with python 3.6 or 3.7.
 
 
-## 🤖 To run Sara:
+## 🤖 To run Komu:
 
-Use `rasa train` to train a model (this will take a significant amount of memory to train,
+Use `autobot train` to train a model (this will take a significant amount of memory to train,
 if you want to train it faster, try the training command with
 `--augmentation 0`).
 
 Then, to run, first set up your action server in one terminal window:
 ```bash
-rasa run actions --actions actions.actions
+autobot run actions --actions actions.actions
 ```
 
 There are some custom actions that require connections to external services,
@@ -49,24 +49,24 @@ credentials for external services.
 
 In another window, run the bot:
 ```bash
-docker run -p 8000:8000 rasa/duckling
-rasa shell --debug
+docker run -p 8000:8000 autobot/duckling
+autobot shell --debug
 ```
 
 Note that `--debug` mode will produce a lot of output meant to help you understand how the bot is working 
 under the hood. To simply talk to the bot, you can remove this flag.
 
-If you would like to run Sara on your website, follow the instructions
-[here](https://github.com/botfront/rasa-webchat) to place the chat widget on
+If you would like to run Komu on your website, follow the instructions
+[here](https://github.com/botfront/autobot-webchat) to place the chat widget on
 your website.
 
-## To test Sara:
+## To test Komu:
 
-After doing a `rasa train`, run the command:
+After doing a `autobot train`, run the command:
 
 ```bash
-rasa test nlu -u test/test_data.json --model models
-rasa test core --stories test/test_stories.md
+autobot test nlu -u test/test_data.json --model models
+autobot test core --stories test/test_stories.md
 ```
 
 ## 👩‍💻 Overview of the files
@@ -102,10 +102,10 @@ MAILCHIMP_API_KEY=#api key for mailchimp
 ALGOLIA_APP_ID=#algolia app ID for action_docs_search 
 ALGOLIA_SEARCH_KEY=#algolia search key
 ALGOLIA_DOCS_INDEX=#algolia search index
-RASA_X_HOST=#Rasa X domain e.g. localhost:5002
-RASA_X_PASSWORD=#password for authenticating into Rasa X
-RASA_X_USERNAME=#username for authenticating into Rasa X
-RASA_X_HOST_SCHEMA=#Rasa X address schema (http/https)
+RASA_X_HOST=#Autobot X domain e.g. localhost:5002
+RASA_X_PASSWORD=#password for authenticating into Autobot X
+RASA_X_USERNAME=#username for authenticating into Autobot X
+RASA_X_HOST_SCHEMA=#Autobot X address schema (http/https)
 ```
 
 To run unit tests for custom actions:
@@ -134,6 +134,6 @@ make formatter
 ```
 
 ## :gift: License
-Licensed under the GNU General Public License v3. Copyright 2018 Rasa Technologies
-GmbH. [Copy of the license](https://github.com/RasaHQ/rasa-demo/blob/main/LICENSE).
+Licensed under the GNU General Public License v3. Copyright 2018 Autobot Technologies
+GmbH. [Copy of the license](https://github.com/RasaHQ/autobot-demo/blob/main/LICENSE).
 Licensees may convey the work under this license. There is no warranty for the work.

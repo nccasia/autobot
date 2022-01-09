@@ -119,7 +119,7 @@ def test_action_submit_sales_form(
     gdrive: Tuple[GDriveService, Worksheet],
 ):
     collected_info = {
-        "company": "Sara CI",
+        "company": "Komu CI",
         "use_case": "Unit Tests",
         "budget": "1000",
         "date": datetime.datetime.now().strftime("%d/%m/%Y"),
@@ -127,7 +127,7 @@ def test_action_submit_sales_form(
         # is the one the test wrote
         "person_name": uuid.uuid1().hex,
         "job_function": "Test Actions",
-        "business_email": "example@rasa.com",
+        "business_email": "example@komu.vn",
     }
     tracker.slots.update(collected_info)
 

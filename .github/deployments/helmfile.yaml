@@ -1,4 +1,4 @@
-# helmfile for Rasa X deployment
+# helmfile for Autobot X deployment
 environments:
   # The "default" environment is available and used when `helmfile` is run without `--environment NAME`.
   default:
@@ -11,15 +11,15 @@ environments:
     - values/development.yaml
 
 repositories:
-  - name: rasa-x
-    url: https://rasahq.github.io/rasa-x-helm
+  - name: autobot-x
+    url: https://rasahq.github.io/autobot-x-helm
 
 releases:
   - name: {{ requiredEnv "RELEASE_NAME" }}
     namespace: {{ requiredEnv "NAMESPACE" }}
     labels:
         release: {{ requiredEnv "RELEASE_NAME" }}
-    chart: rasa-x/rasa-x
+    chart: autobot-x/autobot-x
     values:
       - app:
           imagePullPolicy: Always
@@ -87,7 +87,7 @@ releases:
               cpu: {{ .Values.rasax.resources.requests.cpu }}
           persistence:
             existingClaim: {{ requiredEnv "RASA_X_PVC" }}
-      - rasa:
+      - autobot:
           imagePullPolicy: Always
           token: {{ requiredEnv "RASA_TOKEN" }}
           tag: {{ requiredEnv "RASA_VERSION" }}-full
@@ -122,7 +122,7 @@ releases:
           enabled: false
       - ingress:
           tls:
-            - secretName: rasa-x-tls
+            - secretName: autobot-x-tls
               hosts:
                 - {{ requiredEnv "RASA_X_DOMAIN" }}
           annotations:

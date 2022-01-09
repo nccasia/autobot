@@ -1,11 +1,11 @@
 version: "2.0"
 stories:
-- story: install rasa
+- story: install autobot
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
 
-- story: install rasa x
+- story: install autobot x
   steps:
   - intent: install_rasa
   - action: utter_ask_which_product
@@ -16,18 +16,18 @@ stories:
     - product: x
   - action: utter_ask_x_local_server
 
-- story: install rasa open source
+- story: install autobot open source
   steps:
   - intent: install_rasa
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_installation_command
   - action: utter_having_trouble_installing
   - action: utter_ask_ready_to_build
 
-- story: install rasa x server
+- story: install autobot x server
   steps:
   - intent: install_rasa
     entities:
@@ -42,7 +42,7 @@ stories:
     - install_type: server
   - action: utter_rasa_x_server_installation
 
-- story: install rasa x locally
+- story: install autobot x locally
   steps:
   - action: utter_ask_which_product
   - intent: faq
@@ -52,7 +52,7 @@ stories:
     - product: x
   - action: utter_ask_x_local_server
 
-- story: Local Rasa X installation
+- story: Local Autobot X installation
   steps:
   - action: utter_ask_x_local_server
   - intent: enter_data
@@ -62,7 +62,7 @@ stories:
     - install_type: local
   - action: utter_rasa_x_local_installation
 
-- story: Server Rasa X installation
+- story: Server Autobot X installation
   steps:
   - action: utter_ask_x_local_server
   - intent: enter_data
@@ -72,7 +72,7 @@ stories:
     - install_type: server
   - action: utter_rasa_x_server_installation
 
-- story: Local Rasa X installation
+- story: Local Autobot X installation
   steps:
   - action: utter_ask_x_local_server
   - intent: faq
@@ -82,7 +82,7 @@ stories:
     - install_type: local
   - action: utter_rasa_x_local_installation
 
-- story: Server Rasa X installation
+- story: Server Autobot X installation
   steps:
   - action: utter_ask_x_local_server
   - intent: faq
@@ -92,7 +92,7 @@ stories:
     - install_type: server
   - action: utter_rasa_x_server_installation
 
-- story: install rasa x local
+- story: install autobot x local
   steps:
   - intent: install_rasa
     entities:

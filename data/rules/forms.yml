@@ -98,7 +98,7 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
 
-- rule: Rasa x faq in newsletter form
+- rule: Autobot x faq in newsletter form
   condition:
   - active_loop: subscribe_newsletter_form
   steps:
@@ -124,20 +124,20 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
 
-- rule: Rasa faq in newsletter form
+- rule: Autobot faq in newsletter form
   condition:
   - active_loop: subscribe_newsletter_form
   steps:
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
 
-- rule: Rasa NLU faq in newsletter form
+- rule: Autobot NLU faq in newsletter form
   condition:
   - active_loop: subscribe_newsletter_form
   steps:
@@ -150,7 +150,7 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_newsletter
 
-- rule: Rasa Core faq in newsletter form
+- rule: Autobot Core faq in newsletter form
   condition:
   - active_loop: subscribe_newsletter_form
   steps:
@@ -251,7 +251,7 @@ rules:
   - action: action_explain_sales_form
   - action: utter_ask_continue_sales
 
-- rule: Rasa x faq in sales form
+- rule: Autobot x faq in sales form
   condition:
   - active_loop: sales_form
   steps:
@@ -277,20 +277,20 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
 
-- rule: Rasa faq in sales form
+- rule: Autobot faq in sales form
   condition:
   - active_loop: sales_form
   steps:
   - intent: faq
     entities:
-    - product: rasa
+    - product: autobot
   - slot_was_set:
-    - product: rasa
+    - product: autobot
   - action: utter_faq
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
 
-- rule: Rasa NLU faq in sales form
+- rule: Autobot NLU faq in sales form
   condition:
   - active_loop: sales_form
   steps:
@@ -303,7 +303,7 @@ rules:
   - action: action_set_faq_slot
   - action: utter_ask_continue_sales
 
-- rule: Rasa Core faq in sales form
+- rule: Autobot Core faq in sales form
   condition:
   - active_loop: sales_form
   steps:

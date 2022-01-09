@@ -2,66 +2,66 @@ version: "2.0"
 nlu:
 - intent: faq/rasa_components
   examples: |
-    - what are the components of rasa
-    - What components does Rasa have?
-    - What are the two components that make up [Rasa Open Source](product)?
-    - what is a component in rasa?
+    - what are the components of autobot
+    - What components does Autobot have?
+    - What are the two components that make up [Autobot Open Source](product)?
+    - what is a component in autobot?
     - what is componenbts
     - what is components
-    - the components of Rasa
-    - the components of rasa
+    - the components of Autobot
+    - the components of autobot
     - want to build a chatbot
-    - whar are the components of rasa?
-    - what are Rasa's components
-    - what are the components of RASA
-    - what are the components of Rasa
+    - whar are the components of autobot?
+    - what are Autobot's components
+    - what are the components of AUTOBOT
+    - what are the components of Autobot
     - what are the components?
     - tell me about the components
-    - parts of rasa
+    - parts of autobot
     - more info on components
-    - more info on components of rasa pls
-    - more information on components in rasa
-    - compnnent of rasa
-    - components in rasa
-    - components of Rasa?
-    - components of rasa
-    - rasa components
+    - more info on components of autobot pls
+    - more information on components in autobot
+    - compnnent of autobot
+    - components in autobot
+    - components of Autobot?
+    - components of autobot
+    - autobot components
     - can give tell me about components of Rosa
-    - The components of Rasa?
-    - What are Rasa's components?
-    - What are the components of Rasa?
-    - What are the components of rasa?
-    - different parts of Rasa
-    - tell me about the different parts of rasa
+    - The components of Autobot?
+    - What are Autobot's components?
+    - What are the components of Autobot?
+    - What are the components of autobot?
+    - different parts of Autobot
+    - tell me about the different parts of autobot
     - what are your features ?
-    - what are the features does rasa have?    
+    - what are the features does autobot have?    
 - intent: faq/dialogue_management
   examples: |
-    - can you help me with the rasa [core](product) ?
-    - can you explain rasa [core](product)
-    - what is rasa [core](product)
-    - what is rasa [core](product)?
-    - what can i build with rasa [core](product)?
+    - can you help me with the autobot [core](product) ?
+    - can you explain autobot [core](product)
+    - what is autobot [core](product)
+    - what is autobot [core](product)?
+    - what can i build with autobot [core](product)?
     - what is [core](product)
-    - what's rasa [core](product)?
+    - what's autobot [core](product)?
     - tell me something about [core](product)
-    - rasa [core](product) quickstart
+    - autobot [core](product) quickstart
     - I want to know more about [core](product)
-    - I want know about Rasa [Core](product)
+    - I want know about Autobot [Core](product)
     - About [Core](product)
-    - i need more info for rasa [core](product)
-    - i want to learn about rasa [core](product)
-    - i would like more explanation on RASA [Core](product)
-    - tell me about Rasa [Core](product)
+    - i need more info for autobot [core](product)
+    - i want to learn about autobot [core](product)
+    - i would like more explanation on AUTOBOT [Core](product)
+    - tell me about Autobot [Core](product)
     - what is [dialogue management](product)
     - tell me about [dialogue management](product)
     - please explain what is [dialogue management](product)
     - need to understand [dialogue management](product)
     - What is [dialogue management](product) ?
-    - explain about the rasa [dialogue management](product)
-    - what does rasa [dialogue management](product) do?
+    - explain about the autobot [dialogue management](product)
+    - what does autobot [dialogue management](product) do?
     - how does [dialogue management](product) work?
-    - how does rasa [dialogue management](product) work?
+    - how does autobot [dialogue management](product) work?
     - tell me about [core](product)
     - tell me about [core](product) please
 - intent: faq/nlu
@@ -71,21 +71,21 @@ nlu:
     - more about [NLU](product)
     - more about [NLU](product) please
     - more about [nlu](product)
-    - yes i wanna know more about rasa [nlu](product)
+    - yes i wanna know more about autobot [nlu](product)
     - what is this [nlu](product) thing?
-    - what's rasa [nlu](product)
+    - what's autobot [nlu](product)
     - tell me more about [NLU](product)
-    - tell me more about rasa [nlu](product)
+    - tell me more about autobot [nlu](product)
     - what is [nlu](product)
-    - what is rasa [nlu](product)?
+    - what is autobot [nlu](product)?
     - tell me about [nlu](product)
-    - i want to know about RASA [Nlu](product)
+    - i want to know about AUTOBOT [Nlu](product)
     - i want to know more about [NLU](product)
     - i want to learn about [nlu](product)
-    - i want to learn about rasa [nlu](product)
+    - i want to learn about autobot [nlu](product)
     - Can you tell me more about [NLU](product)?
     - I want to know more about [NLU](product)
-    - I would like to know more about RASA [NLU](product)
+    - I would like to know more about AUTOBOT [NLU](product)
     - More about [NLU](product)
     - Yes, I want to know more about [NLU](product)
     - hi, can you help in understanding NLU
@@ -93,172 +93,172 @@ nlu:
     - give me some information on [nlu](product)
 - intent: faq/rasa_playground
   examples: |
-    - what is [Rasa Playground](product) ?
-    - how does [Rasa Playground](product) work?
+    - what is [Autobot Playground](product) ?
+    - how does [Autobot Playground](product) work?
     - what is [playground](product) ?
-    - can you explain [rasa playground](product) to me
-    - could you elaborate more about [rasa playground](product)
-    - tell me about [Rasa Playground](product) please
-    - what is this [rasa playground](product) thing. could you tell me more?
-    - what's the purpose of [Rasa Playground](product)
+    - can you explain [autobot playground](product) to me
+    - could you elaborate more about [autobot playground](product)
+    - tell me about [Autobot Playground](product) please
+    - what is this [autobot playground](product) thing. could you tell me more?
+    - what's the purpose of [Autobot Playground](product)
     - whats [rasaplayground](product)
-    - is [Rasa Playground](product) separate from Rasa?
-    - how does [rasa playground](product) relate to rasa core
-    - I need to know about [Rasa playground](product)
-    - please tell me more about [rasa playground](product)
-    - elaborate on [rasa playground](product)
-    - Can you tell me about [rasa playground](product)?
-    - I want information about [rasa playground](product)
-    - Tell me about [rasa playgrounds](product)
-    - can someone help me with infos about [rasa playground](product)
-    - i want to learn more about [Rasa playground](product)
-    - tell me what is [rasa playground](product)
-    - what is [rasa playground](product) ?
+    - is [Autobot Playground](product) separate from Autobot?
+    - how does [autobot playground](product) relate to autobot core
+    - I need to know about [Autobot playground](product)
+    - please tell me more about [autobot playground](product)
+    - elaborate on [autobot playground](product)
+    - Can you tell me about [autobot playground](product)?
+    - I want information about [autobot playground](product)
+    - Tell me about [autobot playgrounds](product)
+    - can someone help me with infos about [autobot playground](product)
+    - i want to learn more about [Autobot playground](product)
+    - tell me what is [autobot playground](product)
+    - what is [autobot playground](product) ?
     - what is [rasaplayground](product)
-    - what's [rasa playground](product)
-    - tell me about [rasa playground](product)
+    - what's [autobot playground](product)
+    - tell me about [autobot playground](product)
     - i want to try it online
     - try out the [playground](product)
     - see [playground](product)
-    - try [rasa playground]{"entity": "product", "value": "playground"}
-    - try rasa online
+    - try [autobot playground]{"entity": "product", "value": "playground"}
+    - try autobot online
     - try out online
 - intent: faq/rasax
   examples: |
-    - what is [Rasa X](product) ?
-    - how does [Rasa X](product) work?
+    - what is [Autobot X](product) ?
+    - how does [Autobot X](product) work?
     - what is [X](product) ?
-    - can you explain [rasa x](product) to me
-    - could you elaborate more about [rasa x](product)
-    - tell me about [Rasa X](product) please
-    - what is this [rasa x](product) thing. could you tell me more?
-    - what's the purpose of [Rasa X](product)
+    - can you explain [autobot x](product) to me
+    - could you elaborate more about [autobot x](product)
+    - tell me about [Autobot X](product) please
+    - what is this [autobot x](product) thing. could you tell me more?
+    - what's the purpose of [Autobot X](product)
     - whats [rasax](product)
-    - is [Rasa X](product) separate from Rasa?
-    - how does [rasa x](product) relate to rasa core
-    - I need to know about [Rasa X](product)
-    - please tell me more about [rasa x](product)
-    - elaborate on [rasa x](product)
-    - Can you tell me about [rasa x](product)?
-    - I want information about [rasa x](product)
-    - [Rasa X](product) features
-    - Tell me about [rasa x](product)
-    - can someone help me with infos about [rasa x](product)
-    - i want to learn more about [Rasa X](product)
-    - tell me what is [rasa x](product)
-    - what is [rasa x](product) ?
+    - is [Autobot X](product) separate from Autobot?
+    - how does [autobot x](product) relate to autobot core
+    - I need to know about [Autobot X](product)
+    - please tell me more about [autobot x](product)
+    - elaborate on [autobot x](product)
+    - Can you tell me about [autobot x](product)?
+    - I want information about [autobot x](product)
+    - [Autobot X](product) features
+    - Tell me about [autobot x](product)
+    - can someone help me with infos about [autobot x](product)
+    - i want to learn more about [Autobot X](product)
+    - tell me what is [autobot x](product)
+    - what is [autobot x](product) ?
     - what is [rasax](product)
-    - what's [rasa x](product)
+    - what's [autobot x](product)
 - intent: faq/channels
   examples: |
-    - Can you tell which messaging channels does rasa support?
+    - Can you tell which messaging channels does autobot support?
     - Channels
-    - Can I use the rasa code for my own website?
+    - Can I use the autobot code for my own website?
     - Can I use your open source code on my website?
-    - how to use rasa in salesforce
-    - i want to integrate my rasa bot to webex  may i know how
+    - how to use autobot in salesforce
+    - i want to integrate my autobot bot to webex  may i know how
     - how to setup rasax on slack
-    - so... i trying to deploy my rasa bot on
-    - how to use rasa caht in react application
-    - how can i setup rasa in django project ?
+    - so... i trying to deploy my autobot bot on
+    - how to use autobot caht in react application
+    - how can i setup autobot in django project ?
     - how to integrate u in my react application
-    - how to integrate rasa chatbot with my website
+    - how to integrate autobot chatbot with my website
     - Is there a connector for skype?
-    - DOES RASA SUPPORT MESSENGER?
-    - DOES RASA SUPPORT SMS?
-    - DOES RASA SUPPORT THE WHATS APP?
-    - Do you know about rasa supporting channels?
-    - Do you know which messaging channels rasa supports?
-    - How to connect messaging channels to rasa?
-    - Is rasa support message channels?
+    - DOES AUTOBOT SUPPORT MESSENGER?
+    - DOES AUTOBOT SUPPORT SMS?
+    - DOES AUTOBOT SUPPORT THE WHATS APP?
+    - Do you know about autobot supporting channels?
+    - Do you know which messaging channels autobot supports?
+    - How to connect messaging channels to autobot?
+    - Is autobot support message channels?
     - No, I mean how it is possible to use Skype as channel?
-    - Rasa is good for messaging chanels
-    - Rasa supports some messaging channels, what are those?
-    - WHAT MESSAGING PORTALS DOES RASA SUPPORT?
-    - What are the requirements for connecting messaging channel to rasa?
-    - What channels for messaging are supported by rasa?
-    - What channels for messaging does rasa support?
-    - What channels of communication does rasa support?
-    - What communication channels are supported by rasa?
-    - What communication channels does rasa support?
-    - What messaging channels are supported by rasa?
-    - What messaging systems are supported by rasa?
-    - channels supported by Rasa
-    - i need a help to integrate rasa with a messenger
-    - rasa can use which different messaging channels?
-    - rasa supports which messaging channels?
-    - what are the channels Rasa [NLU](product) supports
-    - what are the messaging channels supported by rasa?
-    - what are the messaging channels that can be used with rasa?
+    - Autobot is good for messaging chanels
+    - Autobot supports some messaging channels, what are those?
+    - WHAT MESSAGING PORTALS DOES AUTOBOT SUPPORT?
+    - What are the requirements for connecting messaging channel to autobot?
+    - What channels for messaging are supported by autobot?
+    - What channels for messaging does autobot support?
+    - What channels of communication does autobot support?
+    - What communication channels are supported by autobot?
+    - What communication channels does autobot support?
+    - What messaging channels are supported by autobot?
+    - What messaging systems are supported by autobot?
+    - channels supported by Autobot
+    - i need a help to integrate autobot with a messenger
+    - autobot can use which different messaging channels?
+    - autobot supports which messaging channels?
+    - what are the channels Autobot [NLU](product) supports
+    - what are the messaging channels supported by autobot?
+    - what are the messaging channels that can be used with autobot?
     - what channels do you support?
-    - what channels does rasa support
-    - what chat channels does rasa uses
-    - which UI channel is used by Rasa ?
-    - which messaging channels are compatible with rasa?
-    - which messaging channels are supported by rasa?
-    - which messaging channels can I use with rasa?
-    - which messaging channels can be used with rasa?
-    - which messaging channels does rasa support?
-    - which particular messaging channels are supported by rasa?
+    - what channels does autobot support
+    - what chat channels does autobot uses
+    - which UI channel is used by Autobot ?
+    - which messaging channels are compatible with autobot?
+    - which messaging channels are supported by autobot?
+    - which messaging channels can I use with autobot?
+    - which messaging channels can be used with autobot?
+    - which messaging channels does autobot support?
+    - which particular messaging channels are supported by autobot?
     - what chat services do you support
     - Any integrations with WhatsApp and Facebook?
     - what ui can I use
     - which user interface can I use?
-    - integrate rasa with ui
-    - on what channels can I use rasa
+    - integrate autobot with ui
+    - on what channels can I use autobot
     - Do you  help to  integrate Facebook
-    - in which rasa version google hangouts chat available
-    - What channels does Rasa support?
-    - how can i integrate the rasa chat bot to my website
-    - how can i integrate rasa in my siteweb ?
+    - in which autobot version google hangouts chat available
+    - What channels does Autobot support?
+    - how can i integrate the autobot chat bot to my website
+    - how can i integrate autobot in my siteweb ?
     - explain integrations
     - socket io
     - Custom Connectors
     - custom connection
     - Can I create a chat bot and set it up on a web page?
-    - Does Rasa have the functionality of being able to set up the bot on web pages?
+    - Does Autobot have the functionality of being able to set up the bot on web pages?
 - intent: faq/community_size
   examples: |
-    - Did you know the size of rasa community?
-    - Do you know how big the Rasa community is?
-    - Do you know how many people are in the Rasa community?
-    - How big is the Rasa community
-    - How big is the Rasa community?
+    - Did you know the size of autobot community?
+    - Do you know how big the Autobot community is?
+    - Do you know how many people are in the Autobot community?
+    - How big is the Autobot community
+    - How big is the Autobot community?
     - How big is the community?
     - How big is this community?
-    - How far does the Rasa community spread?
+    - How far does the Autobot community spread?
     - How few members in the community?
-    - How large is the Rasa community?
+    - How large is the Autobot community?
     - How large is the community?
-    - How large roughly speaking is the Rasa community?
+    - How large roughly speaking is the Autobot community?
     - How many in the community?
     - How many individuals are in your community?
     - How many individuals reside in your community?
     - How many members in the community?
     - How many people are here?
     - How many people are in that community?
-    - How many people are in the Rasa Community?
+    - How many people are in the Autobot Community?
     - How many people are in your community
     - How many people are in your community?
-    - How massive is the Rasa community?
+    - How massive is the Autobot community?
     - How small is the community?
-    - Is rasa community big?
-    - Is rasa have more than 1000 members?
-    - Is the Rasa Community large?
-    - Is the Rasa community large?
-    - Is the Rasa community medium?
-    - Is the Rasa community small?
+    - Is autobot community big?
+    - Is autobot have more than 1000 members?
+    - Is the Autobot Community large?
+    - Is the Autobot community large?
+    - Is the Autobot community medium?
+    - Is the Autobot community small?
     - Is the community large?
-    - What is the magnitude of the Rasa community?
+    - What is the magnitude of the Autobot community?
     - What is the magnitude of the community?
     - What is the number of people in this community?
     - What is the rough size of the community?
-    - What size is the Rasa community?
+    - What size is the Autobot community?
     - What's the size of the community?
     - do you have a large community
     - how big is your community
     - how many forum members do you have
-    - how many people are using Rasa
+    - how many people are using Autobot
 - intent: faq/difference_dialogue_management_nlu
   examples: |
     - DIFFERENCES BETWEEN [CORE](product) AND [NLU](product)
@@ -279,17 +279,17 @@ nlu:
     - What facts diverge [core](product) from [nlu](product)?
     - What is the Similarities between [core](product) and [nlu](product)?
     - What is the difference between [NLU](product) and [Core](product)?
-    - What is the difference between rasa [nlu](product) and rasa [core](product)?
+    - What is the difference between autobot [nlu](product) and autobot [core](product)?
     - What makes [core](product) and [nlu](product) different?
     - What makes [core](product) and [nlu](product) incompatible?
     - What makes [core](product) different from [nlu](product)?
     - What makes [core](product) distinct to [nlu](product)?
     - What sets [nlu](product) apart from [core](product)?
     - What's difference between these?
-    - difference between rasa [core](product) and [nlu](product)
-    - diffrence between rasa [core](product) and rasa [nlu](product)
+    - difference between autobot [core](product) and [nlu](product)
+    - diffrence between autobot [core](product) and autobot [nlu](product)
     - i dont know the difference
-    - rasa [core](product) vs rasa [nlu](product)
+    - autobot [core](product) vs autobot [nlu](product)
     - what are the difference between [NLU](product) and [core](product)?
     - what are the difference?
     - what are the differences?
@@ -302,9 +302,9 @@ nlu:
     - what is the difference between [core](product) and [nlu](product)?
     - what is the difference between [nlu](product) and [core](product)
     - what is the difference between [nlu](product) and [core](product)?
-    - what is the difference between [nlu](product) and rasa [core](product)
-    - what is the difference between rasa [nlu](product) and rasa [core](product)
-    - what is the difference between rasa [nlu](product) and rasa [core](product)?
+    - what is the difference between [nlu](product) and autobot [core](product)
+    - what is the difference between autobot [nlu](product) and autobot [core](product)
+    - what is the difference between autobot [nlu](product) and autobot [core](product)?
     - what is the difference between the two?
     - what is the difference?
     - what is the different
@@ -312,9 +312,9 @@ nlu:
     - what is the primary difference between [core](product) and [nlu](product)?
     - what makes [core](product) and [nlu](product) unique from each other?
     - what makes [core](product) different from [nlu](product)?
-    - what the different with rasa [nlu](product) and rasa [core](product)?
+    - what the different with autobot [nlu](product) and autobot [core](product)?
     - what would you say the difference is between [core](product) and [nlu](product)?
-    - what's the  difference between rasa [nlu](product) and rasa [core](product)
+    - what's the  difference between autobot [nlu](product) and autobot [core](product)
     - what's the difference between [NLU](product) and [Core](product)?
     - what's the difference between [core](product) and [nlu](product)?
     - what's the difference?
@@ -323,72 +323,72 @@ nlu:
     - does the [open source](product) version have [core](product)?
 - intent: faq/differencerasarasax
   examples: |
-    - Are [Rasa](product) and [Rasa X](product) the same thing?
-    - Can I use [Rasa X](product) without using [Rasa](product)?
-    - Can i use [rasa](product) without [rasa x](product)?
-    - Do I need both [Rasa](product) and [Rasa X](product)?
-    - How is [Rasa X](product) different from [Rasa](product)?
-    - If I use [Rasa](product), do I also need [Rasa X](product)?
-    - What's new in [Rasa X](product) compared to [Rasa](product)?
-    - how does [rasa x](product) stack up against [rasa](product)
-    - i am using [rasa](product), why would i need [rasa x](product)?
-    - please compare [rasa](product) and [rasa x](product)
-    - show me comparison between [rasa x](product) and [rasa](product)
-    - tell me the difference between [rasa](product) and [rasa x](product)
-    - tell me the difference between [rasa](product) and [x](product)
-    - what's the difference between [rasa](product) and [rasa x](product)
-    - whats the diff between [rasa](product) and [rasa x](product)
-    - when should i use [rasa](product) and when should i use [rasa x](product)
-    - what is the difference between [rasa open source](product) and [rasa x](product)
-    - is [rasa open source](product) needed for [rasa x](product)?
-    - what is the difference between rasaand [rasa x](product)
-    - difference between [rasa](product) and [rasa x](product)
-    - what is the difference between [rasa](product) and [rasa x](product)
-    - what is the difference between [rasa](product) and rasax
-    - the difference between [Rasa](product) and [Rasa X](product)
-    - tell me difference between [Rasa](product) and [Rasa X](product)
-    - difference between [Rasa](product) and [Rasa X](product)
-    - install [rasa x](product) with or without [rasa open source](product) ?
-    - relationship between [rasa open source](product) and [rasa x](product)
+    - Are [Autobot](product) and [Autobot X](product) the same thing?
+    - Can I use [Autobot X](product) without using [Autobot](product)?
+    - Can i use [autobot](product) without [autobot x](product)?
+    - Do I need both [Autobot](product) and [Autobot X](product)?
+    - How is [Autobot X](product) different from [Autobot](product)?
+    - If I use [Autobot](product), do I also need [Autobot X](product)?
+    - What's new in [Autobot X](product) compared to [Autobot](product)?
+    - how does [autobot x](product) stack up against [autobot](product)
+    - i am using [autobot](product), why would i need [autobot x](product)?
+    - please compare [autobot](product) and [autobot x](product)
+    - show me comparison between [autobot x](product) and [autobot](product)
+    - tell me the difference between [autobot](product) and [autobot x](product)
+    - tell me the difference between [autobot](product) and [x](product)
+    - what's the difference between [autobot](product) and [autobot x](product)
+    - whats the diff between [autobot](product) and [autobot x](product)
+    - when should i use [autobot](product) and when should i use [autobot x](product)
+    - what is the difference between [autobot open source](product) and [autobot x](product)
+    - is [autobot open source](product) needed for [autobot x](product)?
+    - what is the difference between rasaand [autobot x](product)
+    - difference between [autobot](product) and [autobot x](product)
+    - what is the difference between [autobot](product) and [autobot x](product)
+    - what is the difference between [autobot](product) and rasax
+    - the difference between [Autobot](product) and [Autobot X](product)
+    - tell me difference between [Autobot](product) and [Autobot X](product)
+    - difference between [Autobot](product) and [Autobot X](product)
+    - install [autobot x](product) with or without [autobot open source](product) ?
+    - relationship between [autobot open source](product) and [autobot x](product)
 - intent: faq/ee
   examples: |
     - Can you tell me about the enterprise edition?
     - I want information about the enterprise edition
-    - Tell me about rasa x ee
+    - Tell me about autobot x ee
     - can someone help me with infos about the enterprise edition
-    - can you tell me about rasa x ee?
+    - can you tell me about autobot x ee?
     - enterprise features
-    - i want to learn more about Rasa X EE
-    - tell me about rasa x EE
-    - tell me more about rasa x EE
-    - tell me what is rasa x ee
-    - we built a bot with rasa x but now we're interested in the enterprise edition
+    - i want to learn more about Autobot X EE
+    - tell me about autobot x EE
+    - tell me more about autobot x EE
+    - tell me what is autobot x ee
+    - we built a bot with autobot x but now we're interested in the enterprise edition
     - what is EE?
-    - what is rasa x ee?
-    - what is rasa x enterprise
+    - what is autobot x ee?
+    - what is autobot x enterprise
     - what is the enterprise edition
-    - what's the rasa x enterprise edition
+    - what's the autobot x enterprise edition
     - please provide information on your enterprise package
-    - what is rasa enterprise
-    - rasa enterprise
-    - tell me about rasa enterprise
-    - rasa enterprise please
+    - what is autobot enterprise
+    - autobot enterprise
+    - tell me about autobot enterprise
+    - autobot enterprise please
     - more info about enterprise
-    - tell me about rasa enterpeise
-    - rasa enterprise plans
+    - tell me about autobot enterpeise
+    - autobot enterprise plans
 - intent: faq/is_programming_required
   examples: |
-    - Does rasa require programming knowledge
-    - Do I need programming skills to develop a chatbot in rasa
-    - do I need programming experience to use rasa
-    - how to programe rasa
-    - Rasa can be programmed in python
+    - Does autobot require programming knowledge
+    - Do I need programming skills to develop a chatbot in autobot
+    - do I need programming experience to use autobot
+    - how to programe autobot
+    - Autobot can be programmed in python
     - programming language use
     - what programming languge do i use
     - How do I do the programming?
     - i have never programed before
     - what language do I need to program?
-    - do i need to be able to program to use rasa?
+    - do i need to be able to program to use autobot?
     - what programming language do i need?
     - shall i use Nodejs as a programming language
     - Can i use python to program my bot?
@@ -396,25 +396,25 @@ nlu:
     - must i have to be a good programmer
     - you have to be a good programmer
     - what do i need for programming?
-    - what programming language is used by rasa
-    - which programming language used for RASA.
-    - what programming language is rasa written in?
-    - what programming languages does Rasa support?
+    - what programming language is used by autobot
+    - which programming language used for AUTOBOT.
+    - what programming language is autobot written in?
+    - what programming languages does Autobot support?
     - which programming languages
     - which programming languages do you support?
-    - which programming languages does rasa supports?
-    - rasa php
-    - Do I have to be a programmer to use rasa?
+    - which programming languages does autobot supports?
+    - autobot php
+    - Do I have to be a programmer to use autobot?
     - what's your programming language
     - what programming language do you recommend
     - can I develop using java
     - Does it have a java library
-    - does rasa support python
+    - does autobot support python
     - programming language
-    - what programming language does rasa use
+    - what programming language does autobot use
     - But what kind of programming language is the code written in?
     - what programming language?
-    - I would like to know about using Java as a programming language with Rasa
+    - I would like to know about using Java as a programming language with Autobot
     - how i program the bot?
     - which programming language can I use?
     - what programming languages do you support
@@ -422,80 +422,80 @@ nlu:
     - what programming knowledge do I need to learn?
     - what is the your programming language
     - which programming language are you written in?
-    - which programming language uses rasa?
+    - which programming language uses autobot?
     - in what programming language is your api
     - Is there API for any other programming languages?
-    - which language is rasa programmed in
-    - Which programming language is rasa written in?
-    - is Rasa available in java ?
-    - I need help to make rasa in java
-    - Rasa development in Java
+    - which language is autobot programmed in
+    - Which programming language is autobot written in?
+    - is Autobot available in java ?
+    - I need help to make autobot in java
+    - Autobot development in Java
     - What language is the open source coding done in?
 - intent: faq/languages
   examples: |
     - I want to build a bot in [Hindi](language)
-    - Any languages that rasa supports?
-    - Can I use Rasa with [Thai](language) language
-    - Can rasa support any language?
-    - Can we make [Japanese](language) speaking bot with Rasa?
+    - Any languages that autobot supports?
+    - Can I use Autobot with [Thai](language) language
+    - Can autobot support any language?
+    - Can we make [Japanese](language) speaking bot with Autobot?
     - Can you built text bot with [Japanese](language)?
     - Can you use other language than [English](language)?
-    - Does rasa support different languages
-    - Hello, rasa supports [spanish](language)?
+    - Does autobot support different languages
+    - Hello, autobot supports [spanish](language)?
     - How can I change the language
     - I want [Vietnamese](language) language processing
     - I want to add [Romanian](language) language support
-    - Is RASA [NLU](product) avaiable for [German](language)?
-    - What all languages does rasa support for us?
-    - What are the languages that rasa supports?
-    - What are the specific languages that rasa is intended to work with?
+    - Is AUTOBOT [NLU](product) avaiable for [German](language)?
+    - What all languages does autobot support for us?
+    - What are the languages that autobot supports?
+    - What are the specific languages that autobot is intended to work with?
     - What language u support?
     - What language you support?
-    - What languages can a program like rasa handle?
-    - What languages can be used with rasa?
-    - What languages can rasa be relied upon to support?
-    - What languages can rasa handle?
-    - What languages can rasa support?
-    - What languages can rasa use?
-    - What languages does rasa know?
-    - What languages does rasa work for?
-    - What languages does rasa work with?
-    - What languages will the utility rasa support?
-    - When I use Rasa, Can I make bot speaking [Japanese](language)?
-    - Which different languages does rasa support?
-    - Which languages are supported by rasa?
-    - Which languages can I use with rasa?
-    - Which languages can be used by rasa?
+    - What languages can a program like autobot handle?
+    - What languages can be used with autobot?
+    - What languages can autobot be relied upon to support?
+    - What languages can autobot handle?
+    - What languages can autobot support?
+    - What languages can autobot use?
+    - What languages does autobot know?
+    - What languages does autobot work for?
+    - What languages does autobot work with?
+    - What languages will the utility autobot support?
+    - When I use Autobot, Can I make bot speaking [Japanese](language)?
+    - Which different languages does autobot support?
+    - Which languages are supported by autobot?
+    - Which languages can I use with autobot?
+    - Which languages can be used by autobot?
     - Which languages can you do?
-    - Which specific languages does rasa support?
+    - Which specific languages does autobot support?
     - Will it work for [german](language)
-    - are there any languages that rasa supports?
+    - are there any languages that autobot supports?
     - available for [German](language)?
-    - can I use rasa also for another laguage?
-    - can rasa speak [portuguese](language)?
-    - can rasa support this language?
-    - can rasa understand this language?
+    - can I use autobot also for another laguage?
+    - can autobot speak [portuguese](language)?
+    - can autobot support this language?
+    - can autobot understand this language?
     - can we make bot who speaks [Japanese](language)?
-    - can you tell me what languages rasa supports
+    - can you tell me what languages autobot supports
     - chatbot language ?
-    - do you have a list of languages rasa supports
-    - do you know of the languages rasa supports
-    - do you know what language rasa uses
+    - do you have a list of languages autobot supports
+    - do you know of the languages autobot supports
+    - do you know what language autobot uses
     - do you support [french](language) ?
-    - doea rasa support a particular langauage?
-    - does Rasa support other languages like [spanish](language)?
-    - does rasa aid other languages?
-    - does rasa support any languages?
-    - does rasa support this language?
-    - does rasa works in [spanish](language)
-    - hich languages supports rasa
-    - how can I add new language to rasa
-    - how can I add new language to rasa [core](product)
-    - how many natural language that rasa supported?
-    - in which langauges can i build a rasa bot
+    - doea autobot support a particular langauage?
+    - does Autobot support other languages like [spanish](language)?
+    - does autobot aid other languages?
+    - does autobot support any languages?
+    - does autobot support this language?
+    - does autobot works in [spanish](language)
+    - hich languages supports autobot
+    - how can I add new language to autobot
+    - how can I add new language to autobot [core](product)
+    - how many natural language that autobot supported?
+    - in which langauges can i build a autobot bot
     - is it available in [Spanish](language)?
-    - is rasa available for node?
-    - is support for rasa in this language?
+    - is autobot available for node?
+    - is support for autobot in this language?
     - language
     - language support
     - languages
@@ -503,51 +503,51 @@ nlu:
     - my bot can be in [italian](language)?
     - need to use [portuguese](language)
     - support for [serbian](language) language
-    - what about languages supported in rasa?
-    - what are the languages that is supported by rasa?
-    - what dialects does rasa support
-    - what different languages does rasa support
-    - what is the language rasa supports
-    - what is the variety of languages rasa uses
-    - what language does rasa support?
-    - what language list can I find for rasa
-    - what language supported by rasa?
-    - what language would rasa use
+    - what about languages supported in autobot?
+    - what are the languages that is supported by autobot?
+    - what dialects does autobot support
+    - what different languages does autobot support
+    - what is the language autobot supports
+    - what is the variety of languages autobot uses
+    - what language does autobot support?
+    - what language list can I find for autobot
+    - what language supported by autobot?
+    - what language would autobot use
     - what languages are available?
-    - what languages are supported by rasa?
-    - what languages can be supported by rasa?
+    - what languages are supported by autobot?
+    - what languages can be supported by autobot?
     - what languages do you support
-    - what languages does rasa support?
-    - which language can I use with rasa?
+    - what languages does autobot support?
+    - which language can I use with autobot?
     - which language do you support?
-    - which language supports rasa
+    - which language supports autobot
     - which languages are supported?
     - which languages do you support
-    - which languages does rasa support
-    - which languages supports rasa
+    - which languages does autobot support
+    - which languages supports autobot
     - your [NLU](product) understand [spanish](language)?
     - could I program spanish speaking bots?
     - How about [hindi](language)?
     - what lanquages do you support
     - What lanquages do you serve
-    - does rasa support other language beside english?
-    - how to build rasa with different languages?
+    - does autobot support other language beside english?
+    - how to build autobot with different languages?
     - even non latin based languages?
 - intent: faq/opensource_cost
   examples: |
     - Are you free?
     - do you cost anything?
-    - Can you tell me whats the price for [rasa](product) platform?
+    - Can you tell me whats the price for [autobot](product) platform?
     - How much do you cost?
     - How much does it cost?
-    - How much does [rasa](product) cost?
+    - How much does [autobot](product) cost?
     - How much it costs
     - I want to learn more about the pricing
     - I would like to know the cost first.
     - Subscription cost?
     - Subscription price
-    - What does [Rasa](product) cost?
-    - What is the cost of [RASA](product)?
+    - What does [Autobot](product) cost?
+    - What is the cost of [AUTOBOT](product)?
     - What is the price ?
     - Whats the cost?
     - are you free ?
@@ -558,90 +558,90 @@ nlu:
     - cost
     - cost?
     - give me the pricing
-    - how cost to install [Rasa](product)?
-    - how much costs the [rasa](product) platform
+    - how cost to install [Autobot](product)?
+    - how much costs the [autobot](product) platform
     - how much do you cost
-    - how much does [Rasa](product) cost
-    - how much does [RASA](product) cost ?
+    - how much does [Autobot](product) cost
+    - how much does [AUTOBOT](product) cost ?
     - how much does it cost
     - how much does it cost normally?
     - how much does it cost?
-    - how much does [rasa](product) cost
-    - how much does [rasa](product) cost?
+    - how much does [autobot](product) cost
+    - how much does [autobot](product) cost?
     - how much is it
     - how much it costs?
-    - how mush does [rasa](product) cost
+    - how mush does [autobot](product) cost
     - is it for free?
     - is it free
     - is it free?
-    - is [rasa core](product) paid?
-    - is [rasa](product) free
-    - is [rasa](product) free of cost
-    - is [rasa](product) stack free
+    - is [autobot core](product) paid?
+    - is [autobot](product) free
+    - is [autobot](product) free of cost
+    - is [autobot](product) stack free
     - is this free?
     - this is free?
     - what is price?
-    - what is pricing of [rasa](product)
-    - what is [rasa](product) cost ?
+    - what is pricing of [autobot](product)
+    - what is [autobot](product) cost ?
     - what is the enterprise pricing schedule?
-    - what is the price of [rasa](product)
+    - what is the price of [autobot](product)
     - what is the price?
-    - whats the cost of [rasa](product)
+    - whats the cost of [autobot](product)
     - your cost?
     - Are you open-source?
-    - Could you tell me whether rasa is [open source](product) or not?
-    - How do I find out if rasa is open source?
-    - Is Rasa a software formatted as open source?
-    - Is [rasa open source](product)
+    - Could you tell me whether autobot is [open source](product) or not?
+    - How do I find out if autobot is open source?
+    - Is Autobot a software formatted as open source?
+    - Is [autobot open source](product)
     - Is it a [open source](product) or any premium offer is available
-    - Is [rasa open source](product)?
-    - Is the [rasa](product) software open source?
+    - Is [autobot open source](product)?
+    - Is the [autobot](product) software open source?
     - Is your software open source?
-    - The [rasa](product) software, is that open source?
+    - The [autobot](product) software, is that open source?
     - are you full open source
     - are you open source
-    - could I call [rasa open source](product) software?
-    - does rasa fall into the [open source](product) software category?
-    - does rasa use [open source](product) software?
-    - how do i get the [open source](product) rasa
-    - is [rasa open source](product)?
-    - is [rasa open source](product)
+    - could I call [autobot open source](product) software?
+    - does autobot fall into the [open source](product) software category?
+    - does autobot use [open source](product) software?
+    - how do i get the [open source](product) autobot
+    - is [autobot open source](product)?
+    - is [autobot open source](product)
     - is it [open source](product)
     - is it [open source](product)?
-    - is [rasa](product) Open-Source?
-    - is [rasa](product) a type of open source software?
-    - is [rasa](product) an open source software?
-    - is [rasa](product) considered [open source](product) software?
-    - is [rasa](product) is open source?
-    - is [rasa](product) like an open source software
-    - is [rasa](product) software that is classified as open source?
-    - is the [Rasa](product) project open sourced?
+    - is [autobot](product) Open-Source?
+    - is [autobot](product) a type of open source software?
+    - is [autobot](product) an open source software?
+    - is [autobot](product) considered [open source](product) software?
+    - is [autobot](product) is open source?
+    - is [autobot](product) like an open source software
+    - is [autobot](product) software that is classified as open source?
+    - is the [Autobot](product) project open sourced?
     - is the project open source?
-    - is the software [rasa open source](product)?
+    - is the software [autobot open source](product)?
     - is this open source
     - is this [open source](product) license
     - is this opensource?
     - is your product open source
     - ist es freie [open source](product) software
     - no budget, that why i looking for open source
-    - [rasa core](product) is open source?
-    - [rasa](product) is the open source
-    - what components of Rasa are open source
-    - would an example of [open source](product) software be rasa?
-    - would people consider rasa an [open source](product) software?
-    - would rasa be [open source](product) software?
-    - would rasa fall into the category of [open source](product) software?
-    - would you call [rasa open source](product) software?
-    - would you consider [rasa open source](product) software?
+    - [autobot core](product) is open source?
+    - [autobot](product) is the open source
+    - what components of Autobot are open source
+    - would an example of [open source](product) software be autobot?
+    - would people consider autobot an [open source](product) software?
+    - would autobot be [open source](product) software?
+    - would autobot fall into the category of [open source](product) software?
+    - would you call [autobot open source](product) software?
+    - would you consider [autobot open source](product) software?
     - How is it opensource
-    - What is included in [rasa open source](product) edition?
+    - What is included in [autobot open source](product) edition?
     - you are [open source](product)
-    - is [rasa](product) opensource?
-    - how much is [Rasa](product) stack?
+    - is [autobot](product) opensource?
+    - how much is [Autobot](product) stack?
 - intent: faq/python_version
   examples: |
     - What Python version should I use?
-    - Which python version should I install to run Rasa example?
+    - Which python version should I install to run Autobot example?
     - Which version of Python to install?
     - python version
     - python version?
@@ -655,7 +655,7 @@ nlu:
     - which python version should i install
     - which version of python do i need
     - which python?
-    - which python is rasa using?
+    - which python is autobot using?
 - intent: faq/slots
   examples: |
     - Definition of slots please.
@@ -669,7 +669,7 @@ nlu:
     - I need a expert opinion on slots.
     - I need to know about slot filling
     - I'd like to know the meaning of slots
-    - In Rasa, what are slots used for?
+    - In Autobot, what are slots used for?
     - Not sure what slots are.
     - Not sure what slots are?
     - Please define the word slots for me.
@@ -729,13 +729,13 @@ nlu:
     - do you have tutorials about core
     - i am looking for a core tutorial
     - i need a core tutorial
-    - i need a rasa core tutorial
-    - i need a tutorial on how to use rasa core
+    - i need a autobot core tutorial
+    - i need a tutorial on how to use autobot core
     - i want a tutorial on core
-    - i want a tutorial on rasa core
+    - i want a tutorial on autobot core
     - i would like to follow a core tutorial
     - please show me a core tutorial
-    - rasa core tutorial
+    - autobot core tutorial
 - intent: faq/tutorial_nlu
   examples: |
     - are there some nlu tutorials i could look at
@@ -744,173 +744,173 @@ nlu:
     - do you have tutorials about nlu
     - i am looking for a nlu tutorial
     - i need a nlu tutorial
-    - i need a rasa nlu tutorial
-    - i need a tutorial on how to use rasa nlu
+    - i need a autobot nlu tutorial
+    - i need a tutorial on how to use autobot nlu
     - i want a tutorial on nlu
-    - i want a tutorial on rasa nlu
+    - i want a tutorial on autobot nlu
     - i would like to follow a nlu tutorial
     - nlu tutorial
     - please show me a nlu tutorial
-    - rasa nlu tutorial
-    - I am looking for tutorial on Rasa NLU
+    - autobot nlu tutorial
+    - I am looking for tutorial on Autobot NLU
     - Hey is there a tutorial on how to train an intent cassification model in Python_
 - intent: faq/tutorials
   examples: |
     - Did you have an tutorial.
     - Great. Are there any tutorials?
     - Im looking for some tutorial
-    - Is there a tutorial for Rasa?
+    - Is there a tutorial for Autobot?
     - TUTORIAL !!!!!!!!!!
-    - Tutorials for learning rasa ?
-    - any tutorials on using rasa?
+    - Tutorials for learning autobot ?
+    - any tutorials on using autobot?
     - are there some tutorials i could look at
-    - are there tutorials about rasa?
+    - are there tutorials about autobot?
     - basic tutorials
-    - best tutorial for rasa
+    - best tutorial for autobot
     - can yiu send me a tutorial?
-    - can you pint me to a good how-to online about Rasa
-    - can you point me to a good manual about Rasa
-    - do you have a rasa tutorial
+    - can you pint me to a good how-to online about Autobot
+    - can you point me to a good manual about Autobot
+    - do you have a autobot tutorial
     - download the tutorial
     - get me some tutorials
-    - i cannot find tutorial for rasa
-    - i need a good tutorial for rasa
-    - i want a tutorial of rasa
+    - i cannot find tutorial for autobot
+    - i need a good tutorial for autobot
+    - i want a tutorial of autobot
     - i want some tutorial
     - i'm looking for the youtube tutorial
     - is there a tutorial for this?
     - is there a tutorial?
-    - rasa bot tutorial
-    - rasa tutorial
-    - rasa tutorials
+    - autobot bot tutorial
+    - autobot tutorial
+    - autobot tutorials
     - show me a tutorial?
     - tutorial
     - tutorial?
     - tutorials
     - what's the best tutorial
-    - where can i fid tutorials for rasa
+    - where can i fid tutorials for autobot
     - where can i find some tutorials?
-    - where can i get a tutorial on rasa
-    - yes, where I can find some hand-on tutorials to use RASA products?
-    - I need to study RASA step by step, which is the best site to study?
+    - where can i get a tutorial on autobot
+    - yes, where I can find some hand-on tutorials to use AUTOBOT products?
+    - I need to study AUTOBOT step by step, which is the best site to study?
 - intent: faq/voice
   examples: |
-    - Building a rasa voice bot?
+    - Building a autobot voice bot?
     - can i programm a vocal assistant
-    - Building a voice bot using rasa.
-    - Can I build a rasa voice bot?
+    - Building a voice bot using autobot.
+    - Can I build a autobot voice bot?
     - Can I use my voice to speak to these bots?
-    - Can I use rasa to build a voice bot?
-    - Can one make a voice bot with rasa?
-    - Can you build a voice bot using rasa?
-    - Could I build a rasa voice bot?
-    - Do you know how to build a voice bot with rasa?
-    - Do you know if I can build a voice bot using rasa?
-    - Do you see an application of rasa in voice bot building?
-    - How can I build a voice bot with rasa?
-    - How can I build my voice bot using rasa?
-    - How can I use to rasa to build a voice bot?
-    - How can i integrate voice in RASA [CORE](product)
-    - How could I construct a voice bot with rasa?
-    - How to build a voice bot using rasa?
-    - How to build a voice bot with rasa?
+    - Can I use autobot to build a voice bot?
+    - Can one make a voice bot with autobot?
+    - Can you build a voice bot using autobot?
+    - Could I build a autobot voice bot?
+    - Do you know how to build a voice bot with autobot?
+    - Do you know if I can build a voice bot using autobot?
+    - Do you see an application of autobot in voice bot building?
+    - How can I build a voice bot with autobot?
+    - How can I build my voice bot using autobot?
+    - How can I use to autobot to build a voice bot?
+    - How can i integrate voice in AUTOBOT [CORE](product)
+    - How could I construct a voice bot with autobot?
+    - How to build a voice bot using autobot?
+    - How to build a voice bot with autobot?
     - How to build a voice bot?
-    - how to integrate speech to text in rasa
-    - How to use rasa to build a voice bot.
-    - I can build a voice bot with rasa, right?
-    - I can build a voice bot with rasa?
-    - I could build a voice bot with rasa?
-    - I'd like to build a voice bot with rasa.
-    - I'd like to use rasa to build a voice bot.
-    - Is it possible to build a voice bot with rasa?
-    - Is it possible to use rasa to build a voice bot?
-    - Is rasa a good fit for building a voice bot?
-    - Is rasa any good for building a voice bot?
-    - Is rasa suitable to build voice bots?
-    - It is possible to build a voice bot with rasa?
-    - Rasa voice bot building.
+    - how to integrate speech to text in autobot
+    - How to use autobot to build a voice bot.
+    - I can build a voice bot with autobot, right?
+    - I can build a voice bot with autobot?
+    - I could build a voice bot with autobot?
+    - I'd like to build a voice bot with autobot.
+    - I'd like to use autobot to build a voice bot.
+    - Is it possible to build a voice bot with autobot?
+    - Is it possible to use autobot to build a voice bot?
+    - Is autobot a good fit for building a voice bot?
+    - Is autobot any good for building a voice bot?
+    - Is autobot suitable to build voice bots?
+    - It is possible to build a voice bot with autobot?
+    - Autobot voice bot building.
     - Voice bot
-    - Voice in Rasa
-    - What can I do to build a voice bot with rasa?
-    - What to do if I want to build a voice bot using rasa?
-    - When can I build a voice bot using rasa?
-    - When is the best time to build a voice bot with rasa?
-    - Will it be correct if I said I can build a voice bot with rasa?
+    - Voice in Autobot
+    - What can I do to build a voice bot with autobot?
+    - What to do if I want to build a voice bot using autobot?
+    - When can I build a voice bot using autobot?
+    - When is the best time to build a voice bot with autobot?
+    - Will it be correct if I said I can build a voice bot with autobot?
     - alexa
-    - can I construct a voice bot with rasa?
-    - can I create a voice bot with rasa?
-    - can I form a voice bot with rasa?
-    - can I invent a voice bot with rasa?
-    - can I make a voice bot with rasa?
-    - can I use rasa to build alexa skills
-    - can a voice bot be built using rasa?
+    - can I construct a voice bot with autobot?
+    - can I create a voice bot with autobot?
+    - can I form a voice bot with autobot?
+    - can I invent a voice bot with autobot?
+    - can I make a voice bot with autobot?
+    - can I use autobot to build alexa skills
+    - can a voice bot be built using autobot?
     - can i build a voice bot
-    - can i build a voice bot with rasa?
-    - can rasa be used to build a voice bot?
-    - can rasa be used with alexa
+    - can i build a voice bot with autobot?
+    - can autobot be used to build a voice bot?
+    - can autobot be used with alexa
     - do u know Alexa?
     - do you have voice recognition
     - do you support alexa voice?
     - do you take voice input?
-    - does rasa support voice input
-    - how can i use rasa with alexa
+    - does autobot support voice input
+    - how can i use autobot with alexa
     - how do i build a voice bot?
     - how to add voice assitant to chat bot
     - i want to build a voice bot
     - is there an alexa integration
-    - rasa can't be used to build a voice bot, can it?
+    - autobot can't be used to build a voice bot, can it?
     - voice
-    - what is the chance of building a rasa voice bot?
-    - with rasa can I build a voice bot?
-    - with rasa can I construct a voice bot?
-    - with rasa can I form a voice bot
-    - with rasa can I invent a voice bot?
-    - with rasa can I make a voice bot?
+    - what is the chance of building a autobot voice bot?
+    - with autobot can I build a voice bot?
+    - with autobot can I construct a voice bot?
+    - with autobot can I form a voice bot
+    - with autobot can I invent a voice bot?
+    - with autobot can I make a voice bot?
     - you have speech recognition?
-    - do rasa provide speech intent
+    - do autobot provide speech intent
 - intent: faq/what_is_forum
   examples: |
-    - Could you please describe the Rasa forum?
-    - Could you please explain the Rasa forum to me?
-    - Could you please give me a description of the Rasa forum?
-    - Could you please tell me more about Rasa forum?
-    - Did you know about Rasa forum?
-    - Do you have rasa forum?
-    - How do you define the Rasa forum?
-    - Is rasa forum reliable?
-    - List the characteristics of rasa forum?
-    - What are the rules of the Rasa forum?
+    - Could you please describe the Autobot forum?
+    - Could you please explain the Autobot forum to me?
+    - Could you please give me a description of the Autobot forum?
+    - Could you please tell me more about Autobot forum?
+    - Did you know about Autobot forum?
+    - Do you have autobot forum?
+    - How do you define the Autobot forum?
+    - Is autobot forum reliable?
+    - List the characteristics of autobot forum?
+    - What are the rules of the Autobot forum?
     - What can a person do in the forum
-    - What do people do in the Rasa forum?
-    - What happens in the Rasa forum?
-    - What is the advantage of rasa forum?
-    - What is the purpose of the Rasa forum?
-    - What is the scope of the Rasa forum?
+    - What do people do in the Autobot forum?
+    - What happens in the Autobot forum?
+    - What is the advantage of autobot forum?
+    - What is the purpose of the Autobot forum?
+    - What is the scope of the Autobot forum?
     - i would just like to have the link for the community
     - is there anything specific to be done in this forum
-    - so what exactly is the Rasa forum?
+    - so what exactly is the Autobot forum?
     - so what is this forum for?
     - tell me about the forum
     - what area is the forum for?
     - what can I do in the forum
     - what can I do in your community's forum
     - what can I post in the forum?
-    - what can a person in Rasa do at the forum
+    - what can a person in Autobot do at the forum
     - what can be done in the forum?
     - what can be performed in the forum?
     - what can people do in the forum
-    - what can people in Rasa do at the forum
+    - what can people in Autobot do at the forum
     - what can you put in the forum?
     - what do people do in the forum
     - what do we do in the forum
-    - what does a person do in the Rasa forum
+    - what does a person do in the Autobot forum
     - what exactly is the forum?
-    - what is a Rasa forum for?
-    - what is the Rasa forum
-    - what is the Rasa forum used for
+    - what is a Autobot forum for?
+    - what is the Autobot forum
+    - what is the Autobot forum used for
     - what is the forum
     - what is the forum about
-    - what is the forum in Rasa used for
+    - what is the forum in Autobot used for
     - what is the forum in your community used for
     - what is the forum used for?
     - whats in the forum
