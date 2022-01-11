@@ -22,7 +22,7 @@ You can find planned enhancements for Komu in the
 To install Komu, please clone the repo and run:
 
 ```sh
-cd autobot-demo
+cd autobot
 make install
 ```
 
@@ -32,13 +32,13 @@ Note that this bot should be used with python 3.6 or 3.7.
 
 ## 🤖 To run Komu:
 
-Use `autobot train` to train a model (this will take a significant amount of memory to train,
+Use `rasa train` to train a model (this will take a significant amount of memory to train,
 if you want to train it faster, try the training command with
 `--augmentation 0`).
 
 Then, to run, first set up your action server in one terminal window:
 ```bash
-autobot run actions --actions actions.actions
+rasa run actions --actions actions.actions
 ```
 
 There are some custom actions that require connections to external services,
@@ -49,8 +49,8 @@ credentials for external services.
 
 In another window, run the bot:
 ```bash
-docker run -p 8000:8000 autobot/duckling
-autobot shell --debug
+docker run -p 8000:8000 rasa/duckling
+rasa shell --debug
 ```
 
 Note that `--debug` mode will produce a lot of output meant to help you understand how the bot is working 
@@ -62,11 +62,11 @@ your website.
 
 ## To test Komu:
 
-After doing a `autobot train`, run the command:
+After doing a `rasa train`, run the command:
 
 ```bash
-autobot test nlu -u test/test_data.json --model models
-autobot test core --stories test/test_stories.md
+rasa test nlu -u test/test_data.json --model models
+rasa test core --stories test/test_stories.md
 ```
 
 ## 👩‍💻 Overview of the files
