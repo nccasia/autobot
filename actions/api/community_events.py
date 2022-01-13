@@ -11,7 +11,7 @@ from geopy.geocoders import Nominatim
 logger = logging.getLogger(__name__)
 
 DATE_FORMAT = "%d %B, %Y"
-COMMUNITY_EVENT_PAGE = "https://komu.vn/community/join/"
+COMMUNITY_EVENT_PAGE = "https://rasa.com/community/join/"
 
 
 class CommunityEvent:
