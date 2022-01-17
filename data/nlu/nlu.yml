@@ -1,5 +1,99 @@
 version: "2.0"
 nlu:
+- intent: require_ratecard
+  examples: |
+    - What is your rate
+    - send me your ratecard
+    - do you have rate card
+- intent: require_porfolio
+  examples: |
+    - send me your portfolio
+    - show me information about your company
+    - send me your profile
+    - do you have any kind of sales documentation
+- intent: concern_about_working_hour
+  examples: |
+    - how_many_working_hours_per_man_day?
+- intent: techstack_consult
+  examples: |
+    - What method of intergration will you use for this project?
+    - What kind of technology will you use for this project?
+- intent: concern_about_base
+  examples: |
+    - where is your head office?
+    - where is your company located in?
+    - do you have office in <country>    
+- intent: require_resource
+  examples: |
+    - i am looking for many developers for my new projects
+    - we are looking for many developers for our new projects
+    - we are looking for <techstack> resource for our project
+    - we are looking for a development team for our project
+    - we are looking for a outsource partner
+- intent: provide_requiremments
+  examples: |
+    - fullstack
+    - senior
+    - pre-senior
+    - middle
+    - junior
+    - fresher
+    - good at English
+    - good at Japanese
+    - <techstack>
+- intent: provide_information_of_project
+  examples: |
+    - the project will kick start on <time>
+    - the project will last for <timeframe>
+    - field
+    - size
+    - any speacial requirements
+- intent: book_meeting
+  examples: |
+    - are you available for a meeting on <time>
+    - how about a meeting on <time>
+- intent: confirm_meeting_schedule
+  examples: |
+    - yes see you soon
+    - okay see you at the meeting
+    - that's great
+    - see you
+    - it's ok
+- intent: require_contract_form
+  examples: |
+    - please send me <type> contract forms
+    - could you please send me your contract forms
+- intent: compare_contract
+  examples: |
+    - what is the difference between <type1> and <type2> contract?
+    - can you tell me the differences of these types of contract?  
+- intent: require_sample_project
+  examples: |
+    - could I see examples of existing similar projects please?
+    - could you give me some examples of your project in this field?
+- intent: concern_about_ project_management
+  examples: |
+    - how can I manage the process of project?
+    - how can I know the project catching up the schedule?
+- intent: concern_about_over_budget
+  examples: |
+    - how can I control the budget of project with T&M contract?
+    - how can I know that the project is not out of budget?
+- intent: concern_about_abroad_representative
+  examples: |
+    - can you give me your representative's contact?
+- intent: concern_about_foreign_reference_or_verification
+  examples: |
+    - can you give me the contact of our client in <country>?
+    - it' great if your client can send me a reference letter
+- intent: concern_about_trial_period
+  examples: |
+    - is there any discounted rate on the trial period?
+    - if the first candidate is not suitable for our product, will you provide another relevant skill-set candidate?
+- intent: concern_about_parts_of project
+  examples: |
+    - how many parts of our project that you can cover?
+    - can you cover all of our project?
 - intent: broken
   examples: |
     - it's not working

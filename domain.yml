@@ -1,8 +1,8 @@
-version: '2.0'
+version: "2.0"
 config:
   store_entities_as_slots: true
 session_config:
-  session_expiration_time: 480
+  session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
 - affirm
@@ -50,6 +50,26 @@ intents:
 - trigger_rephrase
 - why_rasa
 - nlu_fallback
+- require_portfolio
+- require_resource
+- provide_requiremments
+- provide_information_of_project
+- require_ratecard
+- concern_about_working_hour
+- techstack_consult
+- book_meeting
+- confirm_meeting_schedule
+- require_contract_form
+- compare_contract
+- require_sample_project
+- concern_about_management method
+- concern_about_over_budget
+- concern_about_base
+- concern_about_abroad_representative
+- concern_about_foreign_reference_or_verification
+- concern_about_trial_period
+- concern_about_parts_of project
+- how_to_get_started
 - trigger_response_selector:
     use_entities: false
 entities:
@@ -514,6 +534,44 @@ responses:
   - text: Because Autobot is open source, you can customize your bot and explore its inner workings as much as you'd like. There's no vendor lock in, and no hidden algorithms.
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
+  utter_ratecard:
+  - text: this is our rate card for your reference
+  utter_portfolio:
+  - text: this is our company's profile
+  utter_working_hour:
+  - text: a man day is equal to 8 working hours
+  utter_techstack:
+  - text: i will forward your project to our technical team, they will suggest the best choice for you
+  utter_base:
+  - text: NCC has five offices in Vietnam in which the head quarter is located in Hanoi. Besides, we also has a representative in UK and we are taking efforts to settle one more office there.
+  utter_resource:
+  - text: can you give me more information about your project as follows so that we can be well understoood your demand:starting time, scheduled timeframe, field, size
+  utter_requirements:
+  - text: can you give me your resource requirements?
+  utter_project_information:
+  - text: thank you for your information
+  utter_book_meeting:
+  - text: let me check with our manager and get back to you soon
+  utter_confirm_meeting_schedule:
+  - text: yes we're available on <time,date>. See you at the meeting
+  utter_contract_form:
+  - text: This is our <type> contract form, please take a look for more details.
+  utter_compare_contract:
+  - text: with fixed price contract, it will have the finalized cost and fixed deadline but have the poor flexibility and high risk, especially with the complex projects or project which client hasn't had the specific requirements. The cost for maintenance of fixed price is also very high with T&M, we still estimate the total price and scheduled deadline, but during the implementing process, if there are any changes of requirements or any arising problems, they can be easier to be solved, so the higher flexibiliy and lower risk With fixed price, client has to pay the total cost in 2 - 3 times or after each phase of project while With T&M, each month, we will issue an invoice on the last working days of that month.
+  utter_sample_project:
+  - text: this is our existing project which is somehow related to your project.
+  utter_project_management:
+  - text: we will send you the weekly report so that you can manage the process of the project
+  utter_over_budget:
+  - text: we will follow the initial planning and review the project continuously to make sure that the project catching up the schedule. If there are any araising problems, we will solve it imeditately.
+  utter_abroad_representative:
+  - text: please take a look at this link for your reference
+  utter_verification:
+  - text: This is our client's information. You can contact this email or phone number for verification.
+  utter_trial_period:
+  - text: Since we do not know the complexibility level of your project exactly so we would like to offer 1 trial month for our resource to evaluate the project. After this trial period, if the candidate is not suitable, we will provide another relevant skill-set candidate. Please be noted that there is no discount for the trial period.
+
+
 actions:
 - action_trigger_response_selector
 - action_default_ask_affirmation
