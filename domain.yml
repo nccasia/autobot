@@ -5,25 +5,25 @@ session_config:
   session_expiration_time: 480
   carry_over_slots_to_new_session: true
 intents:
-# - require_portfolio
-# - require_resource
-# - provide_requiremments
-# - provide_information_of_project
-# - require_ratecard
-# - concern_about_working_hour
-# - techstack_consult
-# - book_meeting
-# - confirm_meeting_schedule
-# - require_contract_form
-# - compare_contract
-# - require_sample_project
-# - concern_about_management method
-# - concern_about_over_budget
-# - concern_about_base
-# - concern_about_abroad_representative
-# - concern_about_foreign_reference_or_verification
-# - concern_about_trial_period
-# - concern_about_parts_of project
+- require_portfolio
+- require_resource
+- provide_requiremments
+- provide_information_of_project
+- require_ratecard
+- concern_about_working_hour
+- techstack_consult
+- book_meeting
+- confirm_meeting_schedule
+- require_contract_form
+- compare_contract
+- require_sample_project
+- concern_about_management method
+- concern_about_over_budget
+- concern_about_base
+- concern_about_abroad_representative
+- concern_about_foreign_reference_or_verification
+- concern_about_trial_period
+- concern_about_parts_of project
 # - how_to_get_started
 - affirm
 - ask_how_contribute
