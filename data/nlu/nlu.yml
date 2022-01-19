@@ -22,12 +22,12 @@ nlu:
   examples: |
     - where is your head office?
     - where is your company located in?
-    - do you have office in <country>    
+    - do you have office in [Germany](country)    
 - intent: require_resource
   examples: |
     - i am looking for many developers for my new projects
     - we are looking for many developers for our new projects
-    - we are looking for <techstack> resource for our project
+    - we are looking for [fullstack](techstack) resource for our project
     - we are looking for a development team for our project
     - we are looking for a outsource partner
 - intent: provide_requiremments
@@ -40,18 +40,18 @@ nlu:
     - fresher
     - good at English
     - good at Japanese
-    - <techstack>
+    - techstack
 - intent: provide_information_of_project
   examples: |
-    - the project will kick start on <time>
-    - the project will last for <timeframe>
+    - the project will kick start on [6am](time)
+    - the project will last for [6 months](timeframe)
     - field
     - size
     - any speacial requirements
 - intent: book_meeting
   examples: |
-    - are you available for a meeting on <time>
-    - how about a meeting on <time>
+    - are you available for a meeting on [5pm](time)
+    - how about a meeting on [10am](time)
 - intent: confirm_meeting_schedule
   examples: |
     - yes see you soon
@@ -61,17 +61,17 @@ nlu:
     - it's ok
 - intent: require_contract_form
   examples: |
-    - please send me <type> contract forms
+    - please send me [written](contract_type) contract forms
     - could you please send me your contract forms
 - intent: compare_contract
   examples: |
-    - what is the difference between <type1> and <type2> contract?
+    - what is the difference between [Written](contract_type) and [Verbal](contract_type) contract?
     - can you tell me the differences of these types of contract?  
 - intent: require_sample_project
   examples: |
     - could I see examples of existing similar projects please?
     - could you give me some examples of your project in this field?
-- intent: concern_about_ project_management
+- intent: concern_about_project_management
   examples: |
     - how can I manage the process of project?
     - how can I know the project catching up the schedule?

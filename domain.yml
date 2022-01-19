@@ -2,7 +2,7 @@ version: '2.0'
 config:
   store_entities_as_slots: true
 session_config:
-  session_expiration_time: 480
+  session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
 - require_portfolio
@@ -89,7 +89,22 @@ entities:
 - user_type
 - install_type
 - retrieval_intent
+- country
+- time
+- timeframe
+- techstack
+- contract_type
 slots:
+  country:
+    type: text
+  time:
+    type: unfeaturized
+  timeframe:
+    type: text
+  techstack:
+    type: text
+  contract_type: 
+    type: text
   retrieval_intent:
     type: any
   budget:
