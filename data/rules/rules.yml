@@ -1,5 +1,76 @@
 version: "2.0"
 rules:
+- rule: require_ratecard
+  steps:
+  - intent: require_ratecard
+  - action: utter_ratecard
+- rule: require_porfolio
+  steps:
+  - intent: require_porfolio
+  - action: utter_portfolio
+- rule: working_hour
+  steps:
+  - intent: concern_about_working_hour
+  - action: utter_working_hour
+- rule: techstack_consult
+  steps:
+  - intent: techstack_consult
+  - action: utter_techstack
+- rule: base
+  steps:
+  - intent: concern_about_base
+  - action: utter_base
+- rule: require_resource
+  steps:
+  - intent: require_resource
+  - action: utter_resource
+- rule: provide_requiremments
+  steps:
+  - intent: provide_requiremments
+  - action: utter_requirements
+- rule: project_information
+  steps:
+  - intent: provide_information_of_project
+  - action: utter_project_information
+- rule: book_meeting
+  steps:
+  - intent: book_meeting
+- rule: confirm_meeting_schedule
+  steps:
+  - intent: confirm_meeting_schedule
+  - action: utter_confirm_meeting_schedule
+- rule: contract_form
+  steps:
+  - intent: require_contract_form
+  - action: utter_contract_form
+- rule: compare_contract
+  steps:
+  - intent: compare_contract
+  - action: utter_compare_contract
+- rule: sample_project
+  steps:
+  - intent: require_sample_project
+  - action: utter_sample_project
+- rule: project_management
+  steps:
+  - intent: concern_about_ project_management
+  - action: utter_project_management
+- rule: over_budget
+  steps:
+  - intent: concern_about_over_budget
+  - action: utter_over_budget
+- rule: abroad_representative
+  steps:
+  - intent: concern_about_abroad_representative
+  - action: utter_abroad_representative
+- rule: verification
+  steps:
+  - intent: concern_about_foreign_reference_or_verification
+  - action: utter_verification
+- rule: trial_period
+  steps:
+  - intent: concern_about_trial_period
+  - action: utter_trial_period
 - rule: why autobot 1
   condition:
   - slot_was_set:
