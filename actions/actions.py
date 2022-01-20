@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 import json
+import requests
 from datetime import datetime
 from typing import Any, Dict, List, Text, Optional
 
@@ -528,6 +529,9 @@ class ActionDefaultAskAffirmation(Action):
         return button_title.format(**entities)
 
 
+API_TOKEN = "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"
+API_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
+
 class ActionDefaultFallback(Action):
     def name(self) -> Text:
         return "action_default_fallback"
@@ -540,8 +544,28 @@ class ActionDefaultFallback(Action):
     ) -> List[EventType]:
 
         # Fallback caused by TwoStageFallbackPolicy
+
+        payload = json.dumps({
+        "inputs": {
+            "text": tracker.latest_message["text"]
+        }
+        })
+        headers = {
+        'Authorization': f"Bearer {API_TOKEN}",
+        'Content-Type': 'application/json'
+        }
+
+        response = requests.request("POST", API_URL, headers=headers, data=payload)
+        response = response.json()
+        response = response["generated_text"]
+
+        # print("------------------------------")
+        # print(tracker.latest_message["text"])
+        # print(response)
+
         last_intent = tracker.latest_message["intent"]["name"]
         if last_intent in ["nlu_fallback", USER_INTENT_OUT_OF_SCOPE]:
+            dispatcher.utter_message(text=response)
             return [SlotSet("feedback_value", "negative")]
 
         # Fallback caused by Core
