@@ -1,5 +1,81 @@
 version: "2.0"
 rules:
+- rule: concern_about_timekeeping
+  steps:
+  - intent: concern_about_timekeeping
+  - action: utter_concern_about_timekeeping
+- rule: concern_about_log_and_submit_timesheet
+  steps:
+  - intent: concern_about_log_and_submit_timesheet
+  - action: utter_concern_about_log_and_submit_timesheet
+- rule: break_between_working_hours
+  steps:
+  - intent: break_between_working_hours
+  - action: utter_break_between_working_hours
+- rule: regulations_on_means_of_information_notification
+  steps:
+  - intent: regulations_on_means_of_information_notification
+  - action: utter_regulations_on_means_of_information_notification
+- rule: regulation_rules_in_the_workplace
+  steps:
+  - intent: regulation_rules_in_the_workplace
+  - action: utter_regulation_rules_in_the_workplace
+- rule: require_information_security
+  steps:
+  - intent: require_information_security
+  - action: utter_require_information_security
+- rule: regulations_on_management_and_use_of_company_assets
+  steps:
+  - intent: regulations_on_management_and_use_of_company_assets
+  - action: utter_regulations_on_management_and_use_of_company_assets
+- rule: regulations_on_the_implementation_of_savings_in_the_company
+  steps:
+  - intent: regulations_on_the_implementation_of_savings_in_the_company
+  - action: utter_regulations_on_the_implementation_of_savings_in_the_company
+- rule: internship_regulations
+  steps:
+  - intent: internship_regulations
+  - action: utter_internship_regulations
+- rule: probationary_regulations
+  steps:
+  - intent: probationary_regulations
+  - action: utter_probationary_regulations
+- rule: labour_contract
+  steps:
+  - intent: labour_contract
+  - action: utter_labour_contract
+- rule: concern_about_salary_and_allowance
+  steps:
+  - intent: concern_about_salary_and_allowance
+  - action: utter_concern_about_salary_and_allowance
+- rule: insurance_regulations
+  steps:
+  - intent: insurance_regulations
+  - action: utter_insurance_regulations
+- rule: employee_benefits
+  steps:
+  - intent: employee_benefits
+  - action: utter_employee_benefits
+- rule: leave_day_regulations
+  steps:
+  - intent: leave_day_regulations
+  - action: utter_leave_day_regulations
+- rule: promotion_and_reward_policy
+  steps:
+  - intent: promotion_and_reward_policy
+  - action: utter_promotion_and_reward_policy
+- rule: regulations_on_training_and_development
+  steps:
+  - intent: regulations_on_training_and_development
+  - action: utter_regulations_on_training_and_development
+- rule: disciplinary_regulations
+  steps:
+  - intent: disciplinary_regulations
+  - action: utter_disciplinary_regulations
+- rule: concern_about_complain
+  steps:
+  - intent: concern_about_complain
+  - action: utter_concern_about_complain
 - rule: require_ratecard
   steps:
   - intent: require_ratecard
@@ -10,7 +86,7 @@ rules:
   - action: utter_portfolio
 - rule: working_hour
   steps:
-  - intent: concern_about_working_hour
+  - intent: concern_about_working_time
   - action: utter_working_hour
 - rule: techstack_consult
   steps:
@@ -18,7 +94,7 @@ rules:
   - action: utter_techstack
 - rule: base
   steps:
-  - intent: concern_about_base
+  - intent: require_information_company
   - action: utter_base
 - rule: require_resource
   steps:
