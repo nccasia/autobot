@@ -209,7 +209,7 @@ slots:
   faq:
     type: any
 responses:
-  utter_timekeeping:
+  utter_concern_about_timekeeping:
   - text: Employees have to timekeeping twice a day before 8:30 and after 17:30.
   utter_concern_about_log_and_submit_timesheet:
   - text: Logging and submitting timesheets is a part of the company's policy. Time was logged and submitted is the proof to calculate monthly salary. In case employees forget to log their time, their timesheet will be locked and they will have to pay 20.000 VND a time to unlock for a working week.
@@ -240,13 +240,13 @@ responses:
   utter_leave_day_regulations:
   - text: Employees working full 12 months will be entitled to 12 days of paid leave. If it is not enough, the actual number of working months will be 1 day of leave/month. If at the end of the year, the employee has not used up all the leave days will be transferred 03 days of leave to the next year and used in the first quarter of the following year.
   utter_promotion_and_reward_policy:
-  text: The company has a promotion and reward policy. The company will promote employees to the next level of management and reward employees for their contribution to the company.
+  - text: The company has a promotion and reward policy. The company will promote employees to the next level of management and reward employees for their contribution to the company.
   utter_regulations_on_training_and_development:
-  text: The company has a training and development policy. The company will provide training and development programs to employees.
+  - text: The company has a training and development policy. The company will provide training and development programs to employees.
   utter_disciplinary_regulations:
-  text: Forget to lock the computer or push the chair in when leaving the work area (10000 VND). Go to work late (15 minutes) (20000 VND). Messy work area (30000 VND). Forget to log timesheet (20000 VND).
+  - text: Forget to lock the computer or push the chair in when leaving the work area (10000 VND). Go to work late (15 minutes) (20000 VND). Messy work area (30000 VND). Forget to log timesheet (20000 VND).
   utter_concern_about_complain:
-  text: The company has a complaint policy. The company will investigate complaints and take appropriate actions.
+  - text: The company has a complaint policy. The company will investigate complaints and take appropriate actions.
   utter_ratecard:
   - text: this is our rate card for your reference
   utter_portfolio:

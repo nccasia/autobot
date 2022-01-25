@@ -20,7 +20,7 @@ rules:
   steps:
   - intent: regulation_rules_in_the_workplace
   - action: utter_regulation_rules_in_the_workplace
-- rule: require_information_security:
+- rule: require_information_security
   steps:
   - intent: require_information_security
   - action: utter_require_information_security

@@ -262,7 +262,7 @@ nlu:
     - What is external training?
     - What does external training have?
 -  intent: disciplinary_regulations
-  examples: |
+   examples: |
     - What are the basic rules of the company?
     - What is the penalty for breaking the rules?
     - What are the forms of corporate discipline?
@@ -276,7 +276,7 @@ nlu:
 - intent: concern_about_complain
   examples: |
     - Can i make a complaint?
-	  - I want to complain
+    - I want to complain
     - I want to complain about something
 - intent: broken
   examples: |
