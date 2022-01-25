@@ -19,11 +19,32 @@ intents:
 - require_sample_project
 - concern_about_management method
 - concern_about_over_budget
-- concern_about_base
+- require_information_company
 - concern_about_abroad_representative
 - concern_about_foreign_reference_or_verification
 - concern_about_trial_period
 - concern_about_parts_of project
+- concern_about_working_time
+- concern_about_timekeeping
+- concern_about_project_management
+- concern_about_log_and_submit_timesheet
+- break_between_working_hours
+- regulations_on_means_of_information_notification
+- regulation_rules_in_the_workplace
+- require_information_security
+- regulations_on_management_and_use_of_company_assets
+- regulations_on_the_implementation_of_savings_in_the_company
+- internship_regulations
+- probationary_regulations
+- labour_contract
+- concern_about_salary_and_allowance
+- insurance_regulations
+- employee_benefits
+- leave_day_regulations
+- promotion_and_reward_policy
+- regulations_on_training_and_development
+- disciplinary_regulations
+- concern_about_complain
 # - how_to_get_started
 - affirm
 - ask_how_contribute
@@ -188,12 +209,50 @@ slots:
   faq:
     type: any
 responses:
+  utter_timekeeping:
+  - text: Employees have to timekeeping twice a day before 8:30 and after 17:30.
+  utter_concern_about_log_and_submit_timesheet:
+  - text: Logging and submitting timesheets is a part of the company's policy. Time was logged and submitted is the proof to calculate monthly salary. In case employees forget to log their time, their timesheet will be locked and they will have to pay 20.000 VND a time to unlock for a working week.
+  utter_break_between_working_hours:
+  - text: Employees want to have a break between working hours or go out more than a hour have to ask the manager to approve and tell the HR. Employees are not allowed to leave the company without a manager's approval.
+  utter_regulations_on_means_of_information_notification:
+  - text: Email, KOMU, IMS are the means of information notification. The company has to notify employees about the regulations in the company. Employees have to check the email and KOMU regularly to keep up with the company's news.
+  utter_regulation_rules_in_the_workplace:
+  - text: Do not speak loudly, make noise or disorder affecting the others. Maintain cleanliness of workarea and company.
+  utter_require_information_security:
+  - text: Company email can not be used for personal purposes. Each employees is responsible for keeping the password confidential. The content of emails must not be shared with anyone.
+  utter_regulations_on_management_and_use_of_company_assets:
+  - text: Employees are responsible for safeguarding company assets. Do not move or destroy company assets without the permission of the company.
+  utter_regulations_on_the_implementation_of_savings_in_the_company:
+  - text: Employees are required to use economically and efficiently equipment, machinery and energy sources (electricity, water ...), telecommunications charges, stationery costs...
+  utter_internship_regulations:
+  - text: Interns working at the company must meet the working time and job requirements and equipment offered by the company. The level of support of the intern will depend on the capacity and experience to decide. At the end of the internship period, the intern will be considered for capacity, ethics, behavior and aspiration to work at the company, the human resources department will coordinate with the PM and the Board of Directors to consider accepting .
+  utter_probationary_regulations:
+  - text: The probationary period at NCC is 02 months. During the probationary period, both parties have the right to terminate the probationary contract if they feel it is not suitable.
+  utter_labour_contract:
+  - text: Before the end of the probationary period, the employee will be notified of the probation result at least 03 working days in advance. If the assessment results after 2 months of probation are passed, the employee will be signed a 2-year labor contract with the company. Employees are entitled to the Company's welfare regimes after being transferred to full-time employees.
+  utter_concern_about_salary_and_allowance:
+  - text: The company pays periodic salaries to employees from the 1st to the 5th (according to the solar calendar) every month.
+  utter_insurance_regulations:
+  - text: All employees at NCC who sign labor contracts with a term of 24 months or more are covered by the company's insurance obligations in accordance with the provisions of the labor law.
+  utter_employee_benefits:
+  - text: Here are several welfare policies of NCC; Yearly health examination, Annual company events, Holidays and personal bonuses.
+  utter_leave_day_regulations:
+  - text: Employees working full 12 months will be entitled to 12 days of paid leave. If it is not enough, the actual number of working months will be 1 day of leave/month. If at the end of the year, the employee has not used up all the leave days will be transferred 03 days of leave to the next year and used in the first quarter of the following year.
+  utter_promotion_and_reward_policy:
+  text: The company has a promotion and reward policy. The company will promote employees to the next level of management and reward employees for their contribution to the company.
+  utter_regulations_on_training_and_development:
+  text: The company has a training and development policy. The company will provide training and development programs to employees.
+  utter_disciplinary_regulations:
+  text: Forget to lock the computer or push the chair in when leaving the work area (10000 VND). Go to work late (15 minutes) (20000 VND). Messy work area (30000 VND). Forget to log timesheet (20000 VND).
+  utter_concern_about_complain:
+  text: The company has a complaint policy. The company will investigate complaints and take appropriate actions.
   utter_ratecard:
   - text: this is our rate card for your reference
   utter_portfolio:
   - text: this is our company's profile
   utter_working_hour:
-  - text: a man day is equal to 8 working hours
+  - text: The official working hours of NCC are 8.30am - 5.30pm (with one hour of noon-break 12pm - 1pm), from Monday to Friday. On Saturdays, the company hosts Open Talks, and employees are required to join in at least twice a month.
   utter_techstack:
   - text: i will forward your project to our technical team, they will suggest the best choice for you
   utter_base:

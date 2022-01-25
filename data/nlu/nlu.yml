@@ -11,18 +11,24 @@ nlu:
     - show me information about your company
     - send me your profile
     - do you have any kind of sales documentation
-- intent: concern_about_working_hour
-  examples: |
-    - how_many_working_hours_per_man_day?
 - intent: techstack_consult
   examples: |
     - What method of intergration will you use for this project?
     - What kind of technology will you use for this project?
-- intent: concern_about_base
+- intent: require_information_company
   examples: |
-    - where is your head office?
-    - where is your company located in?
-    - do you have office in [Germany](country)    
+    - Where is your head office?
+    - Where is your company located in?
+    - Where does your company have branches?
+    - Do you have office in [Ha Noi](country)
+    - What is your company's direction?
+    - What field does the company specialize in? 
+    - What is the company's goal?
+    - What services does the company currently have?
+    - In which areas does the company work on projects?
+    - How many projects are there in total?
+    - What is the company's working environment like?
+    - What is the company's slogan?    
 - intent: require_resource
   examples: |
     - i am looking for many developers for my new projects
@@ -43,11 +49,9 @@ nlu:
     - techstack
 - intent: provide_information_of_project
   examples: |
-    - the project will kick start on [6am](time)
-    - the project will last for [6 months](timeframe)
-    - field
-    - size
-    - any speacial requirements
+    - What is the [autobot](project) about?
+    - What date will [autobot](project) start?
+    - What date will [autobot](project) end?
 - intent: book_meeting
   examples: |
     - are you available for a meeting on [5pm](time)
@@ -84,7 +88,7 @@ nlu:
     - can you give me your representative's contact?
 - intent: concern_about_foreign_reference_or_verification
   examples: |
-    - can you give me the contact of our client in <country>?
+    - can you give me the contact of our client in [America](country)?
     - it' great if your client can send me a reference letter
 - intent: concern_about_trial_period
   examples: |
@@ -94,6 +98,186 @@ nlu:
   examples: |
     - how many parts of our project that you can cover?
     - can you cover all of our project?
+- intent: concern_about_working_time
+  examples: |
+    - How many hours do I work in a day?
+    - What time does the working time start?
+    - What time does the working time end?
+    - What time is lunch break?
+    - How long is the lunch break?
+    - Do I have to work OT?
+    - Do I have to work Saturday?
+    - Can I sign up for working time?
+    - Can I work starting at [9am](time)?
+    - When I work overtime, will I be paid?
+    - How many Opentalk sessions do I have to attend in a month?
+    - How many hours is the Opentalk session?
+    - Can I choose an opentalk session to join?
+- intent: concern_about_timekeeping
+  examples: |
+    - Do employees have to take attendance every day?
+    - How many times a day do I have to do timekeeping?
+    - What time is timekeeping?
+    - How is the timekeeping? 
+    - Does Saturday have to be timekeeping? 
+    - Do I have to be timekeeping on time?
+    - Timekeeping late at work?
+- intent: concern_about_log_and_submit_timesheet
+  examples: |
+    - Where can I log the timesheet?
+    - How to log timesheet?
+    - Do employees have to log timesheet?
+    - What is the log timesheet for?
+    - Why do I have to log timesheet?
+    - Can I log last week's timesheet?
+    - Can I log last month's timesheet?
+    - I forgot what the log timesheet will look like?
+    - I forgot what the submit timesheet will look like?
+    - Who approves employee timesheets?
+    - When is the timesheet approved?
+    - When is the last date to approve timesheet?
+    - Is there a penalty if I don't approve the timesheet?
+- intent: break_between_working_hours
+  examples: |
+    - Can I go out during working hours?
+    - What if I go out without the PM's approval?
+- intent: regulations_on_means_of_information_notification
+  examples: |
+    - Where is the company's inside information disclosed?
+- intent: regulation_rules_in_the_workplace
+  examples: |
+    - What are the company's rules for maintaining order and cleaning in the workplace?
+- intent: require_information_security
+  examples: |
+    - What is the company's internal information security policy?
+    - What happens when there is a breach of information disclosure?
+- intent: regulations_on_management_and_use_of_company_assets
+  examples: |
+    - I want to know about the regulations on the use and management of assets in the company?
+    - What happens if I lose or damage company property?
+    - How do I use company equipment for personal purposes?
+- intent: regulations_on_the_implementation_of_savings_in_the_company
+  examples: |
+    - Rules on saving in the company?
+    - What are the rules on saving in the company?
+- intent: internship_regulations
+  examples: |
+    - What are the regulations for interns?
+    - Are the interns subsidized?
+    - Can the intern terminate the internship agreement?
+    - Why was the contract terminated for the internship?
+    - If the internship period is over, what will happen?
+    - What happens if the internship is terminated?
+- intent: probationary_regulations
+  examples: |
+    - How long does the probationary period take?
+    - Can the probationer terminate the contract?
+    - What if the company terminates the contract with the probationer?
+    - What happens if the probationary period is over?
+- intent: labour_contract
+  examples: |
+    - When will I be notified of my probationary results?
+    - What if i pass the probation?
+    - Will I be entitled to benefits when I become a official staff?
+    - How long will the official staff sign the contract?
+    - What happens if I resign?
+- intent: concern_about_salary_and_allowance
+  examples: |
+    - What day is the salary paid?
+    - What is the salary payment method?
+    - What is the salary condition?
+    - How to calculate salary?
+    - What are the company allowances?
+    - How much money do you support for lunch?
+    - How much is parking ticket support?
+    - How much does it cost to support the computer?
+    - How much does it cost to support team building projects?
+    - How to calculate overtime?
+    - How is overtime during the week calculated?
+    - How is weekend overtime calculated?
+    - Is overtime paid?
+    - How much is the overtime payment?
+    - How much is the overtime payment for the weekend?
+- intent: insurance_regulations
+  examples: |
+    - What are the conditions for getting insurance?
+    - Who is eligible for health care insurance?
+    - What types of insurance are there?
+    - What are the benefits of social insurance?
+    - What are the benefits of health insurance?
+    - What are the benefits of unemployment insurance?
+    - What are the benefits of disability insurance?
+- intent: employee_benefits
+  examples: |
+    - Can I get regular health check-ups?
+    - Does the company have an Annual Event?
+    - What Annual Events does the company have?
+    - Who can join End year Party?
+    - Who can join Company Trip?
+    - Who can join the company birthday?
+    - Can I join teambuilding?
+    - When is the end year party held?
+    - When does the company trip take place?
+    - When is the company birthday?
+    - When does the teambuilding take place?
+    - What subsidies does the company have?
+    - Does the company reward holidays? 
+    - Does the company have Tet bonus?
+    - Does the company have uniforms?
+    - Does the company have a personal birthday party?
+    - Does the company have a marriage allowance?
+    - Who gets the marriage allowance?
+    - Does the company have a maternity allowance?
+    - Does the company have sickness benefits?
+    - Does the company have a funeral allowance?
+    - Does the company have a seniority bonus?
+    - Who gets seniority bonus?
+- intent: leave_day_regulations
+  examples: |
+    - How many days of leave does the employee have?
+    - How to calculate leave days
+    - Is the leave paid for?
+    - How to calculate leave days?
+    - What if I haven't used up my leave?
+    - I take leave without pay
+    - What if I leave without permission?
+    - What if I take [3 days](leavingtime) leave?
+    - What if I take a day off?
+    - What holidays do I get?
+    - Does the company leave according to the regime?
+    - How many days off do I get when I get married?
+    - How many days off do I have when giving birth?
+    - How is maternity leave calculated?
+- intent: promotion_and_reward_policy
+  examples: |
+    - What is the company's promotion policy?
+    - What is the company's reward policy?
+    - What is the company's salary increase policy?
+    - How to qualify for a salary increase?
+- intent: regulations_on_training_and_development
+  examples: |
+    - What training do new employees receive?
+    - What is internal training?
+    - What does internal training have?
+    - What is external training?
+    - What does external training have?
+-  intent: disciplinary_regulations
+  examples: |
+    - What are the basic rules of the company?
+    - What is the penalty for breaking the rules?
+    - What are the forms of corporate discipline?
+    - What are the violations of company rules?
+    - What is a level one rule violation?
+    - What is a second level rule violation?
+    - What is a third level rule violation?
+    - What are the violations of forced severance?
+    - What are the penalties for forced severance?
+    - What are the penalties for violating the rules?
+- intent: concern_about_complain
+  examples: |
+    - Can i make a complaint?
+	  - I want to complain
+    - I want to complain about something
 - intent: broken
   examples: |
     - it's not working
