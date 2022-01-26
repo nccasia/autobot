@@ -1,5 +1,25 @@
 version: "2.0"
 rules:
+- rule: leave_day_or_onsite
+  steps:
+  - intent: leave_day_or_onsite
+  - action: utter_leave_day_or_onsite
+- rule: team_working_calendar
+  steps:
+  - intent: team_working_calendar
+  - action: utter_team_working_calendar
+- rule: about_resource_management
+  steps:
+  - intent: about_resource_management
+  - action: utter_about_resource_management
+- rule: about_weekly_report
+  steps:
+  - intent: about_weekly_report
+  - action: utter_about_weekly_report
+- rule: about_available_resource
+  steps:
+  - intent: about_available_resource
+  - action: utter_about_available_resource
 - rule: concern_about_timekeeping
   steps:
   - intent: concern_about_timekeeping

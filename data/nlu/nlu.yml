@@ -137,6 +137,11 @@ nlu:
     - When is the timesheet approved?
     - When is the last date to approve timesheet?
     - Is there a penalty if I don't approve the timesheet?
+    - In case I have many projects, how do I log the timesheet?
+    - What if I log a [9 hours](duration) timesheet with the type of normal working hours?
+    - What if I log a [10 hours](duration) timesheet with the type of OT?
+    - When I work overtime, will I be paid?
+    - How do I log the Opentalk session timesheet?
 - intent: break_between_working_hours
   examples: |
     - Can I go out during working hours?
@@ -241,7 +246,7 @@ nlu:
     - What if I haven't used up my leave?
     - I take leave without pay
     - What if I leave without permission?
-    - What if I take [3 days](leavingtime) leave?
+    - What if I take [3 days](duration) leave?
     - What if I take a day off?
     - What holidays do I get?
     - Does the company leave according to the regime?
@@ -278,6 +283,111 @@ nlu:
     - Can i make a complaint?
     - I want to complain
     - I want to complain about something
+- intent: leave_day_or_onsite
+  examples: |
+    - Where is the send remote request?
+    - How do I send remote request?
+    - Can I log in remotely on a day off?
+    - Can I send remote request days in the future?
+    - Is it possible to send remote request in past dates?
+    - Can send remote in the middle of the hour?
+    - Cansend remote in the morning?
+    - Can I send remote in the afternoon?
+    - Can send remote in at the end of the hour?
+    - Can you send remote at the beginning of the hour?
+    - Can I send remote at [1 hours](duration)?
+    - Can I ask for a remote for many days?
+    - Can working as a remote get paid?
+    - What if I forgot to ask for the remote?
+    - When applying for a remote, what if PM does not approve?
+    - When I send remote, what happens if PM reject?
+    - Where is the send onsite?
+    - How to send onsite?
+    - Can I send onsite on holiday?
+    - Can I send onsite in future days?
+    - Can I send onsite from previous days?
+    - Can I send onsite in the middle of the hour?
+    - Can you send onsite in the morning?
+    - Can I send onsite in the afternoon?
+    - Can onsite log in at the end of the hour?
+    - Can you send onsite at the beginning of the hour?
+    - Can I send onsite at [2 hours](duration)?
+    - Can I ask for a onsite for many days?
+    - Where can I send my leave?
+    - If I take a leave of absence, will I get paid?
+    - What if I take [3 days](duration) leave?
+    - How do I apply for an unscheduled leave?
+    - What if I apply for more than the number of leave days?
+    - If I apply for regular leave, will I be paid?
+    - How many days can I take leave under the wedding leave regime?
+    - How many days of maternity leave do you usually get?
+    - How many days of maternity leave can I take?
+    - When send leave leave in the afternoon, can I send remote in the morning?
+-intent: team_working_calendar
+  examples: |
+    - I can see which members in the project are taking leave?
+    - I can see the members of the project who are applying for a remote?
+    - Can I see members applying for remote in multiple projects?
+    - Can I see remote members or leave in the last month?
+- intent: about_resource_management
+  examples: |
+    - I want to see the list of employees included in the project?
+    - What is the start time of each employee's project?
+    - What employee statuses are included in the project?
+    - What is the usage percentage of each employee?
+    - Is it possible to remove an employee from that project?
+    - Is it possible to correct that employee's information?
+    - I want to see the list of employees who have been on the project?
+    - Is it possible to add new employees to the project?
+    - If entering current or past date, what is the employee's status?
+    - If entering a future date, what is the employee's status?
+    - Who can request personnel?
+    - What is the status when you just made a request for personnel?
+    - For each UserId in a project, how many Present states are there?
+    - Can a PM edit or delete an employee from the project?
+    - When clicking "Show historical information", the list will return the employee's status, what is the status?
+    - When I create the HR request table, what is the status?
+    - The list of project bills belongs to whom?
+    - What is the status of the records at the Project Bill list?
+    - What status records are added to the project's Timesheet?
+-intent: about_weekly_report
+  examples: |
+    - What are the statuses of the weekly report page?
+    - Can PMs self-assess their project status?
+    - Is it mandatory to enter a general review?
+    - Who is the general reviewer data entry?
+    - What if I don't enter a general rating?
+    - Who created the issues of the week?
+    - Create issues of the week what is the status?
+    - Can the state of the record be changed?
+    - Who can see the number of projects in this report? 
+    - What was the status of the old weeks?
+    - What is the status of the report for the current week?
+    - Is it possible to edit the name of the report?
+    - Is it possible to view the details of the report?
+    - How to close the report for the current week?
+    - How can the DM see the employee's working percentage in the current week?
+    - Where can I see the list of PM reports?
+    - Who can enter Note to comment overview for the current week?
+    - What information does each PM report include?
+    - What will happen if PM does not Send Report?
+    - With a record with In Progress status when it has not been converted to Done, what will the DM do?
+    - Who is the record status changed by? With what is the condition?
+    - When adding a new record in the Employee List table in the Resource Management tab, what is the status condition?
+    - Can PM edit data of employee record?
+    - Can PM delete data of employee record?
+    - At Resource that is expected to change in the future, what is the status of the record?
+    - What are the actions of this record?
+-intent: about_available_resource
+  examples: |
+    - What is this Available Resource/ Pool tab for?
+    - Want to know what project this employee has participated in?
+    - See if an employee is already in the Pool but hasn't picked a project yet?
+    - Who has that Note?
+    - Which employee stayed in the pool the longest?
+    - Which employees already have [autobot](project) in the Plan?
+    - Who can edit projects in Plan?
+    - I want to know what is the skill of [autobot](project) employee?
 - intent: broken
   examples: |
     - it's not working
