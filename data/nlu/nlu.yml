@@ -337,7 +337,7 @@ nlu:
     - How many days off do you usually get after giving birth?
     - How many days off can I get after giving birth by caesarean section?
     - When I send leave [2 hours](duration) at the end of the hour, can I send remote in the morning?
--intent: team_working_calendar
+- intent: team_working_calendar
   examples: |
     - I can see which members in the project are taking leave?
     - I can see the members of the project who are applying for a remote?
@@ -357,7 +357,7 @@ nlu:
     - I am looking for a programmer for [autobot](project)?
     - We are  looking for [fullstack](techstack) resource for our project?
     - We need a development team for [autobot](project)?
--intent: about_weekly_report
+- intent: about_weekly_report
   examples: |
     - What are the statuses of the weekly report page?
     - What is Green status in Weekly report?
