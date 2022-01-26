@@ -323,7 +323,7 @@ nlu:
     - How many days of maternity leave do you usually get?
     - How many days of maternity leave can I take?
     - When send leave leave in the afternoon, can I send remote in the morning?
--intent: team_working_calendar
+- intent: team_working_calendar
   examples: |
     - I can see which members in the project are taking leave?
     - I can see the members of the project who are applying for a remote?
@@ -350,7 +350,7 @@ nlu:
     - The list of project bills belongs to whom?
     - What is the status of the records at the Project Bill list?
     - What status records are added to the project's Timesheet?
--intent: about_weekly_report
+- intent: about_weekly_report
   examples: |
     - What are the statuses of the weekly report page?
     - Can PMs self-assess their project status?
@@ -378,7 +378,7 @@ nlu:
     - Can PM delete data of employee record?
     - At Resource that is expected to change in the future, what is the status of the record?
     - What are the actions of this record?
--intent: about_available_resource
+- intent: about_available_resource
   examples: |
     - What is this Available Resource/ Pool tab for?
     - Want to know what project this employee has participated in?
