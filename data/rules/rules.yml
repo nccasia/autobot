@@ -1,5 +1,9 @@
 version: "2.0"
 rules:
+- rule: about_pm_management
+  steps:
+  - intent: about_pm_management
+  - action: utter_about_pm_management
 - rule: leave_day_or_onsite
   steps:
   - intent: leave_day_or_onsite
@@ -8,10 +12,10 @@ rules:
   steps:
   - intent: team_working_calendar
   - action: utter_team_working_calendar
-- rule: about_resource_management
+- rule: about_resource_request
   steps:
-  - intent: about_resource_management
-  - action: utter_about_resource_management
+  - intent: about_resource_request
+  - action: utter_about_resource_request
 - rule: about_weekly_report
   steps:
   - intent: about_weekly_report

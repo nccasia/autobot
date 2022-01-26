@@ -47,9 +47,10 @@ intents:
 - concern_about_complain
 - leave_day_or_onsite
 - team_working_calendar
-- about_resource_management
+- about_resource_request
 - about_weekly_report
 - about_available_resource
+- about_pm_management
 # - how_to_get_started
 - affirm
 - ask_how_contribute
@@ -121,7 +122,10 @@ entities:
 - techstack
 - contract_type
 - project
-slots:
+- employee
+slots: 
+  employee:
+    type: text 
   project:
     type: text
   country:
@@ -217,12 +221,14 @@ slots:
   faq:
     type: any
 responses:
+  utter_about_pm_management:
+  - text: You can check the pm management. 
   utter_leave_day_or_onsite:
   - text: You can leave your day or onsite.
   utter_team_working_calendar:
   - text: You can check the team working calendar.
-  utter_about_resource_management:
-  - text: You can check the resource management.
+  utter_about_resource_request:
+  - text: You can check the resource request.
   utter_about_weekly_report:
   - text: You can check the weekly report.
   utter_about_available_resource:
