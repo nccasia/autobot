@@ -51,6 +51,12 @@ intents:
 - about_weekly_report
 - about_available_resource
 - about_pm_management
+- regulations_in_the_company
+- rules_for_working_from_home
+- remote_check_in_and_check_out_rules
+- regulations_on_employee_benefits
+- rules_to_join_opentalk
+- information_about_company_guidelines
 # - how_to_get_started
 - affirm
 - ask_how_contribute
@@ -122,10 +128,7 @@ entities:
 - techstack
 - contract_type
 - project
-- employee
 slots: 
-  employee:
-    type: text 
   project:
     type: text
   country:
