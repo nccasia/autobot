@@ -49,9 +49,16 @@ nlu:
     - techstack
 - intent: provide_information_of_project
   examples: |
-    - What is the [autobot](project) about?
-    - What date will [autobot](project) start?
-    - What date will [autobot](project) end?
+     - What is the [autobot](project) about?
+     - The project will kick start on [8am](time)?
+     - The project will last for [6 months](duration)?
+     - Who is the PM of [autobot] (project)?
+     - What is the status of [autobot](project)?
+     - Can I edit or delete project information?
+     - I want to know the client name of [autobot](project)?
+     - Can I create new project information?
+     - I would like to know if the [autobot](project)charges the customer or not?
+     - Can I see the status of [autobot](project)?
 - intent: book_meeting
   examples: |
     - are you available for a meeting on [5pm](time)
@@ -557,6 +564,49 @@ nlu:
     - Where can I see a list of business contacts?
     - Who can participate in the Checkpoint test?
     - Where do I take the Checkpoint?
+- intent: concern_about_checkpoint
+  examples: |
+    - What is checkpoint for?
+    - What is checkpoint?
+    - Why do I have to checkpoint?
+    - How to checkpoint?
+    - How many checkpoints are there in a year?
+    - When does checkpoint take place?
+    - Who can join the checkpoint?
+    - What does checkpoint have?
+    - Can I rate a colleague?
+    - Can I evaluate my superior?
+    - Can I rate myself?
+    - How many criteria does checkpoint have?
+    - What are the criteria at checkpoint?
+    - When will the checkpoint results be available?
+    - Where can I see the checkpoint results?
+    - Can I see other people's checkpoint results?
+    - What if I don't complete the checkpoint on time?
+    - Can I see last year's checkpoint results?
+    - What is self-assessment?
+    - What is a superior rating?
+    - I want to rate myself
+    - I want to rate my superiors
+    - I want to rate my colleagues
+    - I want to judge other people
+    - How to rate myself
+    - How to evaluate my colleagues
+    - How to rate my superior?
+    - Can other people rate me?
+    - Who can rate me?
+    - When does checkpoint expire?
+    - I can't rate my self
+    - I can't rate my superior
+    - Why can't I do the review?
+    - Where can I see the review results?
+    - I want to see the results of the assessment
+    - Can I edit my review?
+    - Do I know anyone who rate me?
+    - Can I rate anonymously?
+    - Can I rate my team members? 
+    - Can I rate other team members?
+    - Can I evaluate my capacity when it expires
 - intent: broken
   examples: |
     - it's not working

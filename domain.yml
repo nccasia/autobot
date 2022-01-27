@@ -57,6 +57,7 @@ intents:
 - regulations_on_employee_benefits
 - rules_to_join_opentalk
 - information_about_company_guidelines
+- concern_about_checkpoint
 # - how_to_get_started
 - affirm
 - ask_how_contribute
@@ -224,8 +225,32 @@ slots:
   faq:
     type: any
 responses:
+  utter_regulations_in_the_company:
+  - text: The company has regulations on confidentiality of internal information and customer information.When violating regulations, employees need to take full responsibility and the equivalent violation amount is 200 million VND. Regulations on uploading avatars for the company's internal tools to manage employees.
+  utter_rules_for_working_from_home:
+  - text: |
+     General rules for all employees when working from home. All members must comply with the regulations when the remote needs to notify the PM
+     - Check-in/out via IMS.
+     - Notify PM about remote.
+     - Check-in/Check-out when working as a remote.
+     - About the Daily.
+     - Check Komu often.
+     - Log Timesheet by day.
+  utter_remote_check_in_and_check_out_rules:
+  - text: Employees are obligated to timekeeping daily (at least 2 times a day). Timekeeping is from 8.30 am to 5.30 pm (may change according to the time of registration of working hours).
+  utter_regulations_on_employee_benefits:
+  - text: |
+     - The company stipulates the salary payment time from 05 to 06 (solar calendar). The form of payment is via bank transfer with the condition that all documents are received and the timesheet is filled in.
+     - The company has a policy on salary increase, employees need to participate in checkpoint twice a year.
+     - All employees at NCC who sign official labor contracts are covered by the company's insurance obligations according to the provisions of the labor law, and the employees are not excluded from all kinds of insurance. Especially, for employees who have worked at the company for 12 months or more, they will be able to participate in the health care insurance program.
+     - Employee benefits in the company such as periodic health check, annual events, bonus holidays and personal allowance.
+     - Employees working full 12 months will be entitled to 12 days of paid leave. If it is not enough, the actual number of working months will be 1 day of leave/month. NCC members are entitled to holidays and full salary.
+  utter_rules_to_join_opentalk:
+  - text: Every Saturday, the company holds an Opeantalk session. Employees attend at least 2 sessions per month. Only confirm participation in Opentalk with those who are present and participating in opentalk or those who have completed the project (with confirmation from PM when approving timesheet).
+  utter_information_about_company_guidelines:
+  - text: The company has instructions on the IMS to let employees understand how to use the company's internal tools, how to work with people.
   utter_about_pm_management:
-  - text: You can check the pm management. 
+  - text: PM Management is a tab that includes a list of all projects, customer names and corresponding times. Access link http://project.dev.nccsoft.vn/. Create a Resource Management Tab including a list of employees who have been, are and are about to be in the project. Personnel Request table to display the requests for personnel created by the PM.
   utter_leave_day_or_onsite:
   - text: | 
      When remote, employees need to follow the regulations when working from home:
@@ -238,12 +263,18 @@ responses:
      When doing onsite, employees need to notify PM and HR.
   utter_team_working_calendar:
   - text: At the Timesheet page, you can see if the members of the same project are working remotely or on leave.
+  utter_concern_about_checkpoint:
+  - text: | 
+     - To evaluate the working efficiency of all employees as well as to ensure the periodic salary increase review is done within the stipulated time.
+     - Access link  http://checkpoint.nccsoft.vn/ to do the review.
+     - See checkpoint instructions on https://ims.nccsoft.vn/
+     - Read the article about checkpoints on IMS for more details or contact HR.
   utter_about_resource_request:
-  - text: You can check the resource request.
+  - text: The Request Resource tab is the PM page, which summarizes all the personnel requests created by the PM. The PM can switch the state for these requests from Pending to Done.
   utter_about_weekly_report:
-  - text: You can check the weekly report.
+  - text: Weekly report is a weekly report of the project, the components include Status, General Rating, Weekly Issues table, Resource changed in the past week and Resource is expected to change in the future. Every PM is required to submit a report within a certain period of time.
   utter_about_available_resource:
-  - text: You can check the available resource.
+  - text: This is a page to let PMs know that there are currently employees who are not in any project / or are temporarily using in 1 project, but can completely release it for another project. An employee when Released from the project by a PM (Not used in a project) -> will be updated into this pool.
   utter_concern_about_timekeeping:
   - text: Employees have to timekeeping twice a day before 8:30 and after 17:30. 
   utter_concern_about_log_and_submit_timesheet:
@@ -297,7 +328,7 @@ responses:
   utter_requirements:
   - text: can you give me your resource requirements?
   utter_project_information:
-    - text: thank you for your information
+  - text: NCC provides information about the project. Access link http://project.dev.nccsoft.vn/
   utter_book_meeting:
   - text: let me check with our manager and get back to you soon
   utter_confirm_meeting_schedule:
