@@ -227,9 +227,17 @@ responses:
   utter_about_pm_management:
   - text: You can check the pm management. 
   utter_leave_day_or_onsite:
-  - text: You can leave your day or onsite.
+  - text: | 
+     When remote, employees need to follow the regulations when working from home:
+     - Notify PM about remote
+     - Check-in/Check-out when working as a remote
+     - About the Daily
+     - Check Komu often
+     - Log Timesheet.
+     When applying for leave, employees need to notify the PM and arrange work before taking leave.
+     When doing onsite, employees need to notify PM and HR.
   utter_team_working_calendar:
-  - text: You can check the team working calendar.
+  - text: At the Timesheet page, you can see if the members of the same project are working remotely or on leave.
   utter_about_resource_request:
   - text: You can check the resource request.
   utter_about_weekly_report:
@@ -239,7 +247,7 @@ responses:
   utter_concern_about_timekeeping:
   - text: Employees have to timekeeping twice a day before 8:30 and after 17:30. 
   utter_concern_about_log_and_submit_timesheet:
-  - text: Logging and submitting timesheets is a part of the company's policy. Time was logged and submitted is the proof to calculate monthly salary. In case employees forget to log their time, their timesheet will be locked and they will have to pay 20.000 VND a time to unlock for a working week. Every monday, PM's approval function of the previous week will be locked. At the first day of the month, the entire timesheet of the previous month will be locked. If PM forget to approve/reject the timesheet, they will have to pay 50.000 VND to unlock the timesheet.
+  - text: According to the company's regulations, the Log and Submit Timesheet is a mandatory obligation. Working time recorded on Timesheet is the basis for monthly salary calculation. For employees, the weekly timesheet of that week will be locked by the end of Sunday. In case the employee forgets to log the timesheet, they will be fined 20,000 VND. For PM, by the end of every Monday, the approve or reject function will be locked. If you forget to Approve/ Reject, you will be fined 50,000 VND.
   utter_break_between_working_hours:
   - text: Employees want to have a break between working hours or go out more than a hour have to ask the manager to approve and tell the HR. Employees are not allowed to leave the company without a manager's approval.
   utter_regulations_on_means_of_information_notification:
@@ -279,7 +287,7 @@ responses:
   utter_portfolio:
   - text: this is our company's profile
   utter_working_hour:
-  - text: The official working hours of NCC are 8.30am - 5.30pm (with one hour of noon-break 12pm - 1pm), from Monday to Friday. On Saturdays, the company hosts Open Talks, and employees are required to join in at least twice a month.
+  - text: The official working hours of NCC are 8.30am - 5.30pm (Employees can register working hours when approved by PM) (with one hour of noon-break 12pm - 1pm), from Monday to Friday. On Saturdays, the company hosts Open Talks, and employees are required to join in at least twice a month.
   utter_techstack:
   - text: i will forward your project to our technical team, they will suggest the best choice for you
   utter_base:
