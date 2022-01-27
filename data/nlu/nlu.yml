@@ -337,7 +337,7 @@ nlu:
     - How many days off do you usually get after giving birth?
     - How many days off can I get after giving birth by caesarean section?
     - When I send leave [2 hours](duration) at the end of the hour, can I send remote in the morning?
--intent: team_working_calendar
+- intent: team_working_calendar
   examples: |
     - I can see which members in the project are taking leave?
     - I can see the members of the project who are applying for a remote?
@@ -389,20 +389,20 @@ nlu:
 - intent: about_available_resource
   examples: |
     - What is this Available Resource/ Pool tab for?
-    - Want to know what project [Minh Anh](employee) has participated in?
+    - Want to know what project [Minh Anh](name) has participated in?
     - See if an employee is already in the Pool but hasn't picked a project yet?
     - Which employee stayed in the pool the longest?
     - Which employees already have [autobot](project) in the Plan?
-    - I want to know what is the skill of [Hong Minh](employee)?
+    - I want to know what is the skill of [Hong Minh](name)?
     - Who can Note for employees in the Pool tab?
 - intent: about_pm_management
   examples: |
     - I want to see the list of employees included in the[autobot](project)?
     - What is the start time of each employee's [autobot](project)?
     - What employee statuses are included in the[autobot](project)?
-    - What is the usage percentage of [Anh Vu](employee) in the [autobot](project)?
-    -  Who can  remove an [Tuan Anh](employee) from [autobot](project)?
-    - Is it possible to correct [Viet](employee) information?
+    - What is the usage percentage of [Anh Vu](name) in the [autobot](project)?
+    -  Who can  remove an [Tuan Anh](name) from [autobot](project)?
+    - Is it possible to correct [Viet](name) information?
     - I want to see the list of employees who have been on the [autobot](project)?
     - Who can add new employees to the [autobot](project)?
     - If entering current date what is the employee's status?
@@ -416,6 +416,147 @@ nlu:
     - Where can I see [autobot](project) details?
     - Is it possible to edit [autobot](project)details?
     - How many projects are there in [12 months](duration)?
+- intent: regulations_in_the_company
+  examples: |
+    - What is the company's internal information security policy?
+    - What happens when there is a breach of information disclosure?
+    - Who is the audience for uploading avatars to internal tools?
+    - The tools that need to be uploaded are?
+    - Are there any requirements for uploading avatars?
+    - When is the deadline to upload avatars?
+    - What's wrong with not uploading avatars?
+    - Where can I read the company's general regulations?
+- intent: rules_for_working_from_home
+  examples: |
+    - Rules for working from home?
+    - Who can send remote?
+    - When sending remote, how do I timekeeping?
+    - Is there a tutorial on sending remote?
+    - What if I send remote but PM does not confirm?
+    - Is there a regulation on timekeeping when sending remote?
+    - How many times a day daily?
+    - What is the daily time like?
+    - No daily fines?
+    - How late will the daily be?
+    - When working as a remote, how many minutes will it be fine to not check Komu?
+    - Violations many times per day will not be paid
+    - How much is the penalty for not logging the timesheet when working remotely?
+    - Who supervises and applies fines in cases of violations when remote?
+- intent: remote_check_in_and_check_out_rules
+  examples: |
+    - How many times of attendance when working remotely?
+    - Timekeeping when sending remote?
+    - Will I be fined when I don't check-in?
+    - What's wrong with late check-in?
+    - When doing remote, where do you check-in?
+    - Are there instructions on check-in?
+- intent: regulations_on_employee_benefits
+  examples: |
+    - May I know the salary regulations?
+    - What is the company's salary payment date?
+    - What is the company's payment method?
+    - What are the conditions to be paid by the company?
+    - How to calculate company salary?
+    - What kind of allowances does the company have?
+    - When doing OT, does the company charge a salary?
+    - OT salary for the week like?
+    - What is the weekend OT salary?
+    - What policies does the company have on salary increase regulations?
+    - What are the conditions for getting insurance?
+    - Who is entitled to health care insurance?
+    - What types of insurance does the company have?
+    - What are the benefits of social insurance?
+    - What are the benefits of health insurance?
+    - What are the benefits of unemployment insurance?
+    - What are the benefits of health insurance when working for 12 months or more?
+    - Who can participate in periodic health check?
+    - Does the company hold an annual event?
+    - What are the company's annual events?
+    - Who can join the End year Party?
+    - Who can join Company Trip?
+    - Who can join a company birthday party?
+    - Can I join teambuilding?
+    - When is the end year party held?
+    - When does the company trip take place?
+    - When is the company birthday?
+    - When does the teambuilding take place?
+    - What subsidies does the company have?
+    - Does the company reward holidays? 
+    - Does the company have Tet bonus?
+    - Does the company have uniforms?
+    - Does the company have a personal birthday party?
+    - Does the company have a marriage allowance?
+    - Who gets the marriage allowance?
+    - Does the company have a maternity allowance?
+    - Does the company have sickness benefits?
+    - Does the company have a funeral allowance?
+    - Does the company have a seniority bonus?
+    - Who gets seniority bonus?
+    - How many days of leave does the employee have?
+    - How to calculate leave days
+    - Is the leave paid for?
+    - How to calculate leave days?
+    - What if I haven't used up my leave?
+    - I take leave without pay
+    - What if I leave without permission?
+    - What if I take [3 days](duration) leave?
+    - What if I take a day off?
+    - When the annual leave is over, but the employee has his own reasons, what should he do?
+    - What will happen in case of self-retirement without PM's consent?
+    - What do employees need to do with less than 2 days off?
+    - What should employees do on leave of more than 3 days?
+    - What to do in case of sick leave, unexpected work?
+    - What holidays do I get?
+    - Does the company leave according to the regime?
+    - How many days off do I get when I get married?
+    - How many days off do I have when giving birth?
+    - How is maternity leave calculated?
+    - What training do new employees receive?
+    - What is internal training?
+    - What does internal training have?
+    - What is external training?
+- intent: rules_to_join_opentalk
+  examples: |
+    - Who can join Opentalk?
+    - Does participating in Opentalk get paid?
+    - How many sessions per month do you attend?
+    - What is the purpose of the Opentalk session?
+    - Is it okay not to join Opentalk?
+    - What is the fee for joining Opentalk?
+- intent: information_about_company_guidelines
+  examples: |
+    - Where can I read the company's internal tool manuals?
+    - Who created the tutorials?
+    - Who approves these tutorials?
+    - How do I read the TopTracker manual for PMs and Freelancers?
+    - Is there a file to register for ProTrack software?
+    - I want to know a short description of TopTracker software?
+    - Guide channel Support channel internal tools via Azure devops?
+    - Description of channel Support channer internal tools via azure devops?
+    - Where can I look up the contact phone number through google contact of @ncc.asia?
+    - Who is the object of phone number lookup via google contact?
+    - What are the steps to look up phone numbers via google contact?
+    - I want to see instructions for remote registration and changing business hours on Timesheet?
+    - I want information about Alpha Team?
+    - I want information about Alpha Team?
+    - Alpha Team's founding date?
+    - Alpha Team's slogan?
+    - What is the purpose of founding Alpha Team?
+    - Alpha Team uptime?
+    - List of members with main responsibility in the Tester team?
+    - Contact information for [A](name) in Alpha Team?
+    - What is the main job of [A](name) in Alpha Team?
+    - I would like information about the SIPDO team?
+    - How do I contact the SIPDO team?
+    - SIPDO team is divided into how many lines?
+    - What is the contact information for [A](name) in the SIPDO team?
+    - [A](name) in which line of SIPDO team?
+    - Information about OPEN VPN installation and usage guide?
+    - Where can I download the OPEN VPN link?
+    - I want to read about the notes when using Timesheet?
+    - Where can I see a list of business contacts?
+    - Who can participate in the Checkpoint test?
+    - Where do I take the Checkpoint?
 - intent: broken
   examples: |
     - it's not working
