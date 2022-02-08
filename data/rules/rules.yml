@@ -4,10 +4,6 @@ rules:
   steps:
   - intent: about_project
   - action: action_about_project
-- rule: regulations_in_the_company
-  steps:
-  - intent: regulations_in_the_company
-  - action: utter_regulations_in_the_company
 - rule: rules_for_working_from_home
   steps:
   - intent: rules_for_working_from_home
@@ -16,10 +12,6 @@ rules:
   steps:
   - intent: remote_check_in_and_check_out_rules
   - action: utter_remote_check_in_and_check_out_rules
-- rule: regulations_on_employee_benefits
-  steps:
-  - intent: regulations_on_employee_benefits
-  - action: utter_regulations_on_employee_benefits
 - rule: rules_to_join_opentalk
   steps:
   - intent: rules_to_join_opentalk
