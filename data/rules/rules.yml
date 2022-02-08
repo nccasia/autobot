@@ -159,6 +159,7 @@ rules:
 - rule: book_meeting
   steps:
   - intent: book_meeting
+  - action: utter_book_meeting
 - rule: confirm_meeting_schedule
   steps:
   - intent: confirm_meeting_schedule
