@@ -171,7 +171,6 @@ nlu:
     - What if I log a [10 hours](duration) timesheet with the type of OT?
     - Can I log timesheet twice in a day with type as normal working hours?
     - Can I log timesheet multiple times in a day with type overtime?
-    - When I work overtime, will I be paid?
     - How do I log the Opentalk session timesheet?
     - When I log the timesheet for a week, can I send remote after that?
 - intent: break_between_working_hours
@@ -272,7 +271,6 @@ nlu:
 - intent: leave_day_regulations
   examples: |
     - How many days of leave does the employee have?
-    - How to calculate leave days
     - Is the leave paid for?
     - How to calculate leave days?
     - What if I haven't used up my leave?
@@ -323,7 +321,7 @@ nlu:
     - Can I send remote request days in the future?
     - Is it possible to send remote request in past dates?
     - Can send remote  in the middle of the hour?
-    - Cansend remote  in the morning?
+    - Can send remote  in the morning?
     - Can I send remote in the afternoon?
     - Can send remote  in at the end of the hour?
     - Can you send remote at the beginning of the hour?
@@ -347,7 +345,6 @@ nlu:
     - Can I ask for a onsite for many days?
     - Where can I send my leave?
     - If I take a leave of absence, will I get paid?
-    - What if I take [3 days](duration) leave?
     - How do I apply for an unscheduled leave?
     - What if I apply for more than the number of leave days?
     - If I apply for regular leave, will I be paid?
