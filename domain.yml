@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_project
 - require_portfolio
 - require_resource
 - provide_requiremments
@@ -711,6 +712,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_project
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback

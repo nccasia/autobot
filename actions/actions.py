@@ -573,6 +573,31 @@ class ActionDefaultFallback(Action):
             dispatcher.utter_message(template="utter_default")
             return [UserUtteranceReverted()]
 
+class ActionAboutProject(Action):
+    def name(self) -> Text:
+        return "action_about_project"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["about_project", "provide_information_of_project"]:
+            project = next(tracker.get_latest_entity_values("project"), None)
+            if project != "":
+                dispatcher.utter_message(text="respone from " + project)
+            else:
+                dispatcher.utter_message(text="in intent project but not have project name")
+            return []
+
+        # Fallback caused by Core
+        else:
+            dispatcher.utter_message(template="utter_default")
+            return [UserUtteranceReverted()]
+
 
 class ActionRestartWithButton(Action):
     def name(self) -> Text:

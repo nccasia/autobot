@@ -1,5 +1,16 @@
 version: "2.0"
 nlu:
+- intent: about_project
+  examples: |
+   - What is [Core Systems ODC](project) project?
+   - Who is the PM of project [Core Systems ODC](project)?
+   - Can I contact the project [Survey App](project) PM?
+   - What technology does the project [Heroes Of Mavia](project) use?
+   - What technology does the project [Autobot](project) use?
+   - What technology does the project [Trudi](project) use?
+   - What technology does the project [Printapp](project) use?
+   - What field is the project [Survey App](project) in?
+   - What features does the project [Survey App](project) have?
 - intent: require_ratecard
   examples: |
     - What is your rate
