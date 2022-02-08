@@ -132,10 +132,10 @@ rules:
   steps:
   - intent: require_porfolio
   - action: utter_portfolio
-- rule: working_hour
+- rule: concern_about_working_time
   steps:
   - intent: concern_about_working_time
-  - action: utter_working_hour
+  - action: utter_working_time
 - rule: techstack_consult
   steps:
   - intent: techstack_consult
