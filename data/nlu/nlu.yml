@@ -2,7 +2,49 @@ version: "2.0"
 nlu:
 - intent: about_project
   examples: |
-   - What is [Core Systems ODC](project) project?
+   - What is [xvolve](project) project?
+   - What is [thach sanh](project) project?
+   - What is [dhs](project) project?
+   - What is [thanh tra kiem tra](project) project?
+   - What is [orderich](project) project?
+   - What is [obe](project) project?
+   - What is [devil flip](project) project?
+   - What is [ssm](project) project?
+   - What is [trudi](project) project?
+   - What is [eventx](project) project?
+   - What is [rent then buy](project) project?
+   - What is [gasbot](project) project?
+   - What is [fintech control tower](project) project?
+   - What is [undead blocks game](project) project?
+   - What is [jucc](project) project?
+   - What is [limitlessinsight](project) project?
+   - What is [heypal](project) project?
+   - What is [mps](project) project?
+   - What is [movig](project) project?
+   - What is [nitect](project) project?
+   - What is [heroes of mavia](project) project?
+   - What is [core systems odc](project) project?
+   - What is [trailer 2 you](project) project?
+   - What is [meeting hub](project) project?
+   - What is [survey app](project) project?
+   - What is [printapp](project) project?
+   - What is [pigskin](project) project?
+   - What is [memepad](project) project?
+   - What is [[dn]traning php](project) project?
+   - What is [my nu truyen](project) project?
+   - What is [dimond game](project) project?
+   - What is [buu dien](project) project?
+   - What is [offy](project) project?
+   - What is [tandm](project) project?
+   - What is [smartup](project) project?
+   - What is [ucg odc](project) project?
+   - What is [fantasy-0x](project) project?
+   - What is [atlas](project) project?
+   - What is [eastGate t&m](project) project?
+   - What is [esg](project) project?
+   - What is [vital sign](project) project?
+   - What is [rio tinto commercial](project) project?
+   - What is [nafter](project) project?
    - Who is the PM of project [Core Systems ODC](project)?
    - Can I contact the project [Survey App](project) PM?
    - What technology does the project [Heroes Of Mavia](project) use?
