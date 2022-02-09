@@ -24,7 +24,6 @@ intents:
 - concern_about_abroad_representative
 - concern_about_foreign_reference_or_verification
 - concern_about_trial_period
-- concern_about_parts_of project
 - concern_about_working_time
 - concern_about_timekeeping
 - concern_about_project_management

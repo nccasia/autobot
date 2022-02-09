@@ -112,10 +112,6 @@ nlu:
   examples: |
     - is there any discounted rate on the trial period?
     - if the first candidate is not suitable for our product, will you provide another relevant skill-set candidate?
-- intent: concern_about_parts_of project
-  examples: |
-    - how many parts of our project that you can cover?
-    - can you cover all of our project?
 - intent: concern_about_working_time
   examples: |
     - How many hours do I work in a day?
