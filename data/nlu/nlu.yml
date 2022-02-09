@@ -179,6 +179,14 @@ nlu:
 - intent: regulation_rules_in_the_workplace
   examples: |
     - What are the company's rules for maintaining order and cleaning in the workplace?
+- intent: regulations_in_the_company
+  examples: |
+    - Who is the audience for uploading avatars to internal tools?
+    - The tools that need to be uploaded are?
+    - Are there any requirements for uploading avatars?
+    - When is the deadline to upload avatars?
+    - What's wrong with not uploading avatars?
+    - Where can I read the company's general regulations?
 - intent: require_information_security
   examples: |
     - What is the company's internal information security policy?

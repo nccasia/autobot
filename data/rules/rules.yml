@@ -1,5 +1,9 @@
 version: "2.0"
 rules:
+- rule: regulations_in_the_company
+  steps:
+  - intent: regulations_in_the_company
+  - action: utter_regulations_in_the_company
 - rule: about_project
   steps:
   - intent: about_project

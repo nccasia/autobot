@@ -51,6 +51,7 @@ intents:
 - about_weekly_report
 - about_available_resource
 - about_pm_management
+- regulations_in_the_company
 - rules_for_working_from_home
 - remote_check_in_and_check_out_rules
 - rules_to_join_opentalk
@@ -223,6 +224,8 @@ slots:
   faq:
     type: any
 responses:
+  utter_regulations_in_the_company:
+  - text: The company has regulations on confidentiality of internal information and customer information.When violating regulations, employees need to take full responsibility and the equivalent violation amount is 200 million VND. Regulations on uploading avatars for the company's internal tools to manage employees.
   utter_rules_for_working_from_home:
   - text: |
      General rules for all employees when working from home. All members must comply with the regulations when the remote needs to notify the PM
