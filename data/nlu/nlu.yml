@@ -5,6 +5,7 @@ nlu:
    - What is [xvolve](project) project?
    - What is [thach sanh](project) project?
    - What is [dhs](project) project?
+   - What is [Viewzz](project) project?
    - What is [thanh tra kiem tra](project) project?
    - What is [orderich](project) project?
    - What is [obe](project) project?
@@ -40,7 +41,7 @@ nlu:
    - What is [ucg odc](project) project?
    - What is [fantasy-0x](project) project?
    - What is [atlas](project) project?
-   - What is [eastGate t&m](project) project?
+   - What is [East Gate t&m](project) project?
    - What is [esg](project) project?
    - What is [vital sign](project) project?
    - What is [rio tinto commercial](project) project?
@@ -53,12 +54,17 @@ nlu:
    - Can I contact the project [trailer 2 you](project) PM?
    - Can I contact the project [heroes of mavia](project) PM?
    - Can I contact the project [Survey App](project) PM?
+   - Can I contact the [OBE](project) project PM?
    - What technology does the project [Heroes Of Mavia](project) use?
    - What technology does the project [Autobot](project) use?
    - What technology does the project [Trudi](project) use?
    - What technology does the project [Printapp](project) use?
    - What field is the project [Survey App](project) in?
    - What features does the project [Survey App](project) have?
+   - What features does the [OBE](project) project have?
+   - What features does the [JUCC](project) project have?
+   - What features does the [SSM](project) project have?
+   - What features does the [MPS](project) project have?
 - intent: require_ratecard
   examples: |
     - What is your rate
