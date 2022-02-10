@@ -632,12 +632,13 @@ class ActionAboutProject(Action):
         last_intent = tracker.latest_message["intent"]["name"]
         if last_intent in ["about_project", "provide_information_of_project"]:
             project = next(tracker.get_latest_entity_values("project"), None)
-            project = project.lower()
             responeText = "no detect name project"
-            for item in RESPONE_INTENT_ABOUT_PROJECT.keys():
-                if project in item or project == item:
-                    # project = item
-                    responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
+            if project:
+                project = project.lower()
+                for item in RESPONE_INTENT_ABOUT_PROJECT.keys():
+                    if project in item or project == item:
+                        # project = item
+                        responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
             dispatcher.utter_message(text=responeText)
             return []
 

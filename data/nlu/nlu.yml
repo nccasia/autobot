@@ -102,10 +102,8 @@ nlu:
     - techstack
 - intent: provide_information_of_project
   examples: |
-     - What is the [autobot](project) about?
      - The project will kick start on [8am](time)?
      - The project will last for [6 months](duration)?
-     - Who is the PM of [autobot] (project)?
      - What is the status of [autobot](project)?
      - Can I edit or delete project information?
      - I want to know the client name of [autobot](project)?
