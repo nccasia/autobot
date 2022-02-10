@@ -62,7 +62,7 @@ RESPONE_INTENT_ABOUT_PROJECT = {
  "printapp": "- Printapp project (of project type TimeAndMaterials, project status is In Progress) customer is Joel, PM by Thien Dang An, contact at thien.dang@ncc.asia. \n- The project uses PHP, Python and Nextjs technology. Belonging to the Web \n- The project has the following features: Make order by uploading designed images and choosing art styles which are available on site. Login, Signup and Preview. \n- Description of the project: Build a web application form which users can order products by uploading their designed images and applying the application's available color styles to create the products which they want.",
  "pigskin": "- Pigskin project (of project type FIXPRICE, project status is In Progress) customer is Infinity America, PM by Thien Dang An, contact at thien.dang@ncc.asia. \n- The project uses PHP and ReactJS. Belonging to the Web. \n- The project has the following features:Insert, delete, edit organization, offer, contact about Responsive design, linkedin scrapper, PPTX preview and Search, Report. \n- Description of the project: Pigskin is used to manage customers associated with the company and each company will have contacts.",
  "memepad": "- MemePad project (of project type TimeAndMaterial, project status is In Progress) customer is Anh Dung SmartContract, PM by Thien Dang An, contact at thien.dang@ncc.asia. \n- The project uses Nodejs, Reactjs and smartcontract. Belonging to the Web. \n- The project has the following features: Automated_ No obstructions, requirements, or interference in launching whatever token you want to launch on BSC. Decentraluzed_ No supervising or governing body that decides which token 'is good' for the launchpad and which one isn't. \n- Easy to use - Just input all the data necessary for the launch. No complicated application forms to fill out.  \n- Lockig & Vesting - MemePad provides token locking and vesting for all the tokens launched through it. No need to use additional services to give the community peace of mind. \n- Community-oriented-MEPAD token holders can participate in every launch, as well as earn free tokens through staking on the platform. \n- Description of the project: MemePad provides a completely new, systematized, and decentralized way of connecting token creators with community members to raise funds. It's a launchpad like no other, in that it combines and builds upon several elements inspired by other launchpads whilst also providing a unique edge in being tailored specifically to meme coins and microcaps that want to launch on BSC.",
- "[dn]traning php": "Training PHP (of project type NoBill, project status is In Progress)customer is NCC, PM by Thien Dang An, contact at thien.dang@ncc.asia.",
+ "trainning php": "Training PHP (of project type NoBill, project status is In Progress)customer is NCC, PM by Thien Dang An, contact at thien.dang@ncc.asia.",
  "my nu truyen": "- My Nu Truyen project (of project type PRODUCT, project status is Closed) customer is NCC, PM by Tien Nguyen Huu. \n- The project uses: Game Server is C++, Game client is Unity 2019 LTS, Game master tool is JSP, Payment gateway is PHP, SDK for androi is Java, SDK for Ios is Objective C, SDK Server is PHP. \n- Belonging to the Game.",
  "dimond game": "Dimond game project (of project type PRODUCT, project status is Closed) customer is NCC, PM by Tien Nguyen Huu.",
  "buu dien": "- Buu Dien project (of project type TimeAndMaterials, project status is In Progress) customer is Teca Pro, PM by Tien Nguyen Huu.\n- The project uses: Net Framework MVC, MSSQL, HTML, CSS and JQuery.\n- The project has the following features:  \n+ Declaration  \n+ Reports, statistics of records  \n+ Manage Receipts  \n+ Look up information on social insurance and health insurance  \n+ Digital signature management\n- Description of the project: Portal to declare health insurance and social insurance records online.",
@@ -634,11 +634,21 @@ class ActionAboutProject(Action):
             project = next(tracker.get_latest_entity_values("project"), None)
             responeText = "no detect name project"
             if project:
-                project = project.lower()
+                print("------------------------")
+                print("detected name project == " + project)
+                projectLower = project.lower()
+                flag = True
                 for item in RESPONE_INTENT_ABOUT_PROJECT.keys():
-                    if project in item or project == item:
+                    if projectLower == item:
                         # project = item
                         responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
+                        flag = False
+                        break
+                    if flag and (projectLower in item):
+                        responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
+                        flag = False
+                if flag:
+                    responeText = "no infomation about " + project
             dispatcher.utter_message(text=responeText)
             return []
 
