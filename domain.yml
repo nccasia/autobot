@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_project
 - require_portfolio
 - require_resource
 - provide_requiremments
@@ -23,7 +24,6 @@ intents:
 - concern_about_abroad_representative
 - concern_about_foreign_reference_or_verification
 - concern_about_trial_period
-- concern_about_parts_of project
 - concern_about_working_time
 - concern_about_timekeeping
 - concern_about_project_management
@@ -54,7 +54,6 @@ intents:
 - regulations_in_the_company
 - rules_for_working_from_home
 - remote_check_in_and_check_out_rules
-- regulations_on_employee_benefits
 - rules_to_join_opentalk
 - information_about_company_guidelines
 - concern_about_checkpoint
@@ -238,13 +237,6 @@ responses:
      - Log Timesheet by day.
   utter_remote_check_in_and_check_out_rules:
   - text: Employees are obligated to timekeeping daily (at least 2 times a day). Timekeeping is from 8.30 am to 5.30 pm (may change according to the time of registration of working hours).
-  utter_regulations_on_employee_benefits:
-  - text: |
-     - The company stipulates the salary payment time from 05 to 06 (solar calendar). The form of payment is via bank transfer with the condition that all documents are received and the timesheet is filled in.
-     - The company has a policy on salary increase, employees need to participate in checkpoint twice a year.
-     - All employees at NCC who sign official labor contracts are covered by the company's insurance obligations according to the provisions of the labor law, and the employees are not excluded from all kinds of insurance. Especially, for employees who have worked at the company for 12 months or more, they will be able to participate in the health care insurance program.
-     - Employee benefits in the company such as periodic health check, annual events, bonus holidays and personal allowance.
-     - Employees working full 12 months will be entitled to 12 days of paid leave. If it is not enough, the actual number of working months will be 1 day of leave/month. NCC members are entitled to holidays and full salary.
   utter_rules_to_join_opentalk:
   - text: Every Saturday, the company holds an Opeantalk session. Employees attend at least 2 sessions per month. Only confirm participation in Opentalk with those who are present and participating in opentalk or those who have completed the project (with confirmation from PM when approving timesheet).
   utter_information_about_company_guidelines:
@@ -317,7 +309,7 @@ responses:
   - text: this is our rate card for your reference
   utter_portfolio:
   - text: this is our company's profile
-  utter_working_hour:
+  utter_working_time:
   - text: The official working hours of NCC are 8.30am - 5.30pm (Employees can register working hours when approved by PM) (with one hour of noon-break 12pm - 1pm), from Monday to Friday. On Saturdays, the company hosts Open Talks, and employees are required to join in at least twice a month.
   utter_techstack:
   - text: i will forward your project to our technical team, they will suggest the best choice for you
@@ -711,6 +703,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_project
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback

@@ -4,6 +4,10 @@ rules:
   steps:
   - intent: regulations_in_the_company
   - action: utter_regulations_in_the_company
+- rule: about_project
+  steps:
+  - intent: about_project
+  - action: action_about_project
 - rule: rules_for_working_from_home
   steps:
   - intent: rules_for_working_from_home
@@ -12,10 +16,6 @@ rules:
   steps:
   - intent: remote_check_in_and_check_out_rules
   - action: utter_remote_check_in_and_check_out_rules
-- rule: regulations_on_employee_benefits
-  steps:
-  - intent: regulations_on_employee_benefits
-  - action: utter_regulations_on_employee_benefits
 - rule: rules_to_join_opentalk
   steps:
   - intent: rules_to_join_opentalk
@@ -136,10 +136,10 @@ rules:
   steps:
   - intent: require_porfolio
   - action: utter_portfolio
-- rule: working_hour
+- rule: concern_about_working_time
   steps:
   - intent: concern_about_working_time
-  - action: utter_working_hour
+  - action: utter_working_time
 - rule: techstack_consult
   steps:
   - intent: techstack_consult
@@ -163,6 +163,7 @@ rules:
 - rule: book_meeting
   steps:
   - intent: book_meeting
+  - action: utter_book_meeting
 - rule: confirm_meeting_schedule
   steps:
   - intent: confirm_meeting_schedule

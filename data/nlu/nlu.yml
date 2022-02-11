@@ -1,5 +1,70 @@
 version: "2.0"
 nlu:
+- intent: about_project
+  examples: |
+   - What is [xvolve](project) project?
+   - What is [thach sanh](project) project?
+   - What is [dhs](project) project?
+   - What is [Viewzz](project) project?
+   - What is [thanh tra kiem tra](project) project?
+   - What is [orderich](project) project?
+   - What is [obe](project) project?
+   - What is [devil flip](project) project?
+   - What is [ssm](project) project?
+   - What is [trudi](project) project?
+   - What is [eventx](project) project?
+   - What is [rent then buy](project) project?
+   - What is [gasbot](project) project?
+   - What is [fintech control tower](project) project?
+   - What is [undead blocks game](project) project?
+   - What is [jucc](project) project?
+   - What is [limitlessinsight](project) project?
+   - What is [heypal](project) project?
+   - What is [mps](project) project?
+   - What is [movig](project) project?
+   - What is [nitect](project) project?
+   - What is [heroes of mavia](project) project?
+   - What is [core systems odc](project) project?
+   - What is [trailer 2 you](project) project?
+   - What is [meeting hub](project) project?
+   - What is [survey app](project) project?
+   - What is [printapp](project) project?
+   - What is [pigskin](project) project?
+   - What is [memepad](project) project?
+   - What is [training php](project) project?
+   - What is [my nu truyen](project) project?
+   - What is [dimond game](project) project?
+   - What is [buu dien](project) project?
+   - What is [offy](project) project?
+   - What is [tandm](project) project?
+   - What is [smartup](project) project?
+   - What is [ucg odc](project) project?
+   - What is [fantasy-0x](project) project?
+   - What is [atlas](project) project?
+   - What is [East Gate t&m](project) project?
+   - What is [esg](project) project?
+   - What is [vital sign](project) project?
+   - What is [rio tinto commercial](project) project?
+   - What is [nafter](project) project?
+   - Who is the PM of project [Core Systems ODC](project)?
+   - Who is the PM of project [Dimond Game](project)?
+   - Who is the PM of project [trailer 2 you](project)?
+   - Who is the PM of project [heroes of mavia](project)?
+   - Can I contact the project [Dimond Game](project) PM?
+   - Can I contact the project [trailer 2 you](project) PM?
+   - Can I contact the project [heroes of mavia](project) PM?
+   - Can I contact the project [Survey App](project) PM?
+   - Can I contact the [OBE](project) project PM?
+   - What technology does the project [Heroes Of Mavia](project) use?
+   - What technology does the project [Autobot](project) use?
+   - What technology does the project [Trudi](project) use?
+   - What technology does the project [Printapp](project) use?
+   - What field is the project [Survey App](project) in?
+   - What features does the project [Survey App](project) have?
+   - What features does the [OBE](project) project have?
+   - What features does the [JUCC](project) project have?
+   - What features does the [SSM](project) project have?
+   - What features does the [MPS](project) project have?
 - intent: require_ratecard
   examples: |
     - What is your rate
@@ -49,10 +114,8 @@ nlu:
     - techstack
 - intent: provide_information_of_project
   examples: |
-     - What is the [autobot](project) about?
      - The project will kick start on [8am](time)?
      - The project will last for [6 months](duration)?
-     - Who is the PM of [autobot] (project)?
      - What is the status of [autobot](project)?
      - Can I edit or delete project information?
      - I want to know the client name of [autobot](project)?
@@ -101,10 +164,6 @@ nlu:
   examples: |
     - is there any discounted rate on the trial period?
     - if the first candidate is not suitable for our product, will you provide another relevant skill-set candidate?
-- intent: concern_about_parts_of project
-  examples: |
-    - how many parts of our project that you can cover?
-    - can you cover all of our project?
 - intent: concern_about_working_time
   examples: |
     - How many hours do I work in a day?
@@ -160,7 +219,6 @@ nlu:
     - What if I log a [10 hours](duration) timesheet with the type of OT?
     - Can I log timesheet twice in a day with type as normal working hours?
     - Can I log timesheet multiple times in a day with type overtime?
-    - When I work overtime, will I be paid?
     - How do I log the Opentalk session timesheet?
     - When I log the timesheet for a week, can I send remote after that?
 - intent: break_between_working_hours
@@ -173,6 +231,14 @@ nlu:
 - intent: regulation_rules_in_the_workplace
   examples: |
     - What are the company's rules for maintaining order and cleaning in the workplace?
+- intent: regulations_in_the_company
+  examples: |
+    - Who is the audience for uploading avatars to internal tools?
+    - The tools that need to be uploaded are?
+    - Are there any requirements for uploading avatars?
+    - When is the deadline to upload avatars?
+    - What's wrong with not uploading avatars?
+    - Where can I read the company's general regulations?
 - intent: require_information_security
   examples: |
     - What is the company's internal information security policy?
@@ -261,7 +327,6 @@ nlu:
 - intent: leave_day_regulations
   examples: |
     - How many days of leave does the employee have?
-    - How to calculate leave days
     - Is the leave paid for?
     - How to calculate leave days?
     - What if I haven't used up my leave?
@@ -312,7 +377,7 @@ nlu:
     - Can I send remote request days in the future?
     - Is it possible to send remote request in past dates?
     - Can send remote  in the middle of the hour?
-    - Cansend remote  in the morning?
+    - Can send remote  in the morning?
     - Can I send remote in the afternoon?
     - Can send remote  in at the end of the hour?
     - Can you send remote at the beginning of the hour?
@@ -336,7 +401,6 @@ nlu:
     - Can I ask for a onsite for many days?
     - Where can I send my leave?
     - If I take a leave of absence, will I get paid?
-    - What if I take [3 days](duration) leave?
     - How do I apply for an unscheduled leave?
     - What if I apply for more than the number of leave days?
     - If I apply for regular leave, will I be paid?
@@ -423,16 +487,6 @@ nlu:
     - Where can I see [autobot](project) details?
     - Is it possible to edit [autobot](project)details?
     - How many projects are there in [12 months](duration)?
-- intent: regulations_in_the_company
-  examples: |
-    - What is the company's internal information security policy?
-    - What happens when there is a breach of information disclosure?
-    - Who is the audience for uploading avatars to internal tools?
-    - The tools that need to be uploaded are?
-    - Are there any requirements for uploading avatars?
-    - When is the deadline to upload avatars?
-    - What's wrong with not uploading avatars?
-    - Where can I read the company's general regulations?
 - intent: rules_for_working_from_home
   examples: |
     - Rules for working from home?
@@ -457,71 +511,6 @@ nlu:
     - What's wrong with late check-in?
     - When doing remote, where do you check-in?
     - Are there instructions on check-in?
-- intent: regulations_on_employee_benefits
-  examples: |
-    - May I know the salary regulations?
-    - What is the company's salary payment date?
-    - What is the company's payment method?
-    - What are the conditions to be paid by the company?
-    - How to calculate company salary?
-    - What kind of allowances does the company have?
-    - When doing OT, does the company charge a salary?
-    - OT salary for the week like?
-    - What is the weekend OT salary?
-    - What policies does the company have on salary increase regulations?
-    - What are the conditions for getting insurance?
-    - Who is entitled to health care insurance?
-    - What types of insurance does the company have?
-    - What are the benefits of social insurance?
-    - What are the benefits of health insurance?
-    - What are the benefits of unemployment insurance?
-    - What are the benefits of health insurance when working for 12 months or more?
-    - Who can participate in periodic health check?
-    - Does the company hold an annual event?
-    - What are the company's annual events?
-    - Who can join the End year Party?
-    - Who can join Company Trip?
-    - Who can join a company birthday party?
-    - Can I join teambuilding?
-    - When is the end year party held?
-    - When does the company trip take place?
-    - When is the company birthday?
-    - When does the teambuilding take place?
-    - What subsidies does the company have?
-    - Does the company reward holidays? 
-    - Does the company have Tet bonus?
-    - Does the company have uniforms?
-    - Does the company have a personal birthday party?
-    - Does the company have a marriage allowance?
-    - Who gets the marriage allowance?
-    - Does the company have a maternity allowance?
-    - Does the company have sickness benefits?
-    - Does the company have a funeral allowance?
-    - Does the company have a seniority bonus?
-    - Who gets seniority bonus?
-    - How many days of leave does the employee have?
-    - How to calculate leave days
-    - Is the leave paid for?
-    - How to calculate leave days?
-    - What if I haven't used up my leave?
-    - I take leave without pay
-    - What if I leave without permission?
-    - What if I take [3 days](duration) leave?
-    - What if I take a day off?
-    - When the annual leave is over, but the employee has his own reasons, what should he do?
-    - What will happen in case of self-retirement without PM's consent?
-    - What do employees need to do with less than 2 days off?
-    - What should employees do on leave of more than 3 days?
-    - What to do in case of sick leave, unexpected work?
-    - What holidays do I get?
-    - Does the company leave according to the regime?
-    - How many days off do I get when I get married?
-    - How many days off do I have when giving birth?
-    - How is maternity leave calculated?
-    - What training do new employees receive?
-    - What is internal training?
-    - What does internal training have?
-    - What is external training?
 - intent: rules_to_join_opentalk
   examples: |
     - Who can join Opentalk?
