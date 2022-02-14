@@ -24,6 +24,7 @@ from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.rasaxapi import RasaXAPI
 
+from thefuzz import process
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
 logger = logging.getLogger(__name__)
@@ -638,17 +639,12 @@ class ActionAboutProject(Action):
                 print("------------------------")
                 print("detected name project == " + project)
                 projectLower = project.lower()
-                flag = True
-                for item in RESPONE_INTENT_ABOUT_PROJECT.keys():
-                    if projectLower == item:
-                        # project = item
-                        responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
-                        flag = False
-                        break
-                    if flag and (projectLower in item):
-                        responeText = RESPONE_INTENT_ABOUT_PROJECT[item]
-                        flag = False
-                if flag:
+                resultSearchFuzzy, ratio = process.extractOne(projectLower, RESPONE_INTENT_ABOUT_PROJECT.keys())
+                print("resultSearchFuzzy == " + resultSearchFuzzy)
+                print("result ratio == " + ratio)
+                if ratio >= 80:
+                    responeText = RESPONE_INTENT_ABOUT_PROJECT[resultSearchFuzzy]
+                else:
                     responeText = "no infomation about " + project
             dispatcher.utter_message(text=responeText)
             return []
