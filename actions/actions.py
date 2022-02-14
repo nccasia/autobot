@@ -641,7 +641,7 @@ class ActionAboutProject(Action):
                 projectLower = project.lower()
                 resultSearchFuzzy, ratio = process.extractOne(projectLower, RESPONE_INTENT_ABOUT_PROJECT.keys())
                 print("resultSearchFuzzy == " + resultSearchFuzzy)
-                print("result ratio == " + ratio)
+                print("result ratio == " + str(ratio))
                 if ratio >= 80:
                     responeText = RESPONE_INTENT_ABOUT_PROJECT[resultSearchFuzzy]
                 else:
