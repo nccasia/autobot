@@ -219,13 +219,13 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: deny
-  - action: utter_nohelp
+  - action: action_out_of_scope
 - story: neither --> newsletter
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: deny
-  - action: utter_nohelp
+  - action: action_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -239,7 +239,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: deny
-  - action: utter_nohelp
+  - action: action_out_of_scope
   - intent: contact_sales
   - action: utter_moreinformation
   - action: sales_form
@@ -260,8 +260,7 @@ stories:
   steps:
   - action: utter_anything_else
   - intent: enter_data
-  - action: utter_not_sure
-  - action: utter_possibilities
+  - action: action_out_of_scope
 - story: positive reaction
   steps:
   - intent: react_positive
@@ -390,7 +389,6 @@ stories:
   # steps:
   # - intent: explain
   # - action: utter_no_further_info
-  # - action: utter_possibilities
 - story: explain in FAQ
   steps:
   - action: action_set_faq_slot

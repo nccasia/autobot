@@ -11,7 +11,8 @@ rules:
   steps:
   - action: utter_ask_feedback
   - intent: out_of_scope
-  - action: utter_out_of_scope
+  # - action: utter_out_of_scope
+  - action: action_out_of_scope
   - action: utter_anything_else
 - rule: ask feedback; thank
   steps:

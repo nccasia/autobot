@@ -254,11 +254,6 @@ stories:
   - action: sales_form
   - active_loop: sales_form
   - user: |
-      are you a bot?
-    intent: chitchat
-  - action: utter_chitchat
-  - action: utter_ask_continue_sales
-  - user: |
       yep
     intent: affirm
   - action: utter_great
@@ -377,8 +372,7 @@ stories:
   - user: |
       do you sell vacuum robots
     intent: out_of_scope
-  - action: utter_out_of_scope
-  - action: utter_possibilities
+  - action: action_out_of_scope
 - story: human handoff
   steps:
   - user: |

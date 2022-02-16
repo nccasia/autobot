@@ -34,6 +34,48 @@ INTENT_DESCRIPTION_MAPPING_PATH = "actions/intent_description_mapping.csv"
 API_FALLBACK_TOKEN = "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"
 API_FALLBACK_URL = "https://api-inference.huggingface.co/models/microsoft/DialoGPT-large"
 
+
+def send_Out_Of_Scope(tracker):
+    conv = tracker.events
+    speaker = ""
+    respone = ""
+    conv_format = []
+    for item in conv:
+        if 'text' in item.keys():
+            if speaker == item['event']:
+                respone += '\n'
+                respone += item['text']
+            else:
+                if speaker != "":
+                    conv_format.append({speaker: respone})
+                respone = item['text']
+            speaker = item['event']
+    conv_format.append({speaker: respone})
+    headers = {
+        'Authorization': f"Bearer {API_FALLBACK_TOKEN}",
+        'Content-Type': 'application/json'
+    }
+    if len(conv_format) >= 3:
+        payload = {
+            "inputs": {
+                "past_user_inputs": [conv_format[-3]['user']],
+                "generated_responses": [ conv_format[-2]['bot']],
+                "text": conv_format[-1]['user'],
+            },
+        }
+    else:
+        payload = {
+            "inputs": {
+                "text": tracker.latest_message["text"],
+            },
+        }
+    payload = json.dumps(payload)
+    response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
+    response = response.json()
+    response = response["generated_text"]
+    return response
+
+
 RESPONE_INTENT_ABOUT_PROJECT = {
  "xvolve": "- Xvolve project is Dating app, specially designed for Japanese market. \n- Xvolve project has features dating and scheduling. Matching system based on preferences, hobbies, personalities. Chat. Payment system. Mobile applications. Web administration. AWS deployment \n- A project in the field of dating apps \n- It uses technologies Php Laravel. ReactJs. Python. AWS/CICD",
  "thach sanh": "- Aims to create a solution to solve the problems of consuming agricultural products for farmers, as well as the needs of consumers. ThachSanh Store helps to connect suppliers, consumers and customers. transport partners together, creating an ecosystem in the supply chain and consumption of agricultural products in Vietnam \n- Buyers can view and search for the desired products. Can add selected products to cart and proceed to checkout \n- Buyers can search for suppliers with reasonable prices \n- Sellers can manage products, goods, manage orders as well as their customers, ... \n- Buyers and sellers can interact with each other through the seller's new posts, or exchange directly through the Chat function \n- A project in the field of e-commerce, agricultural products \n- It uses technologies ReactJs, Python, iOS, Apollo GraphQL, Postgres",
@@ -475,6 +517,27 @@ class ActionGreetUser(Action):
         return []
 
 
+
+class ActionOutOfScope(Action):
+    def name(self) -> Text:
+        return "action_out_of_scope"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        print("------------")
+        print("ActionOutOfScope")
+
+        respone = send_Out_Of_Scope(tracker)
+        print(respone)
+        dispatcher.utter_message(text=respone)
+        return []
+
+
 class ActionDefaultAskAffirmation(Action):
     """Asks for an affirmation of the intent if NLU threshold is not met."""
 
@@ -507,10 +570,6 @@ class ActionDefaultAskAffirmation(Action):
             else:
                 intent_ranking = intent_ranking[:1]
 
-        # for the intent name used to retrieve the button title, we either use
-        # the name of the name of the "main" intent, or if it's an intent that triggers
-        # the response selector, we use the full retrieval intent name so that we
-        # can distinguish between the different sub intents
         first_intent_names = [
             intent.get("name", "")
             if intent.get("name", "") not in ["faq", "chitchat"]
@@ -527,56 +586,14 @@ class ActionDefaultAskAffirmation(Action):
         if "out_of_scope" in first_intent_names:
             first_intent_names.remove("out_of_scope")
 
-        if len(first_intent_names) > 0:
-            message_title = (
-                "Sorry, I'm not sure I've understood you correctly 🤔 Do you mean..."
-            )
+        print("------------")
+        print("ActionDefaultAskAffirmation")
 
-            entities = tracker.latest_message.get("entities", [])
-            entities = {e["entity"]: e["value"] for e in entities}
-
-            entities_json = json.dumps(entities)
-
-            buttons = []
-            for intent in first_intent_names:
-                button_title = self.get_button_title(intent, entities)
-                if "/" in intent:
-                    # here we use the button title as the payload as well, because you
-                    # can't force a response selector sub intent, so we need NLU to parse
-                    # that correctly
-                    buttons.append({"title": button_title, "payload": button_title})
-                else:
-                    buttons.append(
-                        {"title": button_title, "payload": f"/{intent}{entities_json}"}
-                    )
-
-            buttons.append({"title": "Something else", "payload": "/out_of_scope"})
-
-            dispatcher.utter_message(text=message_title, buttons=buttons)
-        else:
-            message_title = (
-                "Sorry, I'm not sure I've understood "
-                "you correctly 🤔 Can you please rephrase?"
-            )
-            dispatcher.utter_message(text=message_title)
-
+        respone = send_Out_Of_Scope(tracker)
+        print(respone)
+        dispatcher.utter_message(text=respone)
         return []
 
-    def get_button_title(self, intent: Text, entities: Dict[Text, Text]) -> Text:
-        default_utterance_query = self.intent_mappings.intent == intent
-        utterance_query = (self.intent_mappings.entities == entities.keys()) & (
-            default_utterance_query
-        )
-
-        utterances = self.intent_mappings[utterance_query].button.tolist()
-
-        if len(utterances) > 0:
-            button_title = utterances[0]
-        else:
-            utterances = self.intent_mappings[default_utterance_query].button.tolist()
-            button_title = utterances[0] if len(utterances) > 0 else intent
-
-        return button_title.format(**entities)
 
 
 class ActionDefaultFallback(Action):
@@ -590,35 +607,12 @@ class ActionDefaultFallback(Action):
         domain: DomainDict,
     ) -> List[EventType]:
 
-        # Fallback caused by TwoStageFallbackPolicy
+        print("------------")
+        print("ActionDefaultAskAffirmation")
 
-        payload = json.dumps({
-        "inputs": {
-            "text": tracker.latest_message["text"]
-        }
-        })
-        headers = {
-        'Authorization': f"Bearer {API_FALLBACK_TOKEN}",
-        'Content-Type': 'application/json'
-        }
-
-        response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
-        response = response.json()
-        response = response["generated_text"]
-
-        # print("------------------------------")
-        # print(tracker.latest_message["text"])
-        # print(response)
-
-        last_intent = tracker.latest_message["intent"]["name"]
-        if last_intent in ["nlu_fallback", USER_INTENT_OUT_OF_SCOPE]:
-            dispatcher.utter_message(text=response)
-            return [SlotSet("feedback_value", "negative")]
-
-        # Fallback caused by Core
-        else:
-            dispatcher.utter_message(template="utter_default")
-            return [UserUtteranceReverted()]
+        respone = send_Out_Of_Scope(tracker)
+        print(respone)
+        dispatcher.utter_message(text=respone)
 
 class ActionAboutProject(Action):
     def name(self) -> Text:
@@ -649,10 +643,10 @@ class ActionAboutProject(Action):
             dispatcher.utter_message(text=responeText)
             return []
 
-        # Fallback caused by Core
         else:
-            dispatcher.utter_message(template="utter_default")
-            return [UserUtteranceReverted()]
+            respone = send_Out_Of_Scope(tracker)
+            dispatcher.utter_message(text=respone)
+            return []
 
 
 class ActionRestartWithButton(Action):

@@ -3,15 +3,13 @@ stories:
 - story: out of scope
   steps:
   - intent: out_of_scope
-  - action: utter_out_of_scope
-  - action: utter_possibilities
+  - action: action_out_of_scope
 - story: say enter data outside the flows
   steps:
   - intent: greet
   - action: action_greet_user
   - intent: enter_data
-  - action: utter_not_sure
-  - action: utter_possibilities
+  - action: action_out_of_scope
 - story: say confirm outside the flows 2
   steps:
   - intent: greet
@@ -31,8 +29,7 @@ stories:
 - story: newsletter + confirm
   steps:
   - intent: out_of_scope
-  - action: utter_out_of_scope
-  - action: utter_possibilities
+  - action: action_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form
@@ -49,8 +46,7 @@ stories:
   - intent: greet
   - action: action_greet_user
   - intent: out_of_scope
-  - action: utter_out_of_scope
-  - action: utter_possibilities
+  - action: action_out_of_scope
   - intent: signup_newsletter
   - action: utter_can_do
   - action: subscribe_newsletter_form

@@ -361,8 +361,6 @@ responses:
   - text: Do you still want to subscribe to the newsletter?
   utter_ask_continue_rasa_init:
   - text: Do you want to go ahead with the steps to create a contextual assistant?
-  utter_ask_continue_sales:
-  - text: Do you still want to talk to sales?
   utter_ask_problem_description:
   - text: Can you describe the problem you're having?
   utter_ask_docs_help:
@@ -385,8 +383,6 @@ responses:
     - payload: '/feedback{{"feedback_value": "negative"}}'
       title: 👎
     text: How is this conversation going?
-  utter_ask_feedback_message:
-  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
   utter_ask_for_nlu_specifics:
   - text: Anything in particular you'd like to know about, e.g. intent classification or entity recognition?
   utter_ask_goal:
@@ -442,8 +438,6 @@ responses:
   - text: Sure thing!
   - text: Can do!
   - text: You got it. 👍
-  utter_canthelp:
-  - text: I'm sorry I couldn't help you. If you have general questions about Autobot, please head to our [forum](https://forum.komu.vn/), otherwise contact us at [hi@komu.vn](mailto:hi@komu.vn) for anything else.
   utter_cantsignup:
   - text: I can't sign you up if you don't provide your email 😉
   utter_change_mind:
@@ -460,13 +454,6 @@ responses:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@komu.vn.
   utter_crf:
   - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://komu.vn/docs/nlu/dataformat/).
-  utter_default:
-  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
-  - text: I didn't understand, could you rephrase that?
-  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
-  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
-  - text: I didn't quite get that, could you rephrase your message?
-  - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_to_forum_for_help:
   - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.komu.vn/).
   utter_docu:
@@ -583,23 +570,12 @@ responses:
   - text: Looks like you've already gone through all the steps!
   utter_no_speak:
   - text: I'm afraid we can't chat then 😢
-  utter_nohelp:
-  - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
-  utter_not_sure:
-  - text: Hmm, not sure what you mean...
   utter_noworries:
   - text: No worries!
   - text: You're welcome!
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_possibilities:
-  - text: |
-      You can ask me about:
-      - how to get started with Autobot
-      - the components of Autobot,
-      - booking a sales call
-      - subscribing to our newsletter
   utter_possibilities_to_contribute:
   - text: Check out the [Contribute to Autobot](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how to contribute code or content. You can also help by answering other members' questions on the [forum](http://forum.komu.vn).
   utter_rasa_x_local_installation:
@@ -703,6 +679,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_out_of_scope
 - action_about_project
 - action_trigger_response_selector
 - action_default_ask_affirmation
