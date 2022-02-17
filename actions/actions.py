@@ -26,7 +26,7 @@ from actions.api.rasaxapi import RasaXAPI
 
 from thefuzz import process
 
-from constant import RESPONE_INTENT_ABOUT_PROJECT, LIST_KOMU_COMMANDS
+from actions.constant import RESPONE_INTENT_ABOUT_PROJECT, LIST_KOMU_COMMANDS
 
 USER_INTENT_OUT_OF_SCOPE = "out_of_scope"
 
