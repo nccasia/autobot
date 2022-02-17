@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_list_of_komu_commands
 - about_project
 - require_portfolio
 - require_resource
@@ -657,8 +658,6 @@ responses:
   - text: Autobot Masterclass covers how to [set up Autobot X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with others.
   utter_ask_rephrase:
   - text: Can you rephrase the question?
-  utter_no_further_info:
-  - text: Sorry, that's all the info I've got on that subject 😕
   utter_why_rasa:
   - text: Autobot provides the infrastructure and tools needed to build high-performing, resilient assistants that work. What's more, Autobot is **open source** - no black-box magic!
   utter_ask_more:
@@ -679,6 +678,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_list_of_komu_commands
 - action_out_of_scope
 - action_about_project
 - action_trigger_response_selector

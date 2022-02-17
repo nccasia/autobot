@@ -1,5 +1,11 @@
 version: "2.0"
 nlu:
+- intent: about_list_of_komu_commands
+  examples: |
+   - list of komu commands
+   - komu commands
+   - how many commands does komu have?
+   - what is komu command?
 - intent: about_project
   examples: |
    - What is [xvolve](project) project?

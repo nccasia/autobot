@@ -382,13 +382,8 @@ stories:
 - story: explain -> can't explain # the default "rule"; longer rules will handle cases where an explanation exists
   steps:
   - intent: explain
-  - action: utter_no_further_info
+  - action: action_out_of_scope
   # wait_for_user_input: false
-# - story: explain -> can't explain (at conversation start)
-  # conversation_start: true
-  # steps:
-  # - intent: explain
-  # - action: utter_no_further_info
 - story: explain in FAQ
   steps:
   - action: action_set_faq_slot

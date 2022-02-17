@@ -4,6 +4,10 @@ rules:
   steps:
   - intent: regulations_in_the_company
   - action: utter_regulations_in_the_company
+- rule: about_list_of_komu_commands
+  steps:
+  - intent: about_list_of_komu_commands
+  - action: action_about_list_of_komu_commands
 - rule: about_project
   steps:
   - intent: about_project
@@ -276,8 +280,7 @@ rules:
   steps:
   - action: utter_ask_migration
   - intent: explain
-  - action: utter_no_further_info
-  - action: utter_ask_migration
+  - action: action_out_of_scope
 - rule: explain after utter_first_bot_with_rasa # extracted from a training story
   steps:
   - action: utter_first_bot_with_rasa
