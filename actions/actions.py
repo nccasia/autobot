@@ -106,50 +106,6 @@ def send_Out_Of_Scope(tracker):
     return response["generated_text"]
 
 
-class ActionSubmitSubscribeNewsletterForm(Action):
-    def name(self) -> Text:
-        return "action_submit_subscribe_newsletter_form"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        """Once we have an email, attempt to add it to the database"""
-
-        email = tracker.get_slot("email")
-        client = MailChimpAPI(config.mailchimp_api_key)
-        subscription_status = client.subscribe_user(config.mailchimp_list, email)
-
-        if subscription_status == "newly_subscribed":
-            dispatcher.utter_message(template="utter_confirmationemail")
-        elif subscription_status == "already_subscribed":
-            dispatcher.utter_message(template="utter_already_subscribed")
-        elif subscription_status == "error":
-            dispatcher.utter_message(template="utter_could_not_subscribe")
-        return []
-
-
-class ValidateSubscribeNewsletterForm(FormValidationAction):
-    def name(self) -> Text:
-        return "validate_subscribe_newsletter_form"
-
-    def validate_email(
-        self,
-        value: Text,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> Dict[Text, Any]:
-
-        if MailChimpAPI.is_valid_email(value):
-            return {"email": value}
-        else:
-            dispatcher.utter_message(template="utter_no_email")
-            return {"email": None}
-
-
 class ActionSubmitSalesForm(Action):
     def name(self) -> Text:
         return "action_submit_sales_form"
@@ -316,26 +272,6 @@ class ActionStoreUnknownProduct(Action):
         # if we dont know the product the user is migrating from,
         # store their last message in a slot.
         return [SlotSet("unknown_product", tracker.latest_message.get("text"))]
-
-
-class ActionStoreUnknownNluPart(Action):
-    """Stores unknown parts of nlu which the user requests information on
-    in slot.
-    """
-
-    def name(self) -> Text:
-        return "action_store_unknown_nlu_part"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-        # if we dont know the part of nlu the user wants information on,
-        # store their last message in a slot.
-        return [SlotSet("unknown_nlu_part", tracker.latest_message.get("text"))]
-
 
 class ActionStoreBotLanguage(Action):
     """Takes the bot language and checks what pipelines can be used"""
@@ -664,107 +600,6 @@ class ActionRestartWithButton(Action):
         dispatcher.utter_message(template="utter_restart_with_button")
 
 
-class ActionCommunityEvent(Action):
-    """Utters Autobot community events."""
-
-    def __init__(self) -> None:
-        self.last_event_update = None
-        self.events = None
-        self.events = self._get_events()
-
-    def name(self) -> Text:
-        return "action_get_community_events"
-
-    def _get_events(self) -> List[community_events.CommunityEvent]:
-        if self.events is None or self._are_events_expired():
-            logger.debug("Getting events from website.")
-            self.last_event_update = datetime.now()
-            self.events = community_events.get_community_events()
-
-        return self.events
-
-    def _are_events_expired(self) -> bool:
-        # events are expired after 1 hour
-        return (
-            self.last_event_update is None
-            or (datetime.now() - self.last_event_update).total_seconds() > 3600
-        )
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> List[EventType]:
-
-        events = self._get_events()
-        location = next(tracker.get_latest_entity_values("location"), None)
-        events_for_location = None
-        if location:
-            location = location.title()
-            events_for_location = [
-                e
-                for e in events
-                if e.city.lower() == location.lower()
-                or e.country.lower() == location.lower()
-            ]
-
-        if not events:
-            dispatcher.utter_message(
-                text="Looks like we don't have currently have any Autobot events planned."
-            )
-        else:
-            self._utter_events(
-                tracker, dispatcher, events, events_for_location, location
-            )
-
-        return []
-
-    @staticmethod
-    def _utter_events(
-        tracker: Tracker,
-        dispatcher: CollectingDispatcher,
-        events: List,
-        events_for_location: List,
-        location: Text,
-    ) -> None:
-
-        text = tracker.latest_message.get("text") or ""
-        only_next = True if "next" in text else False
-
-        if location:
-            if not events_for_location:
-                header = (
-                    f"Sorry, there are currently no events in {location}. \n\n"
-                    "However, here are the upcoming Autobot events:"
-                )
-                if only_next:
-                    header = (
-                        f"Sorry, there are currently no events in {location}. \n\n"
-                        "However, here is the next Autobot event:"
-                    )
-
-            else:
-                events = events_for_location
-                header = f"Here are the upcoming Autobot events in {location}:"
-                if only_next:
-                    header = f"Here is the next event in {location}:"
-
-        else:
-            header = "Here are the upcoming Autobot events:"
-            if only_next:
-                header = "Here is the next Autobot event:"
-
-        if only_next:
-            events = events[0:1]
-
-        event_items = [f"- {e.name_as_link()} in {e.city}" for e in events]
-        events = "\n".join(event_items)
-        dispatcher.utter_message(
-            text=f"{header} \n\n {events} \n\n We hope to see you there!"
-        )
-
-
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
     skipped = 0
     for e in reversed(tracker.events):
@@ -788,15 +623,7 @@ class ActionDocsSearch(Action):
         algolia = AlgoliaAPI(
             config.algolia_app_id, config.algolia_search_key, config.algolia_docs_index
         )
-        if search_text == "/technical_question{}":
-            # If we're in a TwoStageFallback we need to look back one more user utterance
-            # to get the actual text
-            last_user_event = get_last_event_for(tracker, "user", skip=2)
-            if last_user_event:
-                search_text = last_user_event.get("text")
-                algolia_result = algolia.search(search_text)
-        else:
-            algolia_result = algolia.search(search_text)
+        algolia_result = algolia.search(search_text)
 
         if (
             algolia_result
@@ -843,7 +670,7 @@ class ActionForumSearch(Action):
     def run(self, dispatcher, tracker, domain):
         search_text = tracker.latest_message.get("text")
         # If we're in a TwoStageFallback we need to look back two more user utterance to get the actual text
-        if search_text == "/technical_question{}" or search_text == "/deny":
+        if search_text == "/deny":
             last_user_event = get_last_event_for(tracker, "user", skip=3)
             if last_user_event:
                 search_text = last_user_event.get("text")
