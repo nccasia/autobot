@@ -529,8 +529,6 @@ responses:
   - text: Hey there!
   utter_have_you_used_rasa_before:
   - text: Have you used Autobot before?
-  utter_inform_privacypolicy:
-  - text: By chatting to me you agree to our [privacy policy](https://komu.vn/privacy-policy/).
   utter_installation_command:
   - text: |-
       You will first need to install Autobot Open Source using this installation command. 

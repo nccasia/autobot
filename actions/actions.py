@@ -24,7 +24,7 @@ from actions.api.gdrive_service import GDriveService
 from actions.api.mailchimp import MailChimpAPI
 from actions.api.rasaxapi import RasaXAPI
 
-from thefuzz import process
+from thefuzz import process, fuzz
 
 from actions.constant import RESPONE_INTENT_ABOUT_PROJECT, LIST_KOMU_COMMANDS
 
@@ -39,9 +39,15 @@ API_FALLBACK_URL = "https://api-inference.huggingface.co/models/microsoft/DialoG
 
 
 def send_Out_Of_Scope(tracker):
+    print("-------------send_Out_Of_Scope--------------")
+    headers = {
+        'Authorization': f"Bearer {API_FALLBACK_TOKEN}",
+        'Content-Type': 'application/json'
+    }
     conv = tracker.events
     speaker = ""
     respone = ""
+    timestamp = 0
     conv_format = []
     for item in conv:
         if 'text' in item.keys():
@@ -50,33 +56,54 @@ def send_Out_Of_Scope(tracker):
                 respone += item['text']
             else:
                 if speaker != "":
-                    conv_format.append({speaker: respone})
+                    conv_format.append({
+                        "speaker": speaker,
+                        "text": respone,
+                        "timestamp": timestamp
+                    })
                 respone = item['text']
             speaker = item['event']
-    conv_format.append({speaker: respone})
-    headers = {
-        'Authorization': f"Bearer {API_FALLBACK_TOKEN}",
-        'Content-Type': 'application/json'
+            timestamp = item['timestamp']
+    conv_format.append(
+        {
+            "speaker": speaker,
+            "text": respone,
+            "timestamp": timestamp
+        })
+    conv_rev = list(reversed(conv_format))
+    user_input = []
+    bot_res = []
+    for i in range(len(conv_rev) - 1):
+        if conv_rev[i]['speaker'] == 'bot' and conv_rev[i + 1]['speaker'] == 'user':
+            if len(user_input) > 0 and user_input[-1]['timestamp'] - conv_rev[i + 1]['timestamp'] > 10:
+                break
+            user_input.append(conv_rev[i + 1])
+            bot_res.append(conv_rev[i])
+    payload = {
+            "inputs": {
+                "past_user_inputs": [i["text"] for i in list(reversed(user_input))],
+                "generated_responses": [i["text"] for i in list(reversed(bot_res))],
+                "text": conv_format[-1]['text'],
+            }
     }
-    if len(conv_format) >= 3:
-        payload = {
-            "inputs": {
-                "past_user_inputs": [conv_format[-3]['user']],
-                "generated_responses": [ conv_format[-2]['bot']],
-                "text": conv_format[-1]['user'],
-            },
-        }
-    else:
-        payload = {
-            "inputs": {
-                "text": tracker.latest_message["text"],
-            },
-        }
     payload = json.dumps(payload)
     response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
     response = response.json()
-    response = response["generated_text"]
-    return response
+    if fuzz.partial_ratio(response["generated_text"], conv_format[-2]['text']) > 90:
+        print("repeat case")
+        print(response["generated_text"] + " == " + conv_format[-2]['text'])
+        payload = {
+              "inputs": {
+                  "text": tracker.latest_message["text"],
+              },
+          }
+        payload = json.dumps(payload)
+        response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
+        response = response.json()
+    print(response)
+    print("user: " + conv_format[-1]['text'])
+    print("bot: " + response["generated_text"])
+    return response["generated_text"]
 
 
 class ActionSubmitSubscribeNewsletterForm(Action):
@@ -460,7 +487,7 @@ class ActionGreetUser(Action):
         intent = tracker.latest_message["intent"].get("name")
         shown_privacy = tracker.get_slot("shown_privacy")
         name_entity = next(tracker.get_latest_entity_values("name"), None)
-        if intent == "greet" or (intent == "enter_data" and name_entity):
+        if intent == "greet":
             if shown_privacy and name_entity and name_entity.lower() != "komu":
                 dispatcher.utter_message(response="utter_greet_name", name=name_entity)
                 return []
@@ -469,10 +496,8 @@ class ActionGreetUser(Action):
                 return []
             else:
                 dispatcher.utter_message(response="utter_greet")
-                dispatcher.utter_message(response="utter_inform_privacypolicy")
                 return [SlotSet("shown_privacy", True)]
         return []
-
 
 
 class ActionOutOfScope(Action):
@@ -486,8 +511,8 @@ class ActionOutOfScope(Action):
         domain: DomainDict,
     ) -> List[EventType]:
 
-        print("------------")
-        print("ActionOutOfScope")
+        # print("------------")
+        # print("ActionOutOfScope")
 
         respone = send_Out_Of_Scope(tracker)
         print(respone)
@@ -543,14 +568,13 @@ class ActionDefaultAskAffirmation(Action):
         if "out_of_scope" in first_intent_names:
             first_intent_names.remove("out_of_scope")
 
-        print("------------")
-        print("ActionDefaultAskAffirmation")
+        # print("------------")
+        # print("ActionDefaultAskAffirmation")
 
         respone = send_Out_Of_Scope(tracker)
         print(respone)
         dispatcher.utter_message(text=respone)
         return []
-
 
 
 class ActionDefaultFallback(Action):
@@ -564,12 +588,13 @@ class ActionDefaultFallback(Action):
         domain: DomainDict,
     ) -> List[EventType]:
 
-        print("------------")
-        print("ActionDefaultAskAffirmation")
+        # print("------------")
+        # print("ActionDefaultAskAffirmation")
 
         respone = send_Out_Of_Scope(tracker)
         print(respone)
         dispatcher.utter_message(text=respone)
+
 
 class ActionAboutProject(Action):
     def name(self) -> Text:
@@ -605,6 +630,7 @@ class ActionAboutProject(Action):
             dispatcher.utter_message(text=respone)
             return []
 
+
 class ActionAboutListOfKomuCommands(Action):
     def name(self) -> Text:
         return "action_about_list_of_komu_commands"
@@ -622,8 +648,6 @@ class ActionAboutListOfKomuCommands(Action):
         responseText = responseText[:-1]
         dispatcher.utter_message(text=responseText)
         return []
-
-      
 
 
 class ActionRestartWithButton(Action):
