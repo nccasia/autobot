@@ -4,12 +4,6 @@ responses:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
-  utter_faq/nlu:
-  - text: "Natural Language Understanding (NLU) deals with parsing and understanding human language into a structured format. 
-    Autobot's NLU engine is defined by an [NLU pipeline](https://komu.vn/docs/autobot/tuning-your-model#how-to-choose-a-pipeline) and trained on [NLU training data](https://komu.vn/docs/autobot/nlu-training-data).
-    Usually, an NLU pipeline will include components for:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email)."
   utter_faq/rasa_components:
   - text: "Autobot Open Source is a machine learning framework for automated text and voice-based conversations.
     Autobot Open Source consists of NLU (Natural Language Understanding) and Dialogue Management.  

@@ -89,8 +89,9 @@ def send_Out_Of_Scope(tracker):
     payload = json.dumps(payload)
     response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
     response = response.json()
-    if len(conv_format) >= 3 and  fuzz.partial_ratio(response["generated_text"], conv_format[-2]['text']) > 90:
-        print("repeat case")
+    try:
+        if fuzz.partial_ratio(response["generated_text"], conv_format[-2]['text']) > 90:
+            print("repeat case")
         print(response["generated_text"] + " == " + conv_format[-2]['text'])
         payload = {
               "inputs": {
@@ -100,6 +101,9 @@ def send_Out_Of_Scope(tracker):
         payload = json.dumps(payload)
         response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
         response = response.json()
+    except:
+        print("error in fuzz.partial_ratio")
+    
     print(response)
     print("user: " + conv_format[-1]['text'])
     print("bot: " + response["generated_text"])

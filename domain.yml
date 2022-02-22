@@ -389,8 +389,6 @@ responses:
   - text: What's your job? 🕴
   utter_ask_x_local_server:
   - text: Are you trying to install Autobot X on your local machine or on a server?
-  utter_ask_migration:
-  - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
   utter_ask_person_name:
@@ -415,8 +413,6 @@ responses:
   - text: What kind of assistant do you want to build with Autobot?
   utter_ask_which_product:
   - text: Ok, which product would you like to know more about? Autobot Open Source or Autobot X?
-  utter_ask_which_tool:
-  - text: Which tool are you migrating from?
   utter_awesome:
   - text: Awesome, thanks! 👍
   - text: Sweet, thank you! 😄
@@ -462,25 +458,14 @@ responses:
   - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Autobot.
   utter_explain_company:
   - text: Just for completeness.
-  utter_explain_core:
-  - text: |-
-      Dialogue Management (previously known as "Core") decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
-      (Example: Dialogue Management has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
-  utter_explain_nlu:
-  - text: |-
-      NLU understands the user’s message based on your previous training data:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email).
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
   - text: Alright, I'll briefly explain the components that make up Autobot then.
   utter_explain_use_case:
   - text: In order to help you best, we need to know what you want to build with Autobot.
-  utter_explain_x:
-  - text: Autobot X is a toolset used to improve contextual assistants built using Autobot Open Source by helping you turn real user conversations into training data. Autobot X includes a user interface and a REST API.
   utter_faq_channels_more:
   - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
   utter_faq_languages_more:
