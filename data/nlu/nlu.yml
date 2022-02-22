@@ -1,5 +1,48 @@
 version: "2.0"
 nlu:
+- intent: request_devices
+  examples: |
+   - I wanna request devices
+   - Can I request the device?
+   - Can I request a computer?
+   - Can I request a mouse?
+   - Can I request a headphone?
+   - Can I request a keyboard?
+   - Can I request a desktop?
+   - Can I request a PC?
+   - Can I request a new screen?
+   - How to request devices?
+   - Who can I request the device with?
+   - Who can I request computer with?
+   - Who can I request computer mouse with?
+   - Who can I request headphone with?
+   - Who can I request keyboard with?
+   - I want a computer
+   - I want a new computer
+   - I want another computer
+   - I want a new computer mouse
+   - I want a computer mouse
+   - I want another computer mouse
+   - I want a headphone
+   - I want another headphone
+   - I want a new headphone
+   - I want a keyboard
+   - I want a new keyboard
+   - I want another keyboard
+   - I want a screen
+   - I want a new screen
+   - I want another screen
+   - I want a PC
+   - I want a desktop
+   - My computer is broken, I want a new computer
+   - My mouse is broken, I want a new mouse
+   - My headphone is broken, I want a new headphone
+   - My keyboard is broken, I want a new keyboard
+   - My screen is broken, I want a new screen
+   - I can't use my computer
+   - I can't use my mouse
+   - I can't use my keyboard
+   - I can't use my headphone
 - intent: about_list_of_komu_commands
   examples: |
    - list of komu commands

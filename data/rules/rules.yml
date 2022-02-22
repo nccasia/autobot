@@ -1,5 +1,9 @@
 version: "2.0"
 rules:
+- rule: request_devices
+  steps:
+  - intent: request_devices
+  - action: utter_request_devices
 - rule: regulations_in_the_company
   steps:
   - intent: regulations_in_the_company

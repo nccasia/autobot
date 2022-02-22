@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- request_devices
 - about_list_of_komu_commands
 - about_project
 - require_portfolio
@@ -217,6 +218,8 @@ slots:
   faq:
     type: any
 responses:
+  utter_request_devices:
+  - text: You can contact the IT department or your PM
   utter_regulations_in_the_company:
   - text: The company has regulations on confidentiality of internal information and customer information.When violating regulations, employees need to take full responsibility and the equivalent violation amount is 200 million VND. Regulations on uploading avatars for the company's internal tools to manage employees.
   utter_rules_for_working_from_home:
