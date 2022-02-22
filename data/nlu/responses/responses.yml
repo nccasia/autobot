@@ -4,12 +4,6 @@ responses:
   - text: "I only understand English, I'm sorry."
   utter_out_of_scope/other:
   - text: "I can't help you with that, I'm sorry."
-  utter_faq/nlu:
-  - text: "Natural Language Understanding (NLU) deals with parsing and understanding human language into a structured format. 
-    Autobot's NLU engine is defined by an [NLU pipeline](https://komu.vn/docs/autobot/tuning-your-model#how-to-choose-a-pipeline) and trained on [NLU training data](https://komu.vn/docs/autobot/nlu-training-data).
-    Usually, an NLU pipeline will include components for:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email)."
   utter_faq/rasa_components:
   - text: "Autobot Open Source is a machine learning framework for automated text and voice-based conversations.
     Autobot Open Source consists of NLU (Natural Language Understanding) and Dialogue Management.  
@@ -96,7 +90,7 @@ responses:
   - text: "A little bit cold, otherwise fine."
   utter_chitchat/ask_howold:
   - text: "Old enough to be a bot!"
-  - text: "42"
+  - text: "20"
   - text: "Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter."
   - text: "My first git commit was many moons ago."
   - text: "Why do you ask? Are my wrinkles showing?"
@@ -133,20 +127,15 @@ responses:
   - text: "It's probably the one that your parents chose for you."
   - text: "I'd tell you, but there's restricted access to that chunk of memory."
   - text: "Believe it or not, I actually am not spying on your personal information."
-  - text: "You're the second person now to ask me that. Rihanna was the first."
+  - text: "You're the second person now to ask me that. Nhan Nguyen was the first."
   utter_chitchat/ask_whatisrasa:
   - text: "Autobot Open Source is a conversational AI framework for that provides machine learning tools for
   building contextual assistants. You can read more about it here in the docs or on our
   [website](https://komu.vn/)."
   utter_chitchat/ask_whatspossible:
-  - text: "You can ask me about how to get started with Autobot, the difference between Autobot and Autobot X,
-    subscribing to our newsletter or booking a sales call."
+  - text: "You can ask me everything about NCC"
   utter_chitchat/ask_wherefrom:
-  - text: "I was born in Berlin, but I consider myself a citizen of the world."
-  - text: "I was born in the coolest city on Earth, in Berlin."
-  - text: "My developers come from all over the world!"
-  - text: "I was taught not to give out my address on the internet."
-  - text: "My address starts with github.com."
+  - text: "I was created by NCC VietNam"
   utter_chitchat/ask_whoami:
   - text: "I hope you are being yourself."
   - text: "Who do you think you are?"

@@ -8,3 +8,5 @@ pandas>=0.25.0
 algoliasearch>=2.0,<3.0
 spacy~=2.2.4
 python-dotenv~=0.15.0
+# for Fuzzy string matching
+thefuzz

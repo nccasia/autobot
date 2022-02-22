@@ -5,6 +5,8 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- request_devices
+- about_list_of_komu_commands
 - about_project
 - require_portfolio
 - require_resource
@@ -62,15 +64,12 @@ intents:
 - ask_how_contribute
 - ask_question_in_forum
 - ask_when_next_event
-- ask_which_events
-- ask_why_contribute
 - book_demo
 - broken
 - bye
 - canthelp
 - chitchat:
     use_entities: []
-- contact_sales
 - deny
 - enter_data:
     use_entities: []
@@ -87,18 +86,13 @@ intents:
 - install_rasa
 - need_help_broad
 - next_step
-- nlu_generation_tool_recommendation
-- nlu_info
 - out_of_scope
-- pipeline_recommendation
 - react_negative
 - react_positive
 - restart
-- signup_newsletter
 - source_code
 - suggestion
 - switch
-- technical_question
 - thank
 - trigger_rephrase
 - why_rasa
@@ -224,6 +218,8 @@ slots:
   faq:
     type: any
 responses:
+  utter_request_devices:
+  - text: You can contact the IT department or your PM
   utter_regulations_in_the_company:
   - text: The company has regulations on confidentiality of internal information and customer information.When violating regulations, employees need to take full responsibility and the equivalent violation amount is 200 million VND. Regulations on uploading avatars for the company's internal tools to manage employees.
   utter_rules_for_working_from_home:
@@ -361,8 +357,6 @@ responses:
   - text: Do you still want to subscribe to the newsletter?
   utter_ask_continue_rasa_init:
   - text: Do you want to go ahead with the steps to create a contextual assistant?
-  utter_ask_continue_sales:
-  - text: Do you still want to talk to sales?
   utter_ask_problem_description:
   - text: Can you describe the problem you're having?
   utter_ask_docs_help:
@@ -385,8 +379,6 @@ responses:
     - payload: '/feedback{{"feedback_value": "negative"}}'
       title: 👎
     text: How is this conversation going?
-  utter_ask_feedback_message:
-  - text: I'm sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve.
   utter_ask_for_nlu_specifics:
   - text: Anything in particular you'd like to know about, e.g. intent classification or entity recognition?
   utter_ask_goal:
@@ -397,8 +389,6 @@ responses:
   - text: What's your job? 🕴
   utter_ask_x_local_server:
   - text: Are you trying to install Autobot X on your local machine or on a server?
-  utter_ask_migration:
-  - text: Are you migrating from another tool?
   utter_ask_name:
   - text: What's your name?
   utter_ask_person_name:
@@ -423,8 +413,6 @@ responses:
   - text: What kind of assistant do you want to build with Autobot?
   utter_ask_which_product:
   - text: Ok, which product would you like to know more about? Autobot Open Source or Autobot X?
-  utter_ask_which_tool:
-  - text: Which tool are you migrating from?
   utter_awesome:
   - text: Awesome, thanks! 👍
   - text: Sweet, thank you! 😄
@@ -438,12 +426,6 @@ responses:
   - text: Ciao!
   - text: Bye, was nice talking to you!
   - text: Bye bye!
-  utter_can_do:
-  - text: Sure thing!
-  - text: Can do!
-  - text: You got it. 👍
-  utter_canthelp:
-  - text: I'm sorry I couldn't help you. If you have general questions about Autobot, please head to our [forum](https://forum.komu.vn/), otherwise contact us at [hi@komu.vn](mailto:hi@komu.vn) for anything else.
   utter_cantsignup:
   - text: I can't sign you up if you don't provide your email 😉
   utter_change_mind:
@@ -460,19 +442,10 @@ responses:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@komu.vn.
   utter_crf:
   - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://komu.vn/docs/nlu/dataformat/).
-  utter_default:
-  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
-  - text: I didn't understand, could you rephrase that?
-  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
-  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
-  - text: I didn't quite get that, could you rephrase your message?
-  - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_direct_to_forum_for_help:
   - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.komu.vn/).
   utter_docu:
   - text: If you want some more awesome Autobot content, check out our [forum](https://forum.komu.vn/).
-  utter_dont_know_nlu_part:
-  - text: Hmm, seems like I haven't learned about that part of NLU yet!
   utter_duckling:
   - text: For that entity I'd suggest using the rule-based [DucklingHTTPExtractor](https://komu.vn/docs/autobot/nlu/components/#ducklinghttpextractor) component 🐥
   utter_duckling_info:
@@ -485,25 +458,14 @@ responses:
   - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Autobot.
   utter_explain_company:
   - text: Just for completeness.
-  utter_explain_core:
-  - text: |-
-      Dialogue Management (previously known as "Core") decides what happens next in this conversation. Its machine learning-based dialogue management predicts the next best action based on the input from NLU, the conversation history and your training data.
-      (Example: Dialogue Management has a confidence of 87% that ask_primary_change is the next best action to confirm with the user if they want to change their primary contact information.)
   utter_explain_job_function:
   - text: Your job function helps us in understanding how we can talk to you best.
-  utter_explain_nlu:
-  - text: |-
-      NLU understands the user’s message based on your previous training data:
-      - Intent classification: Interpreting meaning based on predefined intents (Example: “Please send the confirmation to amy@example.com” is a send_confirmation intent with 93% confidence)
-      - Entity extraction: Recognizing structured data (Example: amy@example.com is an email).
   utter_explain_person_name:
   - text: To be able to contact you later on, we would like to know your name.
   utter_explain_rasa_components:
   - text: Alright, I'll briefly explain the components that make up Autobot then.
   utter_explain_use_case:
   - text: In order to help you best, we need to know what you want to build with Autobot.
-  utter_explain_x:
-  - text: Autobot X is a toolset used to improve contextual assistants built using Autobot Open Source by helping you turn real user conversations into training data. Autobot X includes a user interface and a REST API.
   utter_faq_channels_more:
   - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
   utter_faq_languages_more:
@@ -541,8 +503,6 @@ responses:
   - text: Hey there!
   utter_have_you_used_rasa_before:
   - text: Have you used Autobot before?
-  utter_inform_privacypolicy:
-  - text: By chatting to me you agree to our [privacy policy](https://komu.vn/privacy-policy/).
   utter_installation_command:
   - text: |-
       You will first need to install Autobot Open Source using this installation command. 
@@ -583,25 +543,12 @@ responses:
   - text: Looks like you've already gone through all the steps!
   utter_no_speak:
   - text: I'm afraid we can't chat then 😢
-  utter_nohelp:
-  - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
-  utter_not_sure:
-  - text: Hmm, not sure what you mean...
   utter_noworries:
   - text: No worries!
   - text: You're welcome!
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_possibilities:
-  - text: |
-      You can ask me about:
-      - how to get started with Autobot
-      - the components of Autobot,
-      - booking a sales call
-      - subscribing to our newsletter
-  utter_possibilities_to_contribute:
-  - text: Check out the [Contribute to Autobot](https://github.com/orgs/RasaHQ/projects/23) board for ideas on how to contribute code or content. You can also help by answering other members' questions on the [forum](http://forum.komu.vn).
   utter_rasa_x_local_installation:
   - text: This [page](https://komu.vn/docs/autobot-x/installation-and-setup/install/local-mode) has a guide on how to run Autobot X in local mode.
   utter_rasa_x_server_installation:
@@ -618,12 +565,6 @@ responses:
   - text: 😊
   - text: 👏
   - text: 😍
-  utter_reasons_to_contribute:
-  - text: |
-      Here a few reasons why you should contribute:
-      - Explore the source code in depth
-      - Contribute to open source software
-      - Earn [Autobot swag])(https://komu.vn/community/contribute/)!
   utter_recommend_forum:
   - text: You should join the [Autobot Community forum](https://forum.komu.vn), where you can ask questions about Autobot Open Source and Autobot X, find resources, and stay up-to-date with what's happening at Autobot.
   utter_response_why_email:
@@ -681,8 +622,6 @@ responses:
   - text: Autobot Masterclass covers how to [set up Autobot X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with others.
   utter_ask_rephrase:
   - text: Can you rephrase the question?
-  utter_no_further_info:
-  - text: Sorry, that's all the info I've got on that subject 😕
   utter_why_rasa:
   - text: Autobot provides the infrastructure and tools needed to build high-performing, resilient assistants that work. What's more, Autobot is **open source** - no black-box magic!
   utter_ask_more:
@@ -703,6 +642,8 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_list_of_komu_commands
+- action_out_of_scope
 - action_about_project
 - action_trigger_response_selector
 - action_default_ask_affirmation
@@ -713,21 +654,17 @@ actions:
 - action_set_faq_slot
 - action_explain_faq
 - action_forum_search
-- action_get_community_events
 - action_greet_user
 - action_pause
 - action_set_onboarding
 - action_store_bot_language
 - action_store_entity_extractor
 - action_store_problem_description
-- action_store_unknown_nlu_part
 - action_store_unknown_product
 - action_tag_docs_search
 - action_tag_feedback
-- action_submit_subscribe_newsletter_form
 - action_submit_sales_form
 - action_submit_suggestion_form
-- validate_subscribe_newsletter_form
 - validate_sales_form
 forms:
   playground_form:
@@ -736,41 +673,4 @@ forms:
   suggestion_form:
     suggestion:
     - type: from_text
-  sales_form:
-    budget:
-    - entity: amount-of-money
-      type: from_entity
-    - entity: number
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    business_email:
-    - entity: email
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    company:
-    - entity: company
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    job_function:
-    - entity: job_function
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    person_name:
-    - entity: name
-      type: from_entity
-    - intent: enter_data
-      type: from_text
-    use_case:
-    - intent: enter_data
-      type: from_text
-  subscribe_newsletter_form:
-    email:
-    - entity: email
-      type: from_entity
-    - intent: enter_data
-      type: from_text
 e2e_actions: []

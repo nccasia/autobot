@@ -150,49 +150,6 @@ def test_action_submit_sales_form(
     assert dispatcher.messages[0]["template"] == "utter_confirm_salesrequest"
     assert worksheet.row_values(2) == row_values
 
-
-def test_action_submit_subscribe_newsletter_form_unsubscribed(
-    tracker: Tracker,
-    dispatcher: CollectingDispatcher,
-    domain: DomainDict,
-    mailchimp_unsubscribed_email: Text,
-):
-    tracker.slots["email"] = mailchimp_unsubscribed_email
-    action = actions.ActionSubmitSubscribeNewsletterForm()
-    actual_events = action.run(dispatcher, tracker, domain)
-    assert actual_events == []
-    assert len(dispatcher.messages) == 1
-    assert dispatcher.messages[0]["template"] == "utter_confirmationemail"
-
-
-def test_action_submit_subscribe_newsletter_form_new(
-    tracker: Tracker,
-    dispatcher: CollectingDispatcher,
-    domain: DomainDict,
-    mailchimp_email: Text,
-):
-    tracker.slots["email"] = mailchimp_email
-    action = actions.ActionSubmitSubscribeNewsletterForm()
-    actual_events = action.run(dispatcher, tracker, domain)
-    assert actual_events == []
-    assert len(dispatcher.messages) == 1
-    assert dispatcher.messages[0]["template"] == "utter_confirmationemail"
-
-
-def test_action_submit_subscribe_newsletter_form_subscribed(
-    tracker: Tracker,
-    dispatcher: CollectingDispatcher,
-    domain: DomainDict,
-    mailchimp_subscribed_email: Text,
-):
-    tracker.slots["email"] = mailchimp_subscribed_email
-    action = actions.ActionSubmitSubscribeNewsletterForm()
-    actual_events = action.run(dispatcher, tracker, domain)
-    assert actual_events == []
-    assert len(dispatcher.messages) == 1
-    assert dispatcher.messages[0]["template"] == "utter_already_subscribed"
-
-
 def test_action_community_events(
     tracker: Tracker,
     dispatcher: CollectingDispatcher,
