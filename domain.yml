@@ -6,6 +6,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - about_log_leave_and_remote_request
+- about_register_working_hour
+- about_complain_timesheet
+- comments_about_the_company
 - request_devices
 - about_list_of_komu_commands
 - about_project
@@ -125,9 +128,9 @@ entities:
 - project
 forms:
   log_request_form:
-   kind_request:
+   log_request_kind:
     - type: from_text
-   time_request:
+   log_request_time:
     - type: from_text
   playground_form:
     problem_description:
@@ -136,17 +139,10 @@ forms:
     suggestion:
     - type: from_text
 slots:
-  kind_request:
-    type: categorical
-    values:
-    - remote
-    - onsite
-    - leave
-  time_request:
-    type: categorical
-    values:
-    - afternoon
-    - morning
+  log_request_kind:
+    type: text
+  log_request_time:
+    type: text
   project:
     type: text
   country:
@@ -242,6 +238,18 @@ slots:
   faq:
     type: any
 responses:
+  utter_ask_log_request_form_log_request_kind:
+  - text: what kind of request do you want to log?
+  utter_ask_log_request_form_log_request_time:
+  - text: what time do you want to log?
+  utter_confirm_request_form:
+  - text: Are you sure to request {log_request_kind} in the {log_request_time} today?
+  utter_about_register_working_hour:
+  - text: To register for new working hours, employees/interns need to register via Timesheet at My working time http://timesheet.nccsoft.vn/app/main/my-working-time Employees need to choose a time to start working in the morning + afternoon, and finish working in the morning + afternoon. Note SA and CH need to be entered for all fields. 12 noon is 12 PM. After registering, PM needs to approve the registration at My Working Time menu. The employee's working hours will then be updated at the effective time.
+  utter_about_complain_timesheet:
+  - text: Access the link http://timesheet.nccsoft.vn To complain when you don't have an account, checkin but the machine does not recognize, lose network when checkingin,...
+  utter_comments_about_the_company:
+  - text: Employees in the company can contribute comments and complaints about the company. The policy of the company is to resolve employee complaints quickly. If the complaint is about the employee himself, the employee should report it directly to his supervisor. Regarding the issue that has not been satisfactorily resolved by the superior, you can meet the Human Resources Department or the Board of Directors to present.
   utter_request_devices:
   - text: You can contact the IT department or your PM
   utter_regulations_in_the_company:
@@ -466,8 +474,6 @@ responses:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@komu.vn.
   utter_crf:
   - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://komu.vn/docs/nlu/dataformat/).
-  utter_direct_to_forum_for_help:
-  - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.komu.vn/).
   utter_docu:
   - text: If you want some more awesome Autobot content, check out our [forum](https://forum.komu.vn/).
   utter_duckling:
@@ -539,12 +545,6 @@ responses:
       "pip install autobot"
   utter_interested_in_starter_packs:
   - text: Got it, are you interested in seeing any example Autobot Open Source assistants to help you get started?
-  utter_interested_in_installation:
-  - text: Would you like to learn more about installing Autobot?
-  utter_installation_instructions:
-  - text: If you haven't already read the detailed instruction guide, you can look it up [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
-  utter_having_trouble_installing:
-  - text: If you are having any trouble installing, you can look up detailed installation instructions [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
   utter_ask_ready_to_build:
   - text: If you got it successfully installed, are you ready to start building a contextual assistant?
   utter_link_to_forum:
@@ -573,10 +573,6 @@ responses:
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_rasa_x_local_installation:
-  - text: This [page](https://komu.vn/docs/autobot-x/installation-and-setup/install/local-mode) has a guide on how to run Autobot X in local mode.
-  utter_rasa_x_server_installation:
-  - text: You can install Autobot X on a server using either [Docker-Compose](https://komu.vn/docs/autobot-x/installation-and-setup/install/docker-compose) or [Helm](https://komu.vn/docs/autobot-x/installation-and-setup/install/helm-chart).
   utter_rasa_components_details:
   - text: Autobot Open Source is a machine learning framework for automated text and voice-based conversations. Autobot X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Autobot Open Source framework.
   utter_react_negative:
@@ -602,10 +598,6 @@ responses:
     - payload: /restart
       title: Restart
     text: Click the button below if you want to start over.
-  utter_run_rasa_init:
-  - text: |-
-      You can now create a new Autobot assistant and also talk to it by simply running "autobot init".
-      This comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training. 
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
@@ -667,6 +659,7 @@ responses:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
 - action_about_log_leave_and_remote_request
+- validate_log_request_form
 - action_about_list_of_komu_commands
 - action_out_of_scope
 - action_about_project

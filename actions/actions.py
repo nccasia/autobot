@@ -75,7 +75,7 @@ def send_Out_Of_Scope(tracker):
     bot_res = []
     for i in range(len(conv_rev) - 1):
         if conv_rev[i]['speaker'] == 'bot' and conv_rev[i + 1]['speaker'] == 'user':
-            if len(user_input) > 0 and user_input[-1]['timestamp'] - conv_rev[i + 1]['timestamp'] > 10:
+            if len(user_input) > 0 and user_input[-1]['timestamp'] - conv_rev[i + 1]['timestamp'] > 20:
                 break
             user_input.append(conv_rev[i + 1])
             bot_res.append(conv_rev[i])
@@ -535,6 +535,41 @@ class ActionDefaultFallback(Action):
         print(respone)
         dispatcher.utter_message(text=respone)
 
+class ValidateLogRequestForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_log_request_form"
+
+    def validate_log_request_kind(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `log_request_kind` value."""
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['onsite', 'remote', 'leave'])
+        if ratio > 70:
+            return {"log_request_kind": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Kind request must be one in: onsite, remote, leave")
+            return {"log_request_kind": None}
+
+    def validate_log_request_time(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `log_request_time` value."""
+
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['morning', 'afternoon', 'full day'])
+        if ratio > 70:
+            return {"log_request_time": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Time request must be one in: morning, afternoon, full day")
+            return {"log_request_time": None}
+
 class ActionAboutLogLeaveAndRemoteRequest(Action):
     def name(self) -> Text:
         return "action_about_log_leave_and_remote_request"
@@ -546,9 +581,15 @@ class ActionAboutLogLeaveAndRemoteRequest(Action):
         domain: DomainDict,
     ) -> List[EventType]:
 
-        print("-------------action_about_log_leave_and_remote_request-------------------")
-        print(tracker)
-        dispatcher.utter_message(text="action_about_log_leave_and_remote_request")
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            log_request_kind = tracker.slots.get("log_request_kind")
+            log_request_time = tracker.slots.get("log_request_time")
+            if log_request_kind and log_request_time:
+                dispatcher.utter_message(text=f"sended api to log {log_request_kind} in {log_request_time} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
 
 class ActionAboutProject(Action):
     def name(self) -> Text:

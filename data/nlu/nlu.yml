@@ -2,14 +2,36 @@ version: "2.0"
 nlu:
 - intent: about_log_leave_and_remote_request
   examples: |
-   - Where can I log request?
    - How to log request?
    - I want to log request
-   - I want to log request
+   - log request
    - Can I log leave request?
    - Can I log onsite request?
    - Can I log remote request?
-   - I want to log request
+- intent: about_register_working_hour
+  examples: |
+   - Who can sign up for hours?
+   - Where can I sign up for hours?
+   - Who approves employee hours registration?
+   - Can my work hours start at [9.30](hours)?
+   - What if I sign up for working hours but I don't get PM approval?
+- intent: about_complain_timesheet
+  examples: |
+   - Who can complain?
+   - What problems can I complain about?
+   - When I check in via FaceID but I can't recognize it, can I complain?
+   - Check-in via FaceID has a network error but after the time is late, can I complain?
+   - Do not have a FaceID account can complain?
+   - Who confirms or denies complaints?
+   - Can I see last month's claims?
+- intent: comments_about_the_company
+  examples: |
+   - Who can contribute ideas in the company?
+   - Contributed on what issues?
+   - Who can contribute ideas?
+   - What if the superiors' suggestions are not resolved satisfactorily?
+   - Who handles employee complaints?
+   - If the complaint is personal, how should the employee present it?
 - intent: request_devices
   examples: |
    - I wanna request devices

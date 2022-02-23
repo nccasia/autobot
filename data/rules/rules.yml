@@ -13,8 +13,23 @@ rules:
   - active_loop: null
   - slot_was_set:
     - requested_slot: null
+  - action: utter_confirm_request_form
+  - or:
+    - intent: affirm
+    - intent: deny
   - action: action_about_log_leave_and_remote_request
-  
+- rule: about_register_working_hour
+  steps:
+  - intent: about_register_working_hour
+  - action: utter_about_register_working_hour
+- rule: about_complain_timesheet
+  steps:
+  - intent: about_complain_timesheet
+  - action: utter_about_complain_timesheet
+- rule: comments_about_the_company
+  steps:
+  - intent: comments_about_the_company
+  - action: utter_comments_about_the_company
 - rule: request_devices
   steps:
   - intent: request_devices
