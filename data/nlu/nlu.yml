@@ -1,5 +1,15 @@
 version: "2.0"
 nlu:
+- intent: about_log_leave_and_remote_request
+  examples: |
+   - Where can I log request?
+   - How to log request?
+   - I want to log request
+   - I want to log request
+   - Can I log leave request?
+   - Can I log onsite request?
+   - Can I log remote request?
+   - I want to log request
 - intent: request_devices
   examples: |
    - I wanna request devices

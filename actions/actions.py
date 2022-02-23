@@ -92,15 +92,15 @@ def send_Out_Of_Scope(tracker):
     try:
         if fuzz.partial_ratio(response["generated_text"], conv_format[-2]['text']) > 90:
             print("repeat case")
-        print(response["generated_text"] + " == " + conv_format[-2]['text'])
-        payload = {
-              "inputs": {
-                  "text": tracker.latest_message["text"],
-              },
-          }
-        payload = json.dumps(payload)
-        response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
-        response = response.json()
+            print(response["generated_text"] + " == " + conv_format[-2]['text'])
+            payload = {
+                "inputs": {
+                    "text": tracker.latest_message["text"],
+                },
+            }
+            payload = json.dumps(payload)
+            response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
+            response = response.json()
     except:
         print("error in fuzz.partial_ratio")
     
@@ -535,6 +535,20 @@ class ActionDefaultFallback(Action):
         print(respone)
         dispatcher.utter_message(text=respone)
 
+class ActionAboutLogLeaveAndRemoteRequest(Action):
+    def name(self) -> Text:
+        return "action_about_log_leave_and_remote_request"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        print("-------------action_about_log_leave_and_remote_request-------------------")
+        print(tracker)
+        dispatcher.utter_message(text="action_about_log_leave_and_remote_request")
 
 class ActionAboutProject(Action):
     def name(self) -> Text:

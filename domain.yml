@@ -5,6 +5,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_log_leave_and_remote_request
 - request_devices
 - about_list_of_komu_commands
 - about_project
@@ -122,7 +123,30 @@ entities:
 - techstack
 - contract_type
 - project
-slots: 
+forms:
+  log_request_form:
+   kind_request:
+    - type: from_text
+   time_request:
+    - type: from_text
+  playground_form:
+    problem_description:
+    - type: from_text
+  suggestion_form:
+    suggestion:
+    - type: from_text
+slots:
+  kind_request:
+    type: categorical
+    values:
+    - remote
+    - onsite
+    - leave
+  time_request:
+    type: categorical
+    values:
+    - afternoon
+    - morning
   project:
     type: text
   country:
@@ -642,6 +666,7 @@ responses:
   utter_why_rasa_compliant:
   - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_log_leave_and_remote_request
 - action_about_list_of_komu_commands
 - action_out_of_scope
 - action_about_project
@@ -666,11 +691,4 @@ actions:
 - action_submit_sales_form
 - action_submit_suggestion_form
 - validate_sales_form
-forms:
-  playground_form:
-    problem_description:
-    - type: from_text
-  suggestion_form:
-    suggestion:
-    - type: from_text
 e2e_actions: []

@@ -1,5 +1,20 @@
 version: "2.0"
 rules:
+- rule: activate_form_request
+  steps:
+  - intent: about_log_leave_and_remote_request
+  - action: log_request_form
+  - active_loop: log_request_form
+- rule: submit_form_request
+  condition:
+  - active_loop: log_request_form
+  steps:
+  - action: log_request_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_about_log_leave_and_remote_request
+  
 - rule: request_devices
   steps:
   - intent: request_devices
