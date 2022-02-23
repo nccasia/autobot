@@ -3,11 +3,18 @@ nlu:
 - intent: about_log_leave_and_remote_request
   examples: |
    - How to log request?
-   - I want to log request
+   - I want to log [remote](log_request_kind) request
+   - I want to log [leave](log_request_kind) request [full day](log_request_time)
    - log request
-   - Can I log leave request?
-   - Can I log onsite request?
-   - Can I log remote request?
+   - send [remote](log_request_kind) request [full day](log_request_time)
+   - send [onsite](log_request_kind) request [morning](log_request_time)
+   - send [leave](log_request_kind) request [afternoon](log_request_time)
+   - send [remote](log_request_kind) request
+   - send [onsite](log_request_kind) request
+   - send [leave](log_request_kind) request
+   - Can I log [leave](log_request_kind) request?
+   - Can I log [onsite](log_request_kind) request?
+   - Can I log [remote](log_request_kind) request?
 - intent: about_register_working_hour
   examples: |
    - Who can sign up for hours?
