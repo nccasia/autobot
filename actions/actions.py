@@ -112,6 +112,23 @@ def send_Out_Of_Scope(tracker):
     return response["generated_text"]
 
 
+class ActionAboutFindUserPhoneNumber(Action):
+    def name(self) -> Text:
+        return "action_about_find_user_phone_number"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+        staff = tracker.slots.get("staff")
+        if staff:
+            dispatcher.utter_message(text=f"here is the phone of {staff}: 113")
+        else:
+            dispatcher.utter_message(text=f"no trigger user name")
+        return []
+
 class ActionSubmitSalesForm(Action):
     def name(self) -> Text:
         return "action_submit_sales_form"

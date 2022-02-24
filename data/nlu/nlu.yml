@@ -16,6 +16,20 @@ nlu:
    - Can I log [leave](log_request_kind) request?
    - Can I log [onsite](log_request_kind) request?
    - Can I log [remote](log_request_kind) request?
+   - How to log [remote] (log_request_kind) request?
+   - How to log [leave] (log_request_kind) request?
+   - How to log [onsite] (log_request_kind) request?
+   - Log [remote](log_request_kind) request
+   - Log [leave](log_request_kind) request
+   - Log [onsite](log_request_kind) request
+   - Can I log request?
+- intent: about_find_user_phone_number
+  examples: |
+   - phone number of [tung.khongmanh](staff)
+   - phonenumber of [thao.tranphuong](staff)
+   - i need phone of [tung.khongmanh](staff)
+   - [thao.nguyenthi1](staff) phone
+   - [tung.khongmanh](staff) phone number
 - intent: about_daily
   examples: |
    - Who is the subject of daily work when working in the company?

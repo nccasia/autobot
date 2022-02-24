@@ -1,8 +1,0 @@
-version: "2.0"
-rules:
-- rule: Activate playground form
-  steps:
-  - action: utter_ask_playground_help
-  - intent: affirm
-  - action: playground_form
-  - active_loop: playground_form
