@@ -99,8 +99,10 @@ def send_Out_Of_Scope(tracker):
                 },
             }
             payload = json.dumps(payload)
-            response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
-            response = response.json()
+            responseRep = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
+            responseRep = responseRep.json()
+            if responseRep["generated_text"]:
+                response = responseRep
     except:
         print("error in fuzz.partial_ratio")
     

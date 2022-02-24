@@ -18,6 +18,18 @@ rules:
     - intent: affirm
     - intent: deny
   - action: action_about_log_leave_and_remote_request
+- rule: about_daily
+  steps:
+  - intent: about_daily
+  - action: utter_about_daily
+- rule: about_business_contact_list
+  steps:
+  - intent: about_business_contact_list
+  - action: utter_about_business_contact_list
+- rule: about_teambuilding
+  steps:
+  - intent: about_teambuilding
+  - action: utter_about_teambuilding
 - rule: about_register_working_hour
   steps:
   - intent: about_register_working_hour

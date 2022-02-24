@@ -5,6 +5,9 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_daily
+- about_teambuilding
+- about_business_contact_list
 - about_log_leave_and_remote_request
 - about_register_working_hour
 - about_complain_timesheet
@@ -244,6 +247,12 @@ responses:
   - text: what time do you want to log?
   utter_confirm_request_form:
   - text: Are you sure to request {log_request_kind} in the {log_request_time} today?
+  utter_about_daily:
+  - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
+  utter_about_teambuilding:
+  - text: Teambuilding applies to both employees and interns when participating in the project. Extracurricular activities are an opportunity for members to understand each other and help each other in their work. Make communication with each other easier and more effective.
+  utter_about_business_contact_list:
+  - text: Visit the link you can see the details https://ims.nccsoft.vn/#/information/guidelines/10054
   utter_about_register_working_hour:
   - text: To register for new working hours, employees/interns need to register via Timesheet at My working time http://timesheet.nccsoft.vn/app/main/my-working-time Employees need to choose a time to start working in the morning + afternoon, and finish working in the morning + afternoon. Note SA and CH need to be entered for all fields. 12 noon is 12 PM. After registering, PM needs to approve the registration at My Working Time menu. The employee's working hours will then be updated at the effective time.
   utter_about_complain_timesheet:

@@ -6,6 +6,7 @@ nlu:
    - I want to log [remote](log_request_kind) request
    - I want to log [leave](log_request_kind) request [full day](log_request_time)
    - log request
+   - log [onsite](log_request_kind) request [morning](log_request_time)
    - send [remote](log_request_kind) request [full day](log_request_time)
    - send [onsite](log_request_kind) request [morning](log_request_time)
    - send [leave](log_request_kind) request [afternoon](log_request_time)
@@ -15,6 +16,35 @@ nlu:
    - Can I log [leave](log_request_kind) request?
    - Can I log [onsite](log_request_kind) request?
    - Can I log [remote](log_request_kind) request?
+- intent: about_daily
+  examples: |
+   - Who is the subject of daily work when working in the company?
+   - What is the daily time like?
+   - Daily minimum how many times a day?
+   - Can I daily at [10 am](hours)?
+   - Daily in what form?
+   - What if I don't daily?
+   - What is the daily syntax?
+   - What to do if you are calling an internal daily or a customer when Komu pings?
+   - Does Call daily require the camera to be turned on?
+   - daily time
+- intent: about_business_contact_list
+  examples: |
+   - I want to know about the salary, bonus, allowance,... who can I contact?
+   - I want to know about recruitment information, events in the company, who can I contact?
+   - I want to make suggestions, suggestions, complaints or complaints, who can I contact?
+   - When my computer has network connection problems or hardware failure, who can I contact?
+- intent: about_teambuilding
+  examples: |
+   - Who are the participants in teambuilding?
+   - What is team building?
+   - What is team?
+   - Teambuilding needs to do what organizations?
+   - What results does teambuilding bring?
+   - What is teambuilding and what are the notes in organizing activities?
+   - How is the teambuilding venue and program duration suitable?
+   - What are the benefits of teambuilding?
+   - teambuilding
 - intent: about_register_working_hour
   examples: |
    - Who can sign up for hours?
