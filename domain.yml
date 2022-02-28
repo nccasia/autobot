@@ -10,6 +10,7 @@ intents:
 - about_teambuilding
 - about_business_contact_list
 - about_log_leave_and_remote_request
+- about_log_timesheet
 - about_register_working_hour
 - about_complain_timesheet
 - comments_about_the_company
@@ -137,6 +138,13 @@ forms:
     - type: from_text
    log_request_time:
     - type: from_text
+  log_timesheet_form:
+   hours:
+    - type: from_text
+   project:
+    - type: from_text
+   position:
+    - type: from_text
   playground_form:
     problem_description:
     - type: from_text
@@ -148,8 +156,12 @@ slots:
     type: text
   log_request_time:
     type: text
+  hours:
+   type: text
   project:
-    type: text
+   type: text
+  position:
+   type: text
   country:
     type: text
   time:
@@ -157,7 +169,7 @@ slots:
   duration:
     type: text
   staff:
-   type: text
+   type: any
   techstack:
     type: text
   contract_type: 
@@ -251,6 +263,14 @@ responses:
   - text: what time do you want to log?
   utter_confirm_request_form:
   - text: Are you sure to request {log_request_kind} in the {log_request_time} today?
+  utter_ask_log_timesheet_form_log_hours:
+  - text: how many hours?
+  utter_ask_log_timesheet_form_log_project:
+  - text: which project?
+  utter_ask_log_timesheet_form_log_position:
+  - text: which position?
+  utter_confirm_timesheet_form: 
+  - text: Are you sure to log {hours} hours in {project} as {position} today?
   utter_about_daily:
   - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
   utter_about_teambuilding:
@@ -415,8 +435,6 @@ responses:
   - text: What's your email address?
   utter_ask_entities:
   - text: What kind of entities do you want to extract?
-  utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Autobot Open Source or Autobot X?
   utter_ask_feedback:
   - buttons:
     - payload: '/feedback{{"feedback_value": "positive"}}'
@@ -518,11 +536,6 @@ responses:
   utter_restart:
   - text: Loading... And I've been restarted! 🤯
   - text: Congrats you've restarted me! 😉
-  utter_restart_with_button:
-  - buttons:
-    - payload: /restart
-      title: Restart
-    text: Click the button below if you want to start over.
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
@@ -537,8 +550,6 @@ responses:
   - text: Ok, what can I help you with?
   utter_what_language:
   - text: Which (human) language is your assistant in?
-  utter_ask_rephrase:
-  - text: Can you rephrase the question?
   utter_ask_more:
   - text: Would you like to learn more?
   utter_ask_more_details:
@@ -547,6 +558,8 @@ responses:
 actions:
 - action_about_log_leave_and_remote_request
 - validate_log_request_form
+- action_about_log_timesheet
+- validate_log_timesheet_form
 - action_about_find_user_phone_number
 - action_about_list_of_komu_commands
 - action_out_of_scope
@@ -554,7 +567,6 @@ actions:
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
-- action_restart_with_button
 - action_docs_search
 - action_explain_sales_form
 - action_set_faq_slot

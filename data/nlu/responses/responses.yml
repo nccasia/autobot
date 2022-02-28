@@ -1,9 +1,5 @@
 version: "2.0"
 responses:
-  utter_out_of_scope/non_english:
-  - text: "I only understand English, I'm sorry."
-  utter_out_of_scope/other:
-  - text: "I can't help you with that, I'm sorry."
   utter_faq/rasa_components:
   - text: "Autobot Open Source is a machine learning framework for automated text and voice-based conversations.
     Autobot Open Source consists of NLU (Natural Language Understanding) and Dialogue Management.  

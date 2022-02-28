@@ -18,6 +18,24 @@ rules:
     - intent: affirm
     - intent: deny
   - action: action_about_log_leave_and_remote_request
+- rule: activate_form_timesheet
+  steps:
+  - intent: about_log_timesheet
+  - action: log_timesheet_form
+  - active_loop: log_timesheet_form
+- rule: submit_form_timesheet
+  condition:
+  - active_loop: log_timesheet_form
+  steps:
+  - action: log_timesheet_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_timesheet_form
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: action_about_log_timesheet
 - rule: about_find_user_phone_number
   steps:
   - intent: about_find_user_phone_number

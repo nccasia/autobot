@@ -23,6 +23,29 @@ nlu:
    - Log [leave](log_request_kind) request
    - Log [onsite](log_request_kind) request
    - Can I log request?
+- intent: about_log_timesheet
+  examples: |
+   - How to log timesheet?
+   - Can I log timesheet? 
+   - log timesheet
+   - What project do you want to log?
+   - [autobot](project)
+   - I want to log for [autobot](project)
+   - I need to log for the [autobot](project)
+   - How do you want to log position?
+   - [coding](position)
+   - [testing](position)
+   - [Business Analyzing](position)
+   - [Project Management](position)
+   - [Unassigned](position)
+   - I want to log for [coding](position)
+   - I want to log for [testing](position)
+   - I want to log for [Business Analyzing](position)
+   - I want to log for [Project Management](position)
+   - What time do you want to log?
+   - [8](hours) hours
+   - I want to log [7](hours) hours
+   - I can log [8](hours) hours
 - intent: about_find_user_phone_number
   examples: |
    - phone number of [tung.khongmanh](staff)
@@ -30,6 +53,12 @@ nlu:
    - i need phone of [tung.khongmanh](staff)
    - [thao.nguyenthi1](staff) phone
    - [tung.khongmanh](staff) phone number
+   - phone number of [duc.dinhquang](staff)
+   - phone number of [thien.nguyenthai](staff)
+   - phone number of [duc.nguyenminh](staff)
+   - phone number of [hieu.nguyenduc](staff)
+   - phone number of [tien.phammanh](staff)
+   - phone number of [ngan.nguyenthu](staff)
 - intent: about_daily
   examples: |
    - Who is the subject of daily work when working in the company?
@@ -661,9 +690,6 @@ nlu:
     - I want to know a short description of TopTracker software?
     - Guide channel Support channel internal tools via Azure devops?
     - Description of channel Support channer internal tools via azure devops?
-    - Where can I look up the contact phone number through google contact of @ncc.asia?
-    - Who is the object of phone number lookup via google contact?
-    - What are the steps to look up phone numbers via google contact?
     - I want to see instructions for remote registration and changing business hours on Timesheet?
     - I want information about Alpha Team?
     - I want information about Alpha Team?

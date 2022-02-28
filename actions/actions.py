@@ -610,6 +610,78 @@ class ActionAboutLogLeaveAndRemoteRequest(Action):
             dispatcher.utter_message(text=f"oke, it was cancelled")
         return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
 
+class ValidateLogTimeSheetForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_log_timesheet_form"
+
+    def validate_project(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `project` value."""
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), RESPONE_INTENT_ABOUT_PROJECT.keys())
+        if ratio > 80:
+            return {"project": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"no detected project name")
+            return {"project": None}
+
+    def validate_hours(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `hours` value."""
+
+        if 0. <= float(hours) <= 8.:
+            return {"hours": hours}
+        else:
+            dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+            return {"hours": None}
+
+    def validate_position(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `position` value."""
+
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['Coding', 'Testing', 'Business Analyzing', 'Project Management', 'Unassigned'])
+        if ratio > 70:
+            return {"position": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Time request must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
+            return {"position": None}
+
+class ActionAboutLogTimeSheet(Action):
+    def name(self) -> Text:
+        return "action_about_log_timesheet"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            hours = tracker.slots.get("hours")
+            project = tracker.slots.get("log_requeprojectst_time")
+            position = tracker.slots.get("position")
+            if log_request_kind and log_request_time:
+                dispatcher.utter_message(text=f"sended api to log time sheet: {hours} - {project} - {position} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("position", None)]
+
 class ActionAboutProject(Action):
     def name(self) -> Text:
         return "action_about_project"
@@ -663,19 +735,6 @@ class ActionAboutListOfKomuCommands(Action):
         dispatcher.utter_message(text=responseText)
         return []
 
-
-class ActionRestartWithButton(Action):
-    def name(self) -> Text:
-        return "action_restart_with_button"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> None:
-
-        dispatcher.utter_message(template="utter_restart_with_button")
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:
