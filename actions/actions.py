@@ -638,11 +638,20 @@ class ValidateLogTimeSheetForm(FormValidationAction):
     ) -> Dict[Text, Any]:
         """Validate `hours` value."""
 
-        if 0. <= float(hours) <= 8.:
-            return {"hours": hours}
-        else:
-            dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+        hours = tracker.slots.get("hours")
+        print("slot hours: ", hours)
+        try:
+            hours = hours.split(" ")[0]
+            float(hours)
+            if 0. <= float(hours) <= 8.:
+                return {"hours": hours}
+            else:
+                dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+                return {"hours": None}
+        except:
+            dispatcher.utter_message(text=f"Please reshape: Examples: 8 hours")
             return {"hours": None}
+        
 
     def validate_position(
         self,
@@ -674,9 +683,9 @@ class ActionAboutLogTimeSheet(Action):
         last_intent = tracker.latest_message["intent"]["name"]
         if last_intent in ["affirm"]:
             hours = tracker.slots.get("hours")
-            project = tracker.slots.get("log_requeprojectst_time")
+            project = tracker.slots.get("project")
             position = tracker.slots.get("position")
-            if log_request_kind and log_request_time:
+            if hours and project and position:
                 dispatcher.utter_message(text=f"sended api to log time sheet: {hours} - {project} - {position} today")
         else:
             dispatcher.utter_message(text=f"oke, it was cancelled")
