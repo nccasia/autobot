@@ -666,7 +666,7 @@ class ValidateLogTimeSheetForm(FormValidationAction):
         if ratio > 70:
             return {"position": resultSearchFuzzy}
         else:
-            dispatcher.utter_message(text=f"Time request must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
+            dispatcher.utter_message(text=f"Position must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
             return {"position": None}
 
 class ActionAboutLogTimeSheet(Action):

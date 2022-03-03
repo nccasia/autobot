@@ -27,6 +27,8 @@ nlu:
   examples: |
    - How to log timesheet?
    - Can I log timesheet? 
+   - can I log timesheet? 
+   - Log timesheet
    - log timesheet
    - What project do you want to log?
    - [autobot](project)
@@ -352,7 +354,6 @@ nlu:
 - intent: concern_about_log_and_submit_timesheet
   examples: |
     - Where can I log timsheet?
-    - How to log timesheet?
     - Do employees have to log timesheet?
     - What is the log timesheet for?
     - Why do I have to log timesheet?
