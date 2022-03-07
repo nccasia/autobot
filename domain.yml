@@ -264,11 +264,11 @@ responses:
   utter_confirm_request_form:
   - text: Are you sure to request {log_request_kind} in the {log_request_time} today?
   utter_ask_log_timesheet_form_hours:
-  - text: how many hours?
+  - text: How many hours do you want to log timesheet?
   utter_ask_log_timesheet_form_project:
-  - text: which project?
+  - text: Which project do you work on?
   utter_ask_log_timesheet_form_position:
-  - text: which position?
+  - text: Could I have your position, please?
   utter_confirm_timesheet_form: 
   - text: Are you sure to log {hours} hours in {project} as {position} today?
   utter_about_daily:
