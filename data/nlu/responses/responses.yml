@@ -1,9 +1,5 @@
 version: "2.0"
 responses:
-  utter_out_of_scope/non_english:
-  - text: "I only understand English, I'm sorry."
-  utter_out_of_scope/other:
-  - text: "I can't help you with that, I'm sorry."
   utter_faq/rasa_components:
   - text: "Autobot Open Source is a machine learning framework for automated text and voice-based conversations.
     Autobot Open Source consists of NLU (Natural Language Understanding) and Dialogue Management.  
@@ -24,13 +20,6 @@ responses:
   - text: "Autobot has more than 7000 community members and over 300 code and content contributors 🚀."
   utter_faq/languages:
   - text: "You can use Autobot to build assistants in any language you want!"
-  utter_faq/is_programming_required:
-  - text: "Autobot Open Source is written in Python, but programming is not required to develop an assistant.
-    To learn how to create an assistant, check out the [Autobot Masterclass](https://www.youtube.com/watch?v=rlAQWbhwqLA).
-    There is one place where programming skills come in handy, and that is when implementing
-    [custom actions](https://komu.vn/docs/autobot/core/actions/#custom-actions). You can create an action server in
-    Node.js, .NET, Java, or any other language and define your actions there. For custom actions written in Python,
-    we provide a small [Python SDK](https://komu.vn/docs/autobot/api/autobot-sdk/#autobot-sdk) to make development even easier."
   utter_faq/tutorial_nlu:
   - text: "Autobot Masterclass episodes 2-4 focus on NLU. Check out episode 2
     [here](https://www.youtube.com/watch?v=k5UeywXA28k)."

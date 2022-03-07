@@ -1,5 +1,119 @@
 version: "2.0"
 nlu:
+- intent: about_log_leave_and_remote_request
+  examples: |
+   - How to log request?
+   - I want to log [remote](log_request_kind) request
+   - I want to log [leave](log_request_kind) request [full day](log_request_time)
+   - log request
+   - log [onsite](log_request_kind) request [morning](log_request_time)
+   - send [remote](log_request_kind) request [full day](log_request_time)
+   - send [onsite](log_request_kind) request [morning](log_request_time)
+   - send [leave](log_request_kind) request [afternoon](log_request_time)
+   - send [remote](log_request_kind) request
+   - send [onsite](log_request_kind) request
+   - send [leave](log_request_kind) request
+   - Can I log [leave](log_request_kind) request?
+   - Can I log [onsite](log_request_kind) request?
+   - Can I log [remote](log_request_kind) request?
+   - How to log [remote] (log_request_kind) request?
+   - How to log [leave] (log_request_kind) request?
+   - How to log [onsite] (log_request_kind) request?
+   - Log [remote](log_request_kind) request
+   - Log [leave](log_request_kind) request
+   - Log [onsite](log_request_kind) request
+   - Can I log request?
+- intent: about_log_timesheet
+  examples: |
+   - How to log timesheet?
+   - Can I log timesheet? 
+   - can I log timesheet? 
+   - Log timesheet
+   - log timesheet
+   - What project do you want to log?
+   - [autobot](project)
+   - I want to log for [autobot](project)
+   - I need to log for the [autobot](project)
+   - How do you want to log position?
+   - [coding](position)
+   - [testing](position)
+   - [Business Analyzing](position)
+   - [Project Management](position)
+   - [Unassigned](position)
+   - I want to log for [coding](position)
+   - I want to log for [testing](position)
+   - I want to log for [Business Analyzing](position)
+   - I want to log for [Project Management](position)
+   - What time do you want to log?
+   - [8](hours) hours
+   - I want to log [7](hours) hours
+   - I can log [8](hours) hours
+- intent: about_find_user_phone_number
+  examples: |
+   - phone number of [tung.khongmanh](staff)
+   - phonenumber of [thao.tranphuong](staff)
+   - i need phone of [tung.khongmanh](staff)
+   - [thao.nguyenthi1](staff) phone
+   - [tung.khongmanh](staff) phone number
+   - phone number of [duc.dinhquang](staff)
+   - phone number of [thien.nguyenthai](staff)
+   - phone number of [duc.nguyenminh](staff)
+   - phone number of [hieu.nguyenduc](staff)
+   - phone number of [tien.phammanh](staff)
+   - phone number of [ngan.nguyenthu](staff)
+- intent: about_daily
+  examples: |
+   - Who is the subject of daily work when working in the company?
+   - What is the daily time like?
+   - Daily minimum how many times a day?
+   - Can I daily at [10 am](hours)?
+   - Daily in what form?
+   - What if I don't daily?
+   - What is the daily syntax?
+   - What to do if you are calling an internal daily or a customer when Komu pings?
+   - Does Call daily require the camera to be turned on?
+   - daily time
+- intent: about_business_contact_list
+  examples: |
+   - I want to know about the salary, bonus, allowance,... who can I contact?
+   - I want to know about recruitment information, events in the company, who can I contact?
+   - I want to make suggestions, suggestions, complaints or complaints, who can I contact?
+   - When my computer has network connection problems or hardware failure, who can I contact?
+- intent: about_teambuilding
+  examples: |
+   - Who are the participants in teambuilding?
+   - What is team building?
+   - What is team?
+   - Teambuilding needs to do what organizations?
+   - What results does teambuilding bring?
+   - What is teambuilding and what are the notes in organizing activities?
+   - How is the teambuilding venue and program duration suitable?
+   - What are the benefits of teambuilding?
+   - teambuilding
+- intent: about_register_working_hour
+  examples: |
+   - Who can sign up for hours?
+   - Where can I sign up for hours?
+   - Who approves employee hours registration?
+   - Can my work hours start at [9.30](hours)?
+   - What if I sign up for working hours but I don't get PM approval?
+- intent: about_complain_timesheet
+  examples: |
+   - Who can complain?
+   - What problems can I complain about?
+   - When I check in via FaceID but I can't recognize it, can I complain?
+   - Check-in via FaceID has a network error but after the time is late, can I complain?
+   - Do not have a FaceID account can complain?
+   - Who confirms or denies complaints?
+   - Can I see last month's claims?
+- intent: comments_about_the_company
+  examples: |
+   - Who can contribute ideas in the company?
+   - Contributed on what issues?
+   - Who can contribute ideas?
+   - What if the superiors' suggestions are not resolved satisfactorily?
+   - Who handles employee complaints?
+   - If the complaint is personal, how should the employee present it?
 - intent: request_devices
   examples: |
    - I wanna request devices
@@ -240,7 +354,6 @@ nlu:
 - intent: concern_about_log_and_submit_timesheet
   examples: |
     - Where can I log timsheet?
-    - How to log timesheet?
     - Do employees have to log timesheet?
     - What is the log timesheet for?
     - Why do I have to log timesheet?
@@ -545,7 +658,6 @@ nlu:
     - What if I send remote but PM does not confirm?
     - Is there a regulation on timekeeping when sending remote?
     - How many times a day daily?
-    - What is the daily time like?
     - No daily fines?
     - How late will the daily be?
     - When working as a remote, how many minutes will it be fine to not check Komu?
@@ -578,9 +690,6 @@ nlu:
     - I want to know a short description of TopTracker software?
     - Guide channel Support channel internal tools via Azure devops?
     - Description of channel Support channer internal tools via azure devops?
-    - Where can I look up the contact phone number through google contact of @ncc.asia?
-    - Who is the object of phone number lookup via google contact?
-    - What are the steps to look up phone numbers via google contact?
     - I want to see instructions for remote registration and changing business hours on Timesheet?
     - I want information about Alpha Team?
     - I want information about Alpha Team?

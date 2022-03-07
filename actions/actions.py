@@ -75,7 +75,7 @@ def send_Out_Of_Scope(tracker):
     bot_res = []
     for i in range(len(conv_rev) - 1):
         if conv_rev[i]['speaker'] == 'bot' and conv_rev[i + 1]['speaker'] == 'user':
-            if len(user_input) > 0 and user_input[-1]['timestamp'] - conv_rev[i + 1]['timestamp'] > 10:
+            if len(user_input) > 0 and user_input[-1]['timestamp'] - conv_rev[i + 1]['timestamp'] > 20:
                 break
             user_input.append(conv_rev[i + 1])
             bot_res.append(conv_rev[i])
@@ -92,15 +92,17 @@ def send_Out_Of_Scope(tracker):
     try:
         if fuzz.partial_ratio(response["generated_text"], conv_format[-2]['text']) > 90:
             print("repeat case")
-        print(response["generated_text"] + " == " + conv_format[-2]['text'])
-        payload = {
-              "inputs": {
-                  "text": tracker.latest_message["text"],
-              },
-          }
-        payload = json.dumps(payload)
-        response = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
-        response = response.json()
+            print(response["generated_text"] + " == " + conv_format[-2]['text'])
+            payload = {
+                "inputs": {
+                    "text": tracker.latest_message["text"],
+                },
+            }
+            payload = json.dumps(payload)
+            responseRep = requests.request("POST", API_FALLBACK_URL, headers=headers, data=payload)
+            responseRep = responseRep.json()
+            if responseRep["generated_text"]:
+                response = responseRep
     except:
         print("error in fuzz.partial_ratio")
     
@@ -109,6 +111,23 @@ def send_Out_Of_Scope(tracker):
     print("bot: " + response["generated_text"])
     return response["generated_text"]
 
+
+class ActionAboutFindUserPhoneNumber(Action):
+    def name(self) -> Text:
+        return "action_about_find_user_phone_number"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+        staff = tracker.slots.get("staff")
+        if staff:
+            dispatcher.utter_message(text=f"here is the phone of {staff}: 113")
+        else:
+            dispatcher.utter_message(text=f"no trigger user name")
+        return []
 
 class ActionSubmitSalesForm(Action):
     def name(self) -> Text:
@@ -535,6 +554,142 @@ class ActionDefaultFallback(Action):
         print(respone)
         dispatcher.utter_message(text=respone)
 
+class ValidateLogRequestForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_log_request_form"
+
+    def validate_log_request_kind(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `log_request_kind` value."""
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['onsite', 'remote', 'leave'])
+        if ratio > 70:
+            return {"log_request_kind": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Kind request must be one in: onsite, remote, leave")
+            return {"log_request_kind": None}
+
+    def validate_log_request_time(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `log_request_time` value."""
+
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['morning', 'afternoon', 'full day'])
+        if ratio > 70:
+            return {"log_request_time": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Time request must be one in: morning, afternoon, full day")
+            return {"log_request_time": None}
+
+class ActionAboutLogLeaveAndRemoteRequest(Action):
+    def name(self) -> Text:
+        return "action_about_log_leave_and_remote_request"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            log_request_kind = tracker.slots.get("log_request_kind")
+            log_request_time = tracker.slots.get("log_request_time")
+            if log_request_kind and log_request_time:
+                dispatcher.utter_message(text=f"sended api to log {log_request_kind} in {log_request_time} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
+
+class ValidateLogTimeSheetForm(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_log_timesheet_form"
+
+    def validate_project(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `project` value."""
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), RESPONE_INTENT_ABOUT_PROJECT.keys())
+        if ratio > 80:
+            return {"project": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"no detected project name")
+            return {"project": None}
+
+    def validate_hours(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `hours` value."""
+
+        hours = tracker.slots.get("hours")
+        print("slot hours: ", hours)
+        try:
+            hours = hours.split(" ")[0]
+            float(hours)
+            if 0. <= float(hours) <= 8.:
+                return {"hours": hours}
+            else:
+                dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+                return {"hours": None}
+        except:
+            dispatcher.utter_message(text=f"Please reshape: Examples: 8 hours")
+            return {"hours": None}
+        
+
+    def validate_position(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `position` value."""
+
+        resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['Coding', 'Testing', 'Business Analyzing', 'Project Management', 'Unassigned'])
+        if ratio > 70:
+            return {"position": resultSearchFuzzy}
+        else:
+            dispatcher.utter_message(text=f"Position must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
+            return {"position": None}
+
+class ActionAboutLogTimeSheet(Action):
+    def name(self) -> Text:
+        return "action_about_log_timesheet"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            hours = tracker.slots.get("hours")
+            project = tracker.slots.get("project")
+            position = tracker.slots.get("position")
+            if hours and project and position:
+                dispatcher.utter_message(text=f"sended api to log time sheet: {hours} - {project} - {position} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("position", None)]
 
 class ActionAboutProject(Action):
     def name(self) -> Text:
@@ -589,19 +744,6 @@ class ActionAboutListOfKomuCommands(Action):
         dispatcher.utter_message(text=responseText)
         return []
 
-
-class ActionRestartWithButton(Action):
-    def name(self) -> Text:
-        return "action_restart_with_button"
-
-    def run(
-        self,
-        dispatcher: CollectingDispatcher,
-        tracker: Tracker,
-        domain: DomainDict,
-    ) -> None:
-
-        dispatcher.utter_message(template="utter_restart_with_button")
 
 
 def get_last_event_for(tracker, event_type: Text, skip: int = 0) -> Optional[EventType]:

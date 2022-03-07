@@ -5,6 +5,15 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- about_find_user_phone_number
+- about_daily
+- about_teambuilding
+- about_business_contact_list
+- about_log_leave_and_remote_request
+- about_log_timesheet
+- about_register_working_hour
+- about_complain_timesheet
+- comments_about_the_company
 - request_devices
 - about_list_of_komu_commands
 - about_project
@@ -122,15 +131,45 @@ entities:
 - techstack
 - contract_type
 - project
-slots: 
-  project:
+- staff
+forms:
+  log_request_form:
+   log_request_kind:
+    - type: from_text
+   log_request_time:
+    - type: from_text
+  log_timesheet_form:
+   hours:
+    - type: from_text
+   project:
+    - type: from_text
+   position:
+    - type: from_text
+  playground_form:
+    problem_description:
+    - type: from_text
+  suggestion_form:
+    suggestion:
+    - type: from_text
+slots:
+  log_request_kind:
     type: text
+  log_request_time:
+    type: text
+  hours:
+   type: text
+  project:
+   type: text
+  position:
+   type: text
   country:
     type: text
   time:
     type: unfeaturized
   duration:
     type: text
+  staff:
+   type: any
   techstack:
     type: text
   contract_type: 
@@ -218,6 +257,32 @@ slots:
   faq:
     type: any
 responses:
+  utter_ask_log_request_form_log_request_kind:
+  - text: what kind of request do you want to log?
+  utter_ask_log_request_form_log_request_time:
+  - text: what time do you want to log?
+  utter_confirm_request_form:
+  - text: Are you sure to request {log_request_kind} in the {log_request_time} today?
+  utter_ask_log_timesheet_form_hours:
+  - text: How many hours do you want to log timesheet?
+  utter_ask_log_timesheet_form_project:
+  - text: Which project do you work on?
+  utter_ask_log_timesheet_form_position:
+  - text: Could I have your position, please?
+  utter_confirm_timesheet_form: 
+  - text: Are you sure to log {hours} hours in {project} as {position} today?
+  utter_about_daily:
+  - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
+  utter_about_teambuilding:
+  - text: Teambuilding applies to both employees and interns when participating in the project. Extracurricular activities are an opportunity for members to understand each other and help each other in their work. Make communication with each other easier and more effective.
+  utter_about_business_contact_list:
+  - text: Visit the link you can see the details https://ims.nccsoft.vn/#/information/guidelines/10054
+  utter_about_register_working_hour:
+  - text: To register for new working hours, employees/interns need to register via Timesheet at My working time http://timesheet.nccsoft.vn/app/main/my-working-time Employees need to choose a time to start working in the morning + afternoon, and finish working in the morning + afternoon. Note SA and CH need to be entered for all fields. 12 noon is 12 PM. After registering, PM needs to approve the registration at My Working Time menu. The employee's working hours will then be updated at the effective time.
+  utter_about_complain_timesheet:
+  - text: Access the link http://timesheet.nccsoft.vn To complain when you don't have an account, checkin but the machine does not recognize, lose network when checkingin,...
+  utter_comments_about_the_company:
+  - text: Employees in the company can contribute comments and complaints about the company. The policy of the company is to resolve employee complaints quickly. If the complaint is about the employee himself, the employee should report it directly to his supervisor. Regarding the issue that has not been satisfactorily resolved by the superior, you can meet the Human Resources Department or the Board of Directors to present.
   utter_request_devices:
   - text: You can contact the IT department or your PM
   utter_regulations_in_the_company:
@@ -370,8 +435,6 @@ responses:
   - text: What's your email address?
   utter_ask_entities:
   - text: What kind of entities do you want to extract?
-  utter_ask_explain_nlucorex:
-  - text: Would you like to know more about Autobot Open Source or Autobot X?
   utter_ask_feedback:
   - buttons:
     - payload: '/feedback{{"feedback_value": "positive"}}'
@@ -393,26 +456,8 @@ responses:
   - text: What's your name?
   utter_ask_person_name:
   - text: What's your name?
-  utter_ask_playground_install_info:
-  - text: Which would you like to do first?
-    buttons:
-    - payload: /get_started_playground
-      title: Try out Autobot in the online Autobot Playground
-    - payload: /install_rasa
-      title: Install Autobot on your own computer
-    - payload: '/trigger_response_selector{{"retrieval_intent":"chitchat/ask_whatisrasa"}}'
-      title: Find out more about Autobot
-  utter_playground_intro:
-  - text: |-
-        In the [Autobot Playground](https://komu.vn/docs/autobot/playground) you can
-          build a Autobot prototype entirely online. Once you've built your prototype, you can talk to
-          your bot online and download your project to continue developing it locally.
-  utter_ask_playground_help:
-  - text: Do you have any questions or issues you're running into with Autobot Playground?
   utter_ask_use_case:
   - text: What kind of assistant do you want to build with Autobot?
-  utter_ask_which_product:
-  - text: Ok, which product would you like to know more about? Autobot Open Source or Autobot X?
   utter_awesome:
   - text: Awesome, thanks! 👍
   - text: Sweet, thank you! 😄
@@ -430,8 +475,6 @@ responses:
   - text: I can't sign you up if you don't provide your email 😉
   utter_change_mind:
   - text: You can still change your mind below though.
-  utter_chatbot_tutorial:
-  - text: No problem, here's a [course on Datacamp](https://www.datacamp.com/courses/building-chatbots-in-python) that teaches you about building your own chatbot 🤓
   utter_confirm_salesrequest:
   - text: Thanks a bunch, we'll be in touch soon! ✉️
   utter_confirmationemail:
@@ -440,44 +483,6 @@ responses:
   - text: Something went wrong, I couldn't subscribe you to the Autobot newsletter 😞
   utter_contact_email:
   - text: You can’t speak to a human directly in this chat, but you can email us at hi@komu.vn.
-  utter_crf:
-  - text: For custom entities like that, I would suggest using the [CRFEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#crfentityextractor) component. Read more about how to annotate entities in your data [here](https://komu.vn/docs/nlu/dataformat/).
-  utter_direct_to_forum_for_help:
-  - text: I've made a note of the problem you're experiencing. In the meantime, if you're still stuck, please ask for help on our [forum](https://forum.komu.vn/).
-  utter_docu:
-  - text: If you want some more awesome Autobot content, check out our [forum](https://forum.komu.vn/).
-  utter_duckling:
-  - text: For that entity I'd suggest using the rule-based [DucklingHTTPExtractor](https://komu.vn/docs/autobot/nlu/components/#ducklinghttpextractor) component 🐥
-  utter_duckling_info:
-  - text: Duckling is a rule-based entity recognition library from Facebook. [Here](https://duckling.wit.ai/) is the link to its documentation.
-  utter_encourage_building_bot:
-  - text: Cool, then good luck with building your first contextual assistant! 🤖
-  utter_explain_budget:
-  - text: If you tell us your budget, we can prepare a package that fits you best.
-  utter_explain_business_email:
-  - text: We need your business email to contact you afterwards. Otherwise, we cannot help you set up Autobot.
-  utter_explain_company:
-  - text: Just for completeness.
-  utter_explain_job_function:
-  - text: Your job function helps us in understanding how we can talk to you best.
-  utter_explain_person_name:
-  - text: To be able to contact you later on, we would like to know your name.
-  utter_explain_rasa_components:
-  - text: Alright, I'll briefly explain the components that make up Autobot then.
-  utter_explain_use_case:
-  - text: In order to help you best, we need to know what you want to build with Autobot.
-  utter_faq_channels_more:
-  - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
-  utter_faq_languages_more:
-  - text: Please read our [documentation](https://komu.vn/docs/autobot/nlu/language-support/) for more information.
-  utter_faq_ee_more:
-  - text: Please read the Autobot X [documentation](https://komu.vn/docs/autobot-x/) for more information.
-  utter_faq_slots_more:
-  - text: Please read our [documentation](https://komu.vn/docs/autobot/core/slots/) for more information.
-  utter_faq_voice_more:
-  - text: Please read our [documentation](https://komu.vn/docs/autobot/user-guide/messaging-and-voice-channels/) for more information.
-  utter_tutorialnlu:
-  - text: Autobot Masterclass episodes 2-4 focus on NLU. Check out episode 2 [here](https://www.youtube.com/watch?v=k5UeywXA28k).
   utter_first_bot_with_rasa:
   - text: I can give you more specific info depending on where you're at in your Autobot journey. Are you new to Autobot?
   utter_getstarted:
@@ -501,40 +506,6 @@ responses:
   - text: Hey!
   - text: Hi!
   - text: Hey there!
-  utter_have_you_used_rasa_before:
-  - text: Have you used Autobot before?
-  utter_installation_command:
-  - text: |-
-      You will first need to install Autobot Open Source using this installation command. 
-
-      "pip install autobot"
-  utter_installation_command_followup:
-  - text: |-
-      Once you're done, you can install Autobot Open Source with pip using the following command. 
-
-      "pip install autobot"
-  utter_interested_in_starter_packs:
-  - text: Got it, are you interested in seeing any example Autobot Open Source assistants to help you get started?
-  utter_interested_in_installation:
-  - text: Would you like to learn more about installing Autobot?
-  utter_installation_instructions:
-  - text: If you haven't already read the detailed instruction guide, you can look it up [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
-  utter_having_trouble_installing:
-  - text: If you are having any trouble installing, you can look up detailed installation instructions [here](https://komu.vn/docs/autobot/user-guide/installation/#step-by-step-installation-guide).
-  utter_ask_ready_to_build:
-  - text: If you got it successfully installed, are you ready to start building a contextual assistant?
-  utter_link_to_forum:
-  - text: "Here's the link to the forum: [https://forum.komu.vn](https://forum.komu.vn)"
-  utter_moreinformation:
-  - text: Sure, we can book a sales call! Let's get to know each other first 😉
-  utter_must_accept:
-  - text: We can't speak until you accept.
-  utter_nlu_entity_tutorial:
-  - text: '[Part 2](https://blog.komu.vn/autobot-nlu-in-depth-part-2-entity-recognition/) of the Autobot NLU In Depth series from our software engineer Tobias is a great tutorial about entity recognition.'
-  utter_nlu_intent_tutorial:
-  - text: Check out [part 1](https://blog.komu.vn/autobot-nlu-in-depth-part-1-intent-classification/) of the Autobot NLU In Depth series from our software engineer Tobias to learn more about intent classification.
-  utter_nlu_tools:
-  - text: We recommend using Autobot X to easily create and classify NLU data from within a UI.
   utter_no_email:
   - text: Hmm, I'm not sure that's a valid email, please make sure to include the full address 😅
   utter_no_guide_for_switch:
@@ -549,12 +520,6 @@ responses:
   - text: I'm happy to help.
   utter_offer_recommendation:
   - text: Would you like me to try to recommend a pipeline?
-  utter_rasa_x_local_installation:
-  - text: This [page](https://komu.vn/docs/autobot-x/installation-and-setup/install/local-mode) has a guide on how to run Autobot X in local mode.
-  utter_rasa_x_server_installation:
-  - text: You can install Autobot X on a server using either [Docker-Compose](https://komu.vn/docs/autobot-x/installation-and-setup/install/docker-compose) or [Helm](https://komu.vn/docs/autobot-x/installation-and-setup/install/helm-chart).
-  utter_rasa_components_details:
-  - text: Autobot Open Source is a machine learning framework for automated text and voice-based conversations. Autobot X is a tool that helps you build, improve, and deploy AI Assistants that are powered by the Autobot Open Source framework.
   utter_react_negative:
   - text: 😕
   - text: 😞
@@ -565,49 +530,16 @@ responses:
   - text: 😊
   - text: 👏
   - text: 😍
-  utter_recommend_forum:
-  - text: You should join the [Autobot Community forum](https://forum.komu.vn), where you can ask questions about Autobot Open Source and Autobot X, find resources, and stay up-to-date with what's happening at Autobot.
   utter_response_why_email:
   - text: I need your email address to sign you up to the newsletter.
   - text: I need it so that I can sign you up to the newsletter.
   utter_restart:
   - text: Loading... And I've been restarted! 🤯
   - text: Congrats you've restarted me! 😉
-  utter_restart_with_button:
-  - buttons:
-    - payload: /restart
-      title: Restart
-    text: Click the button below if you want to start over.
-  utter_run_rasa_init:
-  - text: |-
-      You can now create a new Autobot assistant and also talk to it by simply running "autobot init".
-      This comes with some sample training data and the required configuration files to get you started. You can also talk to the assistant after it is done training. 
   utter_sales_contact:
   - text: Thanks, now I need to know how we can reach you.
   utter_salesrequest_failed:
   - text: Unfortunately we weren't able to store your information. Sorry about that! You can still contact sales via our [website](https://komu.vn/contact-sales/) 🙂
-  utter_search_bar:
-  - text: Try using the search bar above for now.
-  utter_source_code:
-  - text: Like Autobot Open Source, my code is freely available on GitHub! You can find it [here](https://github.com/RasaHQ/autobot-demo) 👻
-  utter_starter_pack_info:
-  - text: We have example for a Financial Services Assistant available [here](https://github.com/RasaHQ/financial-demo) and a Helpdesk Assistant available [here](https://github.com/RasaHQ/helpdesk-assistant).
-  utter_pipeline_english:
-  - text: If your training data is in English, a good starting point is this [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer), which uses both pretrained and supervised embeddings.
-  utter_spacy:
-  - text: SpaCy has excellent pre-trained named-entity recognizers for this -- check out this [interactive demo](https://demos.explosion.ai/displacy-ent/). I would suggest using the [SpacyEntityExtractor](https://komu.vn/docs/autobot/nlu/components/#spacyentityextractor) component in your pipeline.
-  utter_pipeline_nonenglish_spacy:
-  - text: Looks like for your {language} assistant, a good starting point is the [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English. If you want to use pretrained embeddings, the [pipeline using SpacyNLP](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#a-longer-answer) also works for your language.
-  utter_schedule_enterprise_demo:
-  - text: You can schedule a technical demo of Autobot Enterprise by visiting this [page](https://info.komu.vn/autobot-technical-demo).
-  utter_suggestion:
-  - text: I don't have a skill to help you with this stage yet, but please ask any questions you have so I can learn them in the future!
-  utter_switch_dialogflow:
-  - text: We have a guide for migrating from DialogFlow [here](https://www.komu.vn/docs/autobot/migrate-from/google-dialogflow-to-autobot/).
-  utter_switch_luis:
-  - text: We have a guide for migrating from LUIS [here](https://www.komu.vn/docs/autobot/migrate-from/microsoft-luis-to-autobot/).
-  utter_pipeline_nonenglish_nospacy:
-  - text: For {language}, a good starting point is the [recommended pipeline](https://komu.vn/docs/autobot/nlu/choosing-a-pipeline/#the-short-answer) for languages other than English.
   utter_thank_suggestion:
   - text: Thanks for your input!
   utter_thumbsup:
@@ -618,37 +550,23 @@ responses:
   - text: Ok, what can I help you with?
   utter_what_language:
   - text: Which (human) language is your assistant in?
-  utter_x_tutorial:
-  - text: Autobot Masterclass covers how to [set up Autobot X](https://www.youtube.com/watch?v=IUYdwy8HPVc) and how to [improve your assistant](https://www.youtube.com/watch?v=LWzsS5Q-RoI) by sharing your assistant with others.
-  utter_ask_rephrase:
-  - text: Can you rephrase the question?
-  utter_why_rasa:
-  - text: Autobot provides the infrastructure and tools needed to build high-performing, resilient assistants that work. What's more, Autobot is **open source** - no black-box magic!
   utter_ask_more:
   - text: Would you like to learn more?
   utter_ask_more_details:
   - text: Could you be more specific?
   - text: Can you tell me more?
-  utter_ask_more_migrate:
-  - text: Would you like to learn more about the advantages of switching to Autobot?
-  utter_why_rasa_research:
-  - text: Autobot invests in extensive research to create leading-edge conversational AI, enabling developers to create the best text- and voice-based assistants without a dedicated research team.
-  utter_why_rasa_nlu:
-  - text: Autobot's NLU supports multiple languages, single and multiple intents, and both pre-trained and custom entities.
-  utter_why_rasa_dialogue:
-  - text: Assistants built on Autobot can hold meaningful conversations with users - multi-step conversations that remember context and integrate business logic. No state machines here!
-  utter_why_rasa_os:
-  - text: Because Autobot is open source, you can customize your bot and explore its inner workings as much as you'd like. There's no vendor lock in, and no hidden algorithms.
-  utter_why_rasa_compliant:
-  - text: If data security and compliance is a priority for you, Autobot has your back! You can deploy Autobot either in the cloud or on premise and maintain complete control over your assistant & its data.
 actions:
+- action_about_log_leave_and_remote_request
+- validate_log_request_form
+- action_about_log_timesheet
+- validate_log_timesheet_form
+- action_about_find_user_phone_number
 - action_about_list_of_komu_commands
 - action_out_of_scope
 - action_about_project
 - action_trigger_response_selector
 - action_default_ask_affirmation
 - action_default_fallback
-- action_restart_with_button
 - action_docs_search
 - action_explain_sales_form
 - action_set_faq_slot
@@ -666,11 +584,4 @@ actions:
 - action_submit_sales_form
 - action_submit_suggestion_form
 - validate_sales_form
-forms:
-  playground_form:
-    problem_description:
-    - type: from_text
-  suggestion_form:
-    suggestion:
-    - type: from_text
 e2e_actions: []

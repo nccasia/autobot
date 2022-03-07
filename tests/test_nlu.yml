@@ -67,19 +67,6 @@ nlu:
     - languages
     - which languages supports autobot
     - How can I change the language
-- intent: faq/is_programming_required
-  examples: |
-    - Does autobot require programming knowledge
-    - Do I need programming skills to develop a chatbot in autobot
-    - do I need programming experience to use autobot
-    - how to programe autobot
-    - Autobot can be programmed in python
-    - programming language use
-    - what programming languge do i use
-    - How do I do the programming?
-    - i have never programed before
-    - what language do I need to program?
-    - do i need to be able to program to use autobot?
 - intent: faq/opensource
   examples: |
     - is autobot a type of open source software?

@@ -1,5 +1,69 @@
 version: "2.0"
 rules:
+- rule: activate_form_request
+  steps:
+  - intent: about_log_leave_and_remote_request
+  - action: log_request_form
+  - active_loop: log_request_form
+- rule: submit_form_request
+  condition:
+  - active_loop: log_request_form
+  steps:
+  - action: log_request_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_request_form
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: action_about_log_leave_and_remote_request
+- rule: activate_form_timesheet
+  steps:
+  - intent: about_log_timesheet
+  - action: log_timesheet_form
+  - active_loop: log_timesheet_form
+- rule: submit_form_timesheet
+  condition:
+  - active_loop: log_timesheet_form
+  steps:
+  - action: log_timesheet_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_timesheet_form
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: action_about_log_timesheet
+- rule: about_find_user_phone_number
+  steps:
+  - intent: about_find_user_phone_number
+  - action: action_about_find_user_phone_number
+- rule: about_daily
+  steps:
+  - intent: about_daily
+  - action: utter_about_daily
+- rule: about_business_contact_list
+  steps:
+  - intent: about_business_contact_list
+  - action: utter_about_business_contact_list
+- rule: about_teambuilding
+  steps:
+  - intent: about_teambuilding
+  - action: utter_about_teambuilding
+- rule: about_register_working_hour
+  steps:
+  - intent: about_register_working_hour
+  - action: utter_about_register_working_hour
+- rule: about_complain_timesheet
+  steps:
+  - intent: about_complain_timesheet
+  - action: utter_about_complain_timesheet
+- rule: comments_about_the_company
+  steps:
+  - intent: comments_about_the_company
+  - action: utter_comments_about_the_company
 - rule: request_devices
   steps:
   - intent: request_devices
@@ -208,49 +272,3 @@ rules:
   steps:
   - intent: concern_about_trial_period
   - action: utter_trial_period
-- rule: why autobot 1
-  condition:
-  - slot_was_set:
-    - current_api: null
-  steps:
-  - intent: why_rasa
-  - action: utter_why_rasa
-  - action: utter_ask_more
-- rule: why autobot 2
-  steps:
-  - intent: why_rasa
-    entities:
-    - current_api: tensorflow
-  - slot_was_set:
-    - current_api: __other__
-  - action: utter_why_rasa
-  - action: utter_ask_more
-- rule: why autobot 3
-  steps:
-  - intent: why_rasa
-    entities:
-    - current_api: luis
-  - slot_was_set:
-    - current_api: luis
-  - action: utter_why_rasa
-  - action: utter_switch_luis
-  - action: utter_ask_more_migrate
-- rule: why autobot 4
-  steps:
-  - intent: why_rasa
-    entities:
-    - current_api: dialogflow
-  - slot_was_set:
-    - current_api: dialogflow
-  - action: utter_why_rasa
-  - action: utter_switch_dialogflow
-  - action: utter_ask_more_migrate
-- rule: ask for more details
-  steps:
-  - intent: need_help_broad
-  - action: utter_ask_more_details
-- rule: anything else? - yes
-  steps:
-  - action: utter_anything_else
-  - intent: affirm
-  - action: utter_what_help

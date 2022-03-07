@@ -747,8 +747,6 @@ nlu:
     - what you can
 - intent: chitchat/ask_wherefrom
   examples: |
-    - Are you from around here?
-    - Around where are you from?
     - Do you know where you come from?
     - From where did you come?
     - So where are you from
@@ -783,7 +781,6 @@ nlu:
     - Where were you born?
     - You live around here?
     - You were conceived in what location?
-    - are you from around here?
     - what country are you from?
     - where are from
     - where are you from
