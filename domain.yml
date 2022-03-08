@@ -270,7 +270,7 @@ responses:
   utter_ask_log_timesheet_form_position:
   - text: Could I have your position, please?
   utter_confirm_timesheet_form: 
-  - text: Are you sure to log {hours} hours in {project} as {position} today?
+  - text: Are you sure to log {hours} hours in {project.title()} as {position} today?
   utter_about_daily:
   - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
   utter_about_teambuilding:
