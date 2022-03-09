@@ -624,7 +624,7 @@ class ValidateLogTimeSheetForm(FormValidationAction):
         """Validate `project` value."""
         resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), RESPONE_INTENT_ABOUT_PROJECT.keys())
         if ratio > 80:
-            return {"project": resultSearchFuzzy}
+            return {"project": resultSearchFuzzy.title()}
         else:
             dispatcher.utter_message(text=f"no detected project name")
             return {"project": None}
