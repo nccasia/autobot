@@ -34,16 +34,16 @@ nlu:
    - [autobot](project)
    - I want to log for [autobot](project)
    - I need to log for the [autobot](project)
-   - How do you want to log position?
-   - [coding](position)
-   - [testing](position)
-   - [Business Analyzing](position)
-   - [Project Management](position)
-   - [Unassigned](position)
-   - I want to log for [coding](position)
-   - I want to log for [testing](position)
-   - I want to log for [Business Analyzing](position)
-   - I want to log for [Project Management](position)
+   - How do you want to log task?
+   - [coding](task)
+   - [testing](task)
+   - [Business Analyzing](task)
+   - [Project Management](task)
+   - [Unassigned](task)
+   - I want to log for [coding](task)
+   - I want to log for [testing](task)
+   - I want to log for [Business Analyzing](task)
+   - I want to log for [Project Management](task)
    - What time do you want to log?
    - [8](hours) hours
    - I want to log [7](hours) hours

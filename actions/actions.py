@@ -605,7 +605,7 @@ class ActionAboutLogLeaveAndRemoteRequest(Action):
             log_request_kind = tracker.slots.get("log_request_kind")
             log_request_time = tracker.slots.get("log_request_time")
             if log_request_kind and log_request_time:
-                dispatcher.utter_message(text=f"sended api to log {log_request_kind} in {log_request_time} today")
+                dispatcher.utter_message(text=f"sent api to log {log_request_kind} in {log_request_time} today")
         else:
             dispatcher.utter_message(text=f"oke, it was cancelled")
         return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
@@ -653,21 +653,21 @@ class ValidateLogTimeSheetForm(FormValidationAction):
             return {"hours": None}
         
 
-    def validate_position(
+    def validate_task(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate `position` value."""
+        """Validate `task` value."""
 
         resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['Coding', 'Testing', 'Business Analyzing', 'Project Management', 'Unassigned'])
         if ratio > 70:
-            return {"position": resultSearchFuzzy}
+            return {"task": resultSearchFuzzy}
         else:
-            dispatcher.utter_message(text=f"Position must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
-            return {"position": None}
+            dispatcher.utter_message(text=f"Task must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
+            return {"task": None}
 
 class ActionAboutLogTimeSheet(Action):
     def name(self) -> Text:
@@ -684,12 +684,12 @@ class ActionAboutLogTimeSheet(Action):
         if last_intent in ["affirm"]:
             hours = tracker.slots.get("hours")
             project = tracker.slots.get("project")
-            position = tracker.slots.get("position")
-            if hours and project and position:
-                dispatcher.utter_message(text=f"sended api to log time sheet: {hours} - {project} - {position} today")
+            task = tracker.slots.get("task")
+            if hours and project and task:
+                dispatcher.utter_message(text=f"sent api to log time sheet: {hours} - {project} - {task} today")
         else:
             dispatcher.utter_message(text=f"oke, it was cancelled")
-        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("position", None)]
+        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("task", None)]
 
 class ActionAboutProject(Action):
     def name(self) -> Text:
