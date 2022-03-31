@@ -78,6 +78,10 @@ nlu:
    - What is the company culture like?
    - I want to know about company culture?
    - I want to know more details about company culture.
+- intent: about_request_go_out_during_working_hours
+  examples: |
+   - request go out during working hours
+   - I want to go out during working hours
 - intent: about_interns
   examples: |
    - I want to know about the intern regulations?

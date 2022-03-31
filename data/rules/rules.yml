@@ -70,6 +70,10 @@ rules:
   steps:
   - intent: about_interns
   - action: utter_about_interns
+- rule: about_request_go_out_during_working_hours
+  steps:
+  - intent: about_request_go_out_during_working_hours
+  - action: utter_about_request_go_out_during_working_hours
 - rule: about_find_user_phone_number
   steps:
   - intent: about_find_user_phone_number

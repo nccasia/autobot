@@ -294,6 +294,8 @@ responses:
   - text: Company culture such as the spirit of self-study and sharing knowledge, working for passion, having a youthful environment, high responsibility and discipline. You can access the link https://ims.nccsoft.vn/#/information/policies/10072
   utter_about_interns:
   - text: Interns working at the company must meet the working time and job requirements, and the company's equipment.The level of support of the intern will depend on the capacity and experience to decide. During the internship period, the company may unilaterally terminate the internship agreement, but only need to give the intern 1 working day in advance if the intern's work quality or work ethic and style is considered unacceptable. unacceptable. At the end of the internship period, students will be considered in terms of ethics, capacity, behavior and aspiration to work at the company. Human resources department, PM and board of directors will consider to accept.
+  utter_about_request_go_out_during_working_hours:
+  - text: Employees who take a break between working hours or ask permission to go out for more than 60 minutes must be approved by the PM and reported to the HR department. Staff do not voluntarily leave the working position without the approval of the PM
   utter_about_daily:
   - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
   utter_about_teambuilding:
