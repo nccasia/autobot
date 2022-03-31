@@ -610,6 +610,65 @@ class ActionAboutLogLeaveAndRemoteRequest(Action):
             dispatcher.utter_message(text=f"oke, it was cancelled")
         return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
 
+class ValidateFormRequestArrivesLate(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_forms_request_arrives_late"
+
+    def validate_arrives_late_reason(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `arrives_late_reason` value."""
+        return {"arrives_late_reason": slot_value}
+       
+    def validate_arrives_late_time(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `arrives_late_time` value."""
+
+        arrives_late_time = tracker.slots.get("arrives_late_time")
+        print("slot arrives_late_time: ", arrives_late_time)
+        try:
+            arrives_late_time = arrives_late_time.split(" ")[0]
+            float(arrives_late_time)
+            if 0. <= float(arrives_late_time) <= 8.:
+                return {"arrives_late_time": arrives_late_time}
+            else:
+                dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+                return {"arrives_late_time": arrives_late_time}
+        except:
+            dispatcher.utter_message(text=f"Please reshape: Examples: 8 hours")
+            return {"arrives_late_time": None}
+        
+
+class ActionAboutRequestArrivesLate(Action):
+    def name(self) -> Text:
+        return "action_about_request_arrives_late"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            arrives_late_time = tracker.slots.get("arrives_late_time")
+            arrives_late_reason = tracker.slots.get("arrives_late_reason")
+            if arrives_late_time and arrives_late_reason:
+                dispatcher.utter_message(text=f"sent api to request late in {arrives_late_time} hours for reasion: {arrives_late_reason} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("arrives_late_reason", None), SlotSet("arrives_late_time", None)]
+
 class ValidateLogTimeSheetForm(FormValidationAction):
     def name(self) -> Text:
         return "validate_log_timesheet_form"

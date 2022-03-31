@@ -133,6 +133,11 @@ entities:
 - project
 - staff
 forms:
+  forms_request_arrives_late:
+   arrives_late_reason:
+    - type: from_text
+   arrives_late_time:
+    - type: from_text
   log_request_form:
    log_request_kind:
     - type: from_text
@@ -152,6 +157,10 @@ forms:
     suggestion:
     - type: from_text
 slots:
+  arrives_late_reason:
+    type: text
+  arrives_late_time:
+    type: text
   log_request_kind:
     type: text
   log_request_time:
@@ -257,6 +266,12 @@ slots:
   faq:
     type: any
 responses:
+  utter_ask_forms_request_arrives_late_arrives_late_reason:
+  - text: What is the reason?
+  utter_ask_forms_request_arrives_late_arrives_late_time:
+  - text: How many hours do you want to be late?
+  utter_confirm_forms_request_arrives_late:
+  - text: In the first case, if you apply late before 10 am, you will be fined 20,000 VND. In case the two apply to be late after 10 am, the morning salary will not be charged. Are you sure to arrive late {arrives_late_time} hour with the reason is "{arrives_late_reason}"?
   utter_ask_log_request_form_log_request_kind:
   - text: what kind of request do you want to log?
   utter_ask_log_request_form_log_request_time:
@@ -271,6 +286,14 @@ responses:
   - text: Could I have your task, please?
   utter_confirm_timesheet_form: 
   - text: Are you sure to log {hours} hours in {project} as {task} today?
+  utter_about_periodic_health_examination:
+  - text: Every year, the company organizes periodical health checks for all employees of NCC who sign official labor contracts.The specific time and cost annually depends on the decision of the Board of Directors.
+  utter_about_insurance:
+  - text: All employees at NCC who sign official labor contracts are covered by the company's insurance obligations in accordance with the provisions of the labor law, employees are not deducted from all kinds of insurance. There are four types of insurance such as social insurance, health insurance, unemployment insurance, health insurance when working for 12 months or more.Benefits for sickness, maternity, occupational accident, occupational disease, retirement, and death benefits. Benefits of medical examination and treatment with health insurance.Unemployment benefits.Health insurance when working for 12 months or more?Sickness, treatment, maternity, accident, and death benefits.
+  utter_about_company_culture:
+  - text: Company culture such as the spirit of self-study and sharing knowledge, working for passion, having a youthful environment, high responsibility and discipline. You can access the link https://ims.nccsoft.vn/#/information/policies/10072
+  utter_about_interns:
+  - text: Interns working at the company must meet the working time and job requirements, and the company's equipment.The level of support of the intern will depend on the capacity and experience to decide. During the internship period, the company may unilaterally terminate the internship agreement, but only need to give the intern 1 working day in advance if the intern's work quality or work ethic and style is considered unacceptable. unacceptable. At the end of the internship period, students will be considered in terms of ethics, capacity, behavior and aspiration to work at the company. Human resources department, PM and board of directors will consider to accept.
   utter_about_daily:
   - text: All remote employees (including directors, PM and HR). Daily time in the morning from 7:30 am to 9:30 am, in the afternoon from 12 pm to 14 pm. In case the daily is early or late within the specified time period, it will still be considered non-daily and fined 20,000 VND. Visit the link to read the details https://ims.nccsoft.vn/#/information/news/110348
   utter_about_teambuilding:
@@ -556,6 +579,7 @@ responses:
   - text: Could you be more specific?
   - text: Can you tell me more?
 actions:
+- action_about_request_arrives_late
 - action_about_log_leave_and_remote_request
 - validate_log_request_form
 - action_about_log_timesheet

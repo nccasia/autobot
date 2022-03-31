@@ -1,5 +1,15 @@
 version: "2.0"
 nlu:
+- intent: about_request_arrives_late
+  examples: |
+   - The request arrives late
+   - I want to arrive late for work
+   - [8](arrives_late_time) hours
+   - [1](arrives_late_time) hours
+   - [2](arrives_late_time) hours
+   - [I am stuck in traffic](arrives_late_reason)
+   - [I have a health problem](arrives_late_reason)
+   - [I broke down the motorbike](arrives_late_reason)
 - intent: about_log_leave_and_remote_request
   examples: |
    - How to log request?
@@ -48,6 +58,32 @@ nlu:
    - [8](hours) hours
    - I want to log [7](hours) hours
    - I can log [8](hours) hours
+- intent: about_periodic_health_examination
+  examples: |
+   - I want to know about periodic health check in company
+   - Does the company have periodic health checks?
+   - What is the time and cost for regular health check-ups?
+- intent: about_insurance
+  examples: |
+   - Can I sign an insurance policy?
+   - I want to know about the company's insurance policy?
+   - What types of insurance does the company have?
+   - Types of insurance?
+   - Benefits of social insurance?
+   - Health insurance benefits?
+   - Unemployment insurance benefits?
+   - Health insurance when working for 12 months or more?
+- intent: about_company_culture
+  examples: |
+   - What is the company culture like?
+   - I want to know about company culture?
+   - I want to know more details about company culture.
+- intent: about_interns
+  examples: |
+   - I want to know about the intern regulations?
+   - What is the level of support for interns?
+   - Can the company unilaterally terminate the trainee's agreement?
+   - When the internship ends, how are students considered to be accepted as employees?
 - intent: about_find_user_phone_number
   examples: |
    - phone number of [tung.khongmanh](staff)
