@@ -642,7 +642,7 @@ class ValidateFormRequestArrivesLate(FormValidationAction):
                 return {"arrives_late_time": arrives_late_time}
             else:
                 dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
-                return {"arrives_late_time": arrives_late_time}
+                return {"arrives_late_time": None}
         except:
             dispatcher.utter_message(text=f"Please reshape: Examples: 8 hours")
             return {"arrives_late_time": None}
