@@ -53,7 +53,10 @@ def send_Out_Of_Scope(tracker):
         if 'text' in item.keys():
             if speaker == item['event']:
                 respone += '\n'
-                respone += item['text']
+                try:
+                    respone += item['text']
+                except:
+                    print("An exception occurred in: respone += item['text']")
             else:
                 if speaker != "":
                     conv_format.append({
