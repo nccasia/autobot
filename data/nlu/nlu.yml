@@ -33,6 +33,9 @@ nlu:
    - Log [leave](log_request_kind) request
    - Log [onsite](log_request_kind) request
    - Can I log request?
+   - log [leave](log_request_kind)
+   - log [remote](log_request_kind)
+   - log [onsite](log_request_kind)
 - intent: about_log_timesheet
   examples: |
    - How to log timesheet?
