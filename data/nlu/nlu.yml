@@ -4,6 +4,7 @@ nlu:
   examples: |
    - The request arrives late
    - I want to arrive late for work
+   - I will be late today
    - [8](arrives_late_time) hours
    - [1](arrives_late_time) hours
    - [2](arrives_late_time) hours
