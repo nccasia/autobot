@@ -11,6 +11,14 @@ nlu:
    - [I am stuck in traffic](arrives_late_reason)
    - [I have a health problem](arrives_late_reason)
    - [I broke down the motorbike](arrives_late_reason)
+   - I will be late for work today.
+   - I want to go late today.
+   - I'm going to late today.
+   - I'm running a little late today.
+   - I'm going to be a little late.
+   - Can I be late tomorrow?
+   - May I be excused to be late tomorrow?
+   - Can I be a little late?
 - intent: about_log_leave_and_remote_request
   examples: |
    - How to log request?
@@ -86,6 +94,9 @@ nlu:
   examples: |
    - request go out during working hours
    - I want to go out during working hours
+   - I want to go out and do some work
+   - I need to go out for a second.
+   - May I go out, please? 
 - intent: about_interns
   examples: |
    - I want to know about the intern regulations?
@@ -95,16 +106,8 @@ nlu:
 - intent: about_find_user_phone_number
   examples: |
    - phone number of [tung.khongmanh](staff)
-   - phonenumber of [thao.tranphuong](staff)
    - i need phone of [tung.khongmanh](staff)
-   - [thao.nguyenthi1](staff) phone
    - [tung.khongmanh](staff) phone number
-   - phone number of [duc.dinhquang](staff)
-   - phone number of [thien.nguyenthai](staff)
-   - phone number of [duc.nguyenminh](staff)
-   - phone number of [hieu.nguyenduc](staff)
-   - phone number of [tien.phammanh](staff)
-   - phone number of [ngan.nguyenthu](staff)
 - intent: about_daily
   examples: |
    - Who is the subject of daily work when working in the company?
