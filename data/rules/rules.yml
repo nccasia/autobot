@@ -1,5 +1,23 @@
 version: "2.0"
 rules:
+- rule: activate_forms_request_arrives_late
+  steps:
+  - intent: about_request_arrives_late
+  - action: forms_request_arrives_late
+  - active_loop: forms_request_arrives_late
+- rule: submit_forms_request_arrives_late
+  condition:
+  - active_loop: forms_request_arrives_late
+  steps:
+  - action: forms_request_arrives_late
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_confirm_forms_request_arrives_late
+  - or:
+    - intent: affirm
+    - intent: deny
+  - action: action_about_request_arrives_late
 - rule: activate_form_request
   steps:
   - intent: about_log_leave_and_remote_request
@@ -36,6 +54,26 @@ rules:
     - intent: affirm
     - intent: deny
   - action: action_about_log_timesheet
+- rule: about_periodic_health_examination
+  steps:
+  - intent: about_periodic_health_examination
+  - action: utter_about_periodic_health_examination
+- rule: about_insurance
+  steps:
+  - intent: about_insurance
+  - action: utter_about_insurance
+- rule: about_company_culture
+  steps:
+  - intent: about_company_culture
+  - action: utter_about_company_culture
+- rule: about_interns
+  steps:
+  - intent: about_interns
+  - action: utter_about_interns
+- rule: about_request_go_out_during_working_hours
+  steps:
+  - intent: about_request_go_out_during_working_hours
+  - action: utter_about_request_go_out_during_working_hours
 - rule: about_find_user_phone_number
   steps:
   - intent: about_find_user_phone_number

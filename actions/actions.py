@@ -53,7 +53,10 @@ def send_Out_Of_Scope(tracker):
         if 'text' in item.keys():
             if speaker == item['event']:
                 respone += '\n'
-                respone += item['text']
+                try:
+                    respone += item['text']
+                except:
+                    print("An exception occurred in: respone += item['text']")
             else:
                 if speaker != "":
                     conv_format.append({
@@ -605,10 +608,69 @@ class ActionAboutLogLeaveAndRemoteRequest(Action):
             log_request_kind = tracker.slots.get("log_request_kind")
             log_request_time = tracker.slots.get("log_request_time")
             if log_request_kind and log_request_time:
-                dispatcher.utter_message(text=f"sended api to log {log_request_kind} in {log_request_time} today")
+                dispatcher.utter_message(text=f"sent api to log {log_request_kind} in {log_request_time} today")
         else:
             dispatcher.utter_message(text=f"oke, it was cancelled")
         return [SlotSet("log_request_kind", None), SlotSet("log_request_time", None)]
+
+class ValidateFormRequestArrivesLate(FormValidationAction):
+    def name(self) -> Text:
+        return "validate_forms_request_arrives_late"
+
+    def validate_arrives_late_reason(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `arrives_late_reason` value."""
+        return {"arrives_late_reason": slot_value}
+       
+    def validate_arrives_late_time(
+        self,
+        slot_value: Any,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> Dict[Text, Any]:
+        """Validate `arrives_late_time` value."""
+
+        arrives_late_time = tracker.slots.get("arrives_late_time")
+        print("slot arrives_late_time: ", arrives_late_time)
+        try:
+            arrives_late_time = arrives_late_time.split(" ")[0]
+            float(arrives_late_time)
+            if 0. <= float(arrives_late_time) <= 8.:
+                return {"arrives_late_time": arrives_late_time}
+            else:
+                dispatcher.utter_message(text=f"Hours must be in range 0 - 8")
+                return {"arrives_late_time": None}
+        except:
+            dispatcher.utter_message(text=f"Please reshape: Examples: 8 hours")
+            return {"arrives_late_time": None}
+        
+
+class ActionAboutRequestArrivesLate(Action):
+    def name(self) -> Text:
+        return "action_about_request_arrives_late"
+
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: DomainDict,
+    ) -> List[EventType]:
+
+        last_intent = tracker.latest_message["intent"]["name"]
+        if last_intent in ["affirm"]:
+            arrives_late_time = tracker.slots.get("arrives_late_time")
+            arrives_late_reason = tracker.slots.get("arrives_late_reason")
+            if arrives_late_time and arrives_late_reason:
+                dispatcher.utter_message(text=f"sent api to request late in {arrives_late_time} hours for reasion: {arrives_late_reason} today")
+        else:
+            dispatcher.utter_message(text=f"oke, it was cancelled")
+        return [SlotSet("arrives_late_reason", None), SlotSet("arrives_late_time", None)]
 
 class ValidateLogTimeSheetForm(FormValidationAction):
     def name(self) -> Text:
@@ -624,7 +686,7 @@ class ValidateLogTimeSheetForm(FormValidationAction):
         """Validate `project` value."""
         resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), RESPONE_INTENT_ABOUT_PROJECT.keys())
         if ratio > 80:
-            return {"project": resultSearchFuzzy}
+            return {"project": resultSearchFuzzy.title()}
         else:
             dispatcher.utter_message(text=f"no detected project name")
             return {"project": None}
@@ -653,21 +715,21 @@ class ValidateLogTimeSheetForm(FormValidationAction):
             return {"hours": None}
         
 
-    def validate_position(
+    def validate_task(
         self,
         slot_value: Any,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict,
     ) -> Dict[Text, Any]:
-        """Validate `position` value."""
+        """Validate `task` value."""
 
         resultSearchFuzzy, ratio = process.extractOne(slot_value.lower(), ['Coding', 'Testing', 'Business Analyzing', 'Project Management', 'Unassigned'])
         if ratio > 70:
-            return {"position": resultSearchFuzzy}
+            return {"task": resultSearchFuzzy}
         else:
-            dispatcher.utter_message(text=f"Position must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
-            return {"position": None}
+            dispatcher.utter_message(text=f"Task must be one in: Coding, Testing, Business Analyzing, Project Management, Unassigned")
+            return {"task": None}
 
 class ActionAboutLogTimeSheet(Action):
     def name(self) -> Text:
@@ -684,12 +746,12 @@ class ActionAboutLogTimeSheet(Action):
         if last_intent in ["affirm"]:
             hours = tracker.slots.get("hours")
             project = tracker.slots.get("project")
-            position = tracker.slots.get("position")
-            if hours and project and position:
-                dispatcher.utter_message(text=f"sended api to log time sheet: {hours} - {project} - {position} today")
+            task = tracker.slots.get("task")
+            if hours and project and task:
+                dispatcher.utter_message(text=f"sent api to log time sheet: {hours} - {project} - {task} today")
         else:
             dispatcher.utter_message(text=f"oke, it was cancelled")
-        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("position", None)]
+        return [SlotSet("hours", None), SlotSet("project", None), SlotSet("task", None)]
 
 class ActionAboutProject(Action):
     def name(self) -> Text:

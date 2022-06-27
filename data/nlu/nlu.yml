@@ -1,5 +1,24 @@
 version: "2.0"
 nlu:
+- intent: about_request_arrives_late
+  examples: |
+   - The request arrives late
+   - I want to arrive late for work
+   - I will be late today
+   - [8](arrives_late_time) hours
+   - [1](arrives_late_time) hours
+   - [2](arrives_late_time) hours
+   - [I am stuck in traffic](arrives_late_reason)
+   - [I have a health problem](arrives_late_reason)
+   - [I broke down the motorbike](arrives_late_reason)
+   - I will be late for work today.
+   - I want to go late today.
+   - I'm going to late today.
+   - I'm running a little late today.
+   - I'm going to be a little late.
+   - Can I be late tomorrow?
+   - May I be excused to be late tomorrow?
+   - Can I be a little late?
 - intent: about_log_leave_and_remote_request
   examples: |
    - How to log request?
@@ -23,6 +42,9 @@ nlu:
    - Log [leave](log_request_kind) request
    - Log [onsite](log_request_kind) request
    - Can I log request?
+   - log [leave](log_request_kind)
+   - log [remote](log_request_kind)
+   - log [onsite](log_request_kind)
 - intent: about_log_timesheet
   examples: |
    - How to log timesheet?
@@ -34,33 +56,58 @@ nlu:
    - [autobot](project)
    - I want to log for [autobot](project)
    - I need to log for the [autobot](project)
-   - How do you want to log position?
-   - [coding](position)
-   - [testing](position)
-   - [Business Analyzing](position)
-   - [Project Management](position)
-   - [Unassigned](position)
-   - I want to log for [coding](position)
-   - I want to log for [testing](position)
-   - I want to log for [Business Analyzing](position)
-   - I want to log for [Project Management](position)
+   - How do you want to log task?
+   - [coding](task)
+   - [testing](task)
+   - [Business Analyzing](task)
+   - [Project Management](task)
+   - [Unassigned](task)
+   - I want to log for [coding](task)
+   - I want to log for [testing](task)
+   - I want to log for [Business Analyzing](task)
+   - I want to log for [Project Management](task)
    - What time do you want to log?
    - [8](hours) hours
    - I want to log [7](hours) hours
    - I can log [8](hours) hours
+- intent: about_periodic_health_examination
+  examples: |
+   - I want to know about periodic health check in company
+   - Does the company have periodic health checks?
+   - What is the time and cost for regular health check-ups?
+- intent: about_insurance
+  examples: |
+   - Can I sign an insurance policy?
+   - I want to know about the company's insurance policy?
+   - What types of insurance does the company have?
+   - Types of insurance?
+   - Benefits of social insurance?
+   - Health insurance benefits?
+   - Unemployment insurance benefits?
+   - Health insurance when working for 12 months or more?
+- intent: about_company_culture
+  examples: |
+   - What is the company culture like?
+   - I want to know about company culture?
+   - I want to know more details about company culture.
+- intent: about_request_go_out_during_working_hours
+  examples: |
+   - request go out during working hours
+   - I want to go out during working hours
+   - I want to go out and do some work
+   - I need to go out for a second.
+   - May I go out, please? 
+- intent: about_interns
+  examples: |
+   - I want to know about the intern regulations?
+   - What is the level of support for interns?
+   - Can the company unilaterally terminate the trainee's agreement?
+   - When the internship ends, how are students considered to be accepted as employees?
 - intent: about_find_user_phone_number
   examples: |
    - phone number of [tung.khongmanh](staff)
-   - phonenumber of [thao.tranphuong](staff)
    - i need phone of [tung.khongmanh](staff)
-   - [thao.nguyenthi1](staff) phone
    - [tung.khongmanh](staff) phone number
-   - phone number of [duc.dinhquang](staff)
-   - phone number of [thien.nguyenthai](staff)
-   - phone number of [duc.nguyenminh](staff)
-   - phone number of [hieu.nguyenduc](staff)
-   - phone number of [tien.phammanh](staff)
-   - phone number of [ngan.nguyenthu](staff)
 - intent: about_daily
   examples: |
    - Who is the subject of daily work when working in the company?
@@ -353,36 +400,12 @@ nlu:
     - Timekeeping late at work?
 - intent: concern_about_log_and_submit_timesheet
   examples: |
-    - Where can I log timsheet?
-    - Do employees have to log timesheet?
-    - What is the log timesheet for?
-    - Why do I have to log timesheet?
-    - Can I log last week's timesheet?
-    - Can I log last month's timesheet?
-    - I forgot what the log timesheet will look like?
-    - What if I log the timesheet and forgot to submit it?
-    - Can I log timesheet by week?
-    - Can I log timesheet on holidays?
-    - Do I log timesheet on Saturday?
-    - Can I log timesheet Saturday is [8 hours](duration)?
-    - Do I log timesheet on Sunday?
-    - Can I log timesheet Sunday is [8 hours](duration) với type là Normal working hours?
-    - Can I logtimesheet for the previous day?
-    - Can I logtimesheet for the next day?
     - Can I edit the timesheet after it has not been approved?
     - Can I delete the timesheet after it has not been approved?
     - After approval, can I delete or edit the timesheet?
     - Who approves employee timesheets?
     - When is the timesheet approved?
     - When is the last date to approve timesheet?
-    - Is there a penalty if I don't approve the timesheet?
-    - In case I have many projects, how do I log the timesheet?
-    - What if I log a [9 hours](duration) timesheet with the type of normal working hours?
-    - What if I log a [10 hours](duration) timesheet with the type of OT?
-    - Can I log timesheet twice in a day with type as normal working hours?
-    - Can I log timesheet multiple times in a day with type overtime?
-    - How do I log the Opentalk session timesheet?
-    - When I log the timesheet for a week, can I send remote after that?
 - intent: break_between_working_hours
   examples: |
     - Can I go out during working hours?
