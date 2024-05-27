@@ -3,3 +3,4 @@ chroma_db/
 __pycache__/
 .env
 *.service
+*.pkl
