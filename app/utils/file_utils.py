@@ -2,7 +2,7 @@ from langchain_community.document_loaders import Docx2txtLoader
 from langchain_text_splitters import CharacterTextSplitter
 import os
 import hashlib
-import pickle
+import json
 from docx import Document
 
 
@@ -41,11 +41,11 @@ def hash_all_docs(directory):
 
 def load_last_hashes(last_hashes_file):
     if os.path.exists(last_hashes_file):
-        with open(last_hashes_file, "rb") as f:
-            return pickle.load(f)
+        with open(last_hashes_file, "r") as f:
+            return json.load(f)
     return {}
 
 
-def save_last_hashes(pickle_file, hashes):
-    with open(pickle_file, "wb") as f:
-        pickle.dump(hashes, f)
+def save_last_hashes(json_file, hashes):
+    with open(json_file, "w") as f:
+        json.dump(hashes, f)
