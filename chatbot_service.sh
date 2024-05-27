@@ -41,3 +41,7 @@ sudo systemctl start chatbot.service
 
 # To enable your service on every reboot
 sudo systemctl enable chatbot.service
+
+# Start the file watcher
+echo "Starting the file watcher..."
+python3 file_watcher.py chatbot.service

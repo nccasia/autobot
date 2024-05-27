@@ -39,9 +39,9 @@ def hash_all_docs(directory):
     return hashes
 
 
-def load_last_hashes(pickle_file):
-    if os.path.exists(pickle_file):
-        with open(pickle_file, "rb") as f:
+def load_last_hashes(last_hashes_file):
+    if os.path.exists(last_hashes_file):
+        with open(last_hashes_file, "rb") as f:
             return pickle.load(f)
     return {}
 

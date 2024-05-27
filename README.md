@@ -39,6 +39,6 @@ sudo systemctl stop chatbot.service
 
 - If you wish to add new information data to the project, follow these steps:
 
-1. Ensure that the new data files, in .docx format, are placed within the /data directory of the project.
-
-2. Restart the service to apply the changes. The system will automatically process the new data files and update the internal database.
+1. Run your service.
+2. Ensure that the new data files, in .docx format, are placed within the /data directory of the project.
+3. The service will automatically restart. The system will process the new data files and update the internal database.

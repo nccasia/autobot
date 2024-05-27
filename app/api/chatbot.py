@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 from pydantic import BaseModel
-from app.services.chatbot_service import process_chat, create_chain, setup_chroma_db
+from app.services.chatbot import process_chat, create_chain, setup_chroma_db
 from app.schemas.message import Message
 
 vectordb = setup_chroma_db()
