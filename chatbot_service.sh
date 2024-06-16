@@ -25,7 +25,7 @@ echo "[Service]" >> chatbot.service
 echo "User=root" >> chatbot.service
 echo "EnvironmentFile=$current_directory/.env" >> chatbot.service
 echo "WorkingDirectory=$current_directory" >> chatbot.service
-echo "ExecStart=$current_directory/venv/bin/uvicorn app.main:app --host $host --port $port --workers 4" >> chatbot.service
+echo "ExecStart=$current_directory/venv/bin/uvicorn app.main:app --host $host --port $port --workers 2" >> chatbot.service
 echo "Restart=always" >> chatbot.service
 echo "RestartSec=3" >> chatbot.service
 echo "[Install]" >> chatbot.service
