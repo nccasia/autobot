@@ -12,7 +12,7 @@ def process_docx_files(directory):
     filenames.sort()
     for filename in filenames:
         loader = Docx2txtLoader(os.path.join(directory, filename))
-        text_splitter = CharacterTextSplitter(chunk_size=20000, chunk_overlap=0)
+        text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
         docs = text_splitter.split_documents(loader.load())
         contents.extend(docs)
     return contents
